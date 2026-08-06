@@ -104,6 +104,8 @@ argument-hint: 'JSON: {"content": "<story>", "content_type": "text|plot", "domai
 
 plotモードでは、上記3体を `caveats` に記録する（例: `"content_type: plot のため prose-style, narrative-technique, reader-experience は未招集（次元が不適合）"`）。3体の次元は Story Vector で `null` になる。
 
+**`non_consulted_evaluators` の実行時挙動**（明確化）: 未招集の評価者は、**Agent tool で呼び出さない**（API呼び出しを節約する）。`non_consulted_evaluators` に `evaluator_id` と `reason` を記録し、その次元は Story Vector で `null` として**集計から除外**する（0として数えない）。呼び出し履歴・除外理由はStory Reportの `caveats` にも併記する。**未招集＝「評価していない」であり、「低評価した」ではない**ことに注意する。
+
 #### モード（mode）
 
 `ARGUMENTS` の `mode` フィールドで招集範囲を選ぶ。
@@ -253,6 +255,12 @@ Prompt: {"content": "<story>", "content_type": "<type>", "domain": "<domain>", "
 ## 分類の導出
 
 **分類モデル**: 現在価値 × 潜在価値の**2x2マトリクス（4象限）**に、high/high の `innovation` を加えた**5分類**である（厳密には 2x2 + 1セル）。`trend_object` は「現在価値高・潜在価値35-44」のボーダー帯の分類。
+
+**2つの軸の意味論（明文化）**:
+- **横軸 = 現在価値（`current_value_score`）**: 「今、読まれた時間が価値ある体験だったか」—— quality, narrative_originality, emotional_power, plot_architecture, character_depth, prose_style, world_building, narrative_technique, reader_experience の非null平均。
+- **縦軸 = 潜在価値（`hidden_potential_score`）**: 「再読・時代変化・人生の一部になる可能性で価値が上昇するか」—— theme_resonance, narrative_originality, emotional_power（読後の変位）の非null平均。
+- **境界線**: 両軸とも 45/35 のしきい値で分割（下表）。`innovation` は「両高（≥45 / ≥45）」の +1 セルであり、2x2の基本4象限（current_success / discovery_target / low_signal / trend_object の4つ目は innovation と重複する）に追加される第5セルとして定義する。
+- **判定の事前登録（pre-registration）**: 境界線（45/35）とボーダー帯（35-44）の扱いは、評価の実施前に固定し、評価結果で事後的に動かさない。ボーダー帯の最終判断は、各評価者の `classification` と不一致度に照合して決める。
 
 - `current_value_score`: quality, narrative_originality, emotional_power, plot_architecture, character_depth, prose_style, world_building, narrative_technique, reader_experience の平均（非null次元のみ）。
 - `hidden_potential_score`: theme_resonance, narrative_originality（潜在価値への寄与）, emotional_power（読後の変位）の平均（非null次元のみ）。※ 厳密な配分は `references/scoring-strictness.md` に従う。
