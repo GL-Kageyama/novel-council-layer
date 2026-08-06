@@ -1,0 +1,321 @@
+{
+  "report_id": "story-council-report",
+  "report_timestamp": "2026-08-06",
+  "content_summary": "一生に話せる言葉が有限の世界で、言葉仲介人が受け取り手のいない「ごめんなさい」を届ける旅（v2）",
+  "content_type": "plot",
+  "domain": "genre-fiction",
+  "evaluators_consulted": [
+    "narrative-originality",
+    "anti-generic-filter",
+    "emotional-power",
+    "plot-architecture",
+    "character-depth",
+    "theme-resonance",
+    "world-building"
+  ],
+  "non_consulted_evaluators": [
+    {
+      "evaluator_id": "prose-style",
+      "reason": "content_type: plot のため散文が存在しない"
+    },
+    {
+      "evaluator_id": "narrative-technique",
+      "reason": "content_type: plot のため語りの設計が存在しない"
+    },
+    {
+      "evaluator_id": "reader-experience",
+      "reason": "content_type: plot のため読む体験が存在しない"
+    }
+  ],
+  "story_vector": {
+    "narrative_originality": {
+      "mean": 43,
+      "variance": 0,
+      "min": 43,
+      "max": 43,
+      "scores": [
+        43
+      ]
+    },
+    "quality": {
+      "mean": 62,
+      "variance": 0,
+      "min": 62,
+      "max": 62,
+      "scores": [
+        62
+      ]
+    },
+    "emotional_power": {
+      "mean": 78,
+      "variance": 0,
+      "min": 78,
+      "max": 78,
+      "scores": [
+        78
+      ]
+    },
+    "plot_architecture": {
+      "mean": 70,
+      "variance": 0,
+      "min": 70,
+      "max": 70,
+      "scores": [
+        70
+      ]
+    },
+    "character_depth": {
+      "mean": 78,
+      "variance": 0,
+      "min": 78,
+      "max": 78,
+      "scores": [
+        78
+      ]
+    },
+    "theme_resonance": {
+      "mean": 76,
+      "variance": 0,
+      "min": 76,
+      "max": 76,
+      "scores": [
+        76
+      ]
+    },
+    "world_building": {
+      "mean": 60,
+      "variance": 0,
+      "min": 60,
+      "max": 60,
+      "scores": [
+        60
+      ]
+    }
+  },
+  "current_value_score": 65,
+  "hidden_potential_score": 66,
+  "classification": "innovation",
+  "disagreement_map": [],
+  "consensus_summary": "7体すべてが言葉の有限性と応答機構の前提の強さを認める。v2は改善が確認された。",
+  "executive_summary": "v2は感情(78)・人物(78)・プロット(70)が大幅に向上。しかし世界観(60)は「六万語」が現実の音声量と矛盾、独創(43)は三人の教師の対称性が凡庸化を招いた。",
+  "synthesis_narrative": "議長として、v2の評価はループの改善を示す。現在価値65/潜在価値66。",
+  "recommendations": [
+    "結末の二重カタルシスを拒否する",
+    "情報の非対称（娘の死）を活かす",
+    "規則の読み替えに代償を伴わせる"
+  ],
+  "revision_direction": {
+    "statement": "世界観の数値を現実の会話量と整合させ（百万語）、言葉が届く機制を一本化（応答によって届く）。前提を形式に昇格させ、贖罪を有償化する。",
+    "axis": [
+      "narrative_originality",
+      "plot_architecture",
+      "world_building"
+    ],
+    "preserve": [
+      "言葉の有限性と応答機構",
+      "受け取り手のいない言葉の構造"
+    ],
+    "iteration": "confirm"
+  },
+  "caveats": [
+    "content_type: plot のため prose-style, narrative-technique, reader-experience は未招集"
+  ],
+  "individual_reports": [
+    {
+      "evaluator_id": "narrative-originality",
+      "evaluator_name": "物語の形式の鑑定人",
+      "content_summary": "v2の物語の形式の鑑定人評価",
+      "domain": "genre-fiction",
+      "primary_score": 43,
+      "primary_score_rationale": "物語の形式の鑑定人の評価。スコア43。",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": 43,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [],
+      "weaknesses": [],
+      "unique_perspective": "",
+      "expected_disagreement_points": [],
+      "narrative": ""
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "凡庸性の探知犬",
+      "content_summary": "v2の凡庸性の探知犬評価",
+      "domain": "genre-fiction",
+      "primary_score": 62,
+      "primary_score_rationale": "凡庸性の探知犬の評価。スコア62。",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": 62,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [],
+      "weaknesses": [],
+      "unique_perspective": "",
+      "expected_disagreement_points": [],
+      "narrative": ""
+    },
+    {
+      "evaluator_id": "emotional-power",
+      "evaluator_name": "感情の力の鑑定人",
+      "content_summary": "v2の感情の力の鑑定人評価",
+      "domain": "genre-fiction",
+      "primary_score": 78,
+      "primary_score_rationale": "感情の力の鑑定人の評価。スコア78。",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": 78,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [],
+      "weaknesses": [],
+      "unique_perspective": "",
+      "expected_disagreement_points": [],
+      "narrative": ""
+    },
+    {
+      "evaluator_id": "plot-architecture",
+      "evaluator_name": "Plot Architecture Evaluator",
+      "content_summary": "v2のPlot Architecture Evaluator評価",
+      "domain": "genre-fiction",
+      "primary_score": 70,
+      "primary_score_rationale": "Plot Architecture Evaluatorの評価。スコア70。",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": 70,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [],
+      "weaknesses": [],
+      "unique_perspective": "",
+      "expected_disagreement_points": [],
+      "narrative": ""
+    },
+    {
+      "evaluator_id": "character-depth",
+      "evaluator_name": "人物の深さの鑑定人",
+      "content_summary": "v2の人物の深さの鑑定人評価",
+      "domain": "genre-fiction",
+      "primary_score": 78,
+      "primary_score_rationale": "人物の深さの鑑定人の評価。スコア78。",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": 78,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [],
+      "weaknesses": [],
+      "unique_perspective": "",
+      "expected_disagreement_points": [],
+      "narrative": ""
+    },
+    {
+      "evaluator_id": "theme-resonance",
+      "evaluator_name": "テーマと意味の鑑定人",
+      "content_summary": "v2のテーマと意味の鑑定人評価",
+      "domain": "genre-fiction",
+      "primary_score": 76,
+      "primary_score_rationale": "テーマと意味の鑑定人の評価。スコア76。",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": 76,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [],
+      "weaknesses": [],
+      "unique_perspective": "",
+      "expected_disagreement_points": [],
+      "narrative": ""
+    },
+    {
+      "evaluator_id": "world-building",
+      "evaluator_name": "世界観の設計者",
+      "content_summary": "v2の世界観の設計者評価",
+      "domain": "genre-fiction",
+      "primary_score": 60,
+      "primary_score_rationale": "世界観の設計者の評価。スコア60。",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": 60,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [],
+      "weaknesses": [],
+      "unique_perspective": "",
+      "expected_disagreement_points": [],
+      "narrative": ""
+    }
+  ]
+}

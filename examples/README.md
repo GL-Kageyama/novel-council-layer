@@ -45,3 +45,20 @@ for f in */report-*.json; do python3 ../utils/validate_output.py "$f"; done
 ## 個別評価レポート（individual_reports）
 
 各レポートの `individual_reports` には**招集した全評価者の生データ**（`weaknesses`・`improvement_suggestions`・`narrative`）が入る。これは**リライトの材料として読む入力**である。
+
+## 動作確認の注意（運用時）
+
+`novel-sample/` は、story-council の **plotモード**（content_type: plot, mode: full）で3ループ評価した実例である:
+
+| ファイル | 内容 |
+|---------|------|
+| `input.md` | あらすじ（v1→v2→v3） |
+| `report-v1.json` | 初回評価（現在価値62/潜在65） |
+| `report-v2.json` | ループ2（65/66） |
+| `report-v3.json` | ループ3（**68/68**、+4.6平均改善） |
+| `report.md` | v3のMarkdown表示 |
+
+**運用上の注意**:
+- 評価者エージェント（`agents/`）のネイティブ起動には、**Claude Codeの再起動（または `/agents`）が必要**。再起動前は、エージェントファイルのシステムプロンプトを読み込んで起動するフォールバック方式で運用できる。
+- プロットモードでは `prose-style`・`narrative-technique`・`reader-experience` の3体は未招集となり、Story Vectorで `null` になる（`non_consulted_evaluators` に記録）。
+- 3ループの改善推移から、評価→修正ループが機能することが確認できる。

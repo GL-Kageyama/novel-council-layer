@@ -1,0 +1,418 @@
+{
+  "report_id": "story-council-report",
+  "report_timestamp": "2026-08-06",
+  "content_summary": "一生に話せる言葉が有限の世界で、言葉仲介人が受け取り手のいない「ごめんなさい」を届ける旅のあらすじ（v1）",
+  "content_type": "plot",
+  "domain": "genre-fiction",
+  "evaluators_consulted": [
+    "narrative-originality",
+    "anti-generic-filter",
+    "emotional-power",
+    "plot-architecture",
+    "character-depth",
+    "theme-resonance",
+    "world-building"
+  ],
+  "non_consulted_evaluators": [
+    {
+      "evaluator_id": "prose-style",
+      "reason": "content_type: plot のため散文が存在しない"
+    },
+    {
+      "evaluator_id": "narrative-technique",
+      "reason": "content_type: plot のため語りの設計が存在しない"
+    },
+    {
+      "evaluator_id": "reader-experience",
+      "reason": "content_type: plot のため読む体験が存在しない"
+    }
+  ],
+  "story_vector": {
+    "narrative_originality": {
+      "mean": 48,
+      "variance": 0,
+      "min": 48,
+      "max": 48,
+      "scores": [
+        48
+      ]
+    },
+    "quality": {
+      "mean": 51,
+      "variance": 0,
+      "min": 51,
+      "max": 51,
+      "scores": [
+        51
+      ]
+    },
+    "emotional_power": {
+      "mean": 71,
+      "variance": 0,
+      "min": 71,
+      "max": 71,
+      "scores": [
+        71
+      ]
+    },
+    "plot_architecture": {
+      "mean": 59,
+      "variance": 0,
+      "min": 59,
+      "max": 59,
+      "scores": [
+        59
+      ]
+    },
+    "character_depth": {
+      "mean": 73,
+      "variance": 0,
+      "min": 73,
+      "max": 73,
+      "scores": [
+        73
+      ]
+    },
+    "prose_style": {
+      "mean": null,
+      "variance": null,
+      "min": null,
+      "max": null,
+      "scores": []
+    },
+    "theme_resonance": {
+      "mean": 76,
+      "variance": 0,
+      "min": 76,
+      "max": 76,
+      "scores": [
+        76
+      ]
+    },
+    "world_building": {
+      "mean": 73,
+      "variance": 0,
+      "min": 73,
+      "max": 73,
+      "scores": [
+        73
+      ]
+    },
+    "narrative_technique": {
+      "mean": null,
+      "variance": null,
+      "min": null,
+      "max": null,
+      "scores": []
+    },
+    "reader_experience": {
+      "mean": null,
+      "variance": null,
+      "min": null,
+      "max": null,
+      "scores": []
+    }
+  },
+  "current_value_score": 62,
+  "hidden_potential_score": 65,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "形式の評価",
+      "variance": 784,
+      "disputing_evaluators": [
+        "narrative-originality",
+        "theme-resonance"
+      ],
+      "arguments": [
+        "narrative-originality(48): 語りは駅伝式ヒューマンドラマの標準構造に忠実。前提が形式に昇格していない。",
+        "theme-resonance(76): 世界の法から問いが構造的に生まれる。届かない言葉を届かせない抑制が主題の誠実さ。"
+      ]
+    }
+  ],
+  "consensus_summary": "7体すべてが「言葉の有限性という前提の強さ」を認める。ただし、実行の凡庸さ（駅伝式出会い・感傷装置の過密・二重カタルシスの危険）を複数評価者が指摘。",
+  "executive_summary": "前提の高概念（生涯の言葉数）は全評価者が認める強み。テーマ(76)・人物(73)・世界観(73)は高水準だが、プロット(59)・品質(51)・独創(48)が「配置の凡庸さ」を指摘。結末の二重カタルシスを拒否し、前提を形式に昇格させれば、埋もれた価値（Discovery Target→Innovation）になりうる。",
+  "synthesis_narrative": "議長として、この合議の最大の発見は独創(48)とテーマ(76)の衝突にある。独創評価者は「駅伝式の凡庸な配置」を、テーマ評価者は「世界の法から生まれる深さ」を見た。この衝突は物語が「強い前提＋凡庸な実行」の状態にあることを示す。改善の鍵は、前提を世界の装飾でなく形式そのものとして消化すること——黙者の手話・筆談を語りの第二レジスターにし、仲介人の残語をナレーションの予算にする。そうすれば、この物語は形式そのものを揺るがすことができる。",
+  "recommendations": [
+    "結末の二重カタルシスを拒否する（言葉を届けず、主人公の癒やしと言葉の到達を同じビートに置かない）",
+    "仲介人が娘の死を読者より後で知る設計にし、劇的アイロニーを旅全体に持続させる",
+    "「三日後に死ぬ」時限を発火させる",
+    "駅的エピソード（亡き妻の男・妊婦）を、主人公の成長をサービスする装置でなく、配送問題の解法として回収する",
+    "言葉を浪費する者・言葉で嘘をつく者を加え、寓意に摩擦を入れる"
+  ],
+  "revision_direction": {
+    "statement": "前提を『形式』に昇格し、凡庸な配置（駅伝式・二重カタルシス・感傷装置の過密）を拒否する。仲介人が娘の死を後で知る劇的アイロニーと、時限の発火、出会いの因果的接続でプロットを強化する。",
+    "axis": [
+      "narrative_originality",
+      "plot_architecture",
+      "quality"
+    ],
+    "preserve": [
+      "言葉の有限性という前提",
+      "受け取り手のいない言葉の構造",
+      "主人公の七割という人物設計",
+      "届かない言葉を届かせない抑制"
+    ],
+    "iteration": "confirm"
+  },
+  "caveats": [
+    "content_type: plot のため prose-style, narrative-technique, reader-experience は未招集",
+    "評価はあらすじ（設計）に対するものであり、実行（散文）は未評価"
+  ],
+  "individual_reports": [
+    {
+      "evaluator_id": "narrative-originality",
+      "evaluator_name": "物語の形式の鑑定人",
+      "primary_score": 48,
+      "classification": "trend_object",
+      "content_summary": "前提は本物だが語りは駅伝式。黙者を第二レジスターに、残語をナレーション予算に。",
+      "domain": "genre-fiction",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": 48,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification_final": "trend_object",
+      "confidence": 72,
+      "strengths": [
+        "前提が主題の深部に達している",
+        "黙者と言葉の売買の世界設定"
+      ],
+      "weaknesses": [
+        "駅伝式の標準構成",
+        "ステーション的人物",
+        "前提が形式として未消化"
+      ],
+      "unique_perspective": "逸脱は前提を『形式』に使うか『世界』に使うかの境界にある。",
+      "expected_disagreement_points": [],
+      "narrative": "前提は本物。だが形式の怠慢が痛烈。黙者の手話を語りの第二レジスターにすれば、形式そのものを揺るがす。",
+      "primary_score_rationale": "前提は本物だが、語りは駅伝式の標準構造。一つの新前提＋従来の語りの水準。"
+    },
+    {
+      "evaluator_id": "anti-generic-filter",
+      "evaluator_name": "凡庸性の探知犬",
+      "primary_score": 51,
+      "classification": "discovery_target",
+      "content_summary": "概念は独自、配置は月並み。二重のカタルシスを拒む覚悟が価値を決める。",
+      "domain": "genre-fiction",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": 51,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification_final": "discovery_target",
+      "confidence": 60,
+      "strengths": [
+        "語の計上経済が置き換え不可能",
+        "受け取り手のいない規則の罠"
+      ],
+      "weaknesses": [
+        "感情の結節点が過密（遺言・死んだ娘・未亡人・妊婦）",
+        "巡礼構造は在庫品",
+        "二重カタルシスの予定調和"
+      ],
+      "unique_perspective": "概念と配置を分けて数えられるのは私だけ。結末の覚悟で価値が決まる。",
+      "expected_disagreement_points": [],
+      "narrative": "概念は独自、配置は月並み。言葉が一語も届かないまま取引が失敗する覚悟があるか。",
+      "primary_score_rationale": "概念は独自、配置は月並み。配置の凡庸さが概念の独自性を相殺。"
+    },
+    {
+      "evaluator_id": "emotional-power",
+      "evaluator_name": "感情の力の鑑定人",
+      "primary_score": 71,
+      "classification": "discovery_target",
+      "content_summary": "受け取り手のいない謝罪は感傷ではなく構造。真の感情主体は主人公自身。",
+      "domain": "genre-fiction",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": 71,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification_final": "discovery_target",
+      "confidence": 70,
+      "strengths": [
+        "感情が機制に身体化",
+        "主人公の七割と本心に使わない規律の鏡"
+      ],
+      "weaknesses": [
+        "周辺人物が死・別離の定型素材に偏る",
+        "解決がご都合主義に堕ちるリスク"
+      ],
+      "unique_perspective": "真の感情主体は老女でなく主人公・悠自身。初めて言葉を費やす瞬間の重さが山場。",
+      "expected_disagreement_points": [],
+      "narrative": "届かないまま置け。空白を維持することが抑制の美学を守る。",
+      "primary_score_rationale": "受け取り手のいない謝罪という反閉塞の構造と、主人公の抑制が物語のエンジン。"
+    },
+    {
+      "evaluator_id": "plot-architecture",
+      "evaluator_name": "Plot Architecture Evaluator",
+      "primary_score": 59,
+      "classification": "discovery_target",
+      "content_summary": "因果エンジンは一枚岩だが、解決機構未開示・時限が発火しない。",
+      "domain": "genre-fiction",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": 59,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification_final": "discovery_target",
+      "confidence": 62,
+      "strengths": [
+        "因果エンジンが一枚岩",
+        "七割の伏線が回収される再文脈化構造"
+      ],
+      "weaknesses": [
+        "解決機構が未開示",
+        "出会いがテーマの並置",
+        "時限が発火しない"
+      ],
+      "unique_perspective": "仲介人が娘の死をいつ知るか——開示順序の一つの選択が物語の運命を決める。",
+      "expected_disagreement_points": [],
+      "narrative": "よく設計されたエンジンと未検証の弾頭。解決機構を制約の内側で設計せよ。",
+      "primary_score_rationale": "因果エンジンは一枚岩だが、解決機構が未開示で時限が発火しない。"
+    },
+    {
+      "evaluator_id": "character-depth",
+      "evaluator_name": "人物の深さの鑑定人",
+      "primary_score": 73,
+      "classification": "discovery_target",
+      "content_summary": "職業と病理の融合が稀な水準。核心の傷の起源が空白。",
+      "domain": "genre-fiction",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": 73,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification_final": "discovery_target",
+      "confidence": 78,
+      "strengths": [
+        "職業と病理の同型結晶",
+        "外部使命と内部危機の一致",
+        "老女の道徳的多面性"
+      ],
+      "weaknesses": [
+        "変化弧が問いの提示にとどまる",
+        "核心の傷の起源が空白",
+        "遭遇人物の機能化リスク"
+      ],
+      "unique_perspective": "七割は余裕ではなく壁。悠の言葉を惜しむ姿勢が彼を何から守ってきたかが道徳的中心。",
+      "expected_disagreement_points": [],
+      "narrative": "転換を選択として刻めば、読後に考え続ける人物へ届きうる。",
+      "primary_score_rationale": "職業と病理の同型結晶は稀な水準だが、核心の傷の起源が空白。"
+    },
+    {
+      "evaluator_id": "theme-resonance",
+      "evaluator_name": "テーマと意味の鑑定人",
+      "primary_score": 76,
+      "classification": "discovery_target",
+      "content_summary": "世界の法から問いが構造的に生まれる。一対一の寓意の完璧さが解釈を閉ざす危険。",
+      "domain": "genre-fiction",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": 76,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification_final": "discovery_target",
+      "confidence": 74,
+      "strengths": [
+        "世界の法と仲介規約がテーマを構造から生成",
+        "黙者という死生観",
+        "結末が問いのまま開かれる"
+      ],
+      "weaknesses": [
+        "二人の問いの因果的接合が緩い",
+        "寓意が一対一で完成に近い",
+        "再読層は設計可能性"
+      ],
+      "unique_perspective": "最大のリスクは浅さでなく『完璧な一貫性』。届かない言葉を届かせないことが主題そのもの。",
+      "expected_disagreement_points": [],
+      "narrative": "届かぬ言葉と主人公の沈黙を因果で熔接するとき、主題は本当に一つになる。",
+      "primary_score_rationale": "世界の法から問いが構造的に生まれる。再読層は設計可能性に留まる。"
+    },
+    {
+      "evaluator_id": "world-building",
+      "evaluator_name": "世界観の設計者",
+      "primary_score": 73,
+      "classification": "discovery_target",
+      "content_summary": "高概念の土台が強く、ルールが物語を駆動。しかし生命・市場・制度の縫い目が残る。",
+      "domain": "genre-fiction",
+      "dimension_scores": {},
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": 73,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification_final": "discovery_target",
+      "confidence": 78,
+      "strengths": [
+        "高概念の根底",
+        "仲介人規則が緊張を生成",
+        "設定の派生が自然"
+      ],
+      "weaknesses": [
+        "使い切る→死/黙者の縫い目",
+        "言葉市場と希少性の両立",
+        "クォータの計測制度が未設計"
+      ],
+      "unique_perspective": "感情の建築は言葉経済の閉鎖性に依存。市場が言葉を買えるものにした瞬間、悲劇は階級問題になる。",
+      "expected_disagreement_points": [],
+      "narrative": "縫い目を塞ぐ改稿で、設計図から住まいへ到達可能な距離にある。",
+      "primary_score_rationale": "高概念の土台が強く、ルールが物語を駆動。生命・市場・制度の縫い目が残る。"
+    }
+  ]
+}
