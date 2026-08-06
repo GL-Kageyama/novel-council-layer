@@ -121,10 +121,14 @@ plotモードでは、上記3体を `caveats` に記録する（例: `"content_t
 
 | iteration | 動作 | 用途 |
 |-----------|------|------|
-| `confirm`（デフォルト） | 各ターンの評価後に `revision_direction`（修正方向）を提示し、確認してから次の修正へ | 方向転換を都度チェックしたい |
-| `persistent` | 最初の評価で `revision_direction` を確定し、以降はその方向に沿って修正し続ける | 方向を決めて磨き込みたい |
+| `confirm`（デフォルト） | **Story Report を出力した後、人間・書き手が `revision_direction` を承認するまで次の反復を開始しない**（各ターンで方向を確認してから次の修正へ） | 方向転換を都度チェックしたい |
+| `persistent` | **初回の評価で `revision_direction` を確定し、以降の反復はその方向を再考せず、`axis` への到達度だけを報告する**（方向を変えず磨き込む。各反復では実行の具体化のみ変える） | 方向を決めて磨き込みたい |
+
+- `confirm` = 停止→確認→再開。`persistent` = 方向固定→ループ継続。
 
 ### Phase 2: Council Convening（合議招集）
+
+**二重の盲検の接続**: 評価に入力する物語は**匿名化済みであること**（第一の盲検）。作者名・作品名を含む生テキストを直接渡してはならない。`utils/anonymize.py` で事前に作者名・作品名を除去したテキストを使用する。評価基準（各エージェントのプロンプト・キャリブレーション）は構造的記述で、固有名詞を含まないこと（第二の盲検）。
 
 各選択された評価者を、独立した**サブエージェントとして個別に起動**し、以下を渡す:
 - 評価対象の物語（匿名化済み——作者名・作品名なし）
@@ -150,11 +154,11 @@ Prompt: {"content": "<story>", "content_type": "<type>", "domain": "<domain>", "
 1. すべての評価者のJSON出力を収集する。
 2. 各出力を `schemas/novel-value-output.schema.json` に対して検証する。
 3. plotモードで未招集の評価者（prose-style, narrative-technique, reader-experience）を `caveats` に記録する。
-4. 合成 Story Vector を構築する（各次元の平均・分散・範囲）。未招集次元は `null`。
+4. 合成 Story Vector を構築する（各次元の平均・分散・範囲）。**平均・分散は非null次元のみで計算する。未招集・不適合の次元は `null` として扱い、集計から除外する（0として数えない）。** これは分散しきい値（下記）が欠損次元で歪まないための仕様である。
 5. 不一致クラスタを特定する（分散がしきい値を超える次元）。
 6. 2象限モデルに基づいて分類を導出する。
 7. 統合 Story Report を生成する。
-8. 評価者が不正なJSONを返した場合は、`caveats` に記録して除外し、残りの評価者で続行する。
+8. 評価者が不正なJSONを返した場合は、**1回だけリトライ**し、それでも不正なら `caveats` に記録して除外し、残りの評価者で再計算して続行する。
 
 ### Phase 4: Disagreement Preservation（不一致の保存）
 
@@ -163,6 +167,8 @@ Prompt: {"content": "<story>", "content_type": "<type>", "domain": "<domain>", "
 - 双方の主張を原文のまま保存する。
 - **平均化や和解を試みない。**
 - 可能ならば、この不一致自体が価値のシグナルであることを指摘する（激しく割れる物語はしばしば最も興味深い）。
+
+**Phase 3 との整合**（Phase 3 の `mean` は Story Vector の**要約統計量**——評価者間のスコア分布を記述する集計値であり、各評価者の生の判断を代表するものではない）。Phase 4 の「平均化しない」とは、**評価者ごとの個別スコア・根拠・主張を `individual_reports` と `disagreement_map` に個別値として保存し、決して1点の合意に潰さない**ことを意味する。集計統計（mean）はあくまで要約であり、生の不一致コンテンツは常に保存される。
 
 ### Phase 5: Input-Ready Output（リライトの材料として）
 
@@ -227,7 +233,14 @@ Prompt: {"content": "<story>", "content_type": "<type>", "domain": "<domain>", "
 }
 ```
 
+**`recommendations` と `revision_direction` の区別**:
+- `recommendations` — 人間の意思決定者（書き手・編集者）への**次の行動の提案**。例: 「投稿先を再検討せよ」「伏線を張り直せ」。読み手の判断を促す。
+- `revision_direction` — 次回の**リライトの方向**を1-2文で合成したもの。`weaknesses`・`improvement_suggestions` から機械的に合成され、書き手・生成AIがリライトの入力として使う。
+- 両者は重複しうるが、`revision_direction` は「リライトの材料」、`recommendations` は「人間への行動提案」と役割を分ける。どちらも**リライト指示そのもの（directive）ではない**（Phase 5）。
+
 ### Disagreement Map の判定基準
+
+**前提**: 全スコアは **0〜100の整数スケール**（`schemas/novel-value-output.schema.json` 準拠）。分散はそのスケールでの母分散として計算する。
 
 | 分散の範囲 | 判定 |
 |-----------|------|
@@ -235,17 +248,21 @@ Prompt: {"content": "<story>", "content_type": "<type>", "domain": "<domain>", "
 | 100-400 | 中程度の不一致。正常な視点の違い。 |
 | > 400 | 深刻な不一致。物語が分裂を引き起こしている。**強調して表示。** |
 
+※ 欠損次元（plotモード等の未招集）は分散計算から除外する。分散は非nullスコアが2つ以上ある次元でのみ計算する。
+
 ## 分類の導出
 
-- `current_value_score`: quality, narrative_originality, emotional_power, plot_architecture, character_depth, prose_style, world_building, narrative_technique, reader_experience の平均（評価された次元のみ）。
-- `hidden_potential_score`: theme_resonance, narrative_originality（潜在価値への寄与）, emotional_power（読後の変位）の平均（評価された次元のみ）。※ 厳密な配分は `references/scoring-strictness.md` に従う。
+**分類モデル**: 現在価値 × 潜在価値の**2x2マトリクス（4象限）**に、high/high の `innovation` を加えた**5分類**である（厳密には 2x2 + 1セル）。`trend_object` は「現在価値高・潜在価値35-44」のボーダー帯の分類。
+
+- `current_value_score`: quality, narrative_originality, emotional_power, plot_architecture, character_depth, prose_style, world_building, narrative_technique, reader_experience の平均（非null次元のみ）。
+- `hidden_potential_score`: theme_resonance, narrative_originality（潜在価値への寄与）, emotional_power（読後の変位）の平均（非null次元のみ）。※ 厳密な配分は `references/scoring-strictness.md` に従う。
 
 評価者は厳格スコアリングに従うため、絶対スコアは低めに出る（中央値約30-45）。しきい値は相対的な目安である。
 
 | 現在価値 | 潜在価値 | 分類 |
 |---------|---------|------|
-| ≥ 45 | ≥ 45 | `innovation` |
-| ≥ 45 | 35-44 | `trend_object` |
+| ≥ 45 | ≥ 45 | `innovation`（2x2の high/high） |
+| ≥ 45 | 35-44 | `trend_object`（ボーダー帯） |
 | ≥ 45 | < 35 | `current_success` |
 | < 35 | ≥ 45 | `discovery_target` |
 | < 35 | < 35 | `low_signal` |
