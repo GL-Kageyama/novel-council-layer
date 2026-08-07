@@ -84,7 +84,10 @@ Prompt: {"content": "...", "content_type": "text", "domain": "genre-fiction"}
 
 ```bash
 python utils/validate_output.py < output.json
+python utils/validate_output.py --json output.json   # 機械可読な検証結果
 ```
+
+**自動リトライ**: 合議スキルは各評価者の出力を `validate_output.py --json` で**決定的に検証**し、不合格なら同じ評価者を**最大3回再起動**する（フィードバックにエラー内容を含める）。3回リトライ後も不合格なら `excluded_evaluators` に `reason: "JSON validation failed after 3 retries"` として明示的に記録する。**サイレントドロップ禁止。**
 
 **入力は匿名化する（第一の盲検）:**
 
@@ -97,7 +100,7 @@ python utils/anonymize.py input.txt --author "著者名" --title "作品名" > a
 | ツール | 役割 |
 |--------|------|
 | `utils/anonymize.py` | **入力の匿名化**——作者名・作品名を除去し、盲検評価の前提を作る（第一の盲検） |
-| `utils/validate_output.py` | 評価者出力のスキーマ検証 |
+| `utils/validate_output.py` | 評価者出力のスキーマ検証。`--json` フラグで機械可読な結果を出力（合議スキルの自動リトライが利用） |
 | `utils/render_report.py` | Story Report の視覚表示（10次元バーチャート・分類バッジ・次元間の対立）。`-o report.md` でMarkdown文書として保存、`--individuals` で全個別レポート表示 |
 | `utils/compare_reports.py` | リライト前後の差分比較（評価→リライトループ用） |
 

@@ -164,7 +164,7 @@ novel-council-layer/
 │   └── novel-sample/
 └── utils/
     ├── anonymize.py                   # 入力の匿名化（第一の盲検の前処理）
-    ├── validate_output.py             # 出力バリデーション
+    ├── validate_output.py             # 出力バリデーション（--json で機械可読。合議の自動リトライに利用）
     ├── render_report.py               # 視覚化（コンソール / Markdown）
     └── compare_reports.py             # 改訂前後の比較
 ```
@@ -245,6 +245,16 @@ Args: {"content": "...", "domain": "genre-fiction", "mode": "full"}
 Skill: story-council
 Args: {"content": "あらすじ...", "content_type": "plot", "domain": "genre-fiction", "mode": "full"}
 ```
+
+### 出力の検証と自動リトライ
+
+合議スキルは各評価者の出力を `utils/validate_output.py --json` で**決定的に検証**する。機械可読な結果（`{"valid": bool, "kind": str, "errors": [string]}`）を返すため、LLMによる目視検証（不正確）に頼らない。
+
+```bash
+python utils/validate_output.py --json output.json
+```
+
+不合格の場合は同じ評価者を**最大3回再起動**し（フィードバックにエラー内容を含める）、3回後も不合格なら `excluded_evaluators` に `"JSON validation failed after 3 retries"` として明示的に記録する。**サイレントドロップは禁止。**
 
 ---
 

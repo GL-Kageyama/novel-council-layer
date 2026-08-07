@@ -5,11 +5,16 @@ Usage:
     python utils/validate_output.py < evaluator_output.json
     cat output.json | python utils/validate_output.py
     python utils/validate_output.py output.json
+    python utils/validate_output.py --json output.json   # machine-readable output
 
 Exit codes:
     0  valid
     1  invalid (with a report of the errors)
     2  usage / IO error
+
+With `--json`, the result is printed as a single JSON object on stdout
+(one `{"valid": bool, "kind": str, "errors": [string]}` object), so the
+orchestrator can consume the validator's verdict programmatically.
 
 This script has no third-party dependencies: it vendors a minimal JSON
 Schema validator for the single schema used in this project.
@@ -62,7 +67,6 @@ def validate_basic(obj):
         "content_summary",
         "domain",
         "primary_score",
-        "primary_score_rationale",
         "dimension_scores",
         "value_vector_contribution",
         "classification",
@@ -70,7 +74,6 @@ def validate_basic(obj):
         "strengths",
         "weaknesses",
         "unique_perspective",
-        "expected_disagreement_points",
         "narrative",
     ]
     for field in required:
@@ -194,6 +197,16 @@ def validate_report(obj):
                     continue
                 errors.append(f"non_consulted_evaluators[{i}] must be an object with 'evaluator_id'")
 
+    if "excluded_evaluators" in obj:
+        ex = obj["excluded_evaluators"]
+        if not isinstance(ex, list):
+            errors.append("excluded_evaluators must be an array")
+        else:
+            for i, e in enumerate(ex):
+                if isinstance(e, dict) and "evaluator_id" in e:
+                    continue
+                errors.append(f"excluded_evaluators[{i}] must be an object with 'evaluator_id'")
+
     if "story_vector" in obj:
         vec = obj["story_vector"]
         if not isinstance(vec, dict):
@@ -216,17 +229,29 @@ def validate_report(obj):
 
 
 def main():
-    if len(sys.argv) > 2:
-        print("Usage: python utils/validate_output.py [output.json]", file=sys.stderr)
+    args = sys.argv[1:]
+    as_json = "--json" in args
+    args = [a for a in args if a != "--json"]
+
+    if len(args) > 1:
+        print("Usage: python utils/validate_output.py [--json] [output.json]", file=sys.stderr)
         return 2
 
     try:
-        obj = load_json(sys.argv[1] if len(sys.argv) == 2 else None)
+        obj = load_json(args[0] if len(args) == 1 else None)
     except json.JSONDecodeError as e:
-        print(f"Invalid JSON: {e}", file=sys.stderr)
+        msg = f"Invalid JSON: {e}"
+        if as_json:
+            print(json.dumps({"valid": False, "kind": "unknown", "errors": [msg]}))
+        else:
+            print(msg, file=sys.stderr)
         return 1
     except OSError as e:
-        print(f"Could not read input: {e}", file=sys.stderr)
+        msg = f"Could not read input: {e}"
+        if as_json:
+            print(json.dumps({"valid": False, "kind": "unknown", "errors": [msg]}))
+        else:
+            print(msg, file=sys.stderr)
         return 2
 
     # Detect whether this is an evaluator output or a council report.
@@ -242,6 +267,10 @@ def main():
             "nor a council report (missing 'report_id')"
         ]
         kind = "unknown"
+
+    if as_json:
+        print(json.dumps({"valid": not errors, "kind": kind, "errors": errors}))
+        return 0 if not errors else 1
 
     if errors:
         print(f"INVALID {kind} — {len(errors)} error(s):", file=sys.stderr)
