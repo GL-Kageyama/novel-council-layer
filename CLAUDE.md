@@ -133,6 +133,7 @@ python utils/anonymize.py input.txt --author "著者名" --title "作品名" > a
 - Sentimentality is penalized. The **aesthetic of restraint** — emotion strengthened by what is left unsaid — is evaluated.
 - The orchestrator does not dictate judgments to the evaluators. It only convenes and integrates.
 - The council does not render a verdict. The final value judgment is the responsibility of the human.
+- **i18n baseline**: multilingual support (en/ja/zh) is the default baseline for any fix or change. New or modified agent prompts, schemas, and report templates must resolve through the language mechanism (evaluator agents' `-ja`/`-zh` variants, locale JSON, mirror tree), and user-facing text must be produced in the run's language.
 
 ## Installation
 
