@@ -148,7 +148,7 @@ def validate_basic(obj):
         # Check the evaluator scored exactly its own dimension (a soft sanity check).
         expected_dim = {
             "narrative-originality": "narrative_originality",
-            "anti-generic-filter": "quality",
+            "anti-generic-story-filter": "quality",
             "emotional-power": "emotional_power",
             "plot-architecture": "plot_architecture",
             "character-depth": "character_depth",

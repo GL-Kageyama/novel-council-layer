@@ -7,6 +7,7 @@ run the council on v2, then compare.
 Usage:
     python utils/compare_reports.py before.json after.json
     python utils/compare_reports.py --before before.json --after after.json
+    python utils/compare_reports.py before.json after.json --lang ja
 
 Exit codes:
     0  compared (improvement or not — the report says which)
@@ -16,26 +17,24 @@ Exit codes:
 import json
 import sys
 
-DIMENSIONS = [
-    ("narrative_originality", "物語独創"),
-    ("quality", "品質"),
-    ("emotional_power", "感情の力"),
-    ("plot_architecture", "プロット構造"),
-    ("character_depth", "人物の深さ"),
-    ("prose_style", "文体"),
-    ("theme_resonance", "テーマ"),
-    ("world_building", "世界観"),
-    ("narrative_technique", "語りの技法"),
-    ("reader_experience", "読書体験"),
+from locale_loader import load_locale, resolve_lang, t
+
+DIMENSION_KEYS = [
+    "narrative_originality",
+    "quality",
+    "emotional_power",
+    "plot_architecture",
+    "character_depth",
+    "prose_style",
+    "theme_resonance",
+    "world_building",
+    "narrative_technique",
+    "reader_experience",
 ]
 
-CLASS_BADGE = {
-    "current_success": "🟢 Current Success",
-    "discovery_target": "🔍 Discovery Target",
-    "trend_object": "🔶 Trend Object",
-    "low_signal": "⚪ Low Signal",
-    "innovation": "⭐ Innovation",
-}
+DIMENSIONS = []   # filled from locale in main()
+CLASS_BADGE = {}  # filled from locale in main()
+L = {}            # active locale
 
 ARROWS = {"up": "▲", "down": "▼", "same": "—"}
 
@@ -54,12 +53,28 @@ def dim_mean(report, key):
 
 
 def main():
-    if len(sys.argv) == 3:
-        before_path, after_path = sys.argv[1], sys.argv[2]
-    elif len(sys.argv) == 5 and sys.argv[1] == "--before" and sys.argv[3] == "--after":
-        before_path, after_path = sys.argv[2], sys.argv[4]
+    # Extract --lang first (it may appear anywhere in argv).
+    argv = list(sys.argv[1:])
+    lang = None
+    if "--lang" in argv:
+        i = argv.index("--lang")
+        if i + 1 < len(argv):
+            lang = argv[i + 1]
+            del argv[i:i + 2]
+    if argv and argv[0] == "--lang":  # defensive; not reached normally
+        pass
+
+    global DIMENSIONS, CLASS_BADGE, L
+    L = load_locale(lang)
+    DIMENSIONS = [(k, L["dimensions"][k]) for k in DIMENSION_KEYS]
+    CLASS_BADGE = L["class_badges"]
+
+    if len(argv) == 2:
+        before_path, after_path = argv[0], argv[1]
+    elif len(argv) == 4 and argv[0] == "--before" and argv[2] == "--after":
+        before_path, after_path = argv[1], argv[3]
     else:
-        print("Usage: python utils/compare_reports.py before.json after.json", file=sys.stderr)
+        print("Usage: python utils/compare_reports.py before.json after.json [--lang en|ja|zh]", file=sys.stderr)
         return 1
 
     try:
@@ -69,17 +84,18 @@ def main():
         return 1
 
     print("┌──────────────────────────────────────────────────────┐")
-    print("│ 🔄 執筆 → 評価 → リライト ループの比較")
+    print(f"│ {t(L, 'compare', 'header_title')}")
     print("└──────────────────────────────────────────────────────┘")
 
-    print("\n  分類の変化:")
+    print(f"\n  {t(L, 'compare', 'classification_change')}")
     bcls = CLASS_BADGE.get(before.get("classification"), before.get("classification", "?"))
     acls = CLASS_BADGE.get(after.get("classification"), after.get("classification", "?"))
-    print(f"    before: {bcls}")
-    print(f"    after:  {acls}")
+    print(f"    {t(L, 'compare', 'before')}: {bcls}")
+    print(f"    {t(L, 'compare', 'after')}:  {acls}")
 
-    print("\n【次元別の改善】")
-    print(f"  {'次元':22s} {'before':>7s} {'after':>6s} {'Δ':>5s}")
+    print(f"\n{t(L, 'compare', 'dims_title')}")
+    cols = [c.strip() for c in t(L, "compare", "dims_cols").split("|")]
+    print(f"  {cols[0]:22s} {cols[1]:>7s} {cols[2]:>6s} {cols[3]:>5s}")
     total = 0
     counted = 0
     changed = []
@@ -100,23 +116,24 @@ def main():
             d_s = f"{delta:+3d}" if b is not None and a is not None else "   "
             print(f"  {jp + ' (' + key + ')':28s} {b_s:>5s} {a_s:>5s} {arrow}{d_s}")
         else:
-            print(f"  {jp + ' (' + key + ')':28s}   {'—' if b is None else b} -> {'—' if a is None else a}  (片側のみ)")
+            print(f"  {jp + ' (' + key + ')':28s}   {'—' if b is None else b} -> {'—' if a is None else a}  ({t(L, 'compare', 'one_sided')})")
 
     if counted:
         avg = total / counted
-        print(f"\n  平均変化（評価された{counted}次元）: {total:+d} / {counted} = {avg:+.1f}")
+        print(f"\n  {t(L, 'compare', 'average_change', count=counted, total=total, avg=avg)}")
 
-    print("\n【主な変化】")
+    print(f"\n{t(L, 'compare', 'main_changes_title')}")
     if not changed:
-        print("  有意な次元変化なし")
+        print(f"  {t(L, 'compare', 'no_significant_changes')}")
     else:
         changed_sorted = sorted(changed, key=lambda c: -abs(c[3]))
         for jp, b, a, d in changed_sorted[:6]:
             arrow = ARROWS["up"] if d > 0 else ARROWS["down"]
             print(f"  {arrow} {jp}: {b} → {a} ({d:+d})")
 
-    print("\n  ※ 全次元の生値は JSON を参照。平均だけで判断せず、分散と不一致も見ること。")
-    print("  ※ 書き手・編集者は individual_reports の weaknesses / improvement_suggestions を入力に使う。")
+    print()
+    print(t(L, "compare", "note_raw_values"))
+    print(t(L, "compare", "note_rewrite_input"))
     return 0
 
 

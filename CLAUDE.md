@@ -1,138 +1,140 @@
+**Language:** English | [日本語](CLAUDE-ja.md) | [中文](CLAUDE-zh.md)
+
 # Novel Council Layer
 
-## プロジェクトのアイデンティティ
+## Project Identity
 
-これは**小説評議会（Novel Council Layer）**である。複数のAI評価者エージェントが異なる物語の視点から小説を評価し、合議スキルによって構造化されたStory Reportを生成するClaude Codeエージェント群。
+This is the **Novel Council Layer**. It is a set of Claude Code agents in which multiple AI evaluator agents evaluate a novel from different narrative perspectives, and the council skill produces a structured Story Report.
 
-> **役割分担**: このレイヤーは**評価専用**である。作品の**執筆**は、書き手・編集者・生成AIに譲る。このリポジトリは「書く」ことではなく「物語の価値を見抜く」ことを担い、その評価結果を次回のリライトへ渡す材料として整える。
+> **Division of roles**: This layer is **evaluation only**. The **writing** of a work is left to the writer, the editor, and the generative AI. This repository does not "write"; it "sees through to the value of a narrative", and it prepares its evaluation results as material to be handed to the next rewrite.
 
-## 核となるテーゼ
+## The Core Thesis
 
-**物語は時間のなかで読まれる。** 小説はオブジェクトではなく、読者の内面で時間のなかに展開する体験である。評価の対象は「読まれる時間の質」であって、作品の属性ではない。
+**A story is read within time.** A novel is not an object; it is an experience that unfolds within time in the reader's mind. The object of evaluation is the "quality of the time spent reading", not the attributes of the work.
 
-物語評価に固有の7つの問い:
-1. **時間の質** —— この物語は読者の時間をどう使わせるか？
-2. **情報の配分** —— 何を、いつ、誰に明かすか？
-3. **語りの距離** —— 誰が語り、どの距離から語るか？
-4. **空白の設計** —— 読者が埋めるべき隙間は意図的に設計されているか？
-5. **文体と時間の一致** —— 文体は読む速度と感覚をコントロールしているか？
-6. **再読の深さ** —— 二度目に読むとき、同じ本は別の本になるか？
-7. **読後の変位** —— 読後、人生の何かが動いた感覚が残るか？
+The seven questions specific to narrative evaluation:
+1. **Quality of time** — How does this story put the reader's time to use?
+2. **Distribution of information** — What is revealed, when, and to whom?
+3. **Narrative distance** — Who narrates, and from what distance?
+4. **Design of gaps** — Are the gaps the reader must fill designed deliberately?
+5. **Alignment of style and time** — Does the prose style control the reading speed and sensation?
+6. **Depth of rereading** — When read a second time, does the same book become a different book?
+7. **Post-reading displacement** — After reading, does a sense that something in one's life has moved remain?
 
-## 核となる哲学
+## The Core Philosophy
 
-- **物語は時間の芸術**: 評価の対象は「読まれる時間の質」。
-- **多声的評価**: 異なる視点を持つ複数の評価者による合議。
-- **不一致こそシグナル**: 評価者間の対立は平均化せず、そのまま保存する。
-- **二重の盲検**: 入力（作者名・作品名）と基準（固有名詞）の両方から名声を遮断する。埋もれた名作の発見を守る前提。
-- **生成より評価**: 物語の価値を見抜くことが競争領域。
+- **A story is an art of time**: The object of evaluation is the "quality of the time spent reading".
+- **Polyphonic evaluation**: Deliberation by multiple evaluators holding different perspectives.
+- **Disagreement itself is a signal**: Conflicts among evaluators are not averaged away; they are preserved as they are.
+- **Double blinding**: Reputation is blocked from both the input (author name, title) and the criteria (proper nouns). The precondition that protects the discovery of buried masterpieces.
+- **Evaluation over generation**: Discerning the value of a narrative is the competitive arena.
 
-## ディレクトリ規約
+## Directory Conventions
 
-- `agents/{name}.md` — 評価者エージェントの正本（10体）。ペルソナベースの専門家として独立したサブエージェントで起動される
-- `skills/story-council/SKILL.md` — 合議オーケストレーターの正本（唯一のスキル）
-- `.claude/agents/` — プロジェクト内検出用symlink（評価者エージェント）
-- `.claude/skills/` — プロジェクト内検出用symlink（合議オーケストレーター）
-- `~/.claude/agents/`, `~/.claude/skills/` — グローバルインストール先（`./install.sh` で設定、どこからでも呼べる）
-- `.claude-plugin/` — プラグイン配布定義（`/plugin marketplace add` 用）
-- `schemas/` — 構造化出力のJSONスキーマ
-- `references/` — 物語評価の理論基盤（テーゼの系譜・構造的キャリブレーション・盲検・ベンチマーク）
-- `examples/` — サンプル入力と出力
-- `utils/` — 匿名化・バリデーション・視覚化・比較ユーティリティ
+- `agents/{name}.md` — the authoritative source of the evaluator agents (10). Launched as independent subagents acting as persona-based experts
+- `skills/story-council/SKILL.md` — the authoritative source of the council orchestrator (the only skill)
+- `.claude/agents/` — symlinks for in-project detection (evaluator agents)
+- `.claude/skills/` — symlinks for in-project detection (council orchestrator)
+- `~/.claude/agents/`, `~/.claude/skills/` — global installation targets (set up by `./install.sh`, callable from anywhere)
+- `.claude-plugin/` — plugin distribution definition (for `/plugin marketplace add`)
+- `schemas/` — JSON schemas for structured output
+- `references/` — the theoretical foundation of narrative evaluation (genealogy of the thesis, structural calibration, blinding, benchmarks)
+- `examples/` — sample inputs and outputs
+- `utils/` — anonymization, validation, visualization, and comparison utilities
 
-## 評価者の呼び出し方
+## How to Invoke the Evaluators
 
-**合議はスキル、評価者はサブエージェント**で呼び出す。この役割分担はアーキテクチャの要である——評価者は互いの結果を知らずに独立評価しなければならない。スキルは同じコンテキストを共有するため、独立評価には不向き。評価者をサブエージェントとして起動することで、コンテキストが隔離される。
+**The council is invoked as a skill, the evaluators as subagents.** This division of roles is the crux of the architecture — the evaluators must evaluate independently without knowing each other's results. A skill shares the same context and is therefore unsuited to independent evaluation. Launching the evaluators as subagents isolates the context.
 
-### 合議全体（推奨）
+### The Full Council (Recommended)
 
 ```
 Skill: story-council
 Args: {"content": "...", "content_type": "text", "domain": "pure-literature"}
 ```
 
-合議は以下を実行する:
-1. 入力の物語サブドメインを判定
-2. 関連する評価者エージェントを選択（anti-generic-filter は常に含める）
-3. 各評価者をサブエージェントとして起動（Agent tool経由、互いの結果を知らずに独立評価）
-4. Story Reportに統合
-5. すべての不一致を保存
+The council performs the following:
+1. Determines the narrative subdomain of the input
+2. Selects the relevant evaluator agents (`anti-generic-story-filter` is always included)
+3. Launches each evaluator as a subagent (via the Agent tool, evaluating independently without knowing each other's results)
+4. Integrates them into the Story Report
+5. Preserves all disagreements
 
-### プロット評価モード（あらすじでも評価できる）
+### Plot Evaluation Mode (a synopsis can also be evaluated)
 
-`content_type: "plot"` を指定すると、執筆前の構想・簡単なあらすじでも評価できる。散文・語り・読書体験が存在しないため、`prose-style`, `narrative-technique`, `reader-experience` の3体は未招集となり、残り7体（narrative-originality, anti-generic-filter, emotional-power, plot-architecture, character-depth, theme-resonance, world-building）で評価する。
+Specifying `content_type: "plot"` allows a pre-writing concept or a simple synopsis to be evaluated. Because there is no prose, narration, or reading experience, the three agents `prose-style`, `narrative-technique`, and `reader-experience` are not convened; evaluation is carried out by the remaining seven (narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, theme-resonance, world-building).
 
 ```
 Skill: story-council
 Args: {"content": "簡単なあらすじ...", "content_type": "plot", "domain": "genre-fiction"}
 ```
 
-### 単一評価者
+### Single Evaluator
 
-特定の視点だけを評価したい場合。評価者はサブエージェントとして起動する。
+For when you want to evaluate only a particular perspective. The evaluator is launched as a subagent.
 
 ```
 Agent tool, subagent_type: plot-architecture
 Prompt: {"content": "...", "content_type": "text", "domain": "genre-fiction"}
 ```
 
-インストール済みプラグインとして実行している場合は、プラグインスコープ名（`novel-council-layer:plot-architecture`）を使う。
+If running as an installed plugin, use the plugin-scoped name (`novel-council-layer:plot-architecture`).
 
-## 出力規約
+## Output Rules
 
-すべての評価者出力は `schemas/novel-value-output.schema.json` に準拠した有効なJSONでなければならない。
+Every evaluator output must be valid JSON conforming to `schemas/novel-value-output.schema.json`.
 
 ```bash
 python utils/validate_output.py < output.json
 python utils/validate_output.py --json output.json   # 機械可読な検証結果
 ```
 
-**自動リトライ**: 合議スキルは各評価者の出力を `validate_output.py --json` で**決定的に検証**し、不合格なら同じ評価者を**最大3回再起動**する（フィードバックにエラー内容を含める）。3回リトライ後も不合格なら `excluded_evaluators` に `reason: "JSON validation failed after 3 retries"` として明示的に記録する。**サイレントドロップ禁止。**
+**Automatic retry**: The council skill **deterministically validates** each evaluator's output with `validate_output.py --json`; if it fails, the same evaluator is **restarted up to 3 times** (the feedback includes the error details). If it still fails after 3 retries, it is explicitly recorded in `excluded_evaluators` as `reason: "JSON validation failed after 3 retries"`. **No silent drops.**
 
-**崩れたら再生成（機械修正禁止）**: 評価者出力のJSONが崩れている（`validate_output.py` が `"valid": false` を返した）場合、**手作業でJSONを直接編集して直してはならない**。必ずその評価者を**再起動して再生成**し、生成し直した出力で検証をやり直す。JSONを人がパッチすると評価者の独立した声（スコア・判断・文体・ナラティブ）を壊す恐れがあるため、崩れた出力への対処は「再生成」に一本化する。
+**If broken, regenerate (no machine fixing)**: If an evaluator's output JSON is broken (`validate_output.py` returned `"valid": false`), you **must not hand-edit the JSON directly to fix it**. Always **restart that evaluator to regenerate** and re-run validation on the regenerated output. Because a human patching the JSON risks destroying the evaluator's independent voice (scores, judgment, style, narrative), the handling of broken output is unified under "regenerate".
 
-**入力は匿名化する（第一の盲検）:**
+**Anonymize the input (the first blind):**
 
 ```bash
 python utils/anonymize.py input.txt --author "著者名" --title "作品名" > anonymized.txt
 ```
 
-## ツール群
+## Tools
 
-| ツール | 役割 |
+| Tool | Role |
 |--------|------|
-| `utils/anonymize.py` | **入力の匿名化**——作者名・作品名を除去し、盲検評価の前提を作る（第一の盲検） |
-| `utils/validate_output.py` | 評価者出力のスキーマ検証。`--json` フラグで機械可読な結果を出力（合議スキルの自動リトライが利用） |
-| `utils/render_report.py` | Story Report の視覚表示（10次元バーチャート・分類バッジ・次元間の対立）。`-o report.md` でMarkdown文書として保存、`--individuals` で全個別レポート表示 |
-| `utils/compare_reports.py` | リライト前後の差分比較（評価→リライトループ用） |
+| `utils/anonymize.py` | **Anonymizes the input** — removes the author name and title, establishing the precondition for blinded evaluation (the first blind) |
+| `utils/validate_output.py` | Schema validation of evaluator output. Outputs machine-readable results via the `--json` flag (used by the council skill's automatic retry) |
+| `utils/render_report.py` | Visual rendering of the Story Report (10-dimensional bar chart, category badges, conflicts between dimensions). Saves as a Markdown document with `-o report.md`, displays all individual reports with `--individuals` |
+| `utils/compare_reports.py` | Diff comparison before and after a rewrite (for the evaluation → rewrite loop) |
 
-## 評価出力は「入力」として設計されている
+## Evaluation Output Is Designed as "Input"
 
-**このレイヤーの評価結果は、それ自体が最終成果ではない。** 書き手・編集者・生成AIがリライトするための**入力**である。
+**The evaluation results of this layer are not themselves the final deliverable.** They are **input** for the writer, the editor, and the generative AI to rewrite with.
 
-- 合議は**リライト指示そのものを生成しない**。それは書き手・編集者・生成AIの責務。
-- 代わりに、`individual_reports` に各評価者の**生の素材**（`weaknesses`・`improvement_suggestions`・`expected_disagreement_points`・`narrative`）を完全に保存する。
-- フィールド名は固定・一貫（`schemas/novel-value-output.schema.json` 準拠）。
-- 合成ナラティブ（executive_summary等）は補助であり、生データを捨てない。
+- The council **does not generate rewrite instructions themselves**. That is the responsibility of the writer, the editor, and the generative AI.
+- Instead, it preserves in full, in `individual_reports`, the **raw material** of each evaluator (`weaknesses`, `improvement_suggestions`, `expected_disagreement_points`, `narrative`).
+- Field names are fixed and consistent (conforming to `schemas/novel-value-output.schema.json`).
+- Synthetic narratives (e.g. executive_summary) are auxiliary; raw data is never discarded.
 
-**評価 → リライトループ:**
+**Evaluation → rewrite loop:**
 ```
 評価 → revision_direction（次回の修正方向）→ リライト → 再評価
   → compare_reports.py で改善度確認 → 繰り返し
 ```
 
-## 重要原則
+## Key Principles
 
-- 評価者は自分の専門領域の次元だけをスコアする。専門外は `null` を返す。
-- **二重の盲検を徹底する**: 入力は匿名、基準は構造的。固有名詞（作家名・作品名）を評価の場から排除する。
-- 不一致を予測するのは評価者の義務である。
-- 評価は外交的であってはならない。率直さが価値。
-- スコアリングは**意図的に厳格**である。高得点は稀。**「読める」では50に届かない。**
-- 感傷は減点する。**抑制の美学**——語らないことで強まる感情——を評価する。
-- オーケストレーターは評価者に判断を指示しない。招集して統合するだけ。
-- 合議は判決を下さない。最終的な価値判断は人間の責任である。
+- An evaluator scores only the dimensions of its own specialty. It returns `null` outside its specialty.
+- **Enforce double blinding thoroughly**: the input is anonymous, the criteria are structural. Proper nouns (author names, titles) are excluded from the evaluation venue.
+- Predicting disagreement is the evaluator's duty.
+- Evaluation must not be diplomatic. Candor is the value.
+- Scoring is **deliberately strict**. High scores are rare. **"Readable" does not reach 50.**
+- Sentimentality is penalized. The **aesthetic of restraint** — emotion strengthened by what is left unsaid — is evaluated.
+- The orchestrator does not dictate judgments to the evaluators. It only convenes and integrates.
+- The council does not render a verdict. The final value judgment is the responsibility of the human.
 
-## インストール
+## Installation
 
 ```bash
 ./install.sh            # グローバル: ~/.claude/agents/ + ~/.claude/skills/（どこからでも呼べる）

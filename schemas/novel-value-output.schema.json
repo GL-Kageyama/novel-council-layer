@@ -190,7 +190,7 @@
         "properties": {
           "evaluator_type": {
             "type": "string",
-            "description": "Type of evaluator expected to disagree (e.g., 'plot-architecture', 'anti-generic-filter')."
+            "description": "Type of evaluator expected to disagree (e.g., 'plot-architecture', 'anti-generic-story-filter')."
           },
           "predicted_stance": {
             "type": "string",

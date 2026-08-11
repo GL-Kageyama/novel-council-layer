@@ -1,85 +1,87 @@
-# Examples — 小説サンプル
+**Language:** English | [日本語](README-ja.md) | [中文](README-zh.md)
 
-ジャンルごとに **執筆 → 評価 → リライト** のループを実演するサンプル集。
+# Examples — Novel Samples
 
-## フォルダ構成
+A collection of samples demonstrating the **write → evaluate → rewrite** loop for each genre.
 
-| フォルダ | ジャンル | 内容 |
+## Folder Structure
+
+| Folder | Genre | Contents |
 |----------|---------|------|
-| `novel-sample/` | サンプル小説 | 評価対象のテキスト + Story Report |
+| `novel-sample/` | Sample novel | Evaluation target text + Story Report |
 
-各サンプルフォルダには:
-- `input.md` — 評価対象の小説（匿名化前）
-- `input-anonymized.md` — `utils/anonymize.py` で匿名化した本文（評価入力）
-- `report-v1.json` — 初回評価（厳格スコア）
-- `report-v2.json` — リライト後の再評価（ループの改善を実演）
-- `report.md` — Markdown表示（GitHub / VSCodeプレビューで読める）
+Each sample folder contains:
+- `input.md` — the novel to be evaluated (before anonymization)
+- `input-anonymized.md` — the body text anonymized with `utils/anonymize.py` (evaluation input)
+- `report-v1.json` — initial evaluation (strict score)
+- `report-v2.json` — re-evaluation after rewrite (demonstrates the loop's improvement)
+- `report.md` — Markdown view (readable in GitHub / VSCode preview)
 
-## 使い方
+## Usage
 
-**入力の匿名化（第一の盲検）:**
+**Anonymizing input (first blind):**
 ```bash
 python ../utils/anonymize.py input.md --author "著者名" --title "作品名" > input-anonymized.md
 ```
 
-**評価を読む（Markdown化）:**
+**Reading evaluations (as Markdown):**
 ```bash
 python ../utils/render_report.py --format md novel-sample/report-v2.json
 ```
 
-**全評価者の個別レポートまで表示:**
+**Showing individual reports for all evaluators:**
 ```bash
 python ../utils/render_report.py --individuals novel-sample/report-v2.json
 ```
 
-**ループの改善を比較:**
+**Comparing the loop's improvement:**
 ```bash
 python ../utils/compare_reports.py novel-sample/report-v1.json novel-sample/report-v2.json
 ```
 
-**全サンプルの検証:**
+**Validating all samples:**
 ```bash
 for f in */report-*.json; do python3 ../utils/validate_output.py "$f"; done
 ```
 
-## 個別評価レポート（individual_reports）
+## Individual evaluation reports (individual_reports)
 
-各レポートの `individual_reports` には**招集した全評価者の生データ**（`weaknesses`・`improvement_suggestions`・`narrative`）が入る。これは**リライトの材料として読む入力**である。
+Each report's `individual_reports` contains the **raw data from all convened evaluators** (`weaknesses`・`improvement_suggestions`・`narrative`). This is input to be read as **material for rewriting**.
 
-## 短編小説サンプル（short-story/）
+## Short story sample (short-story/)
 
-`short-story/` は、あらすじ（plot）でなく**実際の短編小説（text）**のサンプルである。「最後の台詞」の設定を掌編（散文）として書いたもの。`content_type: text` のため、plotモードで未招集だった **prose-style・narrative-technique・reader-experience を含む全10体**で評価される。
+`short-story/` is a sample of an **actual short story (text)** rather than a synopsis (plot). It was written as a flash piece (prose) based on the "Last Line" premise. Because of `content_type: text`, it is evaluated by **all 10 evaluators, including prose-style, narrative-technique, and reader-experience**, which are not convened in plot mode.
 
-| ファイル | 内容 |
+| File | Contents |
 |---------|------|
-| `input.md` | 短編小説（v1→v2→v3） |
-| `report-v1.json` | 初回評価（現在価値68/潜在71） |
-| `report-v2.json` | ループ2（69/71、世界観+9） |
-| `report-v3.json` | ユーザー指摘の是正後（**69/72、テーマ+6・品質+4**） |
-| `report-v4.json` | 感覚的質感の追加（**70/72、文体+7**） |
-| `report-v5.json` | 中盤の韻律と「紙」の比喩の整理（文体70維持） |
-| `report-v6.json` | **最終稿**（冒頭の場景化・反復の刈り込み・鋳型の解消、**文体72**） |
-| `report.md` | v6（最終稿）のMarkdown表示 |
+| `input.md` | Short story (v1→v2→v3) |
+| `report-v1.json` | Initial evaluation (present value 68 / potential 71) |
+| `report-v2.json` | Loop 2 (69/71, worldview +9) |
+| `report-v3.json` | After correcting the user-noted issues (**69/72, theme +6, quality +4**) |
+| `report-v4.json` | Added sensory texture (**70/72, prose style +7**) |
+| `report-v5.json` | Tidied the mid-section prosody and the "paper" metaphor (prose style maintained at 70) |
+| `report-v6.json` | **Final draft** (opening scene-setting, trimming repetitions, removing the mold structure, **prose style 72**) |
+| `report.md` | v6 (final draft) Markdown view |
 
-**v3 はユーザー指摘の「ごめんなさい依存」を是正した版**: 謝罪の言葉に頼らず、応答を待つ言葉（「おかえり」→「ただいま」）で世界の規則（言葉は応答によって届く）を精確に体現する。謝罪（母）・別れ（娘）・帰還（老女/悠）の3つの語域を分離した。評価上、品質(54→62)とテーマ(78→83)が改善し、感傷の型と対称性の批判が解消された。
+**v3 is the revision that corrects the user-noted "sorry-dependence"**: instead of relying on words of apology, it precisely embodies the world rule (words are delivered through a response) with words that await a response ("welcome home" → "I'm home"). It separates the three registers of apology (mother), farewell (daughter), and return (old woman / Yū). In the evaluation, quality (54→62) and theme (78→83) improved, and the criticisms of the sentimental mold and the symmetry were resolved.
 
-**v4 は文体評価（59）の指摘に応え、感覚的質感を追加した版**: 汗ばんだ母の手を握り返さない一瞬、乾いて紙を重ねたような老女の手、指先に挟まれた紙一枚の言葉、薄くなって破れかけた帳面とインクの匂い。prose-styleは59→**70**。
+**v4 responds to the prose-style evaluation (59) by adding sensory texture**: the moment of not squeezing the sweaty mother's hand in return, the old woman's hand dry as if stacked paper, the words on a single slip of paper held between fingertips, the thin and nearly torn notebook and the smell of ink. prose-style went from 59 to **70**.
 
-**v6 は最終稿**: 冒頭を帳面を開く場景で開き、世界の規則を道具を通して感覚化。『切り崩す』『渡る』の商業レジスターで「費やす/届く」の反復を刈り込み、中盤の二つの出会いの鋳型を解消。文体は**72**に到達。v1からの改善: 文体+9・世界観+9・テーマ+6・品質+4（現在価値 68→70）。
+**v6 is the final draft**: it opens with a scene of opening the notebook, making the world rule felt through an object. Using the commercial register of "cutting through" and "crossing", it trims the repetition of "spend / reach" and removes the mold of the two mid-section encounters. Prose style reaches **72**. Improvement from v1: prose style +9, worldview +9, theme +6, quality +4 (present value 68→70).
 
-## 動作確認の注意（運用時）
+## Notes on verification (operational)
 
-`novel-sample/` は、story-council の **plotモード**（content_type: plot, mode: full）で3ループ評価した実例である:
+`novel-sample/` is a real example evaluated over 3 loops in story-council **plot mode** (content_type: plot, mode: full):
 
-| ファイル | 内容 |
+| File | Contents |
 |---------|------|
-| `input.md` | あらすじ（v1→v2→v3） |
-| `report-v1.json` | 初回評価（現在価値62/潜在65） |
-| `report-v2.json` | ループ2（65/66） |
-| `report-v3.json` | ループ3（**68/68**、+4.6平均改善） |
-| `report.md` | v3のMarkdown表示 |
+| `input.md` | Synopsis (v1→v2→v3) |
+| `report-v1.json` | Initial evaluation (present value 62 / potential 65) |
+| `report-v2.json` | Loop 2 (65/66) |
+| `report-v3.json` | Loop 3 (**68/68**, +4.6 average improvement) |
+| `report.md` | v3 Markdown view |
 
-**運用上の注意**:
-- 評価者エージェント（`agents/`）のネイティブ起動には、**Claude Codeの再起動（または `/agents`）が必要**。再起動前は、エージェントファイルのシステムプロンプトを読み込んで起動するフォールバック方式で運用できる。
-- プロットモードでは `prose-style`・`narrative-technique`・`reader-experience` の3体は未招集となり、Story Vectorで `null` になる（`non_consulted_evaluators` に記録）。
-- 3ループの改善推移から、評価→修正ループが機能することが確認できる。
+**Operational notes**:
+- **A restart of Claude Code (or `/agents`) is required** for the native launch of the evaluator agents (`agents/`). Before the restart, a fallback method that reads the system prompt from the agent files and launches from it can be used.
+- In plot mode, the three evaluators `prose-style`, `narrative-technique`, and `reader-experience` are not convened and become `null` in the Story Vector (recorded in `non_consulted_evaluators`).
+- From the improvement trend across the 3 loops, the evaluation → revision loop can be confirmed to work.

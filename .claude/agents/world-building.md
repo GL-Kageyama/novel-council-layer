@@ -1,1 +1,1 @@
-../../agents/world-building.md
+/Users/user/AI評価者たちによる「知恵の評議会」/novel-council-layer/agents/world-building.md

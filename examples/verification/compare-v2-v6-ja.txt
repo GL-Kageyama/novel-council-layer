@@ -1,0 +1,32 @@
+┌──────────────────────────────────────────────────────┐
+│ 🔄 執筆 → 評価 → リライト ループの比較
+└──────────────────────────────────────────────────────┘
+
+  分類の変化:
+    before: ⭐ Innovation（革新）
+    after:  ⭐ Innovation（革新）
+
+【次元別の改善】
+  次元                      before  after     Δ
+  物語独創 (narrative_originality)    56    52 ▼ -4
+  品質 (quality)                    54    62 ▲ +8
+  感情の力 (emotional_power)          79    80 ▲ +1
+  プロット構造 (plot_architecture)      70    70 — +0
+  人物の深さ (character_depth)         81    81 — +0
+  文体 (prose_style)                65    72 ▲ +7
+  テーマ (theme_resonance)           78    83 ▲ +5
+  世界観 (world_building)            67    67 — +0
+  語りの技法 (narrative_technique)     72    72 — +0
+  読書体験 (reader_experience)        74    74 — +0
+
+  平均変化（評価された10次元）: +17 / 10 = +1.7
+
+【主な変化】
+  ▲ 品質: 54 → 62 (+8)
+  ▲ 文体: 65 → 72 (+7)
+  ▲ テーマ: 78 → 83 (+5)
+  ▼ 物語独創: 56 → 52 (-4)
+  ▲ 感情の力: 79 → 80 (+1)
+
+  ※ 全次元の生値は JSON を参照。平均だけで判断せず、分散と不一致も見ること。
+  ※ 書き手・編集者は individual_reports の weaknesses / improvement_suggestions を入力に使う。

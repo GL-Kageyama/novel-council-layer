@@ -1,40 +1,42 @@
-# Blind Evaluation（二重の盲検）
+**Language:** English | [日本語](ja/blind-evaluation.md) | [中文](zh/blind-evaluation.md)
 
-評価が固有名詞——作家名・作品名の名声——に引っ張られないために、このレイヤーは**二重の盲検**で評価する。盲検（入力の匿名化）と、構造的キャリブレーション（基準からの固有名詞排除）である。
+# Blind Evaluation (Double-Blind)
 
-## なぜ盲検か：アンカリング・バイアスの認識
+To keep evaluation from being pulled by proper nouns — the fame of author names and work titles — this layer evaluates with **double-blinding**. It consists of blinding (anonymization of inputs) and structural calibration (removal of proper nouns from the criteria).
 
-人間もAIも、**名声へのアンカリング（固定観念）**を避けられない。これは単なる評価の歪みではない。**このプロジェクトの核心ミッション——埋もれた名作の発見——を直接損なう**危険である。名声にアンカーされた評価は、有名でない作品を過小評価し、有名な作品を過大評価する。それでは、発見すべき「埋もれた名作」を永遠に発見できない。
+## Why Blind Evaluation: Recognizing Anchoring Bias
 
-## 第一の盲検：入力の匿名化
+Neither humans nor AI can avoid **anchoring to fame (stereotyping)**. This is not merely a distortion of evaluation. It is a danger that **directly undermines this project's core mission — the discovery of buried masterpieces**. Evaluations anchored to fame underestimate unknown works and overestimate famous ones. That way, the "buried masterpieces" that should be discovered will never be discovered.
 
-> **評価は、本文のみに基づく。評価者は、作者名・作品名・文学史的評価を知らない状態で評価する。**
+## The First Blind: Anonymization of Inputs
 
-- **入力の匿名化**: 評価に入力する際、作者名・作品名を除去し、本文のみを渡す。
-- **実装**: `utils/anonymize.py` で事前処理する（`--author`・`--title` で対象を指定、`〔匿名〕` に置換）。合議オーケストレーター（story-council）は**匿名化済みテキストのみ**を評価者に渡す。
-- **評価者への情報制限**: ジャンルなど必要な文脈は渡すが、名声を誘導する情報は渡さない。
+> **Evaluation is based on the text alone. Evaluators evaluate without knowing the author name, work title, or literary-historical assessment.**
 
-## 第二の盲検：構造的キャリブレーション（評価基準からの固有名詞排除）
+- **Anonymization of inputs**: When feeding into evaluation, remove the author name and work title, and pass only the text.
+- **Implementation**: Preprocess with `utils/anonymize.py` (specify targets with `--author` and `--title`, replacing them with `〔匿名〕`). The council orchestrator (story-council) passes **only anonymized text** to the evaluators.
+- **Information restriction on evaluators**: Necessary context such as genre is provided, but information that induces fame is not.
 
-第一の盲検だけでは不十分である。もし評価基準が「○○のような作品」「××の水準」という固有名詞で書かれていれば、たとえ入力が匿名でも、**評価者の判断は固有名詞の名声に引っ張られる**。だから、評価基準そのものから固有名詞を排除する。
+## The Second Blind: Structural Calibration (Removal of Proper Nouns from Evaluation Criteria)
 
-> **評価の基準とキャリブレーションは、固有名詞（作家名・作品名）でなく、構造的な記述で定める。**
+The first blind alone is insufficient. If the evaluation criteria were written with proper nouns such as "works like ○○" or "the standard of ××," then even if the input is anonymized, **the evaluator's judgment would be pulled by the fame of those proper nouns**. Therefore, proper nouns are removed from the evaluation criteria themselves.
 
-詳細は `references/structural-calibration.md`。
+> **Evaluation criteria and calibration are defined by structural descriptions, not proper nouns (author names, work titles).**
 
-## 文体識別（スタイロメトリー）への対処
+See `references/structural-calibration.md` for details.
 
-匿名化は完全ではない——**文体そのものが作者を漏らす**ことがある。構造的キャリブレーションは、この残余のリスクにも部分的に対処する。評価者が文体の特徴を既知の作家と結びつけても、**判断基準が構造的であれば、評価は名声ではなく構造に向かう**。「この文体は有名作家のものだ」と認識しても、「この構造が価値ある時間を生むか」を問う。
+## Handling Stylistic Identification (Stylometry)
 
-## Meta Value Layerへの引き継ぎ
+Anonymization is not perfect — **the style itself can leak the author**. Structural calibration also partially addresses this residual risk. Even if an evaluator associates stylistic features with a known author, **as long as the judgment criteria are structural, the evaluation is directed toward structure, not fame**. Even when one recognizes "this style belongs to a famous author," the question asked is whether "this structure produces valuable time."
 
-盲検の徹底（匿名化の漏れ・コンテキストからの名声漏れ・評価基準への固有名詞の混入）は、Phase 4の**Meta Value Layer（Bias Detection）**で監視する。評価の偏りは、ベンチマークの不一致分析と評価者間の乖離で検出する。
+## Handover to the Meta Value Layer
 
-## 盲検のチェックリスト
+The rigor of blinding (leaks in anonymization, fame leaks from context, contamination of the evaluation criteria with proper nouns) is monitored in the **Meta Value Layer (Bias Detection)** of Phase 4. Evaluation bias is detected through inconsistency analysis of benchmarks and divergence between evaluators.
 
-評価を実施する前に、以下を確認する:
+## Blind Evaluation Checklist
 
-1. 入力テキストに作者名・作品名が残っていないか（`utils/anonymize.py` を実行したか）
-2. 評価者エージェントのプロンプト・キャリブレーションに固有名詞が混入していないか
-3. ジャンルなどの文脈情報が、名声を誘導する内容を含んでいないか
-4. 評価の結果と文学史的評価を照合していないか（照合は評価の**後**、ベンチマークでのみ行う）
+Before conducting an evaluation, confirm the following:
+
+1. Is there no author name or work title left in the input text (has `utils/anonymize.py` been run)?
+2. Is there no contamination of the evaluator agents' prompts/calibration with proper nouns?
+3. Does context information such as genre not contain content that induces fame?
+4. Is the evaluation result not being compared against literary-historical assessments (comparison is done only **after** evaluation, within benchmarks)?

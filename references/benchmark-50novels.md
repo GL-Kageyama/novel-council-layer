@@ -1,12 +1,14 @@
-# Blind Benchmark（50冊の盲検ベンチマーク）
+**Language:** English | [日本語](ja/benchmark-50novels.md) | [中文](zh/benchmark-50novels.md)
 
-本計画の最大の賭けは「このシステムは実際に物語の価値を見抜けるのか」。これを検証するため、**文学史の50冊**による**盲検ベンチマーク**を設計する。結果はこの文書に蓄積し、各評価者の厳しさの調整（キャリブレーション）に使う。
+# Blind Benchmark (50-Work Blind Benchmark)
 
-## 盲検の手順（二重の盲検の適用）
+This project's biggest bet is whether this system can actually see through to the value of a story. To verify this, we design a **blind benchmark** using **50 works from literary history**. Results will accumulate in this document and will be used to adjust (calibrate) each evaluator's strictness.
 
-1. 各作品の**冒頭＋要約**を、作者名・作品名を**除去した匿名テキスト**として入力する（第一の盲検）。`utils/anonymize.py` で前処理する。
-2. システムが10体の評価者で、**構造的基準**（第二の盲検）で評価し、分類を導出する。
-3. 評価が終わった**後**にのみ、文学史ラベル（ground truth）と照合して一致率を測定する。
+## Blind Procedure (Applying Double Blindness)
+
+1. Each work's **opening + summary** is input as **anonymized text with the author and work title removed** (the first blindness). Preprocess it with `utils/anonymize.py`.
+2. The system evaluates with 10 evaluators using **structural criteria** (the second blindness) and derives a classification.
+3. Only **after** the evaluation has concluded, match against the literary-history label (ground truth) and measure the agreement rate.
 
 ```
 入力: 「ある男が朝目覚めると、身体が別のものへ変容していた。家族は…」（匿名・構造的記述）
@@ -15,70 +17,70 @@
 一致: ✓
 ```
 
-※ もし作品名を入力に含めれば、システムは名声にアンカーして正解を類推し、**検証の意味が失われる**。盲検は検証の前提である。
+※ If the work title were included in the input, the system would anchor on reputation and infer the answer, and the **meaning of the validation would be lost**. Blindness is a prerequisite for validation.
 
-## 選定基準（4象限 × ジャンル）
+## Selection Criteria (4 Quadrants x Genre)
 
-| 分類 | 選定基準 |
+| Classification | Selection criteria |
 |------|---------|
-| **Discovery Target** | 生前は不遇・低評価だったが、後世に名作と再評価された作品群 |
-| **Innovation** | 発表当時から現在まで、一貫して評価されてきた作品群 |
-| **Current Success** | 同時代には高評価・ベストセラーだったが、後世に残らなかった作品群 |
-| **Low Signal** | 発表後、ほとんど読まれず評価もされなかった作品群 |
+| **Discovery Target** | Works that were unrecognized or underrated during their lifetimes but were re-evaluated as masterpieces by later generations |
+| **Innovation** | Works that have been consistently rated highly from the time of publication to the present |
+| **Current Success** | Works that were highly rated or bestsellers in their own time but did not survive into posterity |
+| **Low Signal** | Works that were barely read and little rated after publication |
 
-各作品に、文学史の定説に基づく**分類ラベル**（ground truth）を付与する。ラベルは複数の文学史・選集の記載から確認できるものに限る。ラベルは**照合時のみ**に使用する。
+Each work is assigned a **classification label** (ground truth) based on the consensus of literary history. Labels are limited to those confirmable from multiple literary histories and anthologies. Labels are used **only at the time of matching**.
 
-※ このラベルは人間の文学史的合意によって外部で付与されるものであり、システムの評価基準（構造的記述）には影響を与えない。
+※ This label is externally assigned by human literary-historical consensus and does not affect the system's evaluation criteria (structural description).
 
-## 一致判定と目標値
+## Agreement Determination and Target Value
 
-- システムの盲検分類と、文学史ラベルの**一致率**を測定する。
-- **目標値: 一致率 70%**（この達成を有料化の条件とする）。
+- Measure the **agreement rate** between the system's blind classification and the literary-history label.
+- **Target value: 70% agreement** (achieving this is a condition for monetization).
 
-### 「一致率70%」の操作的定義（検証可能にする）
+### Operational Definition of the "70% Agreement Rate" (Making It Verifiable)
 
-`一致率` を以下のとおり**操作的に定義**する:
+The **`agreement rate`** is defined **operationally** as follows:
 
-- **一致**: システムの盲検分類（Innovation / Discovery Target / Current Success / Low Signal）が、文学史ラベルと完全一致した場合。
-- **ボーダーケースの扱い**: 現在価値35-44のボーダー帯に分類された作品は、**不一致として数える**（確定的にラベルを出せない作品を「一致」に数えない。保守的な計数）。`borderline` の操作的定義: `current_value_score` が **35以上45未満**、または `hidden_potential_score` が **35以上45未満** の作品。
-- **分母**: 評価対象とした50作品すべて（除外なし）。
-- **報告**: `一致数 / 50` を一致率として記録し、この文書の蓄積テーブルに追記する。ボーダーケース数も併記する。
-- **再現性**: 50作品の**スプリットとシードを固定**し、複数回の実行で同じ結果が出ることを確認する。
+- **Match**: The system's blind classification (Innovation / Discovery Target / Current Success / Low Signal) exactly matches the literary-history label.
+- **Handling of border cases**: Works classified into the borderline band of current value 35-44 are **counted as mismatches** (works for which a definitive label cannot be given are not counted as "matches"; conservative counting). Operational definition of `borderline`: works whose `current_value_score` is **35 or more and less than 45**, or whose `hidden_potential_score` is **35 or more and less than 45**.
+- **Denominator**: All 50 works that were evaluated (no exclusions).
+- **Reporting**: Record `matches / 50` as the agreement rate and append it to the accumulation table in this document. Also record the number of border cases.
+- **Reproducibility**: **Fix the split and seed** for the 50 works and confirm that repeated runs produce the same results.
 
-この定義により、「70%」は曖昧な目標ではなく、追跡・再現可能な指標になる。
+With this definition, "70%" becomes not a vague goal but a trackable, reproducible metric.
 
-### 70%という目標値の根拠（ベースラインとの対比）
+### Rationale for the 70% Target (Contrast with a Baseline)
 
-「70%」は、**偶然の一致率（チャンスレベル）を超える判別力**を示すための閾値として設定する。
+"70%" is set as a threshold for demonstrating **discriminative power that exceeds the chance-level agreement rate**.
 
-- 4分類がほぼ均等分布なら、偶然の一致率は約25%。70%はその**約2.8倍**で、偶然ではまず到達しない水準。
-- ただし、文学史ラベルは人間の合意に基づくため、ラベル自体の揺れ（アノテーター間の不一致）を考慮し、**実測した偶然一致率・アノテーター間一致率（例: Cohen's kappa）も併記**する。
-- 目標値は暫定値であり、ベンチマーク実測後に再較正する（`references/scoring-strictness.md`）。この較正可能性そのものが設計の一部である。
+- If the four categories were roughly evenly distributed, the chance agreement rate would be about 25%. 70% is **about 2.8 times** that — a level that chance can hardly reach.
+- However, since literary-history labels are based on human consensus, and considering label fluctuation (inter-annotator disagreement), **also record the measured chance agreement rate and inter-annotator agreement rate (e.g., Cohen's kappa)**.
+- The target value is provisional and will be recalibrated after the benchmark is actually measured (`references/scoring-strictness.md`). This calibratability itself is part of the design.
 
-### 小サンプル（n）での分散推定への注意
+### Note on Variance Estimation with a Small Sample (n)
 
-プロット評価など評価者数が少ない場合（plotモードでは7体）、Story Vectorの分散は**小さなnでの推定になり、不安定になり得る**。
+When the number of evaluators is small, such as in plot evaluation (7 evaluators in plot mode), the variance of the Story Vector **becomes an estimate with a small n and can be unstable**.
 
-- 分散しきい値（100/400）の判定は、**評価者スコアが3つ以上ある次元**でのみ行う（`references/scoring-strictness.md` 参照）。
-- ベンチマークでは、一致率を報告する際に各作品の**評価者数（n）を併記**し、nが小さい（<4）場合の信頼性の限界を注記する。
+- The variance thresholds (100/400) are applied **only to dimensions with 3 or more evaluator scores** (see `references/scoring-strictness.md`).
+- In the benchmark, when reporting the agreement rate, **also record the number of evaluators (n) for each work**, and note the limits of reliability when n is small (<4).
 
-## 不一致の分析（キャリブレーションへの還元）
+## Analyzing Mismatches (Feeding Back into Calibration)
 
-- 一致率だけで判断しない。**不一致がどこで生じるか**が最も重要。
-- システムが Current Success と判定したが、文学史では Innovation だった作品 → 意味・感情の次元で何を見逃したかを分析。
-- システムが Discovery Target と判定したが、文学史では Low Signal だった作品 → 過剰な楽観のリスク。判断基準を厳格化。
-- 不一致の分析は、**アンカリング・バイアスの検出**にも使う。
-- ベンチマーク結果はこの文書に蓄積し、各評価者の厳しさの調整（Phase 2）に使う。
+- Do not judge by the agreement rate alone. **Where mismatches occur** is what matters most.
+- A work the system classified as Current Success but that is Innovation in literary history → analyze what was missed in the meaning and emotion dimensions.
+- A work the system classified as Discovery Target but that is Low Signal in literary history → risk of excessive optimism. Tighten the criteria.
+- Mismatch analysis is also used to **detect anchoring bias**.
+- Benchmark results will accumulate in this document and be used to adjust each evaluator's strictness (Phase 2).
 
-## 人間編集者との相関（補助的検証）
+## Correlation with Human Editors (Auxiliary Validation)
 
-- 可能なら、数冊の作品について人間の編集者・批評家の評価とシステムのスコアの相関を測定する。
-- これは「一致率」の補助であり、人間の判断をシステムが代替することを意図しない（合議は判決を下さない。判断は人間の責任）。
+- If possible, measure the correlation between human editors'/critics' evaluations and the system's scores for a few works.
+- This is auxiliary to the "agreement rate" and does not intend the system to replace human judgment (the council does not hand down verdicts; judgment remains human responsibility).
 
-## 結果の記録（蓄積テーブル）
+## Recording Results (Accumulation Table)
 
-| # | 匿名入力（冒頭＋要約） | システムの盲検分類 | 文学史ラベル | 一致 | 不一致の分析メモ |
+| # | Anonymized input (opening + summary) | System's blind classification | Literary-history label | Match | Mismatch analysis note |
 |---|----------------------|--------------------|-------------|:----:|-----------------|
-| 1 | （記録） | | | | |
+| 1 | (record) | | | | |
 
-※ 匿名性を保つため、ラベル照合は評価の**後**に記録する。
+※ To preserve anonymity, label matching is recorded **after** the evaluation.

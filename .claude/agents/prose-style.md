@@ -1,1 +1,1 @@
-../../agents/prose-style.md
+/Users/user/AI評価者たちによる「知恵の評議会」/novel-council-layer/agents/prose-style.md

@@ -1,96 +1,98 @@
+**Language:** English | [日本語](README-ja.md) | [中文](README-zh.md)
+
 # Novel Council Layer
 
-**小説評議会** —— 大量の物語の中から、本当に読む価値のある物語を見抜くための多エージェント価値評価レイヤー。
+**小説評議会 (Novel Council)** — a multi-agent value evaluation layer that picks out, from among a flood of stories, the stories truly worth reading.
 
-> **「作れること」から「見抜けること」へ。**
-
----
-
-## なぜ必要か
-
-生成AIは、あらゆるジャンルの小説を大量に生成できるようになった。Web小説・ラノベ・純文学・掌編・AI小説。生成のコストは限りなくゼロに近づいた。
-
-この時代に問われているのは、「どれだけ小説を書けるか」ではない。
-
-> **大量の物語の中から、本当に読む価値のある物語を見抜けるか。**
-
-平均的に整った小説は生成できる。しかし、真に価値ある物語は平均の中には存在しない。一見拙いが忘れられない物語。現時点では理解されないが、時代を超えて残る物語。既存の類型から意味ある形で逸脱した物語。読者の認識を変える物語。
-
-**Novel Council Layer** は、この「物語の価値を見抜く」ための基盤である。**知恵の評議会（Wisdom Council Layer）**の姉妹プロジェクトとして独立し、同じく「合議による多声的評価」の手法をとる。ただし判断基準は、物語という形式に固有のものを独自に持つ。
+> **From "creating" to "discerning."**
 
 ---
 
-## 核となるテーゼ：物語は時間のなかで読まれる
+## Why It Is Needed
 
-汎用の価値評価は、コンテンツを一つの「価値あるオブジェクト」として扱う。独創性、美、市場性、思想的深さ——これらは作品から切り出せる属性である。
+Generative AI can now mass-produce novels in every genre: web novels, light novels, pure literature, short-shorts, AI novels. The cost of generation has approached zero.
 
-しかし小説はオブジェクトではない。**小説は、読者の内面で時間のなかに展開する体験**である。同じ一冊でも、初読と再読では別の本になる。若い頃に読んだ本と老いて読んだ本は別の本になる。
+What this era demands is not "how many novels you can write."
 
-> **物語の価値は、それが読まれる時間のなかにある。**
+> **Whether you can discern, from among a flood of stories, the stories truly worth reading.**
 
-このテーゼから、物語評価に固有の**7つの問い**を立てる。
+You can generate novels that are well-formed on average. But truly valuable stories do not exist in the average. Stories that look clumsy at first glance yet are unforgettable. Stories not understood today yet that endure across the ages. Stories that deviate meaningfully from existing types. Stories that change the reader's perception.
 
-### 物語評価の7つの問い
-
-| # | 問い | 物語に固有の理由 |
-|---|------|-----------------|
-| 1 | **時間の質** —— この物語は、読者の時間をどう使わせるか？ | 物語は時間の芸術。ページをめくる手が止まるか、置いてしまうかが本質 |
-| 2 | **情報の配分** —— 何を、いつ、誰に明かすか？ | 物語の力は「何が語られるか」ではなく「何がいつ明かされるか」にある |
-| 3 | **語りの距離** —— 誰が語り、どの距離から語るか？ | 小説は「語り」の芸術。視点と距離が読者との関係を作る |
-| 4 | **空白の設計** —— 読者が埋めるべき隙間は意図的に設計されているか？ | 小説は読者との共同作業で完成する。書き手は語らないことで語る |
-| 5 | **文体と時間の一致** —— 文体は読む速度と感覚をコントロールしているか？ | 文体は読むリズムを決める |
-| 6 | **再読の深さ** —— 二度目に読むとき、同じ本は別の本になるか？ | 物語の価値は複利で蓄積する |
-| 7 | **読後の変位** —— 読後、人生の何かが動いた感覚が残るか？ | 物語の終わりは読後にはじまる |
-
-この7つの問いは、汎用の価値評価では答えられない。**「この物語は読者の時間をどう変えるか」**という問いこそ、Novel Council Layerが独自に立つ判断基準である。
+**Novel Council Layer** is the foundation for this act of "discerning a story's value." It stands independent as a sister project of the **Wisdom Council Layer**, adopting the same method of "multi-voiced evaluation by council." Its criteria, however, are its own, specific to the form of narrative.
 
 ---
 
-## 核となる哲学
+## Core Thesis: Stories Are Read in Time
 
-- **物語は時間の芸術**: 評価の対象は「読まれる時間の質」であって、作品の属性ではない。
-- **多声的評価**: 単一の審判者ではなく、異なる視点を持つ複数の評価者による合議。
-- **不一致こそシグナル**: 評価者間の対立は平均化せず、そのまま保存する。
-- **二重の盲検**: 入力（作者名・作品名）と基準（固有名詞）の両方から名声を遮断し、本文の構造のみで評価する。
-- **生成より評価**: 物語の価値を見抜くことが、このレイヤーの競争領域である。
+Generic value evaluation treats content as a single "valuable object." Originality, beauty, marketability, philosophical depth—these are attributes that can be cut out of a work.
 
-## 役割分担（このレイヤーの位置づけ）
+But a novel is not an object. **A novel is an experience that unfolds in time within the reader's inner self.** Even the same book becomes a different book on first and second reading. A book read in youth and a book read in old age are different books.
 
-> **このレイヤーは評価（Evaluation）のために存在する。作品の執筆（Generation）は、書き手・編集者・生成AIに譲る。**
+> **A story's value lies in the time in which it is read.**
 
-| 役割 | 担当 |
-|------|------|
-| **執筆（Generation）** | 書き手・編集者・生成AI（このレイヤーは**書かない**） |
-| **評価（Evaluation）** | このレイヤー。二重の盲検で本文のみを評価し、次回のリライトに渡す材料（`weaknesses`・`improvement_suggestions`）を整える |
+From this thesis we derive **seven questions** specific to narrative evaluation.
 
-評価結果は**最終成果ではない**。書き手・編集者・生成AIがリライトするための**入力**である。
+### The Seven Questions of Narrative Evaluation
 
----
+| # | Question | Why It Is Specific to Narrative |
+|---|----------|--------------------------------|
+| 1 | **Quality of Time** — How does this story use the reader's time? | Narrative is the art of time. Whether the hand stops turning pages or sets the book down is the essence |
+| 2 | **Distribution of Information** — What is revealed, when, and to whom? | A story's power lies not in "what is told" but in "what is revealed, and when" |
+| 3 | **Narrative Distance** — Who narrates, and from what distance? | The novel is the art of "telling." Point of view and distance create the relationship with the reader |
+| 4 | **Design of Gaps** — Are the gaps the reader must fill deliberately designed? | A novel is completed through collaboration with the reader. The writer speaks by not speaking |
+| 5 | **Alignment of Style and Time** — Does the prose control the pace and feel of reading? | Prose style sets the rhythm of reading |
+| 6 | **Depth of Rereading** — On a second reading, does the same book become a different book? | A story's value accrues with compound interest |
+| 7 | **Post-Reading Displacement** — After reading, does a sense remain that something in life has moved? | A story's ending begins after reading |
 
-## 二重の盲検：名声へのアンカリングを遮断する
-
-評価が固有名詞——作家名・作品名の名声——に引っ張られないために、このレイヤーは**二重の盲検**で評価する。これは単なる評価の歪みへの対策ではない。**埋もれた名作の発見という核心ミッション**を守るための前提である。
-
-### 第一の盲検：入力の匿名化
-
-> **評価は、本文のみに基づく。評価者は、作者名・作品名・文学史的評価を知らない状態で評価する。**
-
-`utils/anonymize.py` で作者名・作品名を除去し、本文のみを渡す。ジャンルなど必要な文脈は渡すが、名声を誘導する情報は渡さない。
-
-### 第二の盲検：構造的キャリブレーション
-
-> **評価の基準とキャリブレーションは、固有名詞でなく、構造的な記述で定める。**
-
-| | 固有名詞による基準（排除） | 構造的記述による基準（採用） |
-|---|--------------------------|------------------------------|
-| 例 | 「有名な変容の物語のような作品」 | 「登場人物の身体が別のものへ変容し、その変容が日常の細部として淡々と描かれることで、アイデンティティへの不安を生む構造」 |
-| 効果 | 名声の権威が評価へ移転する | パターンそのものが評価の対象になる |
-
-文体が作者を漏らしても（文体識別）、判断基準が構造的であれば、評価は名声ではなく構造に向かう。
+These seven questions cannot be answered by generic value evaluation. The question—**"How does this story change the reader's time?"**—is precisely the criterion on which Novel Council Layer stands alone.
 
 ---
 
-## アーキテクチャ
+## Core Philosophy
+
+- **Narrative is the art of time**: The object of evaluation is the "quality of the time read," not the attributes of the work.
+- **Multi-voiced evaluation**: A council of multiple evaluators holding different viewpoints, rather than a single judge.
+- **Disagreement is the signal**: Conflicts among evaluators are not averaged out but preserved as they are.
+- **Double blinding**: Cut off reputation from both the input (author name, work title) and the criteria (proper nouns), and evaluate only on the structure of the text.
+- **Evaluation over generation**: Discerning a story's value is this layer's competitive arena.
+
+## Division of Roles (Where This Layer Stands)
+
+> **This layer exists for Evaluation. The writing of works (Generation) is left to writers, editors, and generative AI.**
+
+| Role | Responsibility |
+|------|----------------|
+| **Writing (Generation)** | Writers, editors, generative AI (this layer does **not** write) |
+| **Evaluation** | This layer. With double blinding it evaluates only the text and prepares the material for the next rewrite (`weaknesses` / `improvement_suggestions`) |
+
+The evaluation result is **not a final deliverable**. It is **input** for writers, editors, and generative AI to rewrite.
+
+---
+
+## Double Blinding: Shielding Against Anchoring on Reputation
+
+To keep evaluation from being pulled by proper nouns—the reputations of authors and works—this layer evaluates with **double blinding**. This is not merely a countermeasure against distorted evaluation. It is the precondition for protecting the core mission: **the discovery of buried masterpieces**.
+
+### First Blinding: Anonymizing the Input
+
+> **Evaluation is based on the text alone. Evaluators assess without knowing the author's name, the work's title, or its standing in literary history.**
+
+`utils/anonymize.py` removes the author's name and the work's title, passing only the text. Necessary context such as genre is passed, but no information that would steer toward reputation is given.
+
+### Second Blinding: Structural Calibration
+
+> **The criteria and calibration of evaluation are defined not by proper nouns but by structural descriptions.**
+
+| | Criteria via proper nouns (excluded) | Criteria via structural description (adopted) |
+|---|--------------------------------------|----------------------------------------------|
+| Example | "A work like the famous transformation story" | "A structure in which a character's body transforms into something else, and the transformation is depicted flatly as an everyday detail, thereby generating anxiety about identity" |
+| Effect | The authority of reputation transfers to the evaluation | The pattern itself becomes the object of evaluation |
+
+Even if the prose style betrays the author (stylometry), as long as the criteria are structural, evaluation is directed at structure rather than reputation.
+
+---
+
+## Architecture
 
 ```
 小説（全文・冒頭＋要約・プロット）
@@ -99,7 +101,7 @@
         ↓
 ┌─────────────── 小説評議会 ───────────────┐
 │  narrative-originality  plot-architecture │
-│  anti-generic-filter    character-depth   │
+│  anti-generic-story-filter    character-depth   │
 │  emotional-power        prose-style       │
 │  theme-resonance        world-building    │
 │  narrative-technique    reader-experience │
@@ -115,13 +117,13 @@
   revision_direction（次回のリライト方向）
 ```
 
-### 役割分担（実装）
+### Division of Roles (Implementation)
 
-**評価者はエージェント、合議はスキル。** 評価者10体はペルソナベースの専門エージェント（`agents/{name}.md`）として独立したコンテキストで評価する。スキルは同じコンテキストを共有するため独立評価には不向きであり、サブエージェントとして起動することでコンテキストが隔離される。合議オーケストレーター（story-council）のみが唯一のスキルである。
+**Evaluators are agents; the council is a skill.** The ten evaluators are persona-based specialist agents (`agents/{name}.md`) that evaluate in independent contexts. A skill shares the same context and is therefore unsuited to independent evaluation; launching the evaluators as subagents isolates their contexts. The council orchestrator (story-council) is the only skill.
 
 ---
 
-## ディレクトリ構造
+## Directory Structure
 
 ```
 novel-council-layer/
@@ -135,7 +137,7 @@ novel-council-layer/
 │   └── plugin.json
 ├── agents/                            # 評価者エージェントの正本（10体）
 │   ├── narrative-originality.md
-│   ├── anti-generic-filter.md
+│   ├── anti-generic-story-filter.md
 │   ├── emotional-power.md
 │   ├── plot-architecture.md
 │   ├── character-depth.md
@@ -171,143 +173,143 @@ novel-council-layer/
 
 ---
 
-## 使い方
+## Usage
 
-### インストール
+### Installation
 
-**グローバル（どこからでも呼べる）:**
+**Global (callable from anywhere):**
 
 ```bash
 ./install.sh
 ```
 
-`~/.claude/agents/`（評価者エージェント）と `~/.claude/skills/`（合議スキル）にsymlinkが作成され、どのプロジェクトでも利用可能になる。
+Symlinks are created in `~/.claude/agents/` (evaluator agents) and `~/.claude/skills/` (council skill), making them available in any project.
 
-**プロジェクト限定:**
+**Project-scoped:**
 
 ```bash
 ./install.sh --local
 ```
 
-### 呼び出しの流れ（3段階）
+### The Call Flow (Three Levels)
 
-| レベル | 何を呼ぶ | 返るもの | 用途 |
-|--------|---------|----------|------|
-| **1** | 評価者を**1体** | 単一次元の評価JSON | 特定の視点だけ確認したい |
-| **2** | **合議（auto）** | 統合Story Report（3〜5次元） | ドメインに応じて効率的に総合評価 |
-| **3** | **合議（full）** | 全10次元が埋まった完全なStory Report | 最初から全員を一気に評価したい |
+| Level | What You Call | What It Returns | Use Case |
+|-------|---------------|-----------------|----------|
+| **1** | A **single** evaluator | A single-dimension evaluation JSON | To check only a specific viewpoint |
+| **2** | **Council (auto)** | An integrated Story Report (3–5 dimensions) | For an efficient overall assessment according to the domain |
+| **3** | **Council (full)** | A complete Story Report with all 10 dimensions filled | To have everyone evaluate at once from the start |
 
-#### レベル1：評価者を1体呼ぶ
+#### Level 1: Call a Single Evaluator
 
-評価者は**サブエージェント**として起動する。
+Evaluators are launched as **subagents**.
 
 ```
 Agent tool, subagent_type: plot-architecture
 Prompt: {"content": "...", "domain": "genre-fiction"}
 ```
 
-例：
-- プロットの設計だけ確認 → `plot-architecture`
-- AIらしさ（凡庸さ）をチェック → `anti-generic-filter`
-- 文体の質だけ確認 → `prose-style`
+Examples:
+- Check only the plot design → `plot-architecture`
+- Check for AI-likeness (mediocrity) → `anti-generic-story-filter`
+- Check only the quality of the prose → `prose-style`
 
-※ プラグインとして実行している場合はスコープ名（例: `novel-council-layer:plot-architecture`）、プロジェクト内では素の名前で起動する。
+Note: When running as a plugin, launch with the scope name (e.g. `novel-council-layer:plot-architecture`); inside the project, launch with the bare name.
 
-#### レベル2：合議を呼ぶ（推奨）
+#### Level 2: Call the Council (Recommended)
 
-複数の視点で総合評価したい場合。合議が物語サブドメインを判定し、評価者を独立評価させ、統合Story Reportを返す。
+For an overall assessment from multiple perspectives. The council determines the narrative subdomain, has evaluators assess independently, and returns an integrated Story Report.
 
 ```
 Skill: story-council
 Args: {"content": "...", "domain": "pure-literature"}
 ```
 
-#### レベル3：全評価者を一気に呼ぶ
+#### Level 3: Call All Evaluators at Once
 
 ```
 Skill: story-council
 Args: {"content": "...", "domain": "genre-fiction", "mode": "full"}
 ```
 
-### モード一覧
+### List of Modes
 
-合議（story-council）には以下のモードがある。起動時にも案内が表示される。
+The council (story-council) has the following modes. A guide is also shown at launch.
 
-| 項目 | 選択肢 | 説明 |
-|------|--------|------|
-| **入力形式** `content_type` | `text`（デフォルト）/ `plot` | `plot` は**あらすじ・構想でも評価可能**（7体で評価。prose-style・narrative-technique・reader-experience は未招集） |
-| **招集範囲** `mode` | `auto`（デフォルト）/ `full` | `auto` はドメインに応じ**3〜5体**、`full` は適用可能な**全員**（text: 10体 / plot: 7体） |
-| **反復** `iteration` | `confirm`（デフォルト）/ `persistent` | `confirm` は各ターンで修正方向を確認、`persistent` は方向を固定して磨き込み |
-| **ドメイン** `domain` | `pure-literature` / `genre-fiction` / `light-novel` / `short-story` / `historical-fiction` | 物語のサブドメイン。省略可（合議が判定） |
+| Item | Options | Description |
+|------|---------|-------------|
+| **Input format** `content_type` | `text` (default) / `plot` | `plot` also allows evaluating from an **outline or concept** (evaluated by 7. prose-style, narrative-technique, and reader-experience are not convened) |
+| **Convening scope** `mode` | `auto` (default) / `full` | `auto` convenes **3–5** evaluators according to the domain; `full` convenes **all** applicable ones (text: 10 / plot: 7) |
+| **Iteration** `iteration` | `confirm` (default) / `persistent` | `confirm` confirms the revision direction each turn; `persistent` fixes the direction and polishes |
+| **Domain** `domain` | `pure-literature` / `genre-fiction` / `light-novel` / `short-story` / `historical-fiction` | The story's subdomain. Optional (the council determines it) |
 
-**あらすじ評価の例（plotモード・全7体）:**
+**Example of evaluating an outline (plot mode, all 7):**
 ```
 Skill: story-council
 Args: {"content": "あらすじ...", "content_type": "plot", "domain": "genre-fiction", "mode": "full"}
 ```
 
-### 出力の検証と自動リトライ
+### Output Validation and Automatic Retry
 
-合議スキルは各評価者の出力を `utils/validate_output.py --json` で**決定的に検証**する。機械可読な結果（`{"valid": bool, "kind": str, "errors": [string]}`）を返すため、LLMによる目視検証（不正確）に頼らない。
+The council skill **deterministically validates** each evaluator's output with `utils/validate_output.py --json`. Because it returns machine-readable results (`{"valid": bool, "kind": str, "errors": [string]}`), it does not rely on visual LLM inspection (which is imprecise).
 
 ```bash
 python utils/validate_output.py --json output.json
 ```
 
-不合格の場合は同じ評価者を**最大3回再起動**し（フィードバックにエラー内容を含める）、3回後も不合格なら `excluded_evaluators` に `"JSON validation failed after 3 retries"` として明示的に記録する。**サイレントドロップは禁止。**
+If an output fails, the same evaluator is **restarted up to 3 times** (with the error content included in the feedback); if it still fails after 3 attempts, it is explicitly recorded in `excluded_evaluators` as `"JSON validation failed after 3 retries"`. **Silent drops are prohibited.**
 
 ---
 
-## 評価者一覧
+## List of Evaluators
 
-評価者10体は**サブエージェント**（`agents/{name}.md`）である。各評価者は自分の次元だけをスコアし、隣接する次元とは明確な境界を持つ。
+The ten evaluators are **subagents** (`agents/{name}.md`). Each scores only its own dimension and maintains a clear boundary from adjacent dimensions.
 
-| 評価者（エージェント名） | コア質問 | 次元 |
-|--------|----------|------|
-| Narrative Originality（`narrative-originality`） | 物語の**形式**が既存パターンから意味ある逸脱をしているか？ | narrative_originality |
-| Anti-Generic Filter（`anti-generic-filter`） | クリシェ・類型・予定調和に堕していないか？ | quality |
-| Emotional Power（`emotional-power`） | 読者の心を動かし、記憶に定着するか？ | emotional_power |
-| Plot Architecture（`plot-architecture`） | 因果と情報開示は巧みに設計されているか？ | plot_architecture |
-| Character Depth（`character-depth`） | 人物は生きた人間として立ち上がるか？ | character_depth |
-| Prose Style（`prose-style`） | 文体は言葉の音楽として機能するか？ | prose_style |
-| Theme Resonance（`theme-resonance`） | 主題は深く、一貫し、存在の問いに触れるか？ | theme_resonance |
-| World Building（`world-building`） | 舞台は創造的で、内的整合性を持つか？ | world_building |
-| Narrative Technique（`narrative-technique`） | 語りの距離と時間操作は物語を強化するか？ | narrative_technique |
-| Reader Experience（`reader-experience`） | 読む体験として没入し、完成し、再読を誘うか？ | reader_experience |
+| Evaluator (agent name) | Core Question | Dimension |
+|------------------------|---------------|-----------|
+| Narrative Originality（`narrative-originality`） | Does the story's **form** deviate meaningfully from existing patterns? | narrative_originality |
+| Anti-Generic Story Filter（`anti-generic-story-filter`） | Has it fallen into cliché, type, or predictable harmony? | quality |
+| Emotional Power（`emotional-power`） | Does it move the reader's heart and lodge in memory? | emotional_power |
+| Plot Architecture（`plot-architecture`） | Are causality and information disclosure skillfully designed? | plot_architecture |
+| Character Depth（`character-depth`） | Do the characters stand up as living people? | character_depth |
+| Prose Style（`prose-style`） | Does the prose function as music of words? | prose_style |
+| Theme Resonance（`theme-resonance`） | Is the theme deep, consistent, and touching on questions of existence? | theme_resonance |
+| World Building（`world-building`） | Is the setting creative and internally coherent? | world_building |
+| Narrative Technique（`narrative-technique`） | Do narrative distance and time manipulation strengthen the story? | narrative_technique |
+| Reader Experience（`reader-experience`） | As a reading experience, does it immerse, complete, and invite rereading? | reader_experience |
 
-### 合議オーケストレーター：story-council
+### Council Orchestrator: story-council
 
-物語サブドメインを判定し、評価者を招集・統合。不一致を保存したStory Reportを生成する唯一のスキル。
-
----
-
-## スコアリング：厳格基準（小説版）
-
-この評議会の目的は「良い小説を褒める」ことではなく**「読む価値のある物語を見抜く」**ことである。スコアリングは意図的に厳格である。
-
-| 帯 | 意味（小説での対応） | 頻度の期待値 |
-|----|----------------------|-------------|
-| 0-10 | 深刻な欠陥。物語として機能していない | 稀 |
-| 11-30 | 弱い。読者の時間を奪うだけ | 多め |
-| 31-50 | 無難・凡庸。読めるが、読まれた時間が何も変えなかった | **最大の人口分布** |
-| 51-70 | 真に良い。読んだ時間が価値のある体験だった | やや稀 |
-| 71-90 | 例外的。読後、人生の何かが動いた | 稀 |
-| 91-100 | 文学史に残る | ほぼ与えない |
-
-**小説固有の判断の鉄則**:
-1. **「読まれた時間」で判断する**。書き手の意図ではなく、読者の体験として「この時間は価値があったか」を問う。
-2. スコアを出す前に自問する: 「これは本当に50を超える読書体験か？読後、何かが残るか？」疑わしければ低く出す。**「読める」では50に届かない。**
-3. 凡庸さは低得点に落ちる。「読みやすくて無難なエンタメ」は20-40点圏。
-4. 感傷は減点する。**抑制の美学**——語らないことで強まる感情——を評価する。
-5. 意味と美は、説明ではなく**体験**で評価する。
-6. 入力は本文のみ（第一の盲検）。名声へのアンカリングは、評価の最大の歪みである。
-7. 基準は構造的（第二の盲検）。「有名な作品のようだ」ではなく「この構造が価値ある時間を生むか」を問う。
+Determines the narrative subdomain and convenes and integrates evaluators. The only skill that produces a Story Report that preserves disagreement.
 
 ---
 
-## 分類モデル
+## Scoring: Strict Criteria (Novel Edition)
 
-現在価値 × 潜在価値の2軸モデル。
+The purpose of this council is not "to praise good novels" but **"to discern stories worth reading."** Scoring is deliberately strict.
+
+| Band | Meaning (as applied to novels) | Expected frequency |
+|------|--------------------------------|--------------------|
+| 0-10 | Severe defect. Does not function as a story | Rare |
+| 11-30 | Weak. Merely takes the reader's time | Somewhat common |
+| 31-50 | Safe and mediocre. Readable, but the time spent reading changed nothing | **Largest share of the distribution** |
+| 51-70 | Truly good. The time spent reading was a valuable experience | Somewhat rare |
+| 71-90 | Exceptional. After reading, something in life has moved | Rare |
+| 91-100 | Earns a place in literary history | Almost never given |
+
+**Iron rules of judgment specific to novels:**
+1. **Judge by "time read."** Ask, as the reader's experience rather than the writer's intent, "Was this time worth it?"
+2. Before assigning a score, ask yourself: "Is this really a reading experience above 50? Does anything remain after reading?" When in doubt, score low. **"Readable" does not reach 50.**
+3. Mediocrity falls to a low score. "Easy-to-read, safe entertainment" sits in the 20-40 range.
+4. Sentimentality is penalized. Evaluate the **aesthetic of restraint**—emotion that grows stronger by not being said.
+5. Meaning and beauty are evaluated through **experience**, not explanation.
+6. The input is the text alone (first blinding). Anchoring on reputation is the greatest distortion of evaluation.
+7. The criteria are structural (second blinding). Ask not "Does it resemble a famous work?" but "Does this structure produce valuable time?"
+
+---
+
+## Classification Model
+
+A two-axis model of current value × potential value.
 
 ```
              Hidden Potential
@@ -317,20 +319,20 @@ python utils/validate_output.py --json output.json
    Low Signal        Current Success
 ```
 
-| 分類 | 物語での意味 |
-|------|-------------|
-| **Discovery Target** | 現在は埋もれているが、読者や時代の変化で価値が上昇する物語 |
-| **Innovation** | 現在も未来も価値が高い物語 |
-| **Current Success** | 現在読まれているが、潜在価値が低い物語 |
-| **Low Signal** | 現時点で価値の兆候がない物語 |
+| Classification | Meaning for Stories |
+|----------------|---------------------|
+| **Discovery Target** | Stories currently buried, whose value rises as readers or the era change |
+| **Innovation** | Stories of high value now and in the future |
+| **Current Success** | Stories read today but with low potential value |
+| **Low Signal** | Stories with no sign of value at present |
 
-※ 分類は本文の構造から導出し、文学史の固有名詞には依存しない。
+Note: The classification is derived from the structure of the text and does not depend on the proper nouns of literary history.
 
 ---
 
-## 評価 → リライト のループ
+## The Evaluation → Rewrite Loop
 
-このレイヤーの評価結果は**最終成果ではない**。書き手・編集者・生成AIがリライトするための**入力**である。
+The evaluation result of this layer is **not a final deliverable**. It is **input** for writers, editors, and generative AI to rewrite.
 
 ```
 ① 執筆（v1）
@@ -348,19 +350,19 @@ python utils/validate_output.py --json output.json
 ⑦ 目標に達するか頭打ちになるまで繰り返す
 ```
 
-各評価者の `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` は、リライトの具体的な指示の材料として保存される。
+Each evaluator's `weaknesses`, `improvement_suggestions`, and `expected_disagreement_points` are saved as material for concrete rewrite instructions.
 
 ---
 
-## 実績の検証：盲検ベンチマーク（50冊）
+## Verifying the Track Record: Blind Benchmark (50 Books)
 
-本計画の最大の賭けは「このシステムは実際に物語の価値を見抜けるのか」。これを検証するため、**文学史の50冊**による**盲検ベンチマーク**を設計する。
+The project's biggest bet is "can this system actually discern a story's value?" To verify this, we design a **blind benchmark** using **50 books from literary history**.
 
-### 手順（二重の盲検の適用）
+### Procedure (Applying Double Blinding)
 
-1. 各作品の**冒頭＋要約**を、作者名・作品名を**除去した匿名テキスト**として入力する（第一の盲検）
-2. システムが10体の評価者で、**構造的基準**（第二の盲検）で評価し、分類を導出する
-3. 評価が終わった**後**にのみ、文学史ラベル（ground truth）と照合して一致率を測定する
+1. Each work's **opening + summary** is entered as anonymized text with the **author's name and title removed** (first blinding)
+2. The system evaluates with the ten evaluators under **structural criteria** (second blinding) and derives a classification
+3. Only **after** evaluation concludes are the results matched against the literary-history labels (ground truth) to measure the agreement rate
 
 ```
 入力: 「ある男が朝目覚めると、身体が別のものへ変容していた。家族は…」（匿名・構造的記述）
@@ -369,42 +371,42 @@ python utils/validate_output.py --json output.json
 一致: ✓
 ```
 
-### 選定基準（4象限 × ジャンル）
+### Selection Criteria (4 Quadrants × Genre)
 
-| 分類 | 選定基準 |
-|------|---------|
-| **Discovery Target** | 生前は不遇・低評価だったが、後世に名作と再評価された作品群 |
-| **Innovation** | 発表当時から現在まで、一貫して評価されてきた作品群 |
-| **Current Success** | 同時代には高評価・ベストセラーだったが、後世に残らなかった作品群 |
-| **Low Signal** | 発表後、ほとんど読まれず評価もされなかった作品群 |
+| Classification | Selection Criteria |
+|----------------|--------------------|
+| **Discovery Target** | Works that were neglected or underrated in their lifetime but later re-evaluated as masterpieces |
+| **Innovation** | Works consistently evaluated highly from their release to the present |
+| **Current Success** | Works highly rated and bestsellers in their own time but that did not endure |
+| **Low Signal** | Works that, after release, were barely read and barely evaluated |
 
-### 目標値
+### Target Values
 
-- **一致率 70%**（この達成を有料化の条件とする）
-- 不一致がどこで生じるかを分析し、各評価者の厳しさの調整（キャリブレーション）に還元する
-
----
-
-## ロードマップ
-
-- **Phase 1**: Novel Evaluation Core — 評価者エージェント10体（構造的次元・重みで実装）+ 二重の盲検（anonymize + 構造的キャリブレーション）+ 合議スキル（story-council）+ Story Vector + Story Report
-- **Phase 2**: 盲検ベンチマーク（50冊を検証、一致率70%を目標）→ キャリブレーション調整。個人作家向け有料診断（フリーミアム）の開始
-- **Phase 3**: Debate Engine（評価者間の多ターン議論）＋ 投稿プラットフォームPoC（一致率65%・工数削減40%を目標）
-- **Phase 4**: Meta Value Layer（Bias Detection・Evaluation Critic——アンカリング・バイアスと固有名詞混入の監視含む）＋ 有料化（SaaS）
-- **Phase 5**: 長編モード（全文を章ごとに読む評価プロセス）
-
-詳細な仕様と設計は [novel-council-strategy.md](./novel-council-strategy.md) を参照。
+- **70% agreement** (achieving this is the condition for commercialization)
+- Analyze where disagreement occurs and feed it back into adjusting each evaluator's strictness (calibration)
 
 ---
 
-## ライセンス
+## Roadmap
+
+- **Phase 1**: Novel Evaluation Core — the ten evaluator agents (implemented with structural dimensions and weights) + double blinding (anonymize + structural calibration) + the council skill (story-council) + Story Vector + Story Report
+- **Phase 2**: Blind benchmark (verify 50 books, targeting 70% agreement) → calibration adjustment. Launch of paid diagnostics for individual writers (freemium)
+- **Phase 3**: Debate Engine (multi-turn debate among evaluators) + a submission-platform PoC (targeting 65% agreement and 40% labor savings)
+- **Phase 4**: Meta Value Layer (including Bias Detection and Evaluation Critic—monitoring anchoring bias and proper-noun leakage) + commercialization (SaaS)
+- **Phase 5**: Full-length mode (an evaluation process that reads the entire text chapter by chapter)
+
+See [novel-council-strategy.md](./novel-council-strategy.md) for detailed specifications and design.
+
+---
+
+## License
 
 MIT License — Copyright (c) 2026 GL-Kageyama
 
 ## Core Statement
 
-> 大量の物語のなかで、どれだけ価値ある物語を見抜けるか。
+> Among a flood of stories, how many valuable ones can you discern?
 
-Novel Council Layer は、そのための物語価値発見インフラである。
+Novel Council Layer is the narrative-value discovery infrastructure for that purpose.
 
-物語は、読者の時間のなかで生きる。見抜かれるべき価値も、その時間のなかにある。このレイヤーは、作品をオブジェクトとしてではなく、**誰かの人生のなかの時間として**評価する。作者名も作品名も伏せて、本文だけを読む。そして、その判断の基準にも、名声ではなく**構造**を置く。その時間が——ある一読者にとって、人生の一部になるような——意味と美と感情に触れるとき、それは見抜かれるべき価値である。
+A story lives within the reader's time. The value to be discerned lies in that time as well. This layer evaluates a work not as an object but as **time within someone's life**. It conceals both the author's name and the work's title and reads only the text. And at the heart of its judgment it places, not reputation, but **structure**. When that time touches meaning, beauty, and emotion—such that for some reader it becomes part of their life—that is value worth discerning.

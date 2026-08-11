@@ -10,13 +10,15 @@ Usage:
     python utils/anonymize.py input.txt --author "著者名" --title "作品名" > anonymized.txt
     cat input.txt | python utils/anonymize.py --author "名前A" --author "名前B"
     python utils/anonymize.py input.txt --author "名前" --report
+    python utils/anonymize.py input.txt --lang ja
 
 Options:
     --author NAME     Author name to redact (repeatable)
     --title TITLE     Work title to redact (repeatable)
     --name NAME       Any proper noun to redact (repeatable; generic alias)
-    --placeholder TEXT   Replacement text (default: 「〔匿名〕」)
+    --placeholder TEXT   Replacement text (default: locale-specific, e.g. 〔匿名〕 for ja)
     --report          Print a redaction summary to stderr
+    --lang LANG       UI language (en, ja, zh; default: NOVEL_COUNCIL_LANG or en)
     --help            Show this help
 
 The redaction is a plain string replacement over the whole text, including
@@ -25,8 +27,9 @@ enclosed in 《》 or 『』 brackets.
 """
 
 import argparse
-import io
 import sys
+
+from locale_loader import load_locale, t
 
 
 def read_input(path):
@@ -59,9 +62,14 @@ def main():
     parser.add_argument("--author", action="append", default=[], help="author name to redact (repeatable)")
     parser.add_argument("--title", action="append", default=[], help="work title to redact (repeatable)")
     parser.add_argument("--name", action="append", default=[], help="any proper noun to redact (repeatable)")
-    parser.add_argument("--placeholder", default="〔匿名〕", help="replacement text (default: 〔匿名〕)")
+    parser.add_argument("--placeholder", default=None, help="replacement text (default: locale-specific)")
     parser.add_argument("--report", action="store_true", help="print a redaction summary to stderr")
+    parser.add_argument("--lang", default=None, help="UI language (en, ja, zh; default: NOVEL_COUNCIL_LANG or en)")
     args = parser.parse_args()
+
+    L = load_locale(args.lang)
+    if args.placeholder is None:
+        args.placeholder = t(L, "anonymize", "placeholder_default")
 
     try:
         text = read_input(args.input)
@@ -73,10 +81,10 @@ def main():
 
     # Also redact bracketed forms of titles: 《title》 and 『title』
     bracketed = []
-    for t in args.title:
-        if t:
-            bracketed.append(f"《{t}》")
-            bracketed.append(f"『{t}』")
+    for title in args.title:
+        if title:
+            bracketed.append(f"《{title}》")
+            bracketed.append(f"『{title}』")
     names = names + bracketed
 
     redacted, counts = redact(text, names, args.placeholder)
@@ -85,8 +93,8 @@ def main():
         total = sum(counts.values())
         for name in args.author + args.title + args.name:
             if name:
-                print(f"  ✂ {counts.get(name, 0):3d}  {name}", file=sys.stderr)
-        print(f"  → {total} occurrence(s) redacted as {args.placeholder}", file=sys.stderr)
+                print(t(L, "anonymize", "redacted_line", count=counts.get(name, 0), name=name), file=sys.stderr)
+        print(t(L, "anonymize", "redacted_summary", total=total, placeholder=args.placeholder), file=sys.stderr)
 
     sys.stdout.write(redacted)
     return 0

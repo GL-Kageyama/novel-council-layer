@@ -1,0 +1,32 @@
+┌──────────────────────────────────────────────────────┐
+│ 🔄 写作 → 评估 → 重写 循环比较
+└──────────────────────────────────────────────────────┘
+
+  分类变化:
+    before: ⭐ Innovation（革新）
+    after:  ⭐ Innovation（革新）
+
+【分维度改善】
+  维度                      before  after     Δ
+  叙事原创性 (narrative_originality)    56    52 ▼ -4
+  品质 (quality)                    54    62 ▲ +8
+  情感力量 (emotional_power)          79    80 ▲ +1
+  情节结构 (plot_architecture)        70    70 — +0
+  人物深度 (character_depth)          81    81 — +0
+  文笔 (prose_style)                65    72 ▲ +7
+  主题 (theme_resonance)            78    83 ▲ +5
+  世界观 (world_building)            67    67 — +0
+  叙事技法 (narrative_technique)      72    72 — +0
+  阅读体验 (reader_experience)        74    74 — +0
+
+  平均变化（已评估的10个维度）: +17 / 10 = +1.7
+
+【主要变化】
+  ▲ 品质: 54 → 62 (+8)
+  ▲ 文笔: 65 → 72 (+7)
+  ▲ 主题: 78 → 83 (+5)
+  ▼ 叙事原创性: 56 → 52 (-4)
+  ▲ 情感力量: 79 → 80 (+1)
+
+  ※ 全部维度的原始值请参照 JSON。不要仅凭平均值判断，也要看方差和分歧。
+  ※ 写作者、编辑将 individual_reports 中的 weaknesses / improvement_suggestions 作为输入。

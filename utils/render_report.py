@@ -7,43 +7,43 @@ Usage:
     python utils/render_report.py < report.json
     python utils/render_report.py report.json
     python utils/render_report.py report.json -o report.md
+    python utils/render_report.py report.json --lang ja
 
 This is the presentation layer only. The machine contract is the JSON itself
 (evaluators: schemas/novel-value-output.schema.json; council: the Story Report
 structure in skills/story-council/SKILL.md). JSON stays the interchange
-format; this script makes it readable by humans.
+format; this script makes it readable by humans. The UI language is resolved
+by --lang / NOVEL_COUNCIL_LANG / en (default).
 """
 
 import json
 import sys
 
-DIMENSIONS = [
-    ("narrative_originality", "物語独創"),
-    ("quality", "品質"),
-    ("emotional_power", "感情の力"),
-    ("plot_architecture", "プロット構造"),
-    ("character_depth", "人物の深さ"),
-    ("prose_style", "文体"),
-    ("theme_resonance", "テーマ"),
-    ("world_building", "世界観"),
-    ("narrative_technique", "語りの技法"),
-    ("reader_experience", "読書体験"),
+from locale_loader import load_locale, resolve_lang, t
+
+DIMENSION_KEYS = [
+    "narrative_originality",
+    "quality",
+    "emotional_power",
+    "plot_architecture",
+    "character_depth",
+    "prose_style",
+    "theme_resonance",
+    "world_building",
+    "narrative_technique",
+    "reader_experience",
 ]
 
-CLASS_BADGE = {
-    "current_success": "🟢 Current Success（現在成功）",
-    "discovery_target": "🔍 Discovery Target（潜在価値）",
-    "trend_object": "🔶 Trend Object（一過性）",
-    "low_signal": "⚪ Low Signal（兆候なし）",
-    "innovation": "⭐ Innovation（革新）",
-}
+DIMENSIONS = []   # filled from locale in main()
+CLASS_BADGE = {}  # filled from locale in main()
+L = {}            # active locale
 
 BAR_WIDTH = 36
 LINE = "─" * 54
 
 EVAL_TO_DIM = {
     "narrative-originality": "narrative_originality",
-    "anti-generic-filter": "quality",
+    "anti-generic-story-filter": "quality",
     "emotional-power": "emotional_power",
     "plot-architecture": "plot_architecture",
     "character-depth": "character_depth",
@@ -89,8 +89,8 @@ def excluded_ids(obj):
 
 
 def render_story_vector(vector):
-    print("\n【Story Vector】多次元スコア（0-100、厳格スケール）")
-    print(f"  {'次元':16s} {'バー':<{BAR_WIDTH}} {'スコア'}")
+    print(f"\n{t(L, 'render', 'vector_header')}")
+    print(f"  {t(L, 'render', 'vector_cols'):16s} {t(L, 'render', 'vector_bar'):<{BAR_WIDTH}} {t(L, 'render', 'vector_score')}")
     any_scored = False
     for key, jp in DIMENSIONS:
         entry = (vector or {}).get(key)
@@ -111,11 +111,11 @@ def render_story_vector(vector):
             extra = f"  n={n} var={variance} {mark}"
         print(f"  {jp + ' (' + key + ')':24s} {bar(mean)} {f(mean)}{extra}")
     if not any_scored:
-        print("  （スコアされた次元がない）")
+        print(f"  {t(L, 'render', 'no_scored_dimensions')}")
 
 
 def render_disagreement(vector):
-    print("\n【不一致（Disagreement）】評価者が割れた次元 = 最も情報量の多い次元")
+    print(f"\n{t(L, 'render', 'disagreement_header')}")
     found = False
     for key, jp in DIMENSIONS:
         entry = (vector or {}).get(key)
@@ -126,10 +126,11 @@ def render_disagreement(vector):
         if variance is None or len(set(scores)) < 2:
             continue
         found = True
-        level = "⚠⚠ 深刻" if variance > 400 else ("⚠ 中程度" if variance >= 100 else "軽度")
+        level = t(L, "disagreement_levels", "severe") if variance > 400 else (
+            t(L, "disagreement_levels", "medium") if variance >= 100 else t(L, "disagreement_levels", "light"))
         print(f"  [{level}] {jp}({key}): スコア={scores}")
     if not found:
-        print("  有意な不一致なし（評価者は概ね一致している）")
+        print(f"  {t(L, 'disagreement_levels', 'none')}")
 
 
 def contrast_pairs(vector, excluded=(), limit=4):
@@ -159,43 +160,43 @@ def render_contrasts(vector, excluded=()):
     pairs = contrast_pairs(vector, excluded)
     if pairs:
         jp = {d[0]: d[1] for d in DIMENSIONS}
-        print("\n【次元間の対立（Contrast）】高スコア軸と低スコア軸の共存 = 価値の緊張関係")
+        print(f"\n{t(L, 'render', 'contrasts_header')}")
         for hk, hv, lk, lv in pairs:
             print(f"  ⚡ {jp[hk]}({hk}) {hv}  vs  {jp[lk]}({lk}) {lv}")
-        print("  → この対立は平均化せず、そのまま保存する")
+        print(f"  {t(L, 'render', 'contrasts_note')}")
 
 
 def render_council(obj, show_ind=False):
-    header("📖 Novel Council Story Report")
+    header(t(L, "render", "report_title"))
     badge = CLASS_BADGE.get(obj.get("classification"), obj.get("classification", "?"))
-    print(f"\n  分類: {badge}")
+    print(f"\n  {t(L, 'render', 'classification')} {badge}")
 
     current = obj.get("current_value_score")
     hidden = obj.get("hidden_potential_score")
     if current is not None or hidden is not None:
         cbar = bar(current)
         hbar = bar(hidden)
-        print(f"\n  現在価値: {f(current)}  {cbar}")
-        print(f"  潜在価値: {f(hidden)}  {hbar}")
+        print(f"\n  {t(L, 'render', 'current_value')} {f(current)}  {cbar}")
+        print(f"  {t(L, 'render', 'hidden_potential')} {f(hidden)}  {hbar}")
 
-    print(f"\n  【対象】 {obj.get('content_summary', '—')}")
-    print(f"  ドメイン: {obj.get('domain', '—')}  |  招集評価者: {len(obj.get('evaluators_consulted', []) or [])}体")
+    print(f"\n  {t(L, 'render', 'subject')} {obj.get('content_summary', '—')}")
+    print(f"  {t(L, 'render', 'domain_consulted', domain=obj.get('domain', '—'), count=len(obj.get('evaluators_consulted', []) or []))}")
 
     nc = obj.get("non_consulted_evaluators") or []
     if nc:
-        print("  ⏭️ 未招集（plotモード等）: 招集しなかった評価者")
+        print(f"  {t(L, 'render', 'non_consulted_title')}")
         for e in nc:
             eid = e.get("evaluator_id") if isinstance(e, dict) else e
             reason = e.get("reason", "") if isinstance(e, dict) else ""
-            print(f"    · {eid}: {reason or '次元が不適合'}")
+            print(f"    · {eid}: {reason or t(L, 'render', 'reason_fallback')}")
 
     excl = obj.get("excluded_evaluators") or []
     if excl:
-        print("  ⏭️ 除外（例外的機能）: 集計から除外した評価者")
+        print(f"  {t(L, 'render', 'excluded_title')}")
         for e in excl:
             eid = e.get("evaluator_id") if isinstance(e, dict) else e
             reason = e.get("reason", "") if isinstance(e, dict) else ""
-            print(f"    · {eid}: {reason or '次元が不適合'}")
+            print(f"    · {eid}: {reason or t(L, 'render', 'reason_fallback')}")
 
     vector = vector_of(obj)
     render_story_vector(vector)
@@ -203,58 +204,58 @@ def render_council(obj, show_ind=False):
     render_contrasts(vector, excluded_ids(obj))
 
     if obj.get("executive_summary"):
-        print(f"\n【総評】\n  {obj['executive_summary']}")
+        print(f"\n{t(L, 'render', 'executive_summary_title')}\n  {obj['executive_summary']}")
 
     if obj.get("consensus_summary"):
-        print(f"\n【一致点】\n  {obj['consensus_summary']}")
+        print(f"\n{t(L, 'render', 'consensus_title')}\n  {obj['consensus_summary']}")
 
     recs = obj.get("recommendations") or []
     if recs:
-        print("\n【推奨アクション】")
+        print(f"\n{t(L, 'render', 'recommendations_title')}")
         for i, r in enumerate(recs, 1):
             print(f"  {i}. {r}")
 
     rd = obj.get("revision_direction")
     if rd:
         mode = rd.get("iteration") or "confirm"
-        label = "逐次確認（confirm）" if mode == "confirm" else "方向固定（persistent）"
-        print(f"\n🔧 【次回の修正方向（revision_direction）】モード: {label}")
+        label = t(L, "iteration_labels", mode) if mode in ("confirm", "persistent") else mode
+        print(f"\n{t(L, 'render', 'revision_direction_title', mode=label)}")
         if rd.get("statement"):
-            print(f"  方向: {rd['statement']}")
+            print(f"  {t(L, 'render', 'direction')} {rd['statement']}")
         axis = rd.get("axis") or []
         if axis:
-            print(f"  上げる/変える: {', '.join(axis)}")
+            print(f"  {t(L, 'render', 'axis')} {', '.join(axis)}")
         keep = rd.get("preserve") or []
         if keep:
-            print(f"  維持すべき: {', '.join(keep)}")
+            print(f"  {t(L, 'render', 'preserve')} {', '.join(keep)}")
 
     caves = obj.get("caveats") or []
     if caves:
-        print("\n【注意点】")
+        print(f"\n{t(L, 'render', 'caveats_title')}")
         for c in caves:
             print(f"  · {c}")
 
     ind = obj.get("individual_reports") or []
     if ind:
         if show_ind:
-            print(f"\n【個別評価】{len(ind)}体")
+            print(f"\n{t(L, 'render', 'individuals_title', count=len(ind))}")
             for r in ind:
                 render_evaluator(r)
         else:
-            print(f"\n【個別評価】{len(ind)}体の詳細は JSON 側に保存（--individuals で全レポート表示）")
+            print(f"\n{t(L, 'render', 'individuals_hidden', count=len(ind))}")
 
 
 def render_evaluator(obj):
     header(f"🔎 {obj.get('evaluator_name', obj.get('evaluator_id', 'Evaluator'))}")
     badge = CLASS_BADGE.get(obj.get("classification"), obj.get("classification", "?"))
-    print(f"\n  分類: {badge}  |  信頼度: {f(obj.get('confidence'))}")
-    print(f"\n  総合スコア: {f(obj.get('primary_score'))}  {bar(obj.get('primary_score'))}")
+    print(f"\n  {t(L, 'render', 'evaluator_class_confidence', badge=badge, conf=f(obj.get('confidence')))}")
+    print(f"\n  {t(L, 'render', 'primary_score')} {f(obj.get('primary_score'))}  {bar(obj.get('primary_score'))}")
     if obj.get("primary_score_rationale"):
-        print(f"  理由: {obj['primary_score_rationale']}")
+        print(f"  {t(L, 'render', 'rationale')} {obj['primary_score_rationale']}")
 
     ds = obj.get("dimension_scores") or {}
     if ds:
-        print("\n【次元別】")
+        print(f"\n{t(L, 'render', 'dimensions_title')}")
         for name, d in ds.items():
             w = d.get("weight", 0)
             print(f"  {name:24s} {bar(d.get('score'))} {f(d.get('score'))}  (w={w})")
@@ -262,15 +263,15 @@ def render_evaluator(obj):
                 print(f"    ↳ {d['evidence']}")
 
     if obj.get("unique_perspective"):
-        print(f"\n【この評価者にしか見えないもの】\n  {obj['unique_perspective']}")
+        print(f"\n{t(L, 'render', 'unique_perspective_title')}\n  {obj['unique_perspective']}")
 
     if obj.get("expected_disagreement_points"):
-        print("\n【予測される不一致】")
+        print(f"\n{t(L, 'render', 'disagreement_points_title')}")
         for p in obj["expected_disagreement_points"]:
             print(f"  · {p.get('evaluator_type')}: {p.get('predicted_stance')}")
 
     if obj.get("narrative"):
-        print(f"\n【ナラティブ】\n  {obj['narrative']}")
+        print(f"\n{t(L, 'render', 'narrative_title')}\n  {obj['narrative']}")
 
 
 def md_bar(score, width=20):
@@ -287,55 +288,55 @@ def md_val(v):
 
 def render_council_md(obj, show_ind=False):
     """Readable Markdown report (suitable for .md files / GitHub preview)."""
-    L = []
-    L.append("# 📖 Novel Council Story Report")
-    L.append("")
-    L.append(f"> **分類**: {CLASS_BADGE.get(obj.get('classification'), obj.get('classification', '?'))}")
-    L.append("")
+    Lmd = []
+    Lmd.append("# 📖 Novel Council Story Report")
+    Lmd.append("")
+    Lmd.append(f"> **{t(L, 'render', 'classification')}** {CLASS_BADGE.get(obj.get('classification'), obj.get('classification', '?'))}")
+    Lmd.append("")
 
     # Summary table
-    L.append("## 📋 概要")
-    L.append("")
-    L.append("| 項目 | 値 |")
-    L.append("|------|-----|")
-    L.append(f"| 対象 | {obj.get('content_summary', '—')} |")
-    L.append(f"| ドメイン | {obj.get('domain', '—')} |")
-    L.append(f"| 招集評価者 | {len(obj.get('evaluators_consulted', []) or [])}体 |")
-    L.append(f"| 現在価値 | {md_val(obj.get('current_value_score'))} |")
-    L.append(f"| 潜在価値 | {md_val(obj.get('hidden_potential_score'))} |")
-    L.append("")
+    Lmd.append(t(L, "render", "md_summary_title"))
+    Lmd.append("")
+    Lmd.append(f"| {t(L, 'render', 'md_summary_col_item')} | {t(L, 'render', 'md_summary_col_value')} |")
+    Lmd.append("|------|-----|")
+    Lmd.append(f"| {t(L, 'render', 'md_subject')} | {obj.get('content_summary', '—')} |")
+    Lmd.append(f"| {t(L, 'render', 'md_domain')} | {obj.get('domain', '—')} |")
+    Lmd.append(f"| {t(L, 'render', 'md_consulted')} | {len(obj.get('evaluators_consulted', []) or [])} |")
+    Lmd.append(f"| {t(L, 'render', 'md_current')} | {md_val(obj.get('current_value_score'))} |")
+    Lmd.append(f"| {t(L, 'render', 'md_hidden')} | {md_val(obj.get('hidden_potential_score'))} |")
+    Lmd.append("")
 
     # Non-consulted evaluators (plot mode etc.)
     nc = obj.get("non_consulted_evaluators") or []
     if nc:
-        L.append("## ⏭️ 未招集の評価者（plotモード等）")
-        L.append("")
-        L.append("| 評価者 | 理由 |")
-        L.append("|--------|------|")
+        Lmd.append(t(L, "render", "md_non_consulted_title"))
+        Lmd.append("")
+        Lmd.append(f"| {t(L, 'render', 'md_col_evaluator')} | {t(L, 'render', 'md_col_reason')} |")
+        Lmd.append("|--------|------|")
         for e in nc:
             eid = e.get("evaluator_id") if isinstance(e, dict) else e
             reason = e.get("reason", "") if isinstance(e, dict) else ""
-            L.append(f"| `{eid}` | {reason or '次元が不適合'} |")
-        L.append("")
+            Lmd.append(f"| `{eid}` | {reason or t(L, 'render', 'reason_fallback')} |")
+        Lmd.append("")
 
     # Excluded evaluators
     excl = obj.get("excluded_evaluators") or []
     if excl:
-        L.append("## ⏭️ 除外した評価者（例外的機能）")
-        L.append("")
-        L.append("| 評価者 | 理由 |")
-        L.append("|--------|------|")
+        Lmd.append(t(L, "render", "md_excluded_title"))
+        Lmd.append("")
+        Lmd.append(f"| {t(L, 'render', 'md_col_evaluator')} | {t(L, 'render', 'md_col_reason')} |")
+        Lmd.append("|--------|------|")
         for e in excl:
             eid = e.get("evaluator_id") if isinstance(e, dict) else e
             reason = e.get("reason", "") if isinstance(e, dict) else ""
-            L.append(f"| `{eid}` | {reason or '次元が不適合'} |")
-        L.append("")
+            Lmd.append(f"| `{eid}` | {reason or t(L, 'render', 'reason_fallback')} |")
+        Lmd.append("")
 
     # Story vector
-    L.append("## 📊 Story Vector")
-    L.append("")
-    L.append("| 次元 | スコア | 分散 | バー |")
-    L.append("|------|:------:|:----:|------|")
+    Lmd.append(t(L, "render", "md_vector_title"))
+    Lmd.append("")
+    Lmd.append(f"| {t(L, 'render', 'md_vector_cols')} |")
+    Lmd.append("|------|:------:|:----:|------|")
     vec = vector_of(obj)
     any_scored = False
     for key, jp in DIMENSIONS:
@@ -353,14 +354,14 @@ def render_council_md(obj, show_ind=False):
         any_scored = True
         v = f"{variance}" if variance is not None else "—"
         n = f" (n={len(scores)})" if scores else ""
-        L.append(f"| {jp} (`{key}`) | {md_val(mean)} | {v}{n} | `{md_bar(mean)}` |")
+        Lmd.append(f"| {jp} (`{key}`) | {md_val(mean)} | {v}{n} | `{md_bar(mean)}` |")
     if not any_scored:
-        L.append("| — | — | — | スコアされた次元なし |")
-    L.append("")
+        Lmd.append(t(L, "render", "md_no_scored"))
+    Lmd.append("")
 
     # Disagreement
-    L.append("## 🔀 不一致（Disagreement）")
-    L.append("")
+    Lmd.append(t(L, "render", "md_disagreement_title"))
+    Lmd.append("")
     found = False
     for key, jp in DIMENSIONS:
         entry = vec.get(key)
@@ -371,130 +372,132 @@ def render_council_md(obj, show_ind=False):
         if variance is None or len(set(scores)) < 2:
             continue
         found = True
-        level = "⚠⚠ 深刻" if variance > 400 else ("⚠ 中程度" if variance >= 100 else "軽度")
-        L.append(f"- **[{level}]** {jp}（`{key}`）: スコア = {scores}")
+        level = t(L, "disagreement_levels", "severe") if variance > 400 else (
+            t(L, "disagreement_levels", "medium") if variance >= 100 else t(L, "disagreement_levels", "light"))
+        Lmd.append(f"- **[{level}]** {jp}（`{key}`）: スコア = {scores}")
     if not found:
-        L.append("- 有意な不一致なし（評価者は概ね一致）")
-    L.append("")
+        Lmd.append(t(L, "render", "md_disagreement_none"))
+    Lmd.append("")
 
     # Contrasts (skip excluded evaluators, show most striking)
     pairs = contrast_pairs(vec, excluded_ids(obj))
     if pairs:
-        L.append("## ⚡ 次元間の対立（Contrast）")
-        L.append("")
-        L.append("| 高スコア軸 | 低スコア軸 |")
-        L.append("|-----------|-----------|")
+        Lmd.append(t(L, "render", "md_contrasts_title"))
+        Lmd.append("")
+        Lmd.append(f"| {t(L, 'render', 'md_contrasts_cols')} |")
+        Lmd.append("|-----------|-----------|")
         idx = {d[0]: d[1] for d in DIMENSIONS}
         for hk, hv, lk, lv in pairs:
-            L.append(f"| {idx[hk]}（`{hk}`）{hv} | {idx[lk]}（`{lk}`）{lv} |")
-        L.append("")
-        L.append("> この対立は平均化せず保存する")
-        L.append("")
+            Lmd.append(f"| {idx[hk]}（`{hk}`）{hv} | {idx[lk]}（`{lk}`）{lv} |")
+        Lmd.append("")
+        Lmd.append(t(L, "render", "md_contrasts_note"))
+        Lmd.append("")
 
     if obj.get("executive_summary"):
-        L.append("## 📝 総評")
-        L.append("")
-        L.append(f"> {obj['executive_summary']}")
-        L.append("")
+        Lmd.append(t(L, "render", "md_executive_title"))
+        Lmd.append("")
+        Lmd.append(f"> {obj['executive_summary']}")
+        Lmd.append("")
 
     if obj.get("consensus_summary"):
-        L.append("## 🤝 一致点")
-        L.append("")
-        L.append(obj["consensus_summary"])
-        L.append("")
+        Lmd.append(t(L, "render", "md_consensus_title"))
+        Lmd.append("")
+        Lmd.append(obj["consensus_summary"])
+        Lmd.append("")
 
     recs = obj.get("recommendations") or []
     if recs:
-        L.append("## 🎯 推奨アクション")
-        L.append("")
+        Lmd.append(t(L, "render", "md_recommendations_title"))
+        Lmd.append("")
         for i, r in enumerate(recs, 1):
-            L.append(f"{i}. {r}")
-        L.append("")
+            Lmd.append(f"{i}. {r}")
+        Lmd.append("")
 
     rd = obj.get("revision_direction")
     if rd:
         mode = rd.get("iteration") or "confirm"
-        label = "逐次確認（confirm）" if mode == "confirm" else "方向固定（persistent）"
-        L.append(f"## 🔧 次回の修正方向（`{label}`）")
-        L.append("")
+        label = t(L, "iteration_labels", mode) if mode in ("confirm", "persistent") else mode
+        Lmd.append(t(L, "render", "md_revision_title", mode=label))
+        Lmd.append("")
         if rd.get("statement"):
-            L.append(f"> {rd['statement']}")
-            L.append("")
+            Lmd.append(f"> {rd['statement']}")
+            Lmd.append("")
         if rd.get("axis"):
-            L.append("**上げる／変える**:")
+            Lmd.append(t(L, "render", "md_axis"))
             for a in rd["axis"]:
-                L.append(f"- {a}")
-            L.append("")
+                Lmd.append(f"- {a}")
+            Lmd.append("")
         if rd.get("preserve"):
-            L.append("**維持すべき**:")
+            Lmd.append(t(L, "render", "md_preserve"))
             for p in rd["preserve"]:
-                L.append(f"- {p}")
-            L.append("")
+                Lmd.append(f"- {p}")
+            Lmd.append("")
 
     caves = obj.get("caveats") or []
     if caves:
-        L.append("## ⚠️ 注意点")
-        L.append("")
+        Lmd.append(t(L, "render", "md_caveats_title"))
+        Lmd.append("")
         for c in caves:
-            L.append(f"- {c}")
-        L.append("")
+            Lmd.append(f"- {c}")
+        Lmd.append("")
 
     ind = obj.get("individual_reports") or []
     if ind:
         if show_ind:
-            L.append("## 📄 個別評価（全レポート）")
-            L.append("")
+            Lmd.append(t(L, "render", "md_individuals_all_title"))
+            Lmd.append("")
             for r in ind:
-                L.append("")
-                L.append(render_evaluator_md(r))
+                Lmd.append("")
+                Lmd.append(render_evaluator_md(r))
         else:
-            L.append("## 📄 個別評価の素材")
-            L.append("")
-            L.append("書き手・編集者は、各評価者の `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` を入力に使う。生データは JSON（`individual_reports`）に保存。`--individuals` で全レポートを表示。")
-            L.append("")
+            Lmd.append(t(L, "render", "md_individuals_material_title"))
+            Lmd.append("")
+            Lmd.append(t(L, "render", "md_individuals_material_body"))
+            Lmd.append("")
 
-    return "\n".join(L)
+    return "\n".join(Lmd)
 
 
 def render_evaluator_md(obj):
-    L = []
-    L.append(f"# 🔎 {obj.get('evaluator_name', obj.get('evaluator_id', 'Evaluator'))}")
-    L.append("")
-    L.append(f"> **分類**: {CLASS_BADGE.get(obj.get('classification'), obj.get('classification', '?'))}  |  信頼度: {md_val(obj.get('confidence'))}")
-    L.append("")
-    L.append(f"**総合スコア**: {md_val(obj.get('primary_score'))}  `{md_bar(obj.get('primary_score'))}`")
+    Lmd = []
+    Lmd.append(f"# 🔎 {obj.get('evaluator_name', obj.get('evaluator_id', 'Evaluator'))}")
+    Lmd.append("")
+    badge = CLASS_BADGE.get(obj.get("classification"), obj.get("classification", "?"))
+    Lmd.append(f"> **{t(L, 'render', 'classification')}** {badge}  |  {t(L, 'render', 'confidence_label')}: {md_val(obj.get('confidence'))}")
+    Lmd.append("")
+    Lmd.append(f"**{t(L, 'render', 'primary_score')}** {md_val(obj.get('primary_score'))}  `{md_bar(obj.get('primary_score'))}`")
     if obj.get("primary_score_rationale"):
-        L.append("")
-        L.append(f"*{obj['primary_score_rationale']}*")
-    L.append("")
+        Lmd.append("")
+        Lmd.append(f"*{obj['primary_score_rationale']}*")
+    Lmd.append("")
     ds = obj.get("dimension_scores") or {}
     if ds:
-        L.append("## 次元別")
-        L.append("")
-        L.append("| 次元 | スコア | 重み |")
-        L.append("|------|:------:|:----:|")
+        Lmd.append(t(L, "render", "md_evaluator_dimensions_title"))
+        Lmd.append("")
+        Lmd.append(f"| {t(L, 'render', 'md_evaluator_dim_cols')} |")
+        Lmd.append("|------|:------:|:----:|")
         for name, d in ds.items():
-            L.append(f"| {name} | {md_val(d.get('score'))} | {d.get('weight', '—')} |")
+            Lmd.append(f"| {name} | {md_val(d.get('score'))} | {d.get('weight', '—')} |")
             if d.get("evidence"):
-                L.append(f"| ↳ {d['evidence']} | | |")
-        L.append("")
+                Lmd.append(f"| ↳ {d['evidence']} | | |")
+        Lmd.append("")
     if obj.get("unique_perspective"):
-        L.append(f"## 👁️ この評価者にしか見えないもの")
-        L.append("")
-        L.append(obj["unique_perspective"])
-        L.append("")
+        Lmd.append(t(L, "render", "md_evaluator_unique_title"))
+        Lmd.append("")
+        Lmd.append(obj["unique_perspective"])
+        Lmd.append("")
     if obj.get("expected_disagreement_points"):
-        L.append("## 🔮 予測される不一致")
-        L.append("")
+        Lmd.append(t(L, "render", "md_evaluator_disagreement_title"))
+        Lmd.append("")
         for p in obj["expected_disagreement_points"]:
-            L.append(f"- **{p.get('evaluator_type')}**: {p.get('predicted_stance')}")
-        L.append("")
+            Lmd.append(f"- **{p.get('evaluator_type')}**: {p.get('predicted_stance')}")
+        Lmd.append("")
     if obj.get("narrative"):
-        L.append("## 📖 ナラティブ")
-        L.append("")
-        L.append(obj["narrative"])
-        L.append("")
-    return "\n".join(L)
+        Lmd.append(t(L, "render", "md_evaluator_narrative_title"))
+        Lmd.append("")
+        Lmd.append(obj["narrative"])
+        Lmd.append("")
+    return "\n".join(Lmd)
 
 
 def main():
@@ -502,6 +505,7 @@ def main():
     out_format = "console"
     out_file = None
     show_ind = False
+    lang = None
     format_set = False
     positional = []
     i = 0
@@ -517,13 +521,22 @@ def main():
         elif a in ("--individuals", "--ind"):
             show_ind = True
             i += 1
+        elif a in ("--lang", "-l") and i + 1 < len(args):
+            lang = args[i + 1]
+            i += 2
         elif a in ("--help", "-h"):
-            print("Usage: python utils/render_report.py [--format console|md] [--output FILE] [--individuals] [report.json]",
+            print("Usage: python utils/render_report.py [--format console|md] [--output FILE] [--individuals] [--lang en|ja|zh] [report.json]",
                   file=sys.stderr)
             return 0
         else:
             positional.append(a)
             i += 1
+
+    # Activate locale (module globals used by the render functions).
+    global DIMENSIONS, CLASS_BADGE, L
+    L = load_locale(lang)
+    DIMENSIONS = [(k, L["dimensions"][k]) for k in DIMENSION_KEYS]
+    CLASS_BADGE = L["class_badges"]
 
     # Auto-detect Markdown output: -o report.md produces MD without --format.
     if not format_set and out_file and out_file.endswith(".md"):
@@ -562,7 +575,7 @@ def main():
     if out_file:
         with open(out_file, "w", encoding="utf-8") as f:
             f.write(text + "\n")
-        print(f"✓ wrote {out_file}")
+        print(t(L, "render", "wrote", path=out_file))
     else:
         print(text)
     return 0

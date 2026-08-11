@@ -1,1 +1,1 @@
-../../agents/plot-architecture.md
+/Users/user/AI評価者たちによる「知恵の評議会」/novel-council-layer/agents/plot-architecture.md

@@ -1,0 +1,32 @@
+┌──────────────────────────────────────────────────────┐
+│ 🔄 Write → Evaluate → Rewrite loop comparison
+└──────────────────────────────────────────────────────┘
+
+  Classification change:
+    before: ⭐ Innovation
+    after:  ⭐ Innovation
+
+Per-dimension improvement
+  dimension               before  after     Δ
+  Narrative Originality (narrative_originality)    56    52 ▼ -4
+  Quality (quality)               54    62 ▲ +8
+  Emotional Power (emotional_power)    79    80 ▲ +1
+  Plot Architecture (plot_architecture)    70    70 — +0
+  Character Depth (character_depth)    81    81 — +0
+  Prose Style (prose_style)       65    72 ▲ +7
+  Theme Resonance (theme_resonance)    78    83 ▲ +5
+  World Building (world_building)    67    67 — +0
+  Narrative Technique (narrative_technique)    72    72 — +0
+  Reader Experience (reader_experience)    74    74 — +0
+
+  Average change over 10 scored dimension(s): +17 / 10 = +1.7
+
+Main changes
+  ▲ Quality: 54 → 62 (+8)
+  ▲ Prose Style: 65 → 72 (+7)
+  ▲ Theme Resonance: 78 → 83 (+5)
+  ▼ Narrative Originality: 56 → 52 (-4)
+  ▲ Emotional Power: 79 → 80 (+1)
+
+※ See the JSON for raw values across all dimensions. Do not judge by the mean alone — also read variance and disagreement.
+※ Writers and editors consume `weaknesses` / `improvement_suggestions` from `individual_reports` as rewrite input.

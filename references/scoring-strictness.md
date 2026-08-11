@@ -1,53 +1,55 @@
-# Scoring Strictness（厳格スコアリング基準・小説版）
+**Language:** English | [日本語](ja/scoring-strictness.md) | [中文](zh/scoring-strictness.md)
 
-スコアリングは意図的に厳格である。**この評議会の目的は「良い小説を褒める」ことではなく「読む価値のある物語を見抜く」こと**だからだ。判別力はスコアの相対差にあり、絶対スコアの低さは「評価が低い」のではなく「凡庸・無難」を意味する。
+# Scoring Strictness (Strict Scoring Standards, Novel Edition)
 
-## 共通スコア帯
+Scoring is deliberately strict **because the purpose of this council is not to "praise good novels" but to "see through to stories worth reading."** Discriminative power lies in the relative differences between scores; a low absolute score does not mean "poorly rated" but "mediocre and safe."
 
-| 帯 | 意味（小説での対応） | 頻度の期待値 |
-|----|----------------------|-------------|
-| 0-10 | 深刻な欠陥。物語として機能していない | 稀 |
-| 11-30 | 弱い。読者の時間を奪うだけ | 多め |
-| 31-50 | 無難・凡庸。読めるが、読まれた時間が何も変えなかった | **最大の人口分布** |
-| 51-70 | 真に良い。読んだ時間が価値のある体験だった | やや稀 |
-| 71-90 | 例外的。読後、人生の何かが動いた | 稀 |
-| 91-100 | 文学史に残る | ほぼ与えない |
+## Common Score Bands
 
-## 小説固有の判断の鉄則
+| Band | Meaning (in novels) | Expected frequency |
+|------|--------------------|--------------------|
+| 0-10 | Serious defect. Does not function as a story | Rare |
+| 11-30 | Weak. Merely steals the reader's time | Somewhat common |
+| 31-50 | Safe and mediocre. Readable, but the time spent reading changed nothing | **Largest population** |
+| 51-70 | Truly good. The time spent reading was a valuable experience | Somewhat rare |
+| 71-90 | Exceptional. Something in one's life moved after reading | Rare |
+| 91-100 | Will remain in literary history | Almost never given |
 
-1. **「読まれた時間」で判断する**。書き手の意図ではなく、読者の体験として「この時間は価値があったか」を問う。
-2. **スコアを出す前に自問する**: 「これは本当に50を超える読書体験か？読後、何かが残るか？」疑わしければ低く出す。**「読める」では50に届かない。**
-3. **凡庸さは低得点に落ちる**。「読みやすくて無難なエンタメ」は20-40点圏。
-4. **感傷は減点する**。型通りの感動は真の感情体験ではない。**抑制の美学**——語らないことで強まる感情——を評価する。
-5. **意味と美は、説明ではなく体験で評価する**。「深いテーマを語っている」ではなく、「読後の変位・再読の深さ・感覚的質感」という体験として評価する。
-6. **入力は本文のみ（第一の盲検）**。作者名・作品名・文学史的評価を知らない状態で評価する。名声へのアンカリングは、評価の最大の歪みである。
-7. **基準は構造的（第二の盲検）**。固有名詞でなく、構造的記述で判断する。詳細は `references/structural-calibration.md`。「有名な作品のようだ」ではなく「この構造が価値ある時間を生むか」を問う。
+## Iron Rules of Novel-Specific Judgment
 
-## キャリブレーション基準点（構造的）
+1. **Judge by "the time spent reading."** Ask not about the writer's intent, but whether "this time was worth it" as the reader's experience.
+2. **Ask yourself before scoring**: "Is this really a reading experience above 50? Does anything remain after reading?" When in doubt, score low. **"Readable" does not reach 50.**
+3. **Mediocrity falls to low scores.** "Easy-to-read, safe entertainment" lands in the 20-40 range.
+4. **Deduct points for sentimentality.** Formulaic emotion is not a genuine emotional experience. Appreciate the **aesthetics of restraint** — emotion that grows stronger through what is left unsaid.
+5. **Evaluate meaning and beauty by experience, not by explanation.** Rather than "it discusses a deep theme," evaluate it as an experience: "the displacement after reading, the depth of rereading, sensory texture."
+6. **The input is the text alone (the first blind).** Evaluate without knowing the author's name, the work's title, or its standing in literary history. Anchoring to reputation is the greatest distortion in evaluation.
+7. **The criteria are structural (the second blind).** Judge by structural description, not proper nouns. Details in `references/structural-calibration.md`. Ask not "does it resemble a famous work" but "does this structure produce valuable time."
 
-| 基準点 | 想定スコア | 理由 |
-|--------|-----------|------|
-| 読みやすいが何も残らない作品 | 20-40 | 読まれた時間が何も変えなかった |
-| 一つの優れた場面がある作品 | 45-60 | 部分的に真価がある |
-| 構成・文体・テーマ・人物が揃った完成作 | 65-85 | 真の読書体験 |
-| 読後、人生の一部になる作品 | 85-95 | 稀有な価値。結末が冒頭を再文脈化し、再読が別の物語を開く水準 |
+## Calibration Reference Points (Structural)
 
-## 分散と不一致の扱い
+| Reference point | Assumed score | Reason |
+|-----------------|---------------|--------|
+| A readable work that leaves nothing behind | 20-40 | The time spent reading changed nothing |
+| A work with one excellent scene | 45-60 | Partially genuine value |
+| A completed work with structure, style, theme, and characters in place | 65-85 | A true reading experience |
+| A work that becomes part of one's life after reading | 85-95 | Rare value. The ending recontextualizes the opening; rereading opens a different story |
 
-- スコアは **0〜100の整数スケール**（`schemas/novel-value-output.schema.json` 準拠）。
-- 平均だけで判断せず、**分散と不一致**も見る（1次元が突出しても全体は変わらないことがある）。
-- 不一致はノイズではなくシグナル。`disagreement_map` に逐語で保存する（`references/revision-loop.md` 参照）。
-- 欠損次元（plotモードの未招集）は分散計算から除外する。
+## Handling Variance and Disagreement
 
-### 小サンプル（n）での分散推定への注意
+- Scores are on a **0〜100 integer scale** (conforming to `schemas/novel-value-output.schema.json`).
+- Do not judge by the mean alone; also look at **variance and disagreement** (a single dimension may spike without changing the whole).
+- Disagreement is signal, not noise. Save it verbatim in `disagreement_map` (see `references/revision-loop.md`).
+- Missing dimensions (unsummoned in plot mode) are excluded from the variance calculation.
 
-プロット評価など評価者数が少ない場合（plotモードでは7体）、分散は**小さなnでの推定になり、不安定になり得る**。特に n=3 前後では**外れ値1つでしきい値判定が反転**しうる。
+### Note on Variance Estimation with Small Samples (n)
 
-- 分散しきい値（100/400）の判定は、**評価者スコアが3つ以上ある次元**でのみ行う。
-- **n < 4 の次元では、分散しきい値は「確定分類」に使わない。** しきい値は **Phase 4（不一致の逐語レビュー）を起動する信号**として扱い、`disagreement_map` に不一致を保存する。**n ≥ 4 になった次元でのみ**、分散を分類判定に用いる。
-- n=3〜4の次元では、分散の値そのものより、**スコアの範囲（min-max）と不一致の内容**を重視する。
-- 平均・分散・範囲を報告するときは、**n（評価者数）を常に併記**する（合議のStory Vectorの `scores` 配列がnを保持する）。
+When the number of evaluators is small, such as in plot evaluation (7 in plot mode), the variance is **an estimate at small n and can be unstable**. Especially around n=3, **a single outlier can flip the threshold judgment**.
 
-## 閾値の位置づけ
+- The variance threshold (100/400) judgment is performed **only on dimensions with 3 or more evaluator scores**.
+- **On dimensions with n < 4, do not use the variance threshold for "definitive classification."** Treat the threshold as **a signal that launches Phase 4 (verbatim review of disagreement)**, and save the disagreement to `disagreement_map`. **Only on dimensions that reach n ≥ 4** is the variance used for classification judgment.
+- On dimensions with n=3〜4, place more weight on **the range of scores (min-max) and the content of the disagreement** than on the variance value itself.
+- When reporting the mean, variance, and range, **always state n (the number of evaluators)** (the `scores` array of the council's Story Vector holds n).
 
-しきい値（現在価値45、潜在価値45等）は**相対的な目安**であり、Meta Value Layer（Phase 4）で実データ（`references/benchmark-50novels.md`）に基づき再調整する。
+## Status of Thresholds
+
+Thresholds (current value 45, potential value 45, etc.) are **relative guidelines**, and are readjusted in the Meta Value Layer (Phase 4) based on actual data (`references/benchmark-50novels.md`).

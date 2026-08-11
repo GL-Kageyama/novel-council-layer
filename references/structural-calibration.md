@@ -1,43 +1,45 @@
-# Structural Calibration（構造的キャリブレーション・固有名詞を使わない基準）
+**Language:** English | [日本語](ja/structural-calibration.md) | [中文](zh/structural-calibration.md)
 
-評価の基準とキャリブレーションは、**固有名詞（作家名・作品名）でなく、構造的な記述で定める**。これは第二の盲検の中核であり、名声へのアンカリングを評価の場から排除する。
+# Structural Calibration (structural calibration: criteria that do not use proper nouns)
 
-## 原則
+The criteria and calibration of evaluation are defined by **structural descriptions, not by proper nouns (author names, work titles)**. This is the core of the second blind evaluation, and it excludes anchoring on reputation from the evaluation arena.
 
-> **評価の基準とキャリブレーションは、固有名詞でなく、構造的な記述で定める。**
+## Principles
 
-| | 固有名詞による基準（排除） | 構造的記述による基準（採用） |
+> **The criteria and calibration of evaluation are defined by structural descriptions, not by proper nouns.**
+
+| | Criteria based on proper nouns (excluded) | Criteria based on structural descriptions (adopted) |
 |---|--------------------------|------------------------------|
-| 例 | 「有名な変容の物語のような作品」 | 「登場人物の身体が別のものへ変容し、その変容が日常の細部として淡々と描かれることで、アイデンティティへの不安を生む構造」 |
-| 効果 | 名声の権威が評価へ移転する | パターンそのものが評価の対象になる |
-| 危険 | 評価者が既知の名作の名声を判断基準にする | 名声に依存せず、本文の構造だけを判断する |
+| Example | "A work like a famous transformation story" | "A structure in which a character's body transforms into something else, and the transformation is portrayed matter-of-factly as a detail of daily life, thereby giving rise to unease about identity" |
+| Effect | The authority of reputation shifts onto the evaluation | The pattern itself becomes the object of evaluation |
+| Danger | Evaluators take the reputation of known masterpieces as their criterion | Evaluators judge only the structure of the text, without depending on reputation |
 
-## 構造的記述の書き方
+## How to write structural descriptions
 
-構造的記述は、以下の要素を持つ:
+A structural description has the following elements:
 
-1. **機構**: どのような仕掛け・構造が存在するか
-2. **作用**: その機構が読者に何をさせるか（記憶の回帰・解釈の投影・速度の変化など）
-3. **条件**: どのような状況でその作用が発揮されるか
+1. **Mechanism**: what device or structure exists
+2. **Operation**: what the mechanism makes the reader do (recall of memory, projection of interpretation, changes in reading speed, etc.)
+3. **Condition**: under what circumstances the operation takes effect
 
-### 構造例（内部参照・評価の場からは分離）
+### Structural example (internal reference — kept separate from the evaluation arena)
 
-> 「冒頭の一文が、境界の通過（物理的な移動）と視覚的な明暗の転換を同時に生じさせ、それまでの読書の速度を一瞬で切り替える」——文体と時間の一致の構造。
+> "The opening sentence simultaneously produces the crossing of a boundary (a physical movement) and a visual shift from light to dark, instantly switching the reading speed up to that point" — the structure of the correspondence between style and time.
 
-この構造例は、prose-style 評価者の `rhythm` 次元の基準として、**固有名詞を伴わない形でのみ**掲載する。
+This structural example is published as the criterion for the `rhythm` dimension of the prose-style evaluator, **only in a form that does not carry proper nouns**.
 
-### 変換の例（問い → 構造的スコアリング）
+### Example of conversion (question → structural scoring)
 
-問い2（情報の配分）→ plot-architecture の `disclosure_timing` 次元:
+Question 2 (distribution of information) → the `disclosure_timing` dimension of plot-architecture:
 
-> 「読者だけが知り、登場人物が知らない」情報の非対称がどれだけ持続し、それが緊張を生むかをスコアリングする。遺書という情報開示の構造が物語全体を支える作品——ある人物の過去が、遺書という形で物語の最後に開示され、それまで読者が読んできたすべてを再文脈化する構造——は、この次元で高く評価される。
+> Score how long the information asymmetry — in which "only the reader knows, and the characters do not" — persists, and whether it generates tension. A work in which the information-disclosure structure of a testament supports the entire narrative — a structure in which one character's past is disclosed at the end of the story in the form of a testament, recontextualizing everything the reader has read up to that point — is rated highly on this dimension.
 
-## 各評価者の構造的次元（重み）
+## Structural dimensions of each evaluator (weights)
 
-| 評価者 | 次元（重み） |
+| Evaluator | Dimensions (weights) |
 |--------|-------------|
 | **narrative-originality** | premise_novelty (0.35) / form_deviation (0.30) / genre_distance (0.20) / meaningfulness_of_deviation (0.15) |
-| **anti-generic-filter** | cliche_density (0.30) / formulaic_structure (0.25) / voice_particularity (0.25) / risk_taking (0.20) |
+| **anti-generic-story-filter** | cliche_density (0.30) / formulaic_structure (0.25) / voice_particularity (0.25) / risk_taking (0.20) |
 | **emotional-power** | genuine_emotion (0.30) / empathy (0.20) / memory_persistence (0.20) / post_reading_shift (0.30) |
 | **plot-architecture** | causality (0.30) / disclosure_timing (0.30) / foreshadowing (0.25) / tension_curve (0.15) |
 | **character-depth** | inner_conflict (0.30) / change_arc (0.25) / motive_truth (0.25) / moral_complexity (0.20) |
@@ -47,16 +49,16 @@
 | **narrative-technique** | pov_choice (0.30) / narrative_distance (0.25) / reliability (0.25) / time_manipulation (0.20) |
 | **reader-experience** | pacing (0.30) / page_turner (0.25) / promise_keeping (0.25) / reread_invitation (0.20) |
 
-## 感情の深化（構造的に）
+## Deepening of emotion (structurally)
 
-| | 感傷（減点） | 本物の感情（評価） |
+| | Sentimentality (penalized) | Genuine emotion (evaluated) |
 |---|------------|------------------|
-| 構造 | 感情の高まりのためだけに、悲劇的な出来事が配置される | 主人公が自らの欠点を自覚しつつ、それを変えられない自己欺瞞が、選択と後悔の連鎖として描かれる |
+| Structure | Tragic events are placed only to heighten emotion | The self-deception of a protagonist who is aware of their own flaw yet cannot change it is portrayed as a chain of choices and regret |
 
-## 分類の構造的基準
+## Structural criteria for classification
 
-分類（Discovery Target / Innovation / Current Success / Low Signal）も構造的記述で定める（`references/meaning-of-novels.md`・合議の分類導出を参照）。分類は本文の構造から導出し、文学史の固有名詞には依存しない。
+Classification (Discovery Target / Innovation / Current Success / Low Signal) is also defined by structural descriptions (see `references/meaning-of-novels.md` and the council's derivation of classification). Classification is derived from the structure of the text and does not depend on the proper nouns of literary history.
 
-## 文体識別への対処
+## Dealing with style identification
 
-構造的キャリブレーションは、文体識別（スタイロメトリー）の残余リスクにも対処する。評価者が文体を既知の作家と結びつけても、判断基準が構造的であれば、評価は名声ではなく構造に向かう（`references/blind-evaluation.md`）。
+Structural calibration also addresses the residual risk of style identification (stylometry). Even if an evaluator associates a style with a known writer, as long as the criteria are structural, the evaluation turns toward structure rather than reputation (see `references/blind-evaluation.md`).

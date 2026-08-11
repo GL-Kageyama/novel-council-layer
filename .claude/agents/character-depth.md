@@ -1,1 +1,1 @@
-../../agents/character-depth.md
+/Users/user/AI評価者たちによる「知恵の評議会」/novel-council-layer/agents/character-depth.md

@@ -1,8 +1,10 @@
-# Revision Loop（評価→リライトループ）
+**Language:** English | [日本語](ja/revision-loop.md) | [中文](zh/revision-loop.md)
 
-このレイヤーの評価結果は**最終成果ではない**。書き手・編集者・生成AIがリライトするための**入力**である。このループを回すための指針を定義する。
+# Revision Loop (Evaluation → Rewrite Loop)
 
-## ループの流れ
+The evaluation results of this layer are **not the final output**. They are **input** for the writer, editor, or generative AI to use in rewriting. This section defines the guidelines for running this loop.
+
+## Loop Flow
 
 ```
 ① 執筆（v1）
@@ -20,32 +22,32 @@
 ⑦ 目標に達するか頭打ちになるまで繰り返す
 ```
 
-各評価者の `weaknesses`・`improvement_suggestions`・`expected_disagreement_points` は、リライトの具体的な指示の材料として保存される。
+Each evaluator's `weaknesses`, `improvement_suggestions`, and `expected_disagreement_points` are stored as material for concrete rewrite instructions.
 
-## 反復モード（iteration）
+## Iteration Modes (iteration)
 
-評価→リライトループの制御には、2つのモードがある。ループの本質は「1ターン評価ごとに、どの方向に修正するか」を管理することにある。
+Two modes control the evaluation→rewrite loop. The essence of the loop is managing "in which direction to revise" after each round of evaluation.
 
-| iteration | 動作 | 使いどころ |
-|-----------|------|------------|
-| `confirm`（デフォルト） | Story Report を出力した後、人間・書き手が `revision_direction` を承認するまで次の反復を開始しない | 方向転換を都度チェックしたい |
-| `persistent` | 初回の評価で `revision_direction` を確定し、以降の反復はその方向を再考せず、`axis` への到達度だけを報告する | 方向を決めて磨き込みたい |
+| iteration | Behavior | When to use |
+|-----------|----------|-------------|
+| `confirm` (default) | After outputting the Story Report, does not start the next iteration until a human/writer approves `revision_direction` | When you want to check direction changes each time |
+| `persistent` | Finalizes `revision_direction` at the first evaluation; subsequent iterations do not reconsider that direction and only report progress toward the `axis` | When you want to set a direction and then polish |
 
-## ループの指針
+## Loop Guidelines
 
-- **評価は生データを捨てない**（合成ナラティブは補助。素材はJSONに残る）。
-- **フィールド名は固定・一貫**（`schemas/novel-value-output.schema.json` 準拠）。リライト側はパスを決め打ちで読める。
-- 平均だけで判断せず、**分散と不一致**も見る（1次元が突出しても全体は変わらないことがある）。
-- 改善が**頭打ちになったらループを止める**（過修正で元の良さを失うリスク）。
-- リライト指示そのものは生成しない。書き手・編集者・生成AIが `individual_reports` の素材から指示を合成する。
+- **Evaluation does not discard raw data** (synthetic narratives are auxiliary; the source material remains in the JSON).
+- **Field names are fixed and consistent** (per `schemas/novel-value-output.schema.json`). The rewrite side can read paths with hardcoded lookups.
+- Do not judge by averages alone; **also look at variance and disagreement** (a single dimension may spike without changing the whole).
+- **Stop the loop when improvement plateaus** (risk of over-correcting and losing the original strengths).
+- Do not generate the rewrite instructions themselves. The writer, editor, or generative AI composes instructions from the material in `individual_reports`.
 
-## 改善度の比較
+## Comparing Improvement
 
 ```bash
 python utils/compare_reports.py before.json after.json
 ```
 
-出力例:
+Output example:
 
 ```
 🔄 執筆 → 評価 → リライト ループの比較
@@ -61,10 +63,10 @@ python utils/compare_reports.py before.json after.json
   平均変化（評価された10次元）: +9.4
 ```
 
-## 不一致の扱い
+## Handling Disagreement
 
-不一致（`disagreement_map`）はノイズではなく**シグナル**である。激しく割れる物語はしばしば最も興味深い。不一致はリライトの手がかりとして使う:
+Disagreement (`disagreement_map`) is **signal**, not noise. Stories that split evaluators sharply are often the most interesting. Use disagreement as a clue for rewriting:
 
-- ある次元で評価者が激しく割れた → その次元は「強みか弱点かが未決定」であり、リライトで方向を定める余地がある。
-- 全員が一致して低い → 明確な弱点。優先的に修正する。
-- 全員が一致して高い → 強み。リライトで壊さない（`revision_direction.preserve` に記録する）。
+- When evaluators split sharply on a dimension → that dimension is "undetermined as to whether it is a strength or a weakness," and there is room to set a direction through rewriting.
+- Everyone agrees it is low → a clear weakness. Fix it with priority.
+- Everyone agrees it is high → a strength. Do not break it in rewriting (record it in `revision_direction.preserve`).
