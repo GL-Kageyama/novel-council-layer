@@ -2,6 +2,10 @@
 
 # Novel Council Layer
 
+<p align="center">
+  <img src="assets/repo-hero.png" width="100%" alt="Novel Council Layer">
+</p>
+
 **小说评议会（小説評議会）** —— 从海量故事中甄别出真正值得阅读的故事的多智能体价值评估层。
 
 > **从「能够创作」走向「能够甄别」。**

@@ -2,6 +2,10 @@
 
 # Novel Council Layer
 
+<p align="center">
+  <img src="assets/repo-hero.png" width="100%" alt="Novel Council Layer">
+</p>
+
 **小説評議会 (Novel Council)** — a multi-agent value evaluation layer that picks out, from among a flood of stories, the stories truly worth reading.
 
 > **From "creating" to "discerning."**

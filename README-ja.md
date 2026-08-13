@@ -2,6 +2,10 @@
 
 # Novel Council Layer
 
+<p align="center">
+  <img src="assets/repo-hero.png" width="100%" alt="Novel Council Layer">
+</p>
+
 **小説評議会** —— 大量の物語の中から、本当に読む価値のある物語を見抜くための多エージェント価値評価レイヤー。
 
 > **「作れること」から「見抜けること」へ。**
