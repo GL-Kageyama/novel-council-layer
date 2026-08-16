@@ -140,6 +140,11 @@
           "type": ["integer", "null"],
           "minimum": 0,
           "maximum": 100
+        },
+        "admiration": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
         }
       }
     },

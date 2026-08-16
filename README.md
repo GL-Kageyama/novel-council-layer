@@ -109,10 +109,11 @@ Even if the prose style betrays the author (stylometry), as long as the criteria
 │  emotional-power        prose-style       │
 │  theme-resonance        world-building    │
 │  narrative-technique    reader-experience │
+│  admiration            （全サブドメイン）  │
 │  ※各評価者は構造的基準で判断（第二の盲検）│
 └────────────────────────────────────────────┘
         ↓
-  Story Vector（10次元スコア）
+  Story Vector（11次元スコア）
         ↓
   Disagreement Map（不一致の保存）
         ↓
@@ -123,7 +124,7 @@ Even if the prose style betrays the author (stylometry), as long as the criteria
 
 ### Division of Roles (Implementation)
 
-**Evaluators are agents; the council is a skill.** The ten evaluators are persona-based specialist agents (`agents/{name}.md`) that evaluate in independent contexts. A skill shares the same context and is therefore unsuited to independent evaluation; launching the evaluators as subagents isolates their contexts. The council orchestrator (story-council) is the only skill.
+**Evaluators are agents; the council is a skill.** The eleven evaluators are persona-based specialist agents (`agents/{name}.md`) that evaluate in independent contexts. A skill shares the same context and is therefore unsuited to independent evaluation; launching the evaluators as subagents isolates their contexts. The council orchestrator (story-council) is the only skill.
 
 ---
 
@@ -139,7 +140,7 @@ novel-council-layer/
 ├── .claude-plugin/                    # プラグイン配布定義
 │   ├── marketplace.json
 │   └── plugin.json
-├── agents/                            # 評価者エージェントの正本（10体）
+├── agents/                            # 評価者エージェントの正本（11体）
 │   ├── narrative-originality.md
 │   ├── anti-generic-story-filter.md
 │   ├── emotional-power.md
@@ -201,7 +202,7 @@ Symlinks are created in `~/.claude/agents/` (evaluator agents) and `~/.claude/sk
 |-------|---------------|-----------------|----------|
 | **1** | A **single** evaluator | A single-dimension evaluation JSON | To check only a specific viewpoint |
 | **2** | **Council (auto)** | An integrated Story Report (3–5 dimensions) | For an efficient overall assessment according to the domain |
-| **3** | **Council (full)** | A complete Story Report with all 10 dimensions filled | To have everyone evaluate at once from the start |
+| **3** | **Council (full)** | A complete Story Report with all 11 dimensions filled | To have everyone evaluate at once from the start |
 
 #### Level 1: Call a Single Evaluator
 
@@ -241,12 +242,12 @@ The council (story-council) has the following modes. A guide is also shown at la
 
 | Item | Options | Description |
 |------|---------|-------------|
-| **Input format** `content_type` | `text` (default) / `plot` | `plot` also allows evaluating from an **outline or concept** (evaluated by 7. prose-style, narrative-technique, and reader-experience are not convened) |
-| **Convening scope** `mode` | `auto` (default) / `full` | `auto` convenes **3–5** evaluators according to the domain; `full` convenes **all** applicable ones (text: 10 / plot: 7) |
+| **Input format** `content_type` | `text` (default) / `plot` | `plot` also allows evaluating from an **outline or concept** (evaluated by 8. prose-style, narrative-technique, and reader-experience are not convened) |
+| **Convening scope** `mode` | `auto` (default) / `full` | `auto` convenes **3–5** evaluators according to the domain; `full` convenes **all** applicable ones (text: 11 / plot: 8) |
 | **Iteration** `iteration` | `confirm` (default) / `persistent` | `confirm` confirms the revision direction each turn; `persistent` fixes the direction and polishes |
 | **Domain** `domain` | `pure-literature` / `genre-fiction` / `light-novel` / `short-story` / `historical-fiction` | The story's subdomain. Optional (the council determines it) |
 
-**Example of evaluating an outline (plot mode, all 7):**
+**Example of evaluating an outline (plot mode, all 8):**
 ```
 Skill: story-council
 Args: {"content": "あらすじ...", "content_type": "plot", "domain": "genre-fiction", "mode": "full"}
@@ -266,7 +267,7 @@ If an output fails, the same evaluator is **restarted up to 3 times** (with the 
 
 ## List of Evaluators
 
-The ten evaluators are **subagents** (`agents/{name}.md`). Each scores only its own dimension and maintains a clear boundary from adjacent dimensions.
+The eleven evaluators are **subagents** (`agents/{name}.md`). Each scores only its own dimension and maintains a clear boundary from adjacent dimensions.
 
 | Evaluator (agent name) | Core Question | Dimension |
 |------------------------|---------------|-----------|
@@ -365,7 +366,7 @@ The project's biggest bet is "can this system actually discern a story's value?"
 ### Procedure (Applying Double Blinding)
 
 1. Each work's **opening + summary** is entered as anonymized text with the **author's name and title removed** (first blinding)
-2. The system evaluates with the ten evaluators under **structural criteria** (second blinding) and derives a classification
+2. The system evaluates with the eleven evaluators under **structural criteria** (second blinding) and derives a classification
 3. Only **after** evaluation concludes are the results matched against the literary-history labels (ground truth) to measure the agreement rate
 
 ```
@@ -393,7 +394,7 @@ The project's biggest bet is "can this system actually discern a story's value?"
 
 ## Roadmap
 
-- **Phase 1**: Novel Evaluation Core — the ten evaluator agents (implemented with structural dimensions and weights) + double blinding (anonymize + structural calibration) + the council skill (story-council) + Story Vector + Story Report
+- **Phase 1**: Novel Evaluation Core — the eleven evaluator agents (implemented with structural dimensions and weights) + double blinding (anonymize + structural calibration) + the council skill (story-council) + Story Vector + Story Report
 - **Phase 2**: Blind benchmark (verify 50 books, targeting 70% agreement) → calibration adjustment. Launch of paid diagnostics for individual writers (freemium)
 - **Phase 3**: Debate Engine (multi-turn debate among evaluators) + a submission-platform PoC (targeting 65% agreement and 40% labor savings)
 - **Phase 4**: Meta Value Layer (including Bias Detection and Evaluation Critic—monitoring anchoring bias and proper-noun leakage) + commercialization (SaaS)

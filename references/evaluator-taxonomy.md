@@ -23,6 +23,7 @@ Assesses how much reading value a narrative holds **at the present moment**.
 | World Building | Creativity and consistency of the worldview | genre-fiction, light-novel, historical-fiction |
 | Narrative Technique | Narrative distance; manipulation of time | pure-literature, short-story |
 | Reader Experience | Reading experience; immersion | genre-fiction, light-novel |
+| Admiration | The involuntary "wow" — surpassing prediction while earning inevitability | All subdomains |
 
 ### Layer 2: Hidden Potential Discovery
 
@@ -56,6 +57,7 @@ Shakes the very premises of evaluation.
 | World Building | Is the setting creative and internally consistent? |
 | Narrative Technique | Do narrative distance and time manipulation strengthen the story? |
 | Reader Experience | As a reading experience, is it immersive, complete, and inviting of re-reading? |
+| Admiration | Does it make the reader exclaim "interesting!" with admiration — by exceeding prediction while earning inevitability? |
 
 ## Boundaries with Adjacent Dimensions (Resolving Overlap)
 
@@ -67,6 +69,10 @@ Shakes the very premises of evaluation.
 | **prose_style** × **reader_experience** | Prose style looks at "the music of words"; reading experience looks at "the overall experience" |
 | **theme_resonance** × **emotional_power** | Theme looks at "the interpretation and meaning that remain after reading"; emotion looks at "displacement of the heart during reading" |
 | **anti-generic-story-filter** × **narrative_originality** | Anti-generic evaluates "whether it is mundane"; originality evaluates "the meaning of the deviation" |
+| **admiration** × **plot_architecture** | Plot looks at the machinery (what is revealed when); admiration looks at the reaction that machinery produces (surprise + inevitability = "wow") |
+| **admiration** × **reader_experience** | Reader experience looks at the quality of the whole reading act; admiration looks at the single peak moment of "wow" |
+| **admiration** × **emotional_power** | Emotion looks at the heart being moved; admiration looks at the involuntary exclamation (the cognitive "wow", not sentiment) |
+| **admiration** × **narrative_originality** | Originality looks at deviation of form; admiration looks at the peak moment of surpassing prediction |
 
 ## Relationships Between Evaluators
 
@@ -94,7 +100,7 @@ Each evaluator contributes to a specific dimension of the Story Vector (other di
 Story Vector:
 [narrative_originality, quality, emotional_power, plot_architecture,
  character_depth, prose_style, theme_resonance, world_building,
- narrative_technique, reader_experience]
+ narrative_technique, reader_experience, admiration]
 ```
 
 ## Evaluator Selection in the Council

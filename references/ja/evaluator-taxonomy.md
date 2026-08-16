@@ -23,6 +23,7 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | World Building | 世界観の創造性・整合性 | genre-fiction, light-novel, historical-fiction |
 | Narrative Technique | 語りの距離・時間操作 | pure-literature, short-story |
 | Reader Experience | 読書体験・没入 | genre-fiction, light-novel |
+| Admiration | 不随意的な「おおっ」——予測を超えて必然に納得させる | 全サブドメイン |
 
 ### 第2層：潜在価値発見（Hidden Potential Discovery）
 
@@ -56,6 +57,7 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | World Building | 舞台は創造的で、内的整合性を持つか？ |
 | Narrative Technique | 語りの距離と時間操作は物語を強化するか？ |
 | Reader Experience | 読む体験として没入し、完成し、再読を誘うか？ |
+| Admiration | 予測を超えて必然に納得させることで、読者に感嘆を伴う「面白い！」を叫ばせるか？ |
 
 ## 隣接次元との境界（重複の整理）
 
@@ -67,6 +69,10 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | **prose_style** × **reader_experience** | 文体は「言葉の音楽」、読書体験は「体験全体」を見る |
 | **theme_resonance** × **emotional_power** | テーマは「読後に残る解釈・意味」、感情は「読中の心の変位」を見る |
 | **anti-generic-story-filter** × **narrative_originality** | 反凡庸は「月並みかどうか」、独創性は「逸脱の意味」を評価する |
+| **admiration** × **plot_architecture** | プロットは機構（何がいつ明かされるか）を見る。感嘆はその機構が生む反応（驚き＋必然＝「おおっ」）を見る |
+| **admiration** × **reader_experience** | 読書体験は読む行為全体の質を見る。感嘆は単一の「おおっ」の頂点の瞬間を見る |
+| **admiration** × **emotional_power** | 感情は心が動くことを見る。感嘆は不随意的な声の漏れ（感傷ではなく認知の「おおっ」）を見る |
+| **admiration** × **narrative_originality** | 独創性は形式の逸脱を見る。感嘆は予測を超える頂点の瞬間を見る |
 
 ## 評価者間の関係
 
@@ -94,7 +100,7 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 Story Vector:
 [narrative_originality, quality, emotional_power, plot_architecture,
  character_depth, prose_style, theme_resonance, world_building,
- narrative_technique, reader_experience]
+ narrative_technique, reader_experience, admiration]
 ```
 
 ## 合議での評価者選択

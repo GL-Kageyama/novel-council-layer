@@ -31,7 +31,7 @@ The seven questions specific to narrative evaluation:
 
 ## Directory Conventions
 
-- `agents/{name}.md` — the authoritative source of the evaluator agents (10). Launched as independent subagents acting as persona-based experts
+- `agents/{name}.md` — the authoritative source of the evaluator agents (11). Launched as independent subagents acting as persona-based experts
 - `skills/story-council/SKILL.md` — the authoritative source of the council orchestrator (the only skill)
 - `.claude/agents/` — symlinks for in-project detection (evaluator agents)
 - `.claude/skills/` — symlinks for in-project detection (council orchestrator)
@@ -62,7 +62,7 @@ The council performs the following:
 
 ### Plot Evaluation Mode (a synopsis can also be evaluated)
 
-Specifying `content_type: "plot"` allows a pre-writing concept or a simple synopsis to be evaluated. Because there is no prose, narration, or reading experience, the three agents `prose-style`, `narrative-technique`, and `reader-experience` are not convened; evaluation is carried out by the remaining seven (narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, theme-resonance, world-building).
+Specifying `content_type: "plot"` allows a pre-writing concept or a simple synopsis to be evaluated. Because there is no prose, narration, or reading experience, the three agents `prose-style`, `narrative-technique`, and `reader-experience` are not convened; evaluation is carried out by the remaining eight (narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, theme-resonance, world-building, admiration).
 
 ```
 Skill: story-council
@@ -105,7 +105,7 @@ python utils/anonymize.py input.txt --author "著者名" --title "作品名" > a
 |--------|------|
 | `utils/anonymize.py` | **Anonymizes the input** — removes the author name and title, establishing the precondition for blinded evaluation (the first blind) |
 | `utils/validate_output.py` | Schema validation of evaluator output. Outputs machine-readable results via the `--json` flag (used by the council skill's automatic retry) |
-| `utils/render_report.py` | Visual rendering of the Story Report (10-dimensional bar chart, category badges, conflicts between dimensions). Saves as a Markdown document with `-o report.md`, displays all individual reports with `--individuals` |
+| `utils/render_report.py` | Visual rendering of the Story Report (11-dimensional bar chart, category badges, conflicts between dimensions). Saves as a Markdown document with `-o report.md`, displays all individual reports with `--individuals` |
 | `utils/compare_reports.py` | Diff comparison before and after a rewrite (for the evaluation → rewrite loop) |
 
 ## Evaluation Output Is Designed as "Input"

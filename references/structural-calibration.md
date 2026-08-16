@@ -48,6 +48,7 @@ Question 2 (distribution of information) → the `disclosure_timing` dimension o
 | **world-building** | creativity (0.30) / internal_consistency (0.30) / rule_design (0.20) / immersion (0.20) |
 | **narrative-technique** | pov_choice (0.30) / narrative_distance (0.25) / reliability (0.25) / time_manipulation (0.20) |
 | **reader-experience** | pacing (0.30) / page_turner (0.25) / promise_keeping (0.25) / reread_invitation (0.20) |
+| **admiration** | expectation_guidance (0.20) / expectation_exceeding (0.30) / inevitability (0.30) / admiration_peak (0.20) |
 
 ## Deepening of emotion (structurally)
 

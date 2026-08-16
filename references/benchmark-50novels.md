@@ -7,7 +7,7 @@ This project's biggest bet is whether this system can actually see through to th
 ## Blind Procedure (Applying Double Blindness)
 
 1. Each work's **opening + summary** is input as **anonymized text with the author and work title removed** (the first blindness). Preprocess it with `utils/anonymize.py`.
-2. The system evaluates with 10 evaluators using **structural criteria** (the second blindness) and derives a classification.
+2. The system evaluates with 11 evaluators using **structural criteria** (the second blindness) and derives a classification.
 3. Only **after** the evaluation has concluded, match against the literary-history label (ground truth) and measure the agreement rate.
 
 ```
@@ -59,7 +59,7 @@ With this definition, "70%" becomes not a vague goal but a trackable, reproducib
 
 ### Note on Variance Estimation with a Small Sample (n)
 
-When the number of evaluators is small, such as in plot evaluation (7 evaluators in plot mode), the variance of the Story Vector **becomes an estimate with a small n and can be unstable**.
+When the number of evaluators is small, such as in plot evaluation (8 evaluators in plot mode), the variance of the Story Vector **becomes an estimate with a small n and can be unstable**.
 
 - The variance thresholds (100/400) are applied **only to dimensions with 3 or more evaluator scores** (see `references/scoring-strictness.md`).
 - In the benchmark, when reporting the agreement rate, **also record the number of evaluators (n) for each work**, and note the limits of reliability when n is small (<4).

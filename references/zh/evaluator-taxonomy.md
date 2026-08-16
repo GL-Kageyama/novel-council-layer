@@ -23,6 +23,7 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | World Building | 世界观的创造性与一致性 | genre-fiction, light-novel, historical-fiction |
 | Narrative Technique | 叙事的距离・时间操作 | pure-literature, short-story |
 | Reader Experience | 阅读体验・沉浸 | genre-fiction, light-novel |
+| Admiration | 不自主的「哇」——超出预测又赢得必然 | 全部子领域 |
 
 ### 第2层：潜在价值发现（Hidden Potential Discovery）
 
@@ -56,6 +57,7 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | World Building | 舞台是否富有创造性，且具有内在一致性？ |
 | Narrative Technique | 叙事的距离与时间操作是否强化了故事？ |
 | Reader Experience | 作为阅读体验，是否沉浸、完整，并引人重读？ |
+| Admiration | 是否通过超出预测又赢得必然，让读者发出带着惊叹的「有趣！」？ |
 
 ## 与相邻维度的边界（重复的整理）
 
@@ -67,6 +69,10 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | **prose_style** × **reader_experience** | 文体看「文字的音乐」，阅读体验看「整体体验」 |
 | **theme_resonance** × **emotional_power** | 主题看「读后留下的阐释・意义」，情感看「阅读中心灵的位移」 |
 | **anti-generic-story-filter** × **narrative_originality** | 反平庸评价「是否俗套」，独创性评价「偏离的意义」 |
+| **admiration** × **plot_architecture** | 情节看机制（什么在何时被揭示）。惊叹看该机制产生的反应（惊奇＋必然＝「哇」） |
+| **admiration** × **reader_experience** | 阅读体验看整个阅读行为的质量。惊叹看单一「哇」的顶点瞬间 |
+| **admiration** × **emotional_power** | 情感看心灵的触动。惊叹看不自主的脱口而出（非感伤，而是认知上的「哇」） |
+| **admiration** × **narrative_originality** | 独创性看形式的偏离。惊叹看超出预测的顶点瞬间 |
 
 ## 评价者之间的关系
 
@@ -94,7 +100,7 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 Story Vector:
 [narrative_originality, quality, emotional_power, plot_architecture,
  character_depth, prose_style, theme_resonance, world_building,
- narrative_technique, reader_experience]
+ narrative_technique, reader_experience, admiration]
 ```
 
 ## 合议中的评价者选择

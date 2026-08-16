@@ -109,10 +109,11 @@
 │  emotional-power        prose-style       │
 │  theme-resonance        world-building    │
 │  narrative-technique    reader-experience │
+│  admiration            （全サブドメイン）  │
 │  ※各評価者は構造的基準で判断（第二の盲検）│
 └────────────────────────────────────────────┘
         ↓
-  Story Vector（10次元スコア）
+  Story Vector（11次元スコア）
         ↓
   Disagreement Map（不一致の保存）
         ↓
@@ -123,7 +124,7 @@
 
 ### 角色分工（实现）
 
-**评估者是智能体（Agent），合议是技能（Skill）。** 10位评估者是以人格（persona）为基础的专业智能体（`agents/{name}.md`），在各自独立的上下文中进行评估。技能会共享同一个上下文，因此不适合进行独立评估；通过以子智能体（subagent）方式启动，可以使上下文彼此隔离。唯一的技能是合议编排器（story-council）。
+**评估者是智能体（Agent），合议是技能（Skill）。** 11位评估者是以人格（persona）为基础的专业智能体（`agents/{name}.md`），在各自独立的上下文中进行评估。技能会共享同一个上下文，因此不适合进行独立评估；通过以子智能体（subagent）方式启动，可以使上下文彼此隔离。唯一的技能是合议编排器（story-council）。
 
 ---
 
@@ -139,7 +140,7 @@ novel-council-layer/
 ├── .claude-plugin/                    # プラグイン配布定義
 │   ├── marketplace.json
 │   └── plugin.json
-├── agents/                            # 評価者エージェントの正本（10体）
+├── agents/                            # 評価者エージェントの正本（11体）
 │   ├── narrative-originality.md
 │   ├── anti-generic-story-filter.md
 │   ├── emotional-power.md
@@ -201,7 +202,7 @@ novel-council-layer/
 |------|----------|----------|------|
 | **1** | **1位**评估者 | 单一维度的评估 JSON | 只想确认某个特定视角 |
 | **2** | **合议（auto）** | 整合后的 Story Report（3～5 个维度） | 依据领域高效地进行综合评价 |
-| **3** | **合议（full）** | 填满全部 10 个维度的完整 Story Report | 从一开始就让所有人一次性评估 |
+| **3** | **合议（full）** | 填满全部 11 个维度的完整 Story Report | 从一开始就让所有人一次性评估 |
 
 #### 级别 1：调用一位评估者
 
@@ -241,12 +242,12 @@ Args: {"content": "...", "domain": "genre-fiction", "mode": "full"}
 
 | 项目 | 选项 | 说明 |
 |------|------|------|
-| **输入形式** `content_type` | `text`（默认）/ `plot` | `plot` 也可用于**梗概、构思**的评估（由 7 位评估。prose-style、narrative-technique、reader-experience 不参与召集） |
-| **召集范围** `mode` | `auto`（默认）/ `full` | `auto` 依据领域召集 **3～5 位**，`full` 召集适用范围内的**全体**（text：10 位 / plot：7 位） |
+| **输入形式** `content_type` | `text`（默认）/ `plot` | `plot` 也可用于**梗概、构思**的评估（由 8 位评估。prose-style、narrative-technique、reader-experience 不参与召集） |
+| **召集范围** `mode` | `auto`（默认）/ `full` | `auto` 依据领域召集 **3～5 位**，`full` 召集适用范围内的**全体**（text：11 位 / plot：8 位） |
 | **迭代** `iteration` | `confirm`（默认）/ `persistent` | `confirm` 在每一轮确认修正方向，`persistent` 固定方向进行打磨 |
 | **领域** `domain` | `pure-literature` / `genre-fiction` / `light-novel` / `short-story` / `historical-fiction` | 故事的子领域。可省略（由合议判定） |
 
-**梗概评估的示例（plot 模式・全部 7 位）：**
+**梗概评估的示例（plot 模式・全部 8 位）：**
 ```
 Skill: story-council
 Args: {"content": "あらすじ...", "content_type": "plot", "domain": "genre-fiction", "mode": "full"}
@@ -266,7 +267,7 @@ python utils/validate_output.py --json output.json
 
 ## 评估者一览
 
-10 位评估者都是**子智能体**（`agents/{name}.md`）。每位评估者只对自己的维度打分，并与相邻维度保持明确的边界。
+11 位评估者都是**子智能体**（`agents/{name}.md`）。每位评估者只对自己的维度打分，并与相邻维度保持明确的边界。
 
 | 评估者（智能体名） | 核心问题 | 维度 |
 |--------------------|----------|------|
@@ -365,7 +366,7 @@ python utils/validate_output.py --json output.json
 ### 步骤（双重盲检的运用）
 
 1. 将各作品的**开头＋梗概**作为**去除了作者名、作品名**的匿名文本输入（第一重盲检）
-2. 系统以 10 位评估者、依据**结构性标准**（第二重盲检）进行评估，并推导出分类
+2. 系统以 11 位评估者、依据**结构性标准**（第二重盲检）进行评估，并推导出分类
 3. 仅在评估结束**之后**，才与文学史标签（ground truth）进行对照，测量一致率
 
 ```
@@ -393,7 +394,7 @@ python utils/validate_output.py --json output.json
 
 ## 路线图
 
-- **Phase 1**：Novel Evaluation Core——10 位评估者智能体（以结构性维度与权重实现）+ 双重盲检（anonymize + 结构性校准）+ 合议技能（story-council）+ Story Vector + Story Report
+- **Phase 1**：Novel Evaluation Core——11 位评估者智能体（以结构性维度与权重实现）+ 双重盲检（anonymize + 结构性校准）+ 合议技能（story-council）+ Story Vector + Story Report
 - **Phase 2**：盲检基准（验证 50 本作品，以一致率 70% 为目标）→ 校准调整。面向个人作家的付费诊断（Freemium）上线
 - **Phase 3**：Debate Engine（评估者之间的多轮辩论）+ 投稿平台的 PoC（以一致率 65%、工数削减 40% 为目标）
 - **Phase 4**：Meta Value Layer（包括 Bias Detection、Evaluation Critic——监视锚定偏差与专有名词混入）+ 收费化（SaaS）

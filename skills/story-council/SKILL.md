@@ -1,6 +1,6 @@
 ---
 name: story-council
-description: Orchestrates a council of novel evaluator agents to produce a structured Story Report that preserves disagreement. Use to evaluate any story — full text, opening+summary, or plot concept — through multiple independent narrative value perspectives (narrative originality, anti-generic, emotional power, plot architecture, character depth, prose style, theme resonance, world building, narrative technique, reader experience). Selects evaluators by story subdomain, convenes them as subagents, and synthesizes without forcing consensus. Supports plot evaluation mode for synopsis-level inputs.
+description: Orchestrates a council of novel evaluator agents to produce a structured Story Report that preserves disagreement. Use to evaluate any story — full text, opening+summary, or plot concept — through multiple independent narrative value perspectives (narrative originality, anti-generic, emotional power, plot architecture, character depth, prose style, theme resonance, world building, narrative technique, reader experience, admiration). Selects evaluators by story subdomain, convenes them as subagents, and synthesizes without forcing consensus. Supports plot evaluation mode for synopsis-level inputs.
 argument-hint: 'JSON: {"content": "<story>", "content_type": "text|plot", "domain": "pure-literature|genre-fiction|light-novel|short-story|historical-fiction", "context": "<optional context>", "mode": "auto|full", "iteration": "confirm|persistent", "lang": "en|ja|zh"}'
 ---
 
@@ -11,7 +11,7 @@ argument-hint: 'JSON: {"content": "<story>", "content_type": "text|plot", "domai
 - **version**: `1.2.0`
 - **category**: `orchestrator`
 - **standalone**: `false` (requires evaluator agents)
-- **requires_agents**: `[narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, prose-style, theme-resonance, world-building, narrative-technique, reader-experience]`
+- **requires_agents**: `[narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, prose-style, theme-resonance, world-building, narrative-technique, reader-experience, admiration]`
 
 ## Language Mode（言語モード）
 
@@ -48,8 +48,8 @@ Tell me what to evaluate (full text, opening+summary, or plot synopsis). You can
 
 | Item | Options | Description |
 |------|---------|-------------|
-| **Input form** `content_type` | `text` (default) / `plot` | `plot` evaluates synopses/concepts too (7 evaluators; prose-style, narrative-technique, reader-experience are not convened) |
-| **Convocation scope** `mode` | `auto` (default) / `full` | `auto` convenes 3-5 by domain, `full` convenes all applicable (text: 10 / plot: 7) |
+| **Input form** `content_type` | `text` (default) / `plot` | `plot` evaluates synopses/concepts too (8 evaluators; prose-style, narrative-technique, reader-experience are not convened) |
+| **Convocation scope** `mode` | `auto` (default) / `full` | `auto` convenes 3-5 by domain, `full` convenes all applicable (text: 11 / plot: 8) |
 | **Iteration** `iteration` | `confirm` (default) / `persistent` | `confirm` confirms the revision direction each turn, `persistent` fixes the direction and refines |
 | **Domain** `domain` | `pure-literature` / `genre-fiction` / `light-novel` / `short-story` / `historical-fiction` | Story subdomain. Optional (the council assesses it) |
 | **Language** `lang` | `en` (default) / `ja` / `zh` | Output language of the report |
@@ -68,8 +68,8 @@ To call a **single evaluator** directly, launch the evaluator agent directly, e.
 
 | 項目 | 選択肢 | 説明 |
 |------|--------|------|
-| **入力形式** `content_type` | `text`（デフォルト）/ `plot` | `plot` は**あらすじ・構想でも評価可能**（7体で評価。prose-style・narrative-technique・reader-experience は未招集） |
-| **招集範囲** `mode` | `auto`（デフォルト）/ `full` | `auto` はドメインに応じ**3〜5体**、`full` は適用可能な**全員**（text: 10体 / plot: 7体） |
+| **入力形式** `content_type` | `text`（デフォルト）/ `plot` | `plot` は**あらすじ・構想でも評価可能**（8体で評価。prose-style・narrative-technique・reader-experience は未招集） |
+| **招集範囲** `mode` | `auto`（デフォルト）/ `full` | `auto` はドメインに応じ**3〜5体**、`full` は適用可能な**全員**（text: 11体 / plot: 8体） |
 | **反復** `iteration` | `confirm`（デフォルト）/ `persistent` | `confirm` は各ターンで修正方向を確認、`persistent` は方向を固定して磨き込み |
 | **ドメイン** `domain` | `pure-literature` / `genre-fiction` / `light-novel` / `short-story` / `historical-fiction` | 物語のサブドメイン。省略可（合議が判定） |
 | **言語** `lang` | `en`（デフォルト）/ `ja` / `zh` | レポートの出力言語 |
@@ -88,8 +88,8 @@ To call a **single evaluator** directly, launch the evaluator agent directly, e.
 
 | 项目 | 选项 | 说明 |
 |------|------|------|
-| **输入形式** `content_type` | `text`（默认）/ `plot` | `plot` 也可评估**梗概・构想**（由7位评估者评估。prose-style、narrative-technique、reader-experience 不召集） |
-| **召集范围** `mode` | `auto`（默认）/ `full` | `auto` 按领域召集**3〜5位**，`full` 召集全部适用者（text: 10位 / plot: 7位） |
+| **输入形式** `content_type` | `text`（默认）/ `plot` | `plot` 也可评估**梗概・构想**（由8位评估者评估。prose-style、narrative-technique、reader-experience 不召集） |
+| **召集范围** `mode` | `auto`（默认）/ `full` | `auto` 按领域召集**3〜5位**，`full` 召集全部适用者（text: 11位 / plot: 8位） |
 | **迭代** `iteration` | `confirm`（默认）/ `persistent` | `confirm` 每轮确认修改方向，`persistent` 固定方向并进行打磨 |
 | **领域** `domain` | `pure-literature` / `genre-fiction` / `light-novel` / `short-story` / `historical-fiction` | 故事的子领域。可省略（由评议会判定） |
 | **语言** `lang` | `en`（默认）/ `ja` / `zh` | 报告的输出语言 |
@@ -141,11 +141,11 @@ You enforce the **double-blind** evaluation. The story fed into the evaluation i
 
 | Subdomain | Required evaluators | Optional evaluators |
 |-----------|--------------------|---------------------|
-| pure-literature | prose-style, theme-resonance, narrative-technique, anti-generic-story-filter | character-depth, emotional-power, narrative-originality |
-| genre-fiction | plot-architecture, world-building, reader-experience, anti-generic-story-filter | character-depth, narrative-originality, emotional-power |
-| light-novel | world-building, character-depth, reader-experience, anti-generic-story-filter | plot-architecture, emotional-power, narrative-originality |
-| short-story | prose-style, emotional-power, narrative-technique, anti-generic-story-filter | theme-resonance, narrative-originality |
-| historical-fiction | world-building, character-depth, theme-resonance, anti-generic-story-filter | plot-architecture, prose-style |
+| pure-literature | prose-style, theme-resonance, narrative-technique, anti-generic-story-filter | character-depth, emotional-power, narrative-originality, admiration |
+| genre-fiction | plot-architecture, world-building, reader-experience, admiration, anti-generic-story-filter | character-depth, narrative-originality, emotional-power |
+| light-novel | world-building, character-depth, reader-experience, admiration, anti-generic-story-filter | plot-architecture, emotional-power, narrative-originality |
+| short-story | prose-style, emotional-power, narrative-technique, anti-generic-story-filter | theme-resonance, narrative-originality, admiration |
+| historical-fiction | world-building, character-depth, theme-resonance, anti-generic-story-filter | plot-architecture, prose-style, admiration |
 
 ※ Choose the required evaluators applicable to that subdomain. Always include **anti-generic-story-filter** (the cross-cutting core evaluator). Ideally convene **3-5** evaluators.
 
@@ -155,7 +155,7 @@ Declare the input form via `content_type` in `$ARGUMENTS`.
 
 | content_type | Input | Convocation range |
 |--------------|-------|-------------------|
-| `text`（default） | Full text / opening+summary | Selected by domain from all 10 |
+| `text`（default） | Full text / opening+summary | Selected by domain from all 11 |
 | `plot` | Plot, synopsis, or concept (even a brief outline) | **Limited to 7** (below) |
 
 **plot mode** (`content_type: "plot"`): A pre-writing concept or brief synopsis can be the evaluation target. Since no prose, narration, or reading experience exists, the following 3 evaluators are **not consulted** (avoiding wasteful calls):
@@ -164,7 +164,7 @@ Declare the input form via `content_type` in `$ARGUMENTS`.
 - `narrative-technique` (no narration design exists)
 - `reader-experience` (no reading experience exists)
 
-The 7 consulted evaluators: `narrative-originality`, `anti-generic-story-filter`, `emotional-power`, `plot-architecture`, `character-depth`, `theme-resonance`, `world-building`.
+The 8 consulted evaluators: `narrative-originality`, `anti-generic-story-filter`, `emotional-power`, `plot-architecture`, `character-depth`, `theme-resonance`, `world-building`, `admiration`.
 
 In plot mode, record the above 3 in `caveats` (e.g. `"content_type: plot のため prose-style, narrative-technique, reader-experience は未招集（次元が不適合）"` in the original language or the output language). Their dimensions become `null` in the Story Vector.
 
@@ -179,7 +179,7 @@ Choose the convocation scope via `mode` in `$ARGUMENTS`.
 | `auto`（default） | Select **3-5** evaluators by domain | Efficient overall assessment |
 | `full` | Convene **all applicable** evaluators | Evaluate everyone at once from the start |
 
-- `text` + `full` → all 10. `plot` + `full` → the 7 in plot mode.
+- `text` + `full` → all 11. `plot` + `full` → the 8 in plot mode.
 
 #### Iteration mode（iteration）
 
@@ -310,7 +310,8 @@ The following is the council's final deliverable. Generate it following this str
     "theme_resonance": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
     "world_building": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
     "narrative_technique": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
-    "reader_experience": {"mean": null, "variance": null, "min": null, "max": null, "scores": []}
+    "reader_experience": {"mean": null, "variance": null, "min": null, "max": null, "scores": []},
+    "admiration": {"mean": null, "variance": null, "min": null, "max": null, "scores": []}
   },
   "current_value_score": "0-100 aggregate",
   "hidden_potential_score": "0-100 aggregate",
@@ -360,12 +361,12 @@ The following is the council's final deliverable. Generate it following this str
 **Classification model**: A **2x2 matrix (4 quadrants)** of current value × hidden potential, plus a high/high `innovation` — **5 classifications in total** (strictly, 2x2 + 1 cell). `trend_object` is the border band "current value high, hidden potential 35-44".
 
 **Semantics of the two axes（明文化）**:
-- **Horizontal axis = current value (`current_value_score`)**: "Was the time read, this time, a valuable experience?" — the non-null mean of quality, narrative_originality, emotional_power, plot_architecture, character_depth, prose_style, world_building, narrative_technique, reader_experience.
+- **Horizontal axis = current value (`current_value_score`)**: "Was the time read, this time, a valuable experience?" — the non-null mean of quality, narrative_originality, emotional_power, plot_architecture, character_depth, prose_style, world_building, narrative_technique, reader_experience, admiration.
 - **Vertical axis = hidden potential (`hidden_potential_score`)**: "Will the value rise through rereading, changing times, or becoming part of a life?" — the non-null mean of theme_resonance, narrative_originality, emotional_power (post-reading displacement).
 - **Boundaries**: Both axes split at the **45/35 thresholds** (table below). `innovation` is the "+1 cell" of "both high (≥45 / ≥45)" — the 5th cell added on top of the basic 4 quadrants of the 2x2 (current_success / discovery_target / low_signal / trend_object; the 4th overlaps with innovation).
 - **Pre-registration of judgments**: The boundaries (45/35) and the border band (35-44) are fixed before the evaluation and are not moved after the fact based on results. The final judgment for the border band is made by cross-checking each evaluator's `classification` and disagreement level.
 
-- `current_value_score`: the mean of quality, narrative_originality, emotional_power, plot_architecture, character_depth, prose_style, world_building, narrative_technique, reader_experience (non-null dimensions only).
+- `current_value_score`: the mean of quality, narrative_originality, emotional_power, plot_architecture, character_depth, prose_style, world_building, narrative_technique, reader_experience, admiration (non-null dimensions only).
 - `hidden_potential_score`: the mean of theme_resonance, narrative_originality (contribution to hidden potential), emotional_power (post-reading displacement) (non-null dimensions only). ※ The exact allocation follows `references/scoring-strictness.md`.
 
 Evaluators follow strict scoring, so absolute scores tend to be low (median about 30-45). The thresholds are relative guideposts.
@@ -420,10 +421,10 @@ input is anonymized and the criteria are structural.
 If `content_type` is "plot" (synopsis/concept only), do NOT consult
 prose-style, narrative-technique, or reader-experience (no prose,
 no narration design, no reading experience exists). Record them in
-`non_consulted_evaluators` / `caveats`. Otherwise, select from all 10.
+`non_consulted_evaluators` / `caveats`. Otherwise, select from all 11.
 
-If `mode` is "full", select all applicable evaluators (10 for text,
-7 for plot). Otherwise select 3-5 using the subdomain selection
+If `mode` is "full", select all applicable evaluators (11 for text,
+8 for plot). Otherwise select 3-5 using the subdomain selection
 matrix. Always include `anti-generic-story-filter`.
 
 ### Step 2: Convene each evaluator

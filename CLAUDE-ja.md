@@ -31,7 +31,7 @@
 
 ## ディレクトリ規約
 
-- `agents/{name}.md` — 評価者エージェントの正本（10体）。ペルソナベースの専門家として独立したサブエージェントで起動される
+- `agents/{name}.md` — 評価者エージェントの正本（11体）。ペルソナベースの専門家として独立したサブエージェントで起動される
 - `skills/story-council/SKILL.md` — 合議オーケストレーターの正本（唯一のスキル）
 - `.claude/agents/` — プロジェクト内検出用symlink（評価者エージェント）
 - `.claude/skills/` — プロジェクト内検出用symlink（合議オーケストレーター）
@@ -62,7 +62,7 @@ Args: {"content": "...", "content_type": "text", "domain": "pure-literature"}
 
 ### プロット評価モード（あらすじでも評価できる）
 
-`content_type: "plot"` を指定すると、執筆前の構想・簡単なあらすじでも評価できる。散文・語り・読書体験が存在しないため、`prose-style`, `narrative-technique`, `reader-experience` の3体は未招集となり、残り7体（narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, theme-resonance, world-building）で評価する。
+`content_type: "plot"` を指定すると、執筆前の構想・簡単なあらすじでも評価できる。散文・語り・読書体験が存在しないため、`prose-style`, `narrative-technique`, `reader-experience` の3体は未招集となり、残り8体（narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, theme-resonance, world-building, admiration）で評価する。
 
 ```
 Skill: story-council
@@ -105,7 +105,7 @@ python utils/anonymize.py input.txt --author "著者名" --title "作品名" > a
 |--------|------|
 | `utils/anonymize.py` | **入力の匿名化**——作者名・作品名を除去し、盲検評価の前提を作る（第一の盲検） |
 | `utils/validate_output.py` | 評価者出力のスキーマ検証。`--json` フラグで機械可読な結果を出力（合議スキルの自動リトライが利用） |
-| `utils/render_report.py` | Story Report の視覚表示（10次元バーチャート・分類バッジ・次元間の対立）。`-o report.md` でMarkdown文書として保存、`--individuals` で全個別レポート表示 |
+| `utils/render_report.py` | Story Report の視覚表示（11次元バーチャート・分類バッジ・次元間の対立）。`-o report.md` でMarkdown文書として保存、`--individuals` で全個別レポート表示 |
 | `utils/compare_reports.py` | リライト前後の差分比較（評価→リライトループ用） |
 
 ## 評価出力は「入力」として設計されている
