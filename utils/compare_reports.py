@@ -31,6 +31,7 @@ DIMENSION_KEYS = [
     "narrative_technique",
     "reader_experience",
     "admiration",
+    "hook",
 ]
 
 DIMENSIONS = []   # filled from locale in main()

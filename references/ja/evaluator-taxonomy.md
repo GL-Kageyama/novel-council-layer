@@ -24,6 +24,7 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | Narrative Technique | 語りの距離・時間操作 | pure-literature, short-story |
 | Reader Experience | 読書体験・没入 | genre-fiction, light-novel |
 | Admiration | 不随意的な「おおっ」——予測を超えて必然に納得させる | 全サブドメイン |
+| Hook | 興味のエンジン——「続きが気になる」を立て、最後まで保つ（未知 × 知りたさ） | 全サブドメイン |
 
 ### 第2層：潜在価値発見（Hidden Potential Discovery）
 
@@ -58,6 +59,7 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | Narrative Technique | 語りの距離と時間操作は物語を強化するか？ |
 | Reader Experience | 読む体験として没入し、完成し、再読を誘うか？ |
 | Admiration | 予測を超えて必然に納得させることで、読者に感嘆を伴う「面白い！」を叫ばせるか？ |
+| Hook | 「続きが気になる」を意図して立て、最後の行まで保てているか？ |
 
 ## 隣接次元との境界（重複の整理）
 
@@ -73,6 +75,11 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | **admiration** × **reader_experience** | 読書体験は読む行為全体の質を見る。感嘆は単一の「おおっ」の頂点の瞬間を見る |
 | **admiration** × **emotional_power** | 感情は心が動くことを見る。感嘆は不随意的な声の漏れ（感傷ではなく認知の「おおっ」）を見る |
 | **admiration** × **narrative_originality** | 独創性は形式の逸脱を見る。感嘆は予測を超える頂点の瞬間を見る |
+| **hook** × **plot_architecture** | プロットは開示の機構（何がいつ明かされるか）を見る。フックはその開示がエンジンを点火するか（未知 × 知りたさ）を見る |
+| **hook** × **reader_experience** | 読書体験は読む行為の結果（没入・page-turner：実際に読み続けたか）を見る。フックは興味の機構と連鎖（問いをどう立て・どう繋いだか）を見る |
+| **hook** × **admiration** | 同じ超出の二相：フックは開いた半身（納得の前の「なぜ？」）、感嘆は閉じた完成（驚き＋必然＝「おおっ」） |
+| **hook** × **anti-generic-story-filter** | 反凡庸は「予測通り＝凡庸」（品質欠陥）を判定する。フックは「予測通り＝未知なし＝退屈」（エンジン点検）を判定する |
+| **hook** × **emotional_power** | 感情は閉じた反応（同一化 → カタルシス）を見る。フックは開いた半身（同一化 → 「この人助かる？」）を見る |
 
 ## 評価者間の関係
 
@@ -100,7 +107,7 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 Story Vector:
 [narrative_originality, quality, emotional_power, plot_architecture,
  character_depth, prose_style, theme_resonance, world_building,
- narrative_technique, reader_experience, admiration]
+ narrative_technique, reader_experience, admiration, hook]
 ```
 
 ## 合議での評価者選択

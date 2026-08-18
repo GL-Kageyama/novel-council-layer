@@ -24,6 +24,7 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | Narrative Technique | 叙事的距离・时间操作 | pure-literature, short-story |
 | Reader Experience | 阅读体验・沉浸 | genre-fiction, light-novel |
 | Admiration | 不自主的「哇」——超出预测又赢得必然 | 全部子领域 |
+| Hook | 兴味的引擎——立起并维系「好想知道接下来会怎样」（未知 × 想知道） | 全部子领域 |
 
 ### 第2层：潜在价值发现（Hidden Potential Discovery）
 
@@ -58,6 +59,7 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | Narrative Technique | 叙事的距离与时间操作是否强化了故事？ |
 | Reader Experience | 作为阅读体验，是否沉浸、完整，并引人重读？ |
 | Admiration | 是否通过超出预测又赢得必然，让读者发出带着惊叹的「有趣！」？ |
+| Hook | 是否刻意地立起并维系「好想知道接下来会怎样」——直到最后一行？ |
 
 ## 与相邻维度的边界（重复的整理）
 
@@ -73,6 +75,11 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | **admiration** × **reader_experience** | 阅读体验看整个阅读行为的质量。惊叹看单一「哇」的顶点瞬间 |
 | **admiration** × **emotional_power** | 情感看心灵的触动。惊叹看不自主的脱口而出（非感伤，而是认知上的「哇」） |
 | **admiration** × **narrative_originality** | 独创性看形式的偏离。惊叹看超出预测的顶点瞬间 |
+| **hook** × **plot_architecture** | 情节看揭示的机制（什么在何时被揭示）。钩子看该揭示是否点燃引擎（未知 × 想知道） |
+| **hook** × **reader_experience** | 阅读体验看阅读行为的结果（沉浸・page-turner：读者是否真的读下去）。钩子看兴味的机制与连锁（疑问如何立起、如何接续） |
+| **hook** × **admiration** | 同一超脱的两个相位：钩子是敞开的一半（信服之前的「为什么？」），惊叹是闭合的完成（惊奇＋必然＝「哇」） |
+| **hook** × **anti-generic-story-filter** | 反平庸判定「可预料＝平庸」（品质缺陷）。钩子判定「可预料＝无未知＝无聊」（引擎检查） |
+| **hook** × **emotional_power** | 情感看闭合的反应（同一化 → 宣泄）。钩子看敞开的一半（同一化 → 「他们会得救吗？」） |
 
 ## 评价者之间的关系
 
@@ -100,7 +107,7 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 Story Vector:
 [narrative_originality, quality, emotional_power, plot_architecture,
  character_depth, prose_style, theme_resonance, world_building,
- narrative_technique, reader_experience, admiration]
+ narrative_technique, reader_experience, admiration, hook]
 ```
 
 ## 合议中的评价者选择

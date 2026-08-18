@@ -41,6 +41,7 @@ VECTOR_DIMENSIONS = [
     "narrative_technique",
     "reader_experience",
     "admiration",
+    "hook",
 ]
 
 CLASSIFICATIONS = ["current_success", "discovery_target", "trend_object", "low_signal"]
@@ -159,6 +160,7 @@ def validate_basic(obj):
             "narrative-technique": "narrative_technique",
             "reader-experience": "reader_experience",
             "admiration": "admiration",
+            "hook": "hook",
         }.get(evaluator_id)
         vec = obj.get("value_vector_contribution", {}) if isinstance(
             obj.get("value_vector_contribution"), dict

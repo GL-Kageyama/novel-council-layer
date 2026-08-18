@@ -16,7 +16,8 @@
     "world_building": "World Building",
     "narrative_technique": "Narrative Technique",
     "reader_experience": "Reader Experience",
-    "admiration": "Admiration"
+    "admiration": "Admiration",
+    "hook": "Hook"
   },
   "class_badges": {
     "current_success": "🟢 Current Success",

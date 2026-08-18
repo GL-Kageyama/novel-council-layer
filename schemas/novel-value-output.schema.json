@@ -145,6 +145,11 @@
           "type": ["integer", "null"],
           "minimum": 0,
           "maximum": 100
+        },
+        "hook": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
         }
       }
     },

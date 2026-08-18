@@ -86,7 +86,7 @@ WEIGHT_PATTERNS = {
 VECTOR_KEYS = [
     "narrative_originality", "quality", "emotional_power", "plot_architecture",
     "character_depth", "prose_style", "theme_resonance", "world_building",
-    "narrative_technique", "reader_experience", "admiration",
+    "narrative_technique", "reader_experience", "admiration", "hook",
 ]
 
 # Kana letters (hiragana + katakana letters + prolonged mark ー), EXCLUDING
