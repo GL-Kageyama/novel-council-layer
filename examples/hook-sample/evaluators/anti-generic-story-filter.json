@@ -1,0 +1,79 @@
+{
+  "evaluator_id": "anti-generic-story-filter",
+  "evaluator_name": "Anti-Generic Story Filter",
+  "content_summary": "A lamplighter in a village whose houses submerge every night hears his own name called from the water and finds his own face looking back from a sunken window.",
+  "domain": "short-story",
+  "content_type": "text",
+  "primary_score": 63,
+  "primary_score_rationale": "A particular, withholding hand: concrete, terse, and structurally resistant to explanation. The score stops short of higher because the frame is thin and the motifs remain recognizable.",
+  "dimension_scores": {
+    "cliche_density": {
+      "score": 62,
+      "weight": 0.3,
+      "evidence": "The setup of a nightly-sinking village and a watery double reaches toward familiar material, but it is arranged without the expected folklore explanation or moral.",
+      "judgment": "Low density of borrowed beats; recognizable materials are reset into an unhurried, untaught register."
+    },
+    "formulaic_structure": {
+      "score": 65,
+      "weight": 0.25,
+      "evidence": "Three nights of escalation yield no retrieval: the cause is withheld until dawn, and no reconciliation or resolution is supplied.",
+      "judgment": "Refuses predestined harmony; the absence of explanation is structural, not a gap waiting to be filled."
+    },
+    "voice_particularity": {
+      "score": 66,
+      "weight": 0.25,
+      "evidence": "Concrete, restrained narration: roofs counted one by one, water at the knees, lamplight crossing a sunken roof, a face behind glass.",
+      "judgment": "Terse and specific; no generic narrator could imitate the counting or the angle of the light."
+    },
+    "risk_taking": {
+      "score": 60,
+      "weight": 0.2,
+      "evidence": "An ambiguous, unresolved ending and a non-confrontation with the double are permitted to stand without apology.",
+      "judgment": "Quiet risk; it courts the discomfort of not knowing and refuses the relief of an answer."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": 63,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null
+  },
+  "classification": "current_success",
+  "confidence": 58,
+  "strengths": [
+    "The counting of roofs as a near-liturgical repeated action is an irreplaceable structural detail no template would invent.",
+    "The withholding of the cause of the sinking is a deliberate refusal of exposition, not a missing piece.",
+    "The doppelganger is spent slowly and never cashed in: no confrontation, no lesson, no restoration.",
+    "Concrete sensory restraint—knee-deep water, light crossing a sunken roof—carries the mood without sentimentality."
+  ],
+  "weaknesses": [
+    "Three nights is a thin frame, and the rising-sea/double motifs remain recognizable enough that a lesser writer would have leaned on them.",
+    "The ending's enigma could read as coy rather than earned for a reader demanding resolution.",
+    "Brevity leaves little room for the double's hand reaching through the window to develop beyond a poised image."
+  ],
+  "unique_perspective": "Only this evaluator treats the story's refusal to explain the nightly sinking as its own outline—a productive risk rather than a defect of craft.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "reader-experience",
+      "predicted_stance": "May find the ending unsatisfying, the emotional range too narrow, and the prose too bare, scoring lower for lack of payoff."
+    },
+    {
+      "evaluator_type": "prose-style",
+      "predicted_stance": "May praise the restraint and clarity yet find the vocabulary flat or under-adorned, withholding a higher style score."
+    }
+  ],
+  "green_flags_detected": [
+    "Betrayal of expectation: the cause is withheld until dawn and no resolution arrives.",
+    "Irreplaceable details: the lamplighter's counting, the angle of the light, the knee-deep water, the face behind glass.",
+    "Productive risk: an unresolved ending and a double who is not fought or resolved.",
+    "An actual voice: a terse, unhurried register that a machine could not mistake for no one's."
+  ],
+  "narrative": "Whose story is this? It is the lamplighter's, and the lamplighter is a gaze, not a function. The village that sinks every night is not a mystery to be solved; it is weather, routine, and the man's job is to count the roofs going under. That counting is the story's own outline—an irreplaceable, almost liturgical action no template would invent. The template would explain the sea, redeem the double, and restore the village by dawn. This story does none of that.\n\nThe doppelganger at the window is the one real risk, and the story spends it slowly and refuses to cash it in. There is no shouted confrontation, no tearful reconciliation, no final lesson. The voice calls a name; a face answers that is also his own; the water keeps rising. That restraint is productive, but it is also fragile—three nights is a thin frame, and the motifs of the rising sea and the double are recognizable enough that a lesser writer would have leaned in. Here they are kept cold, and the cold is the point.\n\nScore 63: unmistakably a particular hand, concrete and withholding, but not textured or reckless enough to climb higher. The Reader Experience judge will likely complain that nothing is resolved and the prose is too bare; I call that withholding a feature, not a failure.",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z"
+}

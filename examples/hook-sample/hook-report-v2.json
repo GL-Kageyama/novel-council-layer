@@ -1,0 +1,86 @@
+{
+  "evaluator_id": "hook",
+  "evaluator_name": "Hook Evaluator",
+  "content_summary": "A light-keeper's nightly ritual of watching his village sink into the sea is disrupted when a voice from the water calls his name, revealing a face identical to his own.",
+  "domain": "short-story",
+  "content_type": "text",
+  "primary_score": 62,
+  "primary_score_rationale": "The hook ignites, chains through three escalating nights, and the trunk mystery is preserved to the end, but the carrier is an image rather than a bond and the doppelgänger branch only loosely advances the trunk.",
+  "dimension_scores": {
+    "investment": {
+      "score": 60,
+      "weight": 0.20,
+      "evidence": "Three opening paragraphs settle the sinking village's nightly image and the light-keeper's counting ritual before any unknown appears.",
+      "judgment": "The carrier is genuinely given — the image is vivid and possessed — but it is a picture rather than a human bond, so the foundation is solid yet shallow."
+    },
+    "unknown": {
+      "score": 70,
+      "weight": 0.25,
+      "evidence": "The voice rising from the water, its approach across three nights, and the facing image of the self open questions that stay genuinely unpredictable to the end.",
+      "judgment": "The trunk unknown — why the village sinks only at night — is real and is never closed; the mystery is open, not ornamental."
+    },
+    "desire": {
+      "score": 62,
+      "weight": 0.25,
+      "evidence": "The voice calls the man's name and the face beneath the window is his own, attaching the unknown to the self the reader has been shown.",
+      "judgment": "The transference is real — the pull rides on the man's own name and face — but it leans on uncanny symmetry rather than a bond the reader holds with a person, so the want is sharp but narrow."
+    },
+    "continuity": {
+      "score": 60,
+      "weight": 0.15,
+      "evidence": "Each night's answer opens the next: the first voice becomes a window-voice, the window-voice becomes a face, the face raises the unspoken question of identity.",
+      "judgment": "The escalation is clean and no answer lands without a next question; the chain is short but unsevered."
+    },
+    "progression": {
+      "score": 58,
+      "weight": 0.15,
+      "evidence": "The final line names the trunk — why the village sinks only at night — as still unknown, preserving it past the story's end.",
+      "judgment": "The trunk is held to the peak, but the doppelgänger branch reveals more about the face than about why the village sinks, and only loosely advances toward the preserved trunk."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": 62
+  },
+  "classification": "discovery_target",
+  "confidence": 70,
+  "strengths": [
+    "Give, then break: three paragraphs settle the sinking village's daily image before the voice breaks it, so the unknown lands on an image the reader already possesses.",
+    "Personal break: the mystery rides on the man's own name and face, attaching the want to a possession rather than a generic thing in the water.",
+    "The trunk is explicitly preserved: why the village sinks only at night is named as still unknown in the final line, held past the story's end.",
+    "Clean three-night escalation: each answer opens the next question — voice, then window, then face, then the reaching hand."
+  ],
+  "weaknesses": [
+    "The carrier is an image, not a bond: the reader holds a picture, not a person, so the emotional weight behind the wanting is thin.",
+    "The doppelgänger branch advances itself more than the trunk — the reader learns about the face, not why the village sinks.",
+    "The protagonist is a cipher with no investment the reader shares, so the pull leans on uncanny symmetry instead of risk to a loved bond."
+  ],
+  "unique_perspective": "The final line is the engine's triumph, not its failure. 'Until dawn, nobody knew' is trunk-preservation: the story refuses the answer precisely where a lesser story would close, and that refusal points the unresolved pull at the dawn the reader must supply. The hand reaching through the window is the last ignition, not a resolution — the story ends by opening one more joint and not closing it.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "plot-architecture",
+      "predicted_stance": "Likely to rate the disclosure machinery low because the ending leaves the central question entirely unresolved; I argue that the unresolved trunk is the engine's deliberate preservation, not a disclosure defect."
+    },
+    {
+      "evaluator_type": "reader-experience",
+      "predicted_stance": "Likely to flag the thin emotional investment in the protagonist; I argue the self-image hook carries the forward pull despite the cipher-like man."
+    }
+  ],
+  "green_flags_detected": [
+    "Give, then break (与えてから欠けさせる)",
+    "The answer opens the next question (閉じるとき、次の問いが開いている)",
+    "Trunk preserved to the end (幹が最後まで温存)"
+  ],
+  "narrative": "The engine ignites on the first break. The story spends three paragraphs settling the image — the soundless water, the ritual of the light-keeper counting roofs, the village's acclimatized calm — so that when the voice rises from the bottom of the water and calls the man's name, the break lands on something the reader already possesses. The name is the load-bearing word: the unknown is not 'what is under the water' in general but 'what knows me,' and it rides on the man himself. That personal attachment is what separates this from carrier-only; the gap is bolted to a face and a name the reader has been shown.\n\nThe chain escalates cleanly: first night a voice, second night the same voice from the window, third night a face — his own face. Each answer opens the next joint rather than closing it; the face answers 'the voice is a person' but immediately raises 'who are you,' and the hand reaching through the window raises a question that is never answered, which is the point. The trunk — why the village sinks only at night — is named at the very end as still unknown, a double move: it preserves the trunk to the peak, and it points the remaining pull at the dawn the reader must imagine.\n\nWhere the engine cools is in the carrier's bond. The image is possessed, but the man is a cipher; the reader holds a picture, not a person, and the want to know leans more on the uncanny symmetry of the face than on any risk to something loved. That keeps the pull below the rare register — the scarecrow of self is a real hook, but a thin one. Still, this is a story that knows the order: give, then break, and it does not sever its own line anywhere.",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z"
+}

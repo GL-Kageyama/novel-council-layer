@@ -1,0 +1,80 @@
+{
+  "evaluator_id": "character-depth",
+  "evaluator_name": "Character Depth Evaluator",
+  "content_summary": "A short atmospheric piece in which a lamplighter watches his village sink nightly and is called by his own double from beneath the water.",
+  "domain": "short-story",
+  "content_type": "text",
+  "primary_score": 36,
+  "primary_score_rationale": "The protagonist carries a single genuine inner tension — fear of the sea against the compulsion to descend — but he remains largely a lyrical presence whose motives and transformation are only sketched rather than structurally realized.",
+  "dimension_scores": {
+    "inner_conflict": {
+      "score": 50,
+      "weight": 0.3,
+      "evidence": "The text names the conflict once — the man who fears the sea and yet descends toward it — and then performs it through action rather than explanation.",
+      "judgment": "A real tension is present but underdeveloped; it is stated and gestured at more than inhabited, so it stays at the level of a single compelling trait."
+    },
+    "change_arc": {
+      "score": 30,
+      "weight": 0.25,
+      "evidence": "The protagonist moves from counting roofs on the high ground to wading into the water toward the face at the window.",
+      "judgment": "The descent is a plot movement and an image, not a rendered inner transformation; no before-state is established deeply enough for the change to feel earned or inevitable."
+    },
+    "motive_truth": {
+      "score": 35,
+      "weight": 0.25,
+      "evidence": "He descends because his name is called from underwater, three nights running, each time closer.",
+      "judgment": "The motive is convenient to the setup — a call, a mirror self — with little psychology or background making the compulsion arise from who he is."
+    },
+    "moral_complexity": {
+      "score": 25,
+      "weight": 0.2,
+      "evidence": "The character is reduced toward the archetype of the solitary watchman confronting his double, with no self-deception or moral ambiguity examined.",
+      "judgment": "The man does not occupy a flawed position he is aware of and cannot change; he simplifies into a sign of self-confrontation rather than a conflicted moral agent."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": 36,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null
+  },
+  "classification": "low_signal",
+  "confidence": 72,
+  "strengths": [
+    "The inner conflict is rendered through action rather than explanation: the man descends despite a stated fear of the sea, and at the final moment keeps the lamp lit, implying an unresolved choice.",
+    "The double leaves interpretive margin; his unextinguished lamp and unanswered question preserve ambiguity instead of closing it.",
+    "The calling by name compresses an identity question into a concrete sensory event — a voice rising from underwater — grounding psychology in event rather than monologue."
+  ],
+  "weaknesses": [
+    "Motives are thin: he descends because he is called, with little psychology or background making the compulsion inevitable.",
+    "The change arc is minimal and external; the descent reads as plot movement rather than an inner transformation the reader can track.",
+    "Moral complexity is nearly absent; the character is simplified toward the archetype of the solitary watchman facing his double.",
+    "The man functions as a sign of the story's theme — self-confrontation, the hidden village — rather than as a living person."
+  ],
+  "unique_perspective": "What only this evaluator sees is that the story's real 'character' is the tension between the feared sea and the descending man, but this tension is atmospheric rather than psychological — the double is a mirror for theme, not a person, and the lamplighter stays a vehicle for the image he holds aloft.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "plot-architecture",
+      "predicted_stance": "Likely to value the piece's tight atmospheric build and the escalation across three nights, treating the protagonist as a functional carrier of the narrative's rhythm rather than requesting deeper interiority."
+    },
+    {
+      "evaluator_type": "reader-experience",
+      "predicted_stance": "Likely to score immersion higher, since the restrained mood and the uncanny double create a strong felt effect that can register as presence even when the character remains thin on the page."
+    }
+  ],
+  "red_flags_triggered": [
+    "Convenient motives: the compulsion to descend is granted by the plot's call rather than arising from established psychology.",
+    "Role fulfillment only: the lamplighter largely performs his watchman function as a vehicle for the story's atmosphere."
+  ],
+  "green_flags_detected": [
+    "Inner life expressed in action: fear and compulsion are shown through the descent and the choice not to extinguish the lamp.",
+    "Characters with margin: the double and the unanswered question leave room for the reader's interpretation."
+  ],
+  "narrative": "The lamplighter is a figure poised on a single honest hinge. He is a man who fears the sea and yet, when his own name rises from the drowned houses, walks down into it. That contradiction is the one place where he threatens to become a person rather than a watchman, and it is stated exactly once and then acted out: he wades to his knees, he shines the light, he asks who the other is, and he does not put the lamp out. There is something genuinely alive in that restraint — the psychology is not explained, it is performed as a chain of descents over three nights.\n\nBut what surrounds the hinge is thin. Why he goes down is granted him by the plot — a call, a face, a reaching hand — rather than earned from any background, habit, or internalizing of his role. The change from counting roofs to climbing down is a movement of the story's imagery, not an inner transformation with a before-state deep enough to measure against. He is not morally complex; he is not deceiving himself in any legible way. He is, more than a person, the soul of the village's uncanny condition, a sign that the hidden thing underwater knows his name.\n\nThis is not necessarily a failure of the piece. A short story of this kind borrows its power from mood and symbol, and a fully rounded protagonist would crowd out the very hush the story needs. But judged strictly as character depth, the lamplighter stays a presence rather than a person: a man with one compelling trait, rendered beautifully, and not much else yet living behind it."
+}

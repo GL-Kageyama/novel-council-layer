@@ -1,0 +1,1172 @@
+{
+  "report_id": "story-council-report",
+  "report_timestamp": "2026-08-18T00:00:00Z",
+  "content_summary": "A lamplighter in a village that sinks beneath the sea each night hears his own name called from a drowned house and finds his own face behind a submerged window.",
+  "content_type": "text",
+  "domain": "short-story",
+  "evaluators_consulted": [
+    "narrative-originality",
+    "anti-generic-story-filter",
+    "emotional-power",
+    "plot-architecture",
+    "character-depth",
+    "prose-style",
+    "theme-resonance",
+    "world-building",
+    "narrative-technique",
+    "reader-experience",
+    "admiration",
+    "hook"
+  ],
+  "non_consulted_evaluators": [],
+  "excluded_evaluators": [],
+  "story_vector": {
+    "narrative_originality": {
+      "mean": 35,
+      "variance": 0,
+      "min": 35,
+      "max": 35,
+      "scores": [
+        35
+      ]
+    },
+    "quality": {
+      "mean": 63,
+      "variance": 0,
+      "min": 63,
+      "max": 63,
+      "scores": [
+        63
+      ]
+    },
+    "emotional_power": {
+      "mean": 70,
+      "variance": 0,
+      "min": 70,
+      "max": 70,
+      "scores": [
+        70
+      ]
+    },
+    "plot_architecture": {
+      "mean": 63,
+      "variance": 0,
+      "min": 63,
+      "max": 63,
+      "scores": [
+        63
+      ]
+    },
+    "character_depth": {
+      "mean": 36,
+      "variance": 0,
+      "min": 36,
+      "max": 36,
+      "scores": [
+        36
+      ]
+    },
+    "prose_style": {
+      "mean": 82,
+      "variance": 0,
+      "min": 82,
+      "max": 82,
+      "scores": [
+        82
+      ]
+    },
+    "theme_resonance": {
+      "mean": 79,
+      "variance": 0,
+      "min": 79,
+      "max": 79,
+      "scores": [
+        79
+      ]
+    },
+    "world_building": {
+      "mean": 62,
+      "variance": 0,
+      "min": 62,
+      "max": 62,
+      "scores": [
+        62
+      ]
+    },
+    "narrative_technique": {
+      "mean": 69,
+      "variance": 0,
+      "min": 69,
+      "max": 69,
+      "scores": [
+        69
+      ]
+    },
+    "reader_experience": {
+      "mean": 82,
+      "variance": 0,
+      "min": 82,
+      "max": 82,
+      "scores": [
+        82
+      ]
+    },
+    "admiration": {
+      "mean": 59,
+      "variance": 0,
+      "min": 59,
+      "max": 59,
+      "scores": [
+        59
+      ]
+    },
+    "hook": {
+      "mean": 62,
+      "variance": 0,
+      "min": 62,
+      "max": 62,
+      "scores": [
+        62
+      ]
+    }
+  },
+  "current_value_score": 62,
+  "hidden_potential_score": 61,
+  "classification": "innovation",
+  "disagreement_map": [
+    {
+      "dimension": "execution (prose_style / reader_experience / theme_resonance) vs form (narrative_originality)",
+      "variance": null,
+      "disputing_evaluators": [
+        "prose-style",
+        "reader-experience",
+        "theme-resonance",
+        "narrative-originality"
+      ],
+      "arguments": [
+        "prose-style (82): 'The prose functions as music: it throttles the reader's speed with short declarative beats, lands a single recontextualizing word, and makes the water felt on the skin.'",
+        "reader-experience (82): 'the story's secret is that its slowness is its pull, a quiet immersion where boredom would have been the failure and never arrived.'",
+        "narrative-originality (35): 'The setting is new; the machine is not... the work succeeds as genre fiction and means nothing formally.'"
+      ]
+    },
+    {
+      "dimension": "character_depth vs emotional_power (cipher vs tender vigil)",
+      "variance": null,
+      "disputing_evaluators": [
+        "character-depth",
+        "emotional-power"
+      ],
+      "arguments": [
+        "character-depth (36): 'The man functions as a sign of the story's theme... rather than as a living person.'",
+        "emotional-power (70): 'I see a portrait of solitary care. The lantern keeper counting rooftops is the emotional center — a night nurse of a drowning village.'"
+      ]
+    }
+  ],
+  "consensus_summary": "Where the council agreed: (1) the equivalence 'to sink is to sleep' is the story's load-bearing, genuinely fresh move — noted by narrative-originality, prose-style, theme-resonance, world-building, emotional-power, and reader-experience alike; (2) the prose is deliberate and restrained, controlling reading speed with short declarative beats; (3) the ending's refusal to explain why the village sinks is a deliberate disclosure choice, not an accident. Where they split: whether that withheld ending is earned restraint (theme-resonance, reader-experience, emotional-power) or a convenient open loop (plot-architecture, admiration, narrative-originality).",
+  "executive_summary": "The council split on this story, and the split is the finding. Four evaluators in the 'craft' register — prose-style (82), reader-experience (82), theme-resonance (79), emotional-power (70) — judged the story a tightly controlled, atmospheric piece whose restraint, its 'sinking equals sleeping' equivalence, and its withheld ending give it real afterglow and rereading depth. Two evaluators in the 'form and psychology' register — narrative-originality (35) and character-depth (36) — judged the machine conventional (voice-calls-name, doppelgänger, three-night escalation) and the lamplighter a cipher. The remaining evaluators (plot-architecture, world-building, narrative-technique, admiration, hook, quality) landed in a competent middle band of 59–69. The aggregate lands high — current value 62, hidden potential 61 — because the story's manner of telling is genuinely strong even where its formal novelty and interiority are not.",
+  "synthesis_narrative": "The council did not agree, and that is exactly what a chairperson should report. The story divides along a clean seam: its execution is praised nearly unanimously, its form and its psychology are not. prose-style calls the prose 'music' and lands a recontextualizing verb — 'to sink is to sleep' — that retroactively charges every drowned roof. reader-experience locates the value in the experience rather than the event: 'the time spent on this story was not merely used up; it was returned, with interest.' theme-resonance reads the double as the returned gaze of the part of the self that already sleeps beneath the water. This is a real consensus: the story does its work through manner and withholding, not through novelty of machinery.\n\nBut narrative-originality is right that the machine is stock — the voice calling a name, the doppelgänger at a window, the three-night escalation — and character-depth is right that the lamplighter is a sign more than a person. The council's honest conclusion is that this is a story whose value is earned by its telling and its theme, and whose ceiling is held down by conventional structure and thin interiority. That is not a dismissal: the aggregation puts current value at 62 and hidden potential at 61, which under the fixed 2x2 model classifies it as 'innovation' — with the caveat that the innovation here lives in execution and thematic depth, not in formal novelty.",
+  "individual_reports": [
+    {
+      "evaluator_id": "narrative-originality",
+      "evaluator_name": "Narrative Originality Evaluator",
+      "content_summary": "A flash story in which a village sinks underwater each night as its people sleep; a light-keeper, hearing his own name called from a sunken house, descends to find his double at the window.",
+      "domain": "short-story",
+      "primary_score": 35,
+      "primary_score_rationale": "A polished genre-standard kaidan with one fresh premise image (nightly sinking as sleep) over an entirely conventional horror engine and flash-fiction form.",
+      "dimension_scores": {
+        "premise_novelty": {
+          "score": 45,
+          "weight": 0.35,
+          "evidence": "nightly submersion as routine; flooding reframed as sleep; drowned-village folklore precedent; stock voice-calls-name and doppelganger engine",
+          "judgment": "One fresh ironic reversal over a known submerged-village image; the horror engine itself is entirely template."
+        },
+        "form_deviation": {
+          "score": 20,
+          "weight": 0.3,
+          "evidence": "present-tense clipped declarative sentences; three-night escalation; deliberately unresolved final line; standard flash-fiction and kaidan arc",
+          "judgment": "No formal deviation; the narration is a recognized minimalist flash form and the arc is the stock triple-escalation."
+        },
+        "genre_distance": {
+          "score": 25,
+          "weight": 0.2,
+          "evidence": "atmospheric kaidan with voice from water, doppelganger at a window, ritual numbering of roofs; canonical template",
+          "judgment": "Sits inside the genre template with strong déjà vu."
+        },
+        "meaningfulness_of_deviation": {
+          "score": 55,
+          "weight": 0.15,
+          "evidence": "submersion-as-sleep lets the double inhabit the house one leaves in rest; the uncanny is tied to a domestic ritual",
+          "judgment": "What little deviation exists is necessary and clean, but it is a single image, not a structural break."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": 35,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "current_success",
+      "confidence": 72,
+      "strengths": [
+        "The premise's central inversion — submersion as nightly rest rather than catastrophe — recasts a familiar drowned-village image as quiet domestic ritual.",
+        "The clipped, present-tense narration mirrors the submerged, numbed atmosphere; form and content are aligned without much being new.",
+        "The doppelganger placed in the house left behind during sleep gives the uncanny a domestic logic."
+      ],
+      "weaknesses": [
+        "The horror engine is stock: a voice calling one's name and a doppelganger at a window, with a three-night escalation and an unresolved ending.",
+        "No formal deviation: the narration and arc follow the canonical flash-fiction kaidan template.",
+        "The doppelganger motif is confirmatory rather than structurally transformative; the freshness stays on the surface of the premise."
+      ],
+      "unique_perspective": "Only a formalist would note that the story's one true novelty is syntactic: the clipped counting sentences perform the light-keeper's ritual, so the prose enacts the premise even as the plot reuses a template. The mystery of why the village sinks is never answered because asking would break the numbed form — the form's silence is the point, but that silence is borrowed, not invented.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "anti-generic-story-filter",
+          "predicted_stance": "More severe; will flag the voice-calls-name and doppelganger as banal, while I extend some credit for the premise inversion."
+        },
+        {
+          "evaluator_type": "plot-architecture",
+          "predicted_stance": "May score the tight three-night escalation and restraint much higher on design skill, producing a predictable divergence: high design, low novelty."
+        }
+      ],
+      "narrative": "The premise of the nightly-sinking village is the only thing here that earns a second look: by making submersion a routine rather than a catastrophe, and by equating drowning with sleeping, the story converts a worn drowned-village image into a quiet domestic ritual. That inversion has the shape of real invention. But everything the premise is used to do — the voice that calls the protagonist's name from the water, the doppelganger at the window, the three-night escalation, the deliberately unresolved ending — is the standard furniture of atmospheric kaidan and flash fiction. The setting is new; the machine is not.\n\nThe form compounds the problem rather than relieving it. The clipped, present-tense, declarative prose is a recognizable minimalist flash technique, and the triple-night arc is the stock structure of the genre. The one place where form and content genuinely converge — the numbed, counting sentences that perform the light-keeper's ritual of numbering the roofs — is effective but is an alignment of known parts, not a deviation. The story was always going to end with the mystery unanswered, because unresolvedness is what the template requires; that silence feels inevitable and borrowed in equal measure.\n\nA dry formalist would call this what it is: a well-executed variant within its category. The double in the sunken house has a domestic logic — it is the self left behind in sleep — and that logic is clean and necessary, not decorative. But one meaningful image over a conventional engine scores a conventional originality. The work succeeds as genre fiction and means nothing formally.",
+      "red_flags_triggered": [
+        "Cosmetic novelty",
+        "Variation within a category"
+      ],
+      "green_flags_detected": [
+        "Alignment of premise and form"
+      ],
+      "content_type": "text",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    },
+    {
+      "evaluator_id": "anti-generic-story-filter",
+      "evaluator_name": "Anti-Generic Story Filter",
+      "content_summary": "A lamplighter in a village whose houses submerge every night hears his own name called from the water and finds his own face looking back from a sunken window.",
+      "domain": "short-story",
+      "content_type": "text",
+      "primary_score": 63,
+      "primary_score_rationale": "A particular, withholding hand: concrete, terse, and structurally resistant to explanation. The score stops short of higher because the frame is thin and the motifs remain recognizable.",
+      "dimension_scores": {
+        "cliche_density": {
+          "score": 62,
+          "weight": 0.3,
+          "evidence": "The setup of a nightly-sinking village and a watery double reaches toward familiar material, but it is arranged without the expected folklore explanation or moral.",
+          "judgment": "Low density of borrowed beats; recognizable materials are reset into an unhurried, untaught register."
+        },
+        "formulaic_structure": {
+          "score": 65,
+          "weight": 0.25,
+          "evidence": "Three nights of escalation yield no retrieval: the cause is withheld until dawn, and no reconciliation or resolution is supplied.",
+          "judgment": "Refuses predestined harmony; the absence of explanation is structural, not a gap waiting to be filled."
+        },
+        "voice_particularity": {
+          "score": 66,
+          "weight": 0.25,
+          "evidence": "Concrete, restrained narration: roofs counted one by one, water at the knees, lamplight crossing a sunken roof, a face behind glass.",
+          "judgment": "Terse and specific; no generic narrator could imitate the counting or the angle of the light."
+        },
+        "risk_taking": {
+          "score": 60,
+          "weight": 0.2,
+          "evidence": "An ambiguous, unresolved ending and a non-confrontation with the double are permitted to stand without apology.",
+          "judgment": "Quiet risk; it courts the discomfort of not knowing and refuses the relief of an answer."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": 63,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "current_success",
+      "confidence": 58,
+      "strengths": [
+        "The counting of roofs as a near-liturgical repeated action is an irreplaceable structural detail no template would invent.",
+        "The withholding of the cause of the sinking is a deliberate refusal of exposition, not a missing piece.",
+        "The doppelganger is spent slowly and never cashed in: no confrontation, no lesson, no restoration.",
+        "Concrete sensory restraint—knee-deep water, light crossing a sunken roof—carries the mood without sentimentality."
+      ],
+      "weaknesses": [
+        "Three nights is a thin frame, and the rising-sea/double motifs remain recognizable enough that a lesser writer would have leaned on them.",
+        "The ending's enigma could read as coy rather than earned for a reader demanding resolution.",
+        "Brevity leaves little room for the double's hand reaching through the window to develop beyond a poised image."
+      ],
+      "unique_perspective": "Only this evaluator treats the story's refusal to explain the nightly sinking as its own outline—a productive risk rather than a defect of craft.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "reader-experience",
+          "predicted_stance": "May find the ending unsatisfying, the emotional range too narrow, and the prose too bare, scoring lower for lack of payoff."
+        },
+        {
+          "evaluator_type": "prose-style",
+          "predicted_stance": "May praise the restraint and clarity yet find the vocabulary flat or under-adorned, withholding a higher style score."
+        }
+      ],
+      "green_flags_detected": [
+        "Betrayal of expectation: the cause is withheld until dawn and no resolution arrives.",
+        "Irreplaceable details: the lamplighter's counting, the angle of the light, the knee-deep water, the face behind glass.",
+        "Productive risk: an unresolved ending and a double who is not fought or resolved.",
+        "An actual voice: a terse, unhurried register that a machine could not mistake for no one's."
+      ],
+      "narrative": "Whose story is this? It is the lamplighter's, and the lamplighter is a gaze, not a function. The village that sinks every night is not a mystery to be solved; it is weather, routine, and the man's job is to count the roofs going under. That counting is the story's own outline—an irreplaceable, almost liturgical action no template would invent. The template would explain the sea, redeem the double, and restore the village by dawn. This story does none of that.\n\nThe doppelganger at the window is the one real risk, and the story spends it slowly and refuses to cash it in. There is no shouted confrontation, no tearful reconciliation, no final lesson. The voice calls a name; a face answers that is also his own; the water keeps rising. That restraint is productive, but it is also fragile—three nights is a thin frame, and the motifs of the rising sea and the double are recognizable enough that a lesser writer would have leaned in. Here they are kept cold, and the cold is the point.\n\nScore 63: unmistakably a particular hand, concrete and withholding, but not textured or reckless enough to climb higher. The Reader Experience judge will likely complain that nothing is resolved and the prose is too bare; I call that withholding a feature, not a failure.",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    },
+    {
+      "evaluator_id": "emotional-power",
+      "evaluator_name": "Emotional Power Evaluator",
+      "content_summary": "A solitary lantern keeper watches his village sink underwater each night and is called by name from a drowned house, where he meets his own face.",
+      "domain": "short-story",
+      "primary_score": 70,
+      "primary_score_rationale": "Genuine, restrained emotion that accrues through ritual and echo rather than being administered through device; memorable images linger, though the muted register keeps the piece slightly toward the cool end and the doppelganger briefly leans generic.",
+      "dimension_scores": {
+        "genuine_emotion": {
+          "score": 71,
+          "weight": 0.3,
+          "evidence": "Emotion gathers around two repeated structures — the nightly counting of the sinking roofs and the name called from beneath the water — rather than around any stated feeling.",
+          "judgment": "The sorrow is never announced; it accrues through ritual and echo, giving it a restraint that reads as truthful rather than staged."
+        },
+        "empathy": {
+          "score": 68,
+          "weight": 0.2,
+          "evidence": "The keeper's vigil is structurally empathetic: villagers already rest on high ground while he alone stays awake, counting houses as one counts the sleeping, and the text refuses to distinguish sinking from sleeping.",
+          "judgment": "The reader is drawn into the loneliness of a solitary caretaker, an unspoken devotion that asks us to imagine his night as vigilance over others."
+        },
+        "memory_persistence": {
+          "score": 73,
+          "weight": 0.2,
+          "evidence": "The motif of light crossing sunken roofs, the face behind the window, and the hand reaching through recur and recontextualize the opening image of counted roofs.",
+          "judgment": "These images return after reading: the light that finds nothing and returns no answer becomes the residue of an unanswered vigil the reader carries."
+        },
+        "post_reading_shift": {
+          "score": 67,
+          "weight": 0.3,
+          "evidence": "The final refusal — the man does not put out the lamp though the water still rises — and the open clause that no one knew why until dawn leave the confrontation unresolved.",
+          "judgment": "What shifts is small and quiet: the sense of having watched someone choose not to look away. The absence of answer is the shift, which some may find resonant and others merely withheld."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": 70,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 76,
+      "strengths": [
+        "The nightly counting of sinking roofs turns destruction into a tender vigil, so loneliness arises from structure rather than stated feeling.",
+        "The doppelganger embodies the story's own named contradiction — fearing the sea yet descending to it — making the uncanny emotional rather than merely frightening.",
+        "The man's refusal to extinguish the lamp, and the parenthetical rendering of the reaching hand, keep emotion restrained and let the reader complete the feeling."
+      ],
+      "weaknesses": [
+        "The uncanny-double device sits close to familiar horror grammar and momentarily leans generic before the restraint recovers it.",
+        "The muted register can read as cool distance; readers seeking warmth may find vigilance more chilling than moving.",
+        "The closing 'no one knew why' risks feeling withheld rather than resonant, deferring the emotional answer the vigil seems to promise."
+      ],
+      "unique_perspective": "Where another reader sees a ghost story, I see a portrait of solitary care. The lantern keeper counting rooftops is the emotional center — a night nurse of a drowning village — and the face in the window is not horror but the self calling the watcher by name, grief asking to be recognized.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "prose-style",
+          "predicted_stance": "May locate the work's value in the austere formal beauty of the prose, scoring style as the primary carrier, whereas I hold that style here serves an emotional structure and should not outweigh it."
+        },
+        {
+          "evaluator_type": "anti-generic-story-filter",
+          "predicted_stance": "May flag the doppelganger as a worn genre trope and judge the piece derivative, whereas I see the trope recontextualized by the tenderness of the vigil."
+        }
+      ],
+      "narrative": "This story moves without once asking to move. Its emotion is carried by a ritual — a man alone counting the roofs that sink, as one might count the breathing of sleepers — and by an echo, a name called upward through black water. Nothing is explained, and that is its strength: the reader is left inside the vigil, holding the lamp beside the man, watching the light cross a sunken roof and return nothing. The restraint is not coldness but precision; the story knows that grief and dread announce themselves more loudly when not announced.\n\nThe moment that gives the piece its weight is the contradiction the text names outright: the man who fears the sea is also the man who descends to it. The face in the window is never a monster; it is the same face, the same divided self, and its single gesture — a hand reaching slowly toward the glass — is rendered in parentheses, as if the story itself is embarrassed to say too much. That is the aesthetic of restraint in practice: the uncanny is held almost motionless so the reader's feeling must supply the movement.\n\nWhat lingers is not fear but tenderness, and not answer but the refusal to look away. The man does not put out the lamp, and the village's reason remains unknown until dawn — and after dawn, forgotten. There is something quietly devastating in that: a whole village sinking nightly and explaining itself to no one, watched over by one unpaid witness. I am moved, and I cannot quite say why, which is how I know it is genuine and not administered.",
+      "green_flags_detected": [
+        "Restrained emotion",
+        "Negative space",
+        "Complex emotion"
+      ],
+      "improvement_suggestions": [
+        "Ground the doppelganger in one specific personal detail of the keeper's life so the double reads as his particular guilt or longing rather than generic horror.",
+        "Allow a single warm, concrete human gesture earlier in the vigil to raise the register from cool distance toward felt tenderness.",
+        "Reconsider the final 'no one knew why' — either earn it as a shared village silence or replace it with a small internal shift in the man, so the absence of an answer feels deliberate rather than merely withheld."
+      ],
+      "content_type": "text",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    },
+    {
+      "evaluator_id": "plot-architecture",
+      "evaluator_name": "Plot Architecture Evaluator",
+      "content_summary": "A lamplighter in a village that sinks beneath the sea each night hears his own name rise from a drowned house and, over three nights, descends to find his own face at the window.",
+      "domain": "short-story",
+      "primary_score": 63,
+      "primary_score_rationale": "Disclosure is surgical — a three-night ramp with a recontextualizing reveal and a withheld resolution — but the causal premise and the double's existence are asserted rather than earned, keeping the whole in competent but thin territory.",
+      "dimension_scores": {
+        "causality": {
+          "score": 55,
+          "weight": 0.3,
+          "evidence": "The lamplighter's descent is motivated — the voice is heard, so the descent follows — and the three-night escalation is internally consistent. But the governing premise, why the village sinks only at night, is held outside the causal chain, and the double's existence is asserted at the climax rather than earned.",
+          "judgment": "A thin but unbroken chain: character action is motivated, while the world's causality is deliberately withheld, leaving the loop open by design."
+        },
+        "disclosure_timing": {
+          "score": 74,
+          "weight": 0.3,
+          "evidence": "The progression is measured: a barely audible name on the first night, the name twice from a window on the second, a face and a reaching hand on the third, then a sentence that relocates the explanation into a dawn that is never shown.",
+          "judgment": "The strongest element. Each disclosure widens the gap between what is known and what the water holds, and the final withholding purposefully extends the reader's curiosity past the ending."
+        },
+        "foreshadowing": {
+          "score": 56,
+          "weight": 0.25,
+          "evidence": "The early statement that sinking is the same as sleeping plants an association between the submerged world and the unconscious, which the identical face later embodies. Beyond this, few details are buried for rereading.",
+          "judgment": "One symbolic seed is planted and receives a payoff in the double, but the story is too brief to develop a fuller system of planted and paid-off details."
+        },
+        "tension_curve": {
+          "score": 70,
+          "weight": 0.15,
+          "evidence": "A clean three-beat escalation — distant voice, nearer voice, face and hand — that peaks at the climactic gesture and then declines to release, ending instead on the words that the water was still rising and the mystery unread.",
+          "judgment": "The rise is shaped deliberately and the withholding of release is a choice, redirecting the accumulated tension into a lingering question rather than a denouement."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": 63,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "low_signal",
+      "confidence": 74,
+      "strengths": [
+        "A disciplined three-beat disclosure ramp: the summons is released first as a barely audible name, then from a window, then as a face, each beat widening the gap between knowledge and what the water holds.",
+        "The identical face recontextualizes the opening voice — the summons was the self — a payoff that retroactively charges the first night.",
+        "The final line displaces the explanation into a dawn the reader is never shown, engineering a curiosity that survives the ending by design.",
+        "Clean escalating tension: each night the source is closer, culminating in a reaching hand and a deliberately unresolved close."
+      ],
+      "weaknesses": [
+        "The central premise — why the village sinks only at night — sits outside causality, withheld by authorial fiat rather than structural necessity.",
+        "The double's existence is asserted for the sake of the climax, not earned by any planted rule or mechanism.",
+        "Foreshadowing is thin: beyond the 'sinking equals sleeping' motif, little is buried for rereading to recover.",
+        "The causal loop is left open; the wound-up tension is redirected into a question rather than resolved in any sense."
+      ],
+      "unique_perspective": "The real reveal in this story is not the face but the withheld dawn. The story's last act of disclosure is a refusal to disclose — the answer is announced as existing 'until dawn' and then silently withheld — which means the reader is left holding a structure of absence rather than a fact. Only an architecture reading insists that the final gesture is the plot's true event.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "reader-experience",
+          "predicted_stance": "Likely to score higher, treating the unresolved ending and lingering dread as a feature of the atmosphere rather than an open causal loop; the final image may outweigh the thin causality."
+        },
+        {
+          "evaluator_type": "narrative-technique",
+          "predicted_stance": "May praise the controlled detachment and the final shift to a broader, almost omniscient register as a deliberate manipulation of distance, where I read the withheld dawn as a non-closure."
+        }
+      ],
+      "green_flags_detected": [
+        "Recontextualization structure",
+        "Asymmetry of information"
+      ],
+      "improvement_suggestions": [
+        "Plant one additional rule or detail in the opening that the double's appearance later pays off, so the doppelgänger feels earned rather than asserted.",
+        "Provide a release gesture for the wound-up tension — even an anti-release, such as the light going out — so the final withholding lands as a chosen refusal rather than a simple stop."
+      ],
+      "content_type": "text",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z",
+      "narrative": "The plot is a single ramp: three nights, each drawing the lamplighter closer to the submerged window. What is revealed, and when, is the whole of the architecture. The first night releases only a name at the threshold of audibility; the second doubles it and moves it to a window; the third delivers the face and a reaching hand. The sequencing is precise — the escalation is not hurried, and each beat widens the gap between what the man knows and what the water holds. The reveal of the identical face is the payoff that recontextualizes the voice: what called him was himself. In this respect the story has a genuine recontextualization structure, and the final line — 'until dawn no one knew' — is a deliberate displacement of the answer into a dawn the reader is never shown. That is a disclosure choice, not an accident; the reader's curiosity is engineered to outlive the final sentence.\n\nBut the causal chain is thin. The man's actions are motivated — he hears his name, so he descends — yet the premise that moves everything, why the village sinks only at night, is held entirely outside causalism, and the double's existence is never earned by anything except the story's need for a climax. The loop is left open by design. Foreshadowing is present but faint: 'sinking is the same as sleeping' plants the dream-self reading that the double later embodies, but little else is buried for rereading to recover. The tension curve is the most disciplined element — a clean three-beat escalation that peaks at the hand and then refuses release, redirecting the wound-up tension into a persistent question rather than a resolution.\n\nThe design is competent and surgical in its disclosure, but it operates within a very small frame. What it does, it does cleanly; it simply does not attempt much else. On a scale where causality is the load-bearing wall, the building here is a single well-lit corridor leading to a door that is never opened."
+    },
+    {
+      "evaluator_id": "character-depth",
+      "evaluator_name": "Character Depth Evaluator",
+      "content_summary": "A short atmospheric piece in which a lamplighter watches his village sink nightly and is called by his own double from beneath the water.",
+      "domain": "short-story",
+      "content_type": "text",
+      "primary_score": 36,
+      "primary_score_rationale": "The protagonist carries a single genuine inner tension — fear of the sea against the compulsion to descend — but he remains largely a lyrical presence whose motives and transformation are only sketched rather than structurally realized.",
+      "dimension_scores": {
+        "inner_conflict": {
+          "score": 50,
+          "weight": 0.3,
+          "evidence": "The text names the conflict once — the man who fears the sea and yet descends toward it — and then performs it through action rather than explanation.",
+          "judgment": "A real tension is present but underdeveloped; it is stated and gestured at more than inhabited, so it stays at the level of a single compelling trait."
+        },
+        "change_arc": {
+          "score": 30,
+          "weight": 0.25,
+          "evidence": "The protagonist moves from counting roofs on the high ground to wading into the water toward the face at the window.",
+          "judgment": "The descent is a plot movement and an image, not a rendered inner transformation; no before-state is established deeply enough for the change to feel earned or inevitable."
+        },
+        "motive_truth": {
+          "score": 35,
+          "weight": 0.25,
+          "evidence": "He descends because his name is called from underwater, three nights running, each time closer.",
+          "judgment": "The motive is convenient to the setup — a call, a mirror self — with little psychology or background making the compulsion arise from who he is."
+        },
+        "moral_complexity": {
+          "score": 25,
+          "weight": 0.2,
+          "evidence": "The character is reduced toward the archetype of the solitary watchman confronting his double, with no self-deception or moral ambiguity examined.",
+          "judgment": "The man does not occupy a flawed position he is aware of and cannot change; he simplifies into a sign of self-confrontation rather than a conflicted moral agent."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": 36,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "low_signal",
+      "confidence": 72,
+      "strengths": [
+        "The inner conflict is rendered through action rather than explanation: the man descends despite a stated fear of the sea, and at the final moment keeps the lamp lit, implying an unresolved choice.",
+        "The double leaves interpretive margin; his unextinguished lamp and unanswered question preserve ambiguity instead of closing it.",
+        "The calling by name compresses an identity question into a concrete sensory event — a voice rising from underwater — grounding psychology in event rather than monologue."
+      ],
+      "weaknesses": [
+        "Motives are thin: he descends because he is called, with little psychology or background making the compulsion inevitable.",
+        "The change arc is minimal and external; the descent reads as plot movement rather than an inner transformation the reader can track.",
+        "Moral complexity is nearly absent; the character is simplified toward the archetype of the solitary watchman facing his double.",
+        "The man functions as a sign of the story's theme — self-confrontation, the hidden village — rather than as a living person."
+      ],
+      "unique_perspective": "What only this evaluator sees is that the story's real 'character' is the tension between the feared sea and the descending man, but this tension is atmospheric rather than psychological — the double is a mirror for theme, not a person, and the lamplighter stays a vehicle for the image he holds aloft.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "plot-architecture",
+          "predicted_stance": "Likely to value the piece's tight atmospheric build and the escalation across three nights, treating the protagonist as a functional carrier of the narrative's rhythm rather than requesting deeper interiority."
+        },
+        {
+          "evaluator_type": "reader-experience",
+          "predicted_stance": "Likely to score immersion higher, since the restrained mood and the uncanny double create a strong felt effect that can register as presence even when the character remains thin on the page."
+        }
+      ],
+      "red_flags_triggered": [
+        "Convenient motives: the compulsion to descend is granted by the plot's call rather than arising from established psychology.",
+        "Role fulfillment only: the lamplighter largely performs his watchman function as a vehicle for the story's atmosphere."
+      ],
+      "green_flags_detected": [
+        "Inner life expressed in action: fear and compulsion are shown through the descent and the choice not to extinguish the lamp.",
+        "Characters with margin: the double and the unanswered question leave room for the reader's interpretation."
+      ],
+      "narrative": "The lamplighter is a figure poised on a single honest hinge. He is a man who fears the sea and yet, when his own name rises from the drowned houses, walks down into it. That contradiction is the one place where he threatens to become a person rather than a watchman, and it is stated exactly once and then acted out: he wades to his knees, he shines the light, he asks who the other is, and he does not put the lamp out. There is something genuinely alive in that restraint — the psychology is not explained, it is performed as a chain of descents over three nights.\n\nBut what surrounds the hinge is thin. Why he goes down is granted him by the plot — a call, a face, a reaching hand — rather than earned from any background, habit, or internalizing of his role. The change from counting roofs to climbing down is a movement of the story's imagery, not an inner transformation with a before-state deep enough to measure against. He is not morally complex; he is not deceiving himself in any legible way. He is, more than a person, the soul of the village's uncanny condition, a sign that the hidden thing underwater knows his name.\n\nThis is not necessarily a failure of the piece. A short story of this kind borrows its power from mood and symbol, and a fully rounded protagonist would crowd out the very hush the story needs. But judged strictly as character depth, the lamplighter stays a presence rather than a person: a man with one compelling trait, rendered beautifully, and not much else yet living behind it."
+    },
+    {
+      "evaluator_id": "prose-style",
+      "evaluator_name": "Prose Style Evaluator",
+      "content_summary": "A lantern-keeper in a village that sinks beneath the sea each night hears his own name rising from a drowned house and meets his own face behind a submerged window.",
+      "domain": "short-story",
+      "primary_score": 82,
+      "primary_score_rationale": "The prose functions as music: it throttles the reader's speed with short declarative beats, lands a single recontextualizing word, and makes the water felt on the skin.",
+      "dimension_scores": {
+        "rhythm": {
+          "score": 87,
+          "weight": 0.3,
+          "evidence": "Sentences are compressed to single beats — 'Nido-ban, koe wa chikakatta' / 'The voice was nearer.' Long clauses ('Ie no, mado no atari kara datta' / 'It came from near the window of the drowned house') release only after their withholding, then snap back to the short line. The repeated count of nights — first, second, third — imposes a liturgical pulse. Final line sweeps once and stops.",
+          "judgment": "Deliberate control of reading speed. The initial three clauses land like a single held breath; each of the three nights tightens the interval, so the descent toward the window feels like a heartbeat accelerating into the water."
+        },
+        "sensory_texture": {
+          "score": 75,
+          "weight": 0.25,
+          "evidence": "'Mizu wa kuroku, nani mo kaesanai' / 'The water was black and gave nothing back.' The lantern's light crossing 'shizunda yane no ue' / 'over the sunken roof' is made visible and slow. The knee-deep cold is felt in the body.",
+          "judgment": "Mass and temperature are present — the blackness of the water, the weight of it rising without sound. Color and touch carry the scene; smell and taste are absent, which suits a story that watches rather than eats."
+        },
+        "verbal_precision": {
+          "score": 84,
+          "weight": 0.25,
+          "evidence": "'Shizumu' / 'sink' is made synonymous with sleep — 'Shizumu koto wa, kono mura de wa neru koto to onaji datta' / 'To sink was, in this village, the same as sleeping' — so that one verb recontextualizes the entire premise. 'Ie no, mado no atari' / 'near the window of the house' places the voice to the inch. 'Onaji kao' / 'the same face' is repeated without ornament.",
+          "judgment": "Almost no word is disposable. The identification of sinking with sleep is a single recontextualizing act; every later line inherits its weight. Minimal and load-bearing."
+        },
+        "voice": {
+          "score": 83,
+          "weight": 0.2,
+          "evidence": "The narration is flat, witness-like, unhurried, and almost unblinking — it reports a horror without raising its voice. The parenthetical aside about the reaching hand is the one moment the telling leans in, and it is placed exactly there.",
+          "judgment": "An irreplaceable voice: a calm lantern-keeper's witness that no other narrator could sustain without becoming sentimental. Its restraint is its signature."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": 82,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 86,
+      "strengths": [
+        "The opening three lines throttle the reader to a near-stop, then let the long image of the rising water expand before snapping shut — rhythm is used as an instrument.",
+        "'Sinking is the same as sleeping' is a single verb that recontextualizes the entire premise, giving every later descent the weight of a daily death.",
+        "The black unanswering water and the slow lantern crossing sunken roofs make the sea tactile without a single decorative adjective.",
+        "The voice is a calm, nearly unblinking witness whose restraint is the entire horror — the one parenthetical lean-in ('the hand came') is placed with precision."
+      ],
+      "weaknesses": [
+        "Smell and taste are entirely absent; the sensory palette is visual and thermal only, which keeps the sea slightly abstract where it might be full.",
+        "The parenthetical aside about the reaching hand arrives in a slightly different register than the flat witness-voice, a small fracture in the otherwise seamless control.",
+        "One or two linking phrases ('It came from near the window of the house') are filler that a stricter hand would have cut."
+      ],
+      "unique_perspective": "The story does not merely describe a sinking village; it makes sinking synonymous with sleep, so that the entire narrative rhythm — the three counted nights descending like a body lowering into a bath — performs the act it describes. The prose's tempo is the drowning, not just its report.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "emotional-power",
+          "predicted_stance": "May rate the affective depth lower, since the flat witness-voice withholds affect and leans on reader inference rather than overt feeling."
+        },
+        {
+          "evaluator_type": "reader-experience",
+          "predicted_stance": "May rate the whole experience higher for atmosphere and immersion, weighting the compressed rhythm and quiet dread as a complete read."
+        }
+      ],
+      "narrative": "Read this aloud and the first three beats land like stones: the sun sets, the sea rises, and nothing makes a sound. Then a single long sentence lets the water cross the road, climb the stone wall, and drink the foundations — and only then does it snap back to the short declarative line. That is not accident. The prose throttles the reader, and the three counted nights tighten the interval until the descent to the window feels like a body being lowered one stair at a time into black water.\n\nOne verb does the heavy lifting: to sink is to sleep. Once that equivalence is struck, every wet roof becomes a bed, every drowned house a sleeping body, and the final face behind the window is the dream the man did not know he was having. The word choice is spare to the edge of severity — the water is black and gives nothing back, the voice comes from near the window to the inch, the face is the same face, repeated without ornament. Almost nothing here is disposable.\n\nThe voice is the real instrument: a calm, nearly unblinking witness that reports a horror without raising its voice. The one moment it leans in — the parentheses around the reaching hand — is placed exactly where the reader is already holding breath. Weaknesses are small: smell and taste are absent, and a filler phrase or two could be cut. But the style functions as music of words, deliberately controlling speed and sensation; a single recontextualizing verb earns it a place well above the commonplace.",
+      "green_flags_detected": [
+        "Weight of a single word",
+        "Manipulation of speed",
+        "Intrinsic voice"
+      ],
+      "red_flags_triggered": [],
+      "content_type": "text",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    },
+    {
+      "evaluator_id": "theme-resonance",
+      "evaluator_name": "Theme Resonance Evaluator",
+      "content_summary": "A lamplighter in a village that sinks beneath the sea each night, where sinking is the same as sleeping, hears his name called from a drowned house and meets his own face behind the window.",
+      "domain": "short-story",
+      "primary_score": 79,
+      "primary_score_rationale": "The theme emerges from structure rather than sermon, touching identity, death, and solitude with unusual restraint; it is slightly held back by its brevity and one explanatory sentence.",
+      "dimension_scores": {
+        "theme_depth": {
+          "score": 80,
+          "weight": 0.3,
+          "evidence": "The story poses the question of what the self meets when it descends into the drowned, sleeping part of its own world, and refuses to answer that question directly.",
+          "judgment": "A genuine, fundamental question about identity and death, rendered through the rite of watching roofs vanish rather than through commentary."
+        },
+        "existential_resonance": {
+          "score": 78,
+          "weight": 0.25,
+          "evidence": "Death, solitude, and the confrontation with one's own image are carried by the keeper's nightly vigil and the wordless double, not argued.",
+          "judgment": "It touches life's fundamental questions from within its structure, though the small scale leaves the implications still forming rather than fully sounded."
+        },
+        "coherence": {
+          "score": 82,
+          "weight": 0.2,
+          "evidence": "The sinking, the sleeping equivalence, the called name, and the refusal to extinguish the lamp all converge on a single descent toward the self.",
+          "judgment": "The parts are consistent with the whole; the theme is not retrofitted but grows from the arrangement of event, gesture, and withheld cause."
+        },
+        "restraint": {
+          "score": 88,
+          "weight": 0.15,
+          "evidence": "The double answers the question of identity only by speaking the keeper's name, the lamp is deliberately left burning, and the closing line leaves the cause unknown until dawn.",
+          "judgment": "Meaning is held under the waterline and offered as silence, giving the reader room to descend rather than closing interpretation."
+        },
+        "reread_depth": {
+          "score": 76,
+          "weight": 0.1,
+          "evidence": "First read as horror, the story rereads as the self's nightly crossing toward its own death and back; the title and the double accrue a second, allegorical register.",
+          "judgment": "Knowledge withheld on first reading opens a different meaning on rereading, though one explanatory sentence slightly reduces the layeredness."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": 79,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 80,
+      "strengths": [
+        "The equivalence of sinking and sleeping is established through observed custom and the keeper's counting of vanishing roofs, so the theme arises from ritual action rather than explanation.",
+        "The double is never decoded; when asked who he is, he only speaks the keeper's name, leaving the meaning of the encounter open to the reader.",
+        "The refusal to extinguish the lamp as the water rises and the hand reaches through the glass keeps the confrontation unresolved instead of granting a cheap climax.",
+        "The closing refusal of a cause preserves the mystery as silence, allowing the question of why the village sinks to remain the reader's own."
+      ],
+      "weaknesses": [
+        "The sentence equating sinking with sleeping states the central metaphor directly and slightly weakens the otherwise silent emergence of theme.",
+        "The confrontation is delivered in a single gesture and then the story ends, so the existential question is posed more than developed.",
+        "The unresolved 'why' of the sinking can feel like a withheld puzzle rather than fully earned ambiguity, depending on the reader."
+      ],
+      "unique_perspective": "Only this evaluator sees the true event as a nightly descent toward one's own submerged self: the keeper's counting of roofs is a ritual of witnessing his own crossing, and the double is not a horror but the returned gaze of the part of him that already sleeps beneath the water.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "plot-architecture",
+          "predicted_stance": "Likely to assess the narrative as too minimal and unresolved, with little event progression or payoff, since no cause and no confrontation are resolved by dawn."
+        },
+        {
+          "evaluator_type": "emotional-power",
+          "predicted_stance": "May find the horror understated and the emotional arc restrained to near-stillness, so the fear remains intellectual rather than visceral."
+        }
+      ],
+      "green_flags_detected": [
+        "theme emerging from structure",
+        "silence",
+        "layered rereading",
+        "honest uncertainty"
+      ],
+      "improvement_suggestions": [
+        "Remove or bury the single explanatory sentence equating sinking with sleeping so the metaphor comes entirely from the action and deepens the restraint.",
+        "Extend one quiet beat after the hand reaches through the glass, letting the gesture accrue structural weight before the ending."
+      ],
+      "content_type": "text",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z",
+      "narrative": "The story's depth lies beneath the surface of its simple event. A solitary keeper lights the shore and counts the roofs as the sea, night after night, takes the village under. The story never tells us why the village sinks only at night; it tells us only that sinking and sleeping are the same act to these people. From that equivalence the theme rises without explanation: the night-sea is the sleep of the world, and each sunken roof is a life already halfway across the threshold. What the keeper hears at the bottom, then, is not a ghost but the sound of his own submerged self finishing the crossing before him.\n\nThe confrontation with the double is kept almost wordless. When asked who he is, the face in the window does not answer except to speak the keeper's name. The hand that reaches through the glass and the lamp that is deliberately not extinguished leave the meeting unresolved, and the final line refuses to explain the cause at all. This is the restraint that lets the theme live: meaning is not spoken but held just under the waterline, where the reader must go down to meet it.\n\nThe story deepens on a second reading. First read as eerie horror, it rereads as an account of the self's nightly descent toward its own death and back to dawn. The one unobtrusive sentence equating sinking with sleeping leans slightly toward stating the metaphor, a small cost in an otherwise silent structure; but the refusal to explain the village's reason keeps the question open, and the returned gaze remains the reader's to interpret. It is a small, honest work that touches the fundamental questions of identity, death, and solitude without insisting on an answer."
+    },
+    {
+      "evaluator_id": "world-building",
+      "evaluator_name": "World Building Evaluator",
+      "content_summary": "A Japanese micro-horror story about a village that submerges beneath the sea each night as its people sleep on high ground, and a lighthouse keeper who hears his own name called from the sunken houses.",
+      "domain": "short-story",
+      "primary_score": 62,
+      "primary_score_rationale": "A creative, immersive premise with thin literal architecture: the nightly sinking rule is original and drives the story, but the setting stays symbolic rather than structurally developed.",
+      "dimension_scores": {
+        "creativity": {
+          "score": 70,
+          "weight": 0.3,
+          "evidence": "premise of a village that sinks nightly and treats submergence as sleep; villagers retreat to high ground as an accepted routine",
+          "judgment": "deviates from the stock underwater-horror setting by making the sea's return a domestic, accepted rhythm rather than a catastrophe"
+        },
+        "internal_consistency": {
+          "score": 58,
+          "weight": 0.3,
+          "evidence": "the cause and the dawn resurfacing are withheld ('until dawn no one knows'); the mirror double and rising water never contradict but are never explained",
+          "judgment": "internally coherent as symbolic logic, but the physical mechanics are unexamined, leaving the setting thin as a literal system"
+        },
+        "rule_design": {
+          "score": 58,
+          "weight": 0.2,
+          "evidence": "the rule of nightly sinking defines the keeper's duty of counting roofs and licenses his descent to the half-submerged house",
+          "judgment": "the rule is clear enough to generate the descent and the voice, but remains atmospheric rather than placing constraints on choices"
+        },
+        "immersion": {
+          "score": 66,
+          "weight": 0.2,
+          "evidence": "silent water wetting the road's edge, crossing a stone wall, swallowing foundations and roofs one by one; lamplight sliding over a sunken roof",
+          "judgment": "sensory thickness is strong and the place is inhabitable in atmosphere, though its social and historical texture is minimal"
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": 62,
+        "narrative_technique": null,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 72,
+      "strengths": [
+        "The submersion-as-sleep rule is original and immediately legible; it reframes drowning as a nightly domestic routine rather than catastrophe.",
+        "The keeper's ritual of lighting the beacon and counting each roof as it sinks gives the world a repeatable, observable rule that drives the narrative.",
+        "Sensory detail—silent water crossing stone walls, lamplight sliding over a sunken roof—creates inhabitable thickness.",
+        "The rule generates the story's central movement: the voice approaches, so the keeper descends into rising water, producing the mirror-face climax."
+      ],
+      "weaknesses": [
+        "The cause and mechanics of sinking, and the implied dawn resurfacing, are left undefined, so the setting stays symbolic rather than structural.",
+        "Social and historical texture is thin; the villagers' lives, adaptations, and the resurfacing mechanism are only gestured at.",
+        "The rule, while clear, does not meaningfully constrain choices beyond mood—it pressures the keeper to descend but imposes no cost or systematic consequence."
+      ],
+      "unique_perspective": "Only the world evaluator sees the nightly submersion not merely as horror imagery but as a rule-set: the light, the count of roofs, and the accepted retreat to high ground form a legible system whose gap—the unexplained resurfacing—is both its strength and its limit.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "character-depth",
+          "predicted_stance": "will argue the keeper has no developed interiority and that the world is a backdrop to an unexamined psychological state"
+        },
+        {
+          "evaluator_type": "prose-style",
+          "predicted_stance": "will praise the restraint and rhythm while noting the setting is under-specified for sustained inhabitation"
+        }
+      ],
+      "green_flags_detected": [
+        "tension born of rules",
+        "inhabitable thickness",
+        "setting drives the story"
+      ],
+      "improvement_suggestions": [
+        "Specify the dawn resurfacing cycle and how villagers adapt, without dissolving the central mystery.",
+        "Add one concrete consequential choice tied to the rule—a cost for descending or a limit on the rising water—to deepen rule-driven tension."
+      ],
+      "narrative": "The world is a single, well-wrought rule: when the sun sets the sea rises, and a village sinks one roof at a time until its people, already on high ground, treat drowning as sleep. This is a genuinely inventive premise—it converts the familiar sea-horror image into a domestic rhythm—and it is what the story runs on. The lightkeeper's ritual of counting the vanishing roofs gives the rule a legible, repeatable shape, which is exactly what turns it from backdrop into engine.\n\nConsistency is more poetic than mechanical. Nothing contradicts: the lamp, the quiet water, the rising voice, the identical face are all governed by the same dark logic. But the withheld cause ('no one knows why until dawn') means the world never acquires the load-bearing rules that would let a reader predict it; it is held together by atmosphere rather than physics. Immersion is the strongest axis: the wetting of the road's edge, the crossing of one stone wall, lamplight crawling over a sunken roof—these details give the reader a place to stand and smell the water.\n\nNet: a creative, immersive premise with thin literal architecture. It functions beautifully as a short story's enclosed nightmare, but as a world to inhabit it remains a single room rather than a house.",
+      "content_type": "text",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    },
+    {
+      "evaluator_id": "narrative-technique",
+      "evaluator_name": "Narrative Technique Evaluator",
+      "content_summary": "A Japanese short story in which a lighthouse keeper watches his village sink underwater each night, hears his own name called from beneath the waves, and confronts his double in a sunken window.",
+      "domain": "short-story",
+      "primary_score": 69,
+      "primary_score_rationale": "A viewpoint whose external-but-close distance is necessary to the story's central ambiguity, with controlled modulation of distance and purposive, if not ambitious, manipulation of time.",
+      "dimension_scores": {
+        "pov_choice": {
+          "score": 70,
+          "weight": 0.3,
+          "evidence": "Third-person limited narration focalized on the lighthouse keeper, delivered in a present-tense folkloric register; the narrator remains just outside the man's mind while following only what he perceives.",
+          "judgment": "The viewpoint is necessary. By standing just outside the man, the narration keeps open the story's core ambiguity — whether the double in the window is a hallucination, a ghost, or a fact of this village. A first-person account would collapse this into psychology and dissolve the folk-horror register; full omniscience would explain away the mystery. The choice also enacts the theme: the narrator watches the man at a distance, as the man watches the sinking roofs, as the double watches the man from below."
+        },
+        "narrative_distance": {
+          "score": 73,
+          "weight": 0.25,
+          "evidence": "The opening lines establish a mythic, general distance ('When the sun sets, the sea level rises'), which then descends into sensory close-up; the climactic parenthetical line breaks the frame into an intimate, held-breath aside.",
+          "judgment": "The modulation is deliberate and controlled. The story moves from folktale telling to embodied showing and back, and the parenthetical aside — the double's hand reaching through the window — is a precise, formal device that steps outside the normal narration at the exact moment of dread. This is a deliberate control of distance, not an unconscious waver."
+        },
+        "reliability": {
+          "score": 62,
+          "weight": 0.25,
+          "evidence": "The narrator is consistently trustworthy and withholds rather than deceives; the final line ('no one knew until dawn') is a reliable narrator choosing reticence over revelation.",
+          "judgment": "The narrator's trustworthiness is not yet put to work as a source of instability. The mystery is diegetic — it lives in the world, not in the reader's distrust of the teller. The withholding is deliberate and serves the ending, but the craft here is closer to 'reticence' than to the art of the unreliable narrator. This is restraint, not failure."
+        },
+        "time_manipulation": {
+          "score": 69,
+          "weight": 0.2,
+          "evidence": "A ritualistic progression across three nights, each marked and counted, with the voice's proximity escalating each time; the ending leaps in summary to dawn and preserves the mystery.",
+          "judgment": "The handling of time is purposed. The night-by-night escalation is a counting structure that mirrors the man's nightly counting of roofs, and the repetition of the called name gains dread through its increasing nearness. The final summary jump to dawn closes the cycle without dissolving it. Clean and meaningful, though not deeply complex."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": 69,
+        "reader_experience": null
+      },
+      "classification": "discovery_target",
+      "confidence": 82,
+      "strengths": [
+        "The viewpoint is necessary: only an external-but-close third person can hold open the ambiguity between hallucination, ghost, and village fact.",
+        "The distance is modulated with intention, from mythic folktale opening to sensory close-up, with the parenthetical aside breaking the frame at the moment of dread.",
+        "The night-by-night counting structure creates a ritual escalation, and the repeated called name gains force through increasing proximity.",
+        "A nested structure of watching — narrator over man, man over village, double watching man from below — is made possible by the point of view and mirrors the theme."
+      ],
+      "weaknesses": [
+        "Reliability is not deeply exploited: the narrator is trustworthy throughout, and the uncanny is diegetic rather than narratorial, so the reader's perception is never unsettled about the teller himself.",
+        "The manipulation of time is clean and meaningful but not ambitious; a longer piece could push the recurrence into genuine disorientation.",
+        "Character interiority is thin: the man's horror is inferred from the scene rather than felt from within, leaving the dread somewhat scenographic."
+      ],
+      "unique_perspective": "The story's narrative distance structurally enacts its theme: the narrator observes the man as the man observes the sinking roofs, and the double observes the man from below — three nested acts of watching from three levels, all held apart by the same deliberate distance. Moreover, the narrator's ritual counting of the nights mirrors the man's nightly counting of roofs, so the teller's own craft and the protagonist's vigil are the same gesture. Only a narrative-technique reading would notice that the form is doing the tale's work.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "plot-architecture",
+          "predicted_stance": "May find the doppelganger reveal underdeveloped and the withholding of explanation insufficient as a disclosure structure."
+        },
+        {
+          "evaluator_type": "reader-experience",
+          "predicted_stance": "May find the folkloric, arm's-length distance too cold and the emotional impact of the horror insufficiently immediate."
+        }
+      ],
+      "narrative": "This is third-person limited narration focalized on the lighthouse keeper, delivered in a present-tense folktale register. The viewpoint is necessary: by remaining just outside the man — following his perceptions but not entering his mind — the narration keeps open the story's central ambiguity, whether the double in the sunken window is a hallucination, a ghost, or something the village collectively accepts. A first-person telling would collapse this into psychology and dissolve the folk-horror register; full omniscience would explain away the mystery. The choice of distance also enacts the theme: the narrator watches the man from a teller's remove, the man watches the sinking roofs from the high ground, and the double watches the man from below. It is a nested structure of watching, and the point of view is its instrument.\n\nThe distance is deliberately modulated. The opening lines occupy a mythic, general distance grounded in present tense, then the narration descends into sensory close-up, and at the climax a parenthetical line — the double's hand reaching through the window — breaks the frame into an intimate, held-breath aside. This is control, not accident. The handling of time is equally purposive: the ritual counting of three nights, each with the voice drawing nearer, is a precise escalation, and the final summary leap to dawn preserves the mystery rather than resolving it.\n\nThe area of restraint is reliability. The narrator is trustworthy throughout; the mystery is diegetic, not narratorial. The final withholding is a deliberate reticence, but the story does not yet unsettle the reader's trust in the teller himself. The craft here lives in distance and time rather than in deception — accomplished, economical, and quietly controlled.",
+      "green_flags_detected": [
+        "necessity of viewpoint",
+        "control of distance",
+        "craft of time"
+      ],
+      "content_type": "text",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    },
+    {
+      "evaluator_id": "admiration",
+      "evaluator_name": "Admiration Evaluator",
+      "content_summary": "A spare, atmospheric short story about a village that sinks underwater each night and a lamp-keeper who finds his own face calling to him beneath the waves.",
+      "domain": "short-story",
+      "content_type": "text",
+      "primary_score": 59,
+      "primary_score_rationale": "A genuine but modest wow: the doppelganger exceeds the ghost the reader predicted, and it is earned thematically via the 'fears the sea yet descends' line. Familiarity of the trope mutes the exceed, and the inevitability is thematic rather than structural, holding the score in the lower-mid range of well-earned reversals.",
+      "dimension_scores": {
+        "expectation_guidance": {
+          "score": 70,
+          "weight": 0.2,
+          "evidence": "A voice calls the lamp-keeper's name from the sunken house across three escalating nights.",
+          "judgment": "The story plants a clear prediction — a ghost or a lost loved one — and tightens it with patient, ritualized escalation so there is something real for the reveal to surpass."
+        },
+        "expectation_exceeding": {
+          "score": 58,
+          "weight": 0.3,
+          "evidence": "The face in the window turns out to be the man's own face, exceeding the ghost the reader filled in.",
+          "judgment": "A genuine surpassing, but the doppelganger is a familiar horror trope, so the exceed reads as elegant rather than startling for genre-aware readers."
+        },
+        "inevitability": {
+          "score": 52,
+          "weight": 0.3,
+          "evidence": "The 'fears the sea yet descends' line reframes the doppelganger as the man's own divided self.",
+          "judgment": "Earned thematically more than structurally; re-reading finds no dense lattice of clues that lead specifically to one's own face, so the 'of course' is felt but not built."
+        },
+        "admiration_peak": {
+          "score": 62,
+          "weight": 0.2,
+          "evidence": "The stark reveal 'Inside the window, there was a face. It was the same face as the man,' followed by the parenthetical hand reaching across the window.",
+          "judgment": "Delivered with perfect restraint; it lands as a quiet collapse of the self/other boundary rather than a sharp jaw-drop, which suits the story but caps the involuntary exclamation."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null,
+        "admiration": 59
+      },
+      "classification": "discovery_target",
+      "confidence": 75,
+      "green_flags_detected": [
+        "Recognition pleasure",
+        "Earned inevitability"
+      ],
+      "strengths": [
+        "Plants the expectation cleanly through three nights of escalating name-calling, so the reader has a concrete prediction (a ghost, a drowned loved one) for the reveal to exceed.",
+        "The doppelganger genuinely surpasses that prediction and recontextualizes the 'fears the sea yet descends' line into a portrait of a divided self, giving the twist a thematic inevitability.",
+        "The peak is delivered with withholding-to-the-point-of-severity: 'Inside the window, there was a face. It was the same face as the man.' The brevity is what makes the chill land.",
+        "The parenthetical hand reaching from the underwater side to this side of the window is a second, quieter surpassing that silently collapses the boundary between self and other.",
+        "The refusal to explain why the village sinks preserves the mystery as lingering unease rather than deflating into a hollow explanation."
+      ],
+      "weaknesses": [
+        "The doppelganger is a well-worn horror device, so the exceed is muted for genre-aware readers who may see the man's own face coming before the lantern reaches the window.",
+        "Inevitability rests on a single evocative line and is thematic rather than structural; re-reading does not uncover a network of clues that make one's own face the only possible answer.",
+        "The name-calling setup is functional but minimal — the story does not misdirect richly or plant a specific candidate for the caller before the reveal.",
+        "The central planted question (why the village sinks only at night) is never surpassed or earned; it is simply left open, so the largest expectation stays unaddressed."
+      ],
+      "unique_perspective": "The story's true wow is not the doppelganger — a recognizable trope — but the second, quieter surpassing: the parenthetical sentence in which the other man's hand reaches from the underwater side to this side of the window. That gesture does not scream; it collapses the boundary between the man and his sunken self, and the involuntary recognition is that the sea has been holding a mirror to him all along.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "plot-architecture",
+          "predicted_stance": "May praise the understated foreshadowing and the open ending as elegant structural restraint, while I note the foreshadowing is thin and the central mystery is left unearned."
+        },
+        {
+          "evaluator_type": "emotional-power",
+          "predicted_stance": "May find the piece too cold and restrained to move the heart, while I read that same restraint as the precise mechanism that makes the chill land."
+        }
+      ],
+      "improvement_suggestions": [
+        "Plant a reflection motif earlier — the man avoiding his own face in the water, a mirror fogged over — so the doppelganger becomes structurally inevitable on re-read.",
+        "Give the reader a specific candidate for the caller (a named drowned person) so the self-reveal exceeds a concrete prediction rather than a vague ghost.",
+        "Either let the village's sinking obey a rule the reader can infer (an 'of course' for the larger mystery) or make the deliberate non-explanation the point more overtly."
+      ],
+      "narrative": "The story knows exactly what prediction to plant. A voice rises from the sunken house and calls the lamp-keeper's name, and the reader fills the blank with a ghost, a drowned wife, a child the sea took. Three patient nights tighten that expectation until the third night descends from the high ground and the lantern is already swinging toward a face; what it finds is the man's own face, the face of the one who fears the sea but keeps walking down to it. That is a genuine surpassing — the caller knew him because the caller was him — and it is earned in the only way this story can earn it: thematically, through the single line that reframes the whole night walk as a man meeting his own divided self.\n\nBut the inevitability is thin beneath it. Re-reading the early pages does not uncover a lattice of clues leading specifically to the doppelganger; the proof of the twist is a mood, not a structure, so the moment reads as elegant inevitability rather than structural inevitability. And the device itself is worn — genre-aware readers may see their own face in the window before the lamp does, which blunts the very thing the story is selling. The closing refusal to explain why the village sinks is atmospheric and keeps the chill alive, but it also means the story's largest planted question is never surpassed or earned; it is simply left ajar.\n\nThe real feat of admiration is the second, smaller surpassing that most evaluators will pass over: the parenthetical sentence in which the other man's hand reaches from the underwater side to this side of the window. That gesture does not cry out; it quietly dismantles the seam between the man and his sunken self, and that collapse is the story's true 'got me' — the recognition that the sea has never shown him anyone but himself. A well-made, disciplined piece with a genuine but modest wow, more a lingering chill than a jaw-drop.",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    },
+    {
+      "evaluator_id": "reader-experience",
+      "evaluator_name": "Reader Experience Evaluator",
+      "content_summary": "A brief atmospheric tale of a village that sinks nightly and a lighthouse keeper who hears his name called from beneath the water, discovering a doppelganger of himself in a submerged window.",
+      "domain": "short-story",
+      "primary_score": 82,
+      "primary_score_rationale": "This story earns its time: it opens quietly, builds relentless pressure across three nights, honors its uncanny premise to the final line, and leaves an afterglow that makes immediate rereading feel both invited and rewarding. The immersion is sustained, never broken, and the ending does not rush but holds its mystery like a slow exhale.",
+      "dimension_scores": {
+        "pacing": {
+          "score": 85,
+          "weight": 0.3,
+          "evidence": "Three-nights structure: first night establishes the routine and the distant voice; second night brings the voice closer; third night forces the descent. No night is padded or skimmed; each paragraph advances the descent or deepens the ritual.",
+          "judgment": "Deliberately controlled. The repetition of the sinking routine functions as a meditative rhythm rather than boredom, because each return carries a small escalation."
+        },
+        "page_turner": {
+          "score": 83,
+          "weight": 0.25,
+          "evidence": "The escalating proximity of the voice, the mysterious refusal of the water to reflect light, and the shock of the identical face each create a need to know what happens next.",
+          "judgment": "The hand does not stop turning. The story is short, but it compresses a full arc of dread that keeps the reader leaning forward."
+        },
+        "promise_keeping": {
+          "score": 88,
+          "weight": 0.25,
+          "evidence": "Opening promise of a strange, quiet, sinking village is honored to the end; the doppelganger and the unexplained why of the sinking are returned unanswered, matching the story's atmosphere of resigned mystery.",
+          "judgment": "Faithfully honors its genre and tonal promises. The lack of explanation is not a broken promise but the exact fulfillment of a story whose premise is that no one knows why."
+        },
+        "reread_invitation": {
+          "score": 72,
+          "weight": 0.2,
+          "evidence": "The recurring identical face gains weight on rereading: the voice has been calling the keeper's own name all along, and early lines about 'the one who fears the sea yet goes down to it' foreshadow the self-confrontation.",
+          "judgment": "Not exhausted in one reading. The imagery of the double invites a second pass where the horror reads as self-recognition rather than external threat."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": 82
+      },
+      "classification": "discovery_target",
+      "confidence": 78,
+      "strengths": [
+        "The escalation across three nights is tightly controlled, with each repetition of the sinking ritual gaining dread rather than becoming dull.",
+        "The ending sustains the mystery: the unexplained why of the sinking and the silent doppelganger are returned intact, rewarding the atmosphere built from the first line.",
+        "The identical face functions as genuine foreshadowing of a self-confrontation, making the climax feel earned rather than arbitrary."
+      ],
+      "weaknesses": [
+        "The doppelganger reveal, while effective, lands quickly after only a few paragraphs of build-up; a reader craving fuller dread may wish for one more beat between the second night and the face.",
+        "The final line's resignation slightly deflates the horror for readers who wanted the confrontation to escalate rather than remain static."
+      ],
+      "unique_perspective": "I watched for whether the hand turning pages could ever stop inside so short a piece, and found it could not: the story's secret is that its slowness is its pull, a quiet immersion where boredom would have been the failure and never arrived.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "narrative-originality",
+          "predicted_stance": "May argue the doppelganger-in-the-water conceit is a familiar horror trope and score originality lower, while I read it as an experience whose power lies in execution and restraint rather than novelty."
+        },
+        {
+          "evaluator_type": "plot-architecture",
+          "predicted_stance": "May fault the deliberately unexplained ending and thin plot structure as under-designed, whereas I treat the intentional lack of closure as a kept promise rather than a flaw."
+        }
+      ],
+      "narrative": "As an experience of reading, this story spends its time almost perfectly. The first sentences establish a ritual so calm it borders on the hypnotic, and by making sinking synonymous with sleeping, the story turns the village's catastrophe into a shared lullaby. I was drawn in immediately and never felt the urge to set it aside. The escalation of the voice across three nights is the engine: each return to the same ritual carries a small forward pressure, so the repetition never curdles into boredom.\n\nThe promise made in the opening is a promise of quiet strangeness, and the story keeps it to the very last line. There is no cheap explanation, no rush to resolve. The doppelganger face, appearing only after the voice called the keeper's own name, turns the horror inward, and the story is wise enough to leave it there. That restraint is what makes the ending land; a rushed or explanatory finale would have broken the immersion the whole piece has so carefully sustained.\n\nWhat lingers is the image of the man kneeling in the water, lamp still lit, facing his own face while the water rises. The story leaves an afterglow and invites a second reading almost immediately, because the early details about the man who fears the sea yet descends to it read differently once the double is known. The time spent on this story was not merely used up; it was returned, with interest.",
+      "green_flags_detected": [
+        "Sustained immersion: the hand turning pages never stops across the whole piece.",
+        "Promise-keeping: the opening atmosphere of resigned mystery is honored to the final line.",
+        "Afterglow: the final image of the keeper facing his own face lingers after finishing."
+      ],
+      "content_type": "text",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    },
+    {
+      "evaluator_id": "hook",
+      "evaluator_name": "Hook Evaluator",
+      "content_summary": "A light-keeper's nightly ritual of watching his village sink into the sea is disrupted when a voice from the water calls his name, revealing a face identical to his own.",
+      "domain": "short-story",
+      "content_type": "text",
+      "primary_score": 62,
+      "primary_score_rationale": "The hook ignites, chains through three escalating nights, and the trunk mystery is preserved to the end, but the carrier is an image rather than a bond and the doppelgänger branch only loosely advances the trunk.",
+      "dimension_scores": {
+        "investment": {
+          "score": 60,
+          "weight": 0.2,
+          "evidence": "Three opening paragraphs settle the sinking village's nightly image and the light-keeper's counting ritual before any unknown appears.",
+          "judgment": "The carrier is genuinely given — the image is vivid and possessed — but it is a picture rather than a human bond, so the foundation is solid yet shallow."
+        },
+        "unknown": {
+          "score": 70,
+          "weight": 0.25,
+          "evidence": "The voice rising from the water, its approach across three nights, and the facing image of the self open questions that stay genuinely unpredictable to the end.",
+          "judgment": "The trunk unknown — why the village sinks only at night — is real and is never closed; the mystery is open, not ornamental."
+        },
+        "desire": {
+          "score": 62,
+          "weight": 0.25,
+          "evidence": "The voice calls the man's name and the face beneath the window is his own, attaching the unknown to the self the reader has been shown.",
+          "judgment": "The transference is real — the pull rides on the man's own name and face — but it leans on uncanny symmetry rather than a bond the reader holds with a person, so the want is sharp but narrow."
+        },
+        "continuity": {
+          "score": 60,
+          "weight": 0.15,
+          "evidence": "Each night's answer opens the next: the first voice becomes a window-voice, the window-voice becomes a face, the face raises the unspoken question of identity.",
+          "judgment": "The escalation is clean and no answer lands without a next question; the chain is short but unsevered."
+        },
+        "progression": {
+          "score": 58,
+          "weight": 0.15,
+          "evidence": "The final line names the trunk — why the village sinks only at night — as still unknown, preserving it past the story's end.",
+          "judgment": "The trunk is held to the peak, but the doppelgänger branch reveals more about the face than about why the village sinks, and only loosely advances toward the preserved trunk."
+        }
+      },
+      "value_vector_contribution": {
+        "narrative_originality": null,
+        "quality": null,
+        "emotional_power": null,
+        "plot_architecture": null,
+        "character_depth": null,
+        "prose_style": null,
+        "theme_resonance": null,
+        "world_building": null,
+        "narrative_technique": null,
+        "reader_experience": null,
+        "admiration": null,
+        "hook": 62
+      },
+      "classification": "discovery_target",
+      "confidence": 70,
+      "strengths": [
+        "Give, then break: three paragraphs settle the sinking village's daily image before the voice breaks it, so the unknown lands on an image the reader already possesses.",
+        "Personal break: the mystery rides on the man's own name and face, attaching the want to a possession rather than a generic thing in the water.",
+        "The trunk is explicitly preserved: why the village sinks only at night is named as still unknown in the final line, held past the story's end.",
+        "Clean three-night escalation: each answer opens the next question — voice, then window, then face, then the reaching hand."
+      ],
+      "weaknesses": [
+        "The carrier is an image, not a bond: the reader holds a picture, not a person, so the emotional weight behind the wanting is thin.",
+        "The doppelgänger branch advances itself more than the trunk — the reader learns about the face, not why the village sinks.",
+        "The protagonist is a cipher with no investment the reader shares, so the pull leans on uncanny symmetry instead of risk to a loved bond."
+      ],
+      "unique_perspective": "The final line is the engine's triumph, not its failure. 'Until dawn, nobody knew' is trunk-preservation: the story refuses the answer precisely where a lesser story would close, and that refusal points the unresolved pull at the dawn the reader must supply. The hand reaching through the window is the last ignition, not a resolution — the story ends by opening one more joint and not closing it.",
+      "expected_disagreement_points": [
+        {
+          "evaluator_type": "plot-architecture",
+          "predicted_stance": "Likely to rate the disclosure machinery low because the ending leaves the central question entirely unresolved; I argue that the unresolved trunk is the engine's deliberate preservation, not a disclosure defect."
+        },
+        {
+          "evaluator_type": "reader-experience",
+          "predicted_stance": "Likely to flag the thin emotional investment in the protagonist; I argue the self-image hook carries the forward pull despite the cipher-like man."
+        }
+      ],
+      "green_flags_detected": [
+        "Give, then break (与えてから欠けさせる)",
+        "The answer opens the next question (閉じるとき、次の問いが開いている)",
+        "Trunk preserved to the end (幹が最後まで温存)"
+      ],
+      "narrative": "The engine ignites on the first break. The story spends three paragraphs settling the image — the soundless water, the ritual of the light-keeper counting roofs, the village's acclimatized calm — so that when the voice rises from the bottom of the water and calls the man's name, the break lands on something the reader already possesses. The name is the load-bearing word: the unknown is not 'what is under the water' in general but 'what knows me,' and it rides on the man himself. That personal attachment is what separates this from carrier-only; the gap is bolted to a face and a name the reader has been shown.\n\nThe chain escalates cleanly: first night a voice, second night the same voice from the window, third night a face — his own face. Each answer opens the next joint rather than closing it; the face answers 'the voice is a person' but immediately raises 'who are you,' and the hand reaching through the window raises a question that is never answered, which is the point. The trunk — why the village sinks only at night — is named at the very end as still unknown, a double move: it preserves the trunk to the peak, and it points the remaining pull at the dawn the reader must imagine.\n\nWhere the engine cools is in the carrier's bond. The image is possessed, but the man is a cipher; the reader holds a picture, not a person, and the want to know leans more on the uncanny symmetry of the face than on any risk to something loved. That keeps the pull below the rare register — the scarecrow of self is a real hook, but a thin one. Still, this is a story that knows the order: give, then break, and it does not sever its own line anywhere.",
+      "evaluation_timestamp": "2026-08-18T00:00:00Z"
+    }
+  ],
+  "recommendations": [
+    "Treat the split as the signal: this is a work that rewards readers who value atmosphere, restraint, and thematic depth, and will under-serve readers who want formal novelty or deep character — position it accordingly.",
+    "Before any rewrite, decide whether the withheld 'why the village sinks' is a feature to keep or a loop to close; the evaluators split precisely there.",
+    "If revising, deepen the lamplighter's interiority and plant the doppelgänger through one or two details early, without touching the prose, the 'sinking = sleeping' equivalence, or the ending."
+  ],
+  "revision_direction": {
+    "statement": "The next revision should deepen the lamplighter's interiority and earn the doppelgänger through planted detail, while preserving the restrained prose, the 'sinking equals sleeping' equivalence, and the withheld ending.",
+    "axis": [
+      "character_depth",
+      "narrative_originality",
+      "plot_architecture"
+    ],
+    "preserve": [
+      "prose_style",
+      "theme_resonance",
+      "reader_experience",
+      "emotional_power",
+      "hook (withheld trunk)"
+    ],
+    "iteration": "confirm"
+  },
+  "caveats": [
+    "Full mode (mode=full) convenes a single evaluator per dimension, so each dimension's within-dimension variance is 0 and the renderer's disagreement section will show 'no disagreement'. The real disagreement is cross-dimensional and is recorded in disagreement_map.",
+    "Sample verification: the draft was evaluated as provided (title and author do not exist in reality), so double-blind anonymization was treated as already satisfied."
+  ]
+}

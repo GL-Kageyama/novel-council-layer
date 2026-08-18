@@ -1,0 +1,82 @@
+{
+  "evaluator_id": "world-building",
+  "evaluator_name": "World Building Evaluator",
+  "content_summary": "A Japanese micro-horror story about a village that submerges beneath the sea each night as its people sleep on high ground, and a lighthouse keeper who hears his own name called from the sunken houses.",
+  "domain": "short-story",
+  "primary_score": 62,
+  "primary_score_rationale": "A creative, immersive premise with thin literal architecture: the nightly sinking rule is original and drives the story, but the setting stays symbolic rather than structurally developed.",
+  "dimension_scores": {
+    "creativity": {
+      "score": 70,
+      "weight": 0.3,
+      "evidence": "premise of a village that sinks nightly and treats submergence as sleep; villagers retreat to high ground as an accepted routine",
+      "judgment": "deviates from the stock underwater-horror setting by making the sea's return a domestic, accepted rhythm rather than a catastrophe"
+    },
+    "internal_consistency": {
+      "score": 58,
+      "weight": 0.3,
+      "evidence": "the cause and the dawn resurfacing are withheld ('until dawn no one knows'); the mirror double and rising water never contradict but are never explained",
+      "judgment": "internally coherent as symbolic logic, but the physical mechanics are unexamined, leaving the setting thin as a literal system"
+    },
+    "rule_design": {
+      "score": 58,
+      "weight": 0.2,
+      "evidence": "the rule of nightly sinking defines the keeper's duty of counting roofs and licenses his descent to the half-submerged house",
+      "judgment": "the rule is clear enough to generate the descent and the voice, but remains atmospheric rather than placing constraints on choices"
+    },
+    "immersion": {
+      "score": 66,
+      "weight": 0.2,
+      "evidence": "silent water wetting the road's edge, crossing a stone wall, swallowing foundations and roofs one by one; lamplight sliding over a sunken roof",
+      "judgment": "sensory thickness is strong and the place is inhabitable in atmosphere, though its social and historical texture is minimal"
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": 62,
+    "narrative_technique": null,
+    "reader_experience": null
+  },
+  "classification": "discovery_target",
+  "confidence": 72,
+  "strengths": [
+    "The submersion-as-sleep rule is original and immediately legible; it reframes drowning as a nightly domestic routine rather than catastrophe.",
+    "The keeper's ritual of lighting the beacon and counting each roof as it sinks gives the world a repeatable, observable rule that drives the narrative.",
+    "Sensory detail—silent water crossing stone walls, lamplight sliding over a sunken roof—creates inhabitable thickness.",
+    "The rule generates the story's central movement: the voice approaches, so the keeper descends into rising water, producing the mirror-face climax."
+  ],
+  "weaknesses": [
+    "The cause and mechanics of sinking, and the implied dawn resurfacing, are left undefined, so the setting stays symbolic rather than structural.",
+    "Social and historical texture is thin; the villagers' lives, adaptations, and the resurfacing mechanism are only gestured at.",
+    "The rule, while clear, does not meaningfully constrain choices beyond mood—it pressures the keeper to descend but imposes no cost or systematic consequence."
+  ],
+  "unique_perspective": "Only the world evaluator sees the nightly submersion not merely as horror imagery but as a rule-set: the light, the count of roofs, and the accepted retreat to high ground form a legible system whose gap—the unexplained resurfacing—is both its strength and its limit.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "character-depth",
+      "predicted_stance": "will argue the keeper has no developed interiority and that the world is a backdrop to an unexamined psychological state"
+    },
+    {
+      "evaluator_type": "prose-style",
+      "predicted_stance": "will praise the restraint and rhythm while noting the setting is under-specified for sustained inhabitation"
+    }
+  ],
+  "green_flags_detected": [
+    "tension born of rules",
+    "inhabitable thickness",
+    "setting drives the story"
+  ],
+  "improvement_suggestions": [
+    "Specify the dawn resurfacing cycle and how villagers adapt, without dissolving the central mystery.",
+    "Add one concrete consequential choice tied to the rule—a cost for descending or a limit on the rising water—to deepen rule-driven tension."
+  ],
+  "narrative": "The world is a single, well-wrought rule: when the sun sets the sea rises, and a village sinks one roof at a time until its people, already on high ground, treat drowning as sleep. This is a genuinely inventive premise—it converts the familiar sea-horror image into a domestic rhythm—and it is what the story runs on. The lightkeeper's ritual of counting the vanishing roofs gives the rule a legible, repeatable shape, which is exactly what turns it from backdrop into engine.\n\nConsistency is more poetic than mechanical. Nothing contradicts: the lamp, the quiet water, the rising voice, the identical face are all governed by the same dark logic. But the withheld cause ('no one knows why until dawn') means the world never acquires the load-bearing rules that would let a reader predict it; it is held together by atmosphere rather than physics. Immersion is the strongest axis: the wetting of the road's edge, the crossing of one stone wall, lamplight crawling over a sunken roof—these details give the reader a place to stand and smell the water.\n\nNet: a creative, immersive premise with thin literal architecture. It functions beautifully as a short story's enclosed nightmare, but as a world to inhabit it remains a single room rather than a house.",
+  "content_type": "text",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z"
+}

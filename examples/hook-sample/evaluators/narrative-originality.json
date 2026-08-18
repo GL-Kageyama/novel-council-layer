@@ -1,0 +1,79 @@
+{
+  "evaluator_id": "narrative-originality",
+  "evaluator_name": "Narrative Originality Evaluator",
+  "content_summary": "A flash story in which a village sinks underwater each night as its people sleep; a light-keeper, hearing his own name called from a sunken house, descends to find his double at the window.",
+  "domain": "short-story",
+  "primary_score": 35,
+  "primary_score_rationale": "A polished genre-standard kaidan with one fresh premise image (nightly sinking as sleep) over an entirely conventional horror engine and flash-fiction form.",
+  "dimension_scores": {
+    "premise_novelty": {
+      "score": 45,
+      "weight": 0.35,
+      "evidence": "nightly submersion as routine; flooding reframed as sleep; drowned-village folklore precedent; stock voice-calls-name and doppelganger engine",
+      "judgment": "One fresh ironic reversal over a known submerged-village image; the horror engine itself is entirely template."
+    },
+    "form_deviation": {
+      "score": 20,
+      "weight": 0.3,
+      "evidence": "present-tense clipped declarative sentences; three-night escalation; deliberately unresolved final line; standard flash-fiction and kaidan arc",
+      "judgment": "No formal deviation; the narration is a recognized minimalist flash form and the arc is the stock triple-escalation."
+    },
+    "genre_distance": {
+      "score": 25,
+      "weight": 0.2,
+      "evidence": "atmospheric kaidan with voice from water, doppelganger at a window, ritual numbering of roofs; canonical template",
+      "judgment": "Sits inside the genre template with strong déjà vu."
+    },
+    "meaningfulness_of_deviation": {
+      "score": 55,
+      "weight": 0.15,
+      "evidence": "submersion-as-sleep lets the double inhabit the house one leaves in rest; the uncanny is tied to a domestic ritual",
+      "judgment": "What little deviation exists is necessary and clean, but it is a single image, not a structural break."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": 35,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null
+  },
+  "classification": "current_success",
+  "confidence": 72,
+  "strengths": [
+    "The premise's central inversion — submersion as nightly rest rather than catastrophe — recasts a familiar drowned-village image as quiet domestic ritual.",
+    "The clipped, present-tense narration mirrors the submerged, numbed atmosphere; form and content are aligned without much being new.",
+    "The doppelganger placed in the house left behind during sleep gives the uncanny a domestic logic."
+  ],
+  "weaknesses": [
+    "The horror engine is stock: a voice calling one's name and a doppelganger at a window, with a three-night escalation and an unresolved ending.",
+    "No formal deviation: the narration and arc follow the canonical flash-fiction kaidan template.",
+    "The doppelganger motif is confirmatory rather than structurally transformative; the freshness stays on the surface of the premise."
+  ],
+  "unique_perspective": "Only a formalist would note that the story's one true novelty is syntactic: the clipped counting sentences perform the light-keeper's ritual, so the prose enacts the premise even as the plot reuses a template. The mystery of why the village sinks is never answered because asking would break the numbed form — the form's silence is the point, but that silence is borrowed, not invented.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "anti-generic-story-filter",
+      "predicted_stance": "More severe; will flag the voice-calls-name and doppelganger as banal, while I extend some credit for the premise inversion."
+    },
+    {
+      "evaluator_type": "plot-architecture",
+      "predicted_stance": "May score the tight three-night escalation and restraint much higher on design skill, producing a predictable divergence: high design, low novelty."
+    }
+  ],
+  "narrative": "The premise of the nightly-sinking village is the only thing here that earns a second look: by making submersion a routine rather than a catastrophe, and by equating drowning with sleeping, the story converts a worn drowned-village image into a quiet domestic ritual. That inversion has the shape of real invention. But everything the premise is used to do — the voice that calls the protagonist's name from the water, the doppelganger at the window, the three-night escalation, the deliberately unresolved ending — is the standard furniture of atmospheric kaidan and flash fiction. The setting is new; the machine is not.\n\nThe form compounds the problem rather than relieving it. The clipped, present-tense, declarative prose is a recognizable minimalist flash technique, and the triple-night arc is the stock structure of the genre. The one place where form and content genuinely converge — the numbed, counting sentences that perform the light-keeper's ritual of numbering the roofs — is effective but is an alignment of known parts, not a deviation. The story was always going to end with the mystery unanswered, because unresolvedness is what the template requires; that silence feels inevitable and borrowed in equal measure.\n\nA dry formalist would call this what it is: a well-executed variant within its category. The double in the sunken house has a domestic logic — it is the self left behind in sleep — and that logic is clean and necessary, not decorative. But one meaningful image over a conventional engine scores a conventional originality. The work succeeds as genre fiction and means nothing formally.",
+  "red_flags_triggered": [
+    "Cosmetic novelty",
+    "Variation within a category"
+  ],
+  "green_flags_detected": [
+    "Alignment of premise and form"
+  ],
+  "content_type": "text",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z"
+}

@@ -1,0 +1,78 @@
+{
+  "evaluator_id": "narrative-technique",
+  "evaluator_name": "Narrative Technique Evaluator",
+  "content_summary": "A Japanese short story in which a lighthouse keeper watches his village sink underwater each night, hears his own name called from beneath the waves, and confronts his double in a sunken window.",
+  "domain": "short-story",
+  "primary_score": 69,
+  "primary_score_rationale": "A viewpoint whose external-but-close distance is necessary to the story's central ambiguity, with controlled modulation of distance and purposive, if not ambitious, manipulation of time.",
+  "dimension_scores": {
+    "pov_choice": {
+      "score": 70,
+      "weight": 0.3,
+      "evidence": "Third-person limited narration focalized on the lighthouse keeper, delivered in a present-tense folkloric register; the narrator remains just outside the man's mind while following only what he perceives.",
+      "judgment": "The viewpoint is necessary. By standing just outside the man, the narration keeps open the story's core ambiguity — whether the double in the window is a hallucination, a ghost, or a fact of this village. A first-person account would collapse this into psychology and dissolve the folk-horror register; full omniscience would explain away the mystery. The choice also enacts the theme: the narrator watches the man at a distance, as the man watches the sinking roofs, as the double watches the man from below."
+    },
+    "narrative_distance": {
+      "score": 73,
+      "weight": 0.25,
+      "evidence": "The opening lines establish a mythic, general distance ('When the sun sets, the sea level rises'), which then descends into sensory close-up; the climactic parenthetical line breaks the frame into an intimate, held-breath aside.",
+      "judgment": "The modulation is deliberate and controlled. The story moves from folktale telling to embodied showing and back, and the parenthetical aside — the double's hand reaching through the window — is a precise, formal device that steps outside the normal narration at the exact moment of dread. This is a deliberate control of distance, not an unconscious waver."
+    },
+    "reliability": {
+      "score": 62,
+      "weight": 0.25,
+      "evidence": "The narrator is consistently trustworthy and withholds rather than deceives; the final line ('no one knew until dawn') is a reliable narrator choosing reticence over revelation.",
+      "judgment": "The narrator's trustworthiness is not yet put to work as a source of instability. The mystery is diegetic — it lives in the world, not in the reader's distrust of the teller. The withholding is deliberate and serves the ending, but the craft here is closer to 'reticence' than to the art of the unreliable narrator. This is restraint, not failure."
+    },
+    "time_manipulation": {
+      "score": 69,
+      "weight": 0.2,
+      "evidence": "A ritualistic progression across three nights, each marked and counted, with the voice's proximity escalating each time; the ending leaps in summary to dawn and preserves the mystery.",
+      "judgment": "The handling of time is purposed. The night-by-night escalation is a counting structure that mirrors the man's nightly counting of roofs, and the repetition of the called name gains dread through its increasing nearness. The final summary jump to dawn closes the cycle without dissolving it. Clean and meaningful, though not deeply complex."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": 69,
+    "reader_experience": null
+  },
+  "classification": "discovery_target",
+  "confidence": 82,
+  "strengths": [
+    "The viewpoint is necessary: only an external-but-close third person can hold open the ambiguity between hallucination, ghost, and village fact.",
+    "The distance is modulated with intention, from mythic folktale opening to sensory close-up, with the parenthetical aside breaking the frame at the moment of dread.",
+    "The night-by-night counting structure creates a ritual escalation, and the repeated called name gains force through increasing proximity.",
+    "A nested structure of watching — narrator over man, man over village, double watching man from below — is made possible by the point of view and mirrors the theme."
+  ],
+  "weaknesses": [
+    "Reliability is not deeply exploited: the narrator is trustworthy throughout, and the uncanny is diegetic rather than narratorial, so the reader's perception is never unsettled about the teller himself.",
+    "The manipulation of time is clean and meaningful but not ambitious; a longer piece could push the recurrence into genuine disorientation.",
+    "Character interiority is thin: the man's horror is inferred from the scene rather than felt from within, leaving the dread somewhat scenographic."
+  ],
+  "unique_perspective": "The story's narrative distance structurally enacts its theme: the narrator observes the man as the man observes the sinking roofs, and the double observes the man from below — three nested acts of watching from three levels, all held apart by the same deliberate distance. Moreover, the narrator's ritual counting of the nights mirrors the man's nightly counting of roofs, so the teller's own craft and the protagonist's vigil are the same gesture. Only a narrative-technique reading would notice that the form is doing the tale's work.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "plot-architecture",
+      "predicted_stance": "May find the doppelganger reveal underdeveloped and the withholding of explanation insufficient as a disclosure structure."
+    },
+    {
+      "evaluator_type": "reader-experience",
+      "predicted_stance": "May find the folkloric, arm's-length distance too cold and the emotional impact of the horror insufficiently immediate."
+    }
+  ],
+  "narrative": "This is third-person limited narration focalized on the lighthouse keeper, delivered in a present-tense folktale register. The viewpoint is necessary: by remaining just outside the man — following his perceptions but not entering his mind — the narration keeps open the story's central ambiguity, whether the double in the sunken window is a hallucination, a ghost, or something the village collectively accepts. A first-person telling would collapse this into psychology and dissolve the folk-horror register; full omniscience would explain away the mystery. The choice of distance also enacts the theme: the narrator watches the man from a teller's remove, the man watches the sinking roofs from the high ground, and the double watches the man from below. It is a nested structure of watching, and the point of view is its instrument.\n\nThe distance is deliberately modulated. The opening lines occupy a mythic, general distance grounded in present tense, then the narration descends into sensory close-up, and at the climax a parenthetical line — the double's hand reaching through the window — breaks the frame into an intimate, held-breath aside. This is control, not accident. The handling of time is equally purposive: the ritual counting of three nights, each with the voice drawing nearer, is a precise escalation, and the final summary leap to dawn preserves the mystery rather than resolving it.\n\nThe area of restraint is reliability. The narrator is trustworthy throughout; the mystery is diegetic, not narratorial. The final withholding is a deliberate reticence, but the story does not yet unsettle the reader's trust in the teller himself. The craft here lives in distance and time rather than in deception — accomplished, economical, and quietly controlled.",
+  "green_flags_detected": [
+    "necessity of viewpoint",
+    "control of distance",
+    "craft of time"
+  ],
+  "content_type": "text",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z"
+}

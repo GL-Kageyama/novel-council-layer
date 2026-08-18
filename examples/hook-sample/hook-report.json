@@ -1,0 +1,87 @@
+{
+  "evaluator_id": "hook",
+  "evaluator_name": "Hook Evaluator",
+  "content_summary": "A quiet short story of a lighthouse keeper in a village that sinks each night, who hears a voice calling his name from a sunken house.",
+  "domain": "short-story",
+  "primary_score": 63,
+  "primary_score_rationale": "The engine ignites (the nightly sinking is given, then the voice breaks it), the trunk is preserved to the end, but the chain is short and one branch answer lands abruptly.",
+  "dimension_scores": {
+    "investment": {
+      "score": 70,
+      "weight": 0.20,
+      "evidence": "The first scene repeats the nightly sinking as an ordinary ritual — the keeper lights the box, counts the roofs one by one — so the reader settles into the village before anything breaks.",
+      "judgment": "The carrier (the sinking village and the keeper's watch) is strongly given; there is a possession for the unknown to break."
+    },
+    "unknown": {
+      "score": 65,
+      "weight": 0.25,
+      "evidence": "Two unknowns are raised and kept open: whose voice calls the name, and why the village sinks only at night. The voice arrives after the last roof sinks, breaking the ritual.",
+      "judgment": "A genuine, unpredictable unknown is planted; it is not trivial, and the second unknown (why it sinks) is held as a reserve trunk."
+    },
+    "desire": {
+      "score": 62,
+      "weight": 0.25,
+      "evidence": "The voice calls the keeper's own name, then shows a face identical to his own — the want to know rides on the reader's identification with the keeper rather than staying abstract.",
+      "judgment": "The want is transferred onto the keeper (the possession the reader holds), so the gap is not carrier-only; but the transfer happens fast and is not yet deepened."
+    },
+    "continuity": {
+      "score": 60,
+      "weight": 0.15,
+      "evidence": "Each answer opens the next: the voice → (second night) nearer → (third night) a face in the window → 'who are you' → the other man calls the name. The joints hold without a visible break.",
+      "judgment": "The chain does not break at the joints; the answer itself opens the next question, but the chain is short and there is no long middle to carry it."
+    },
+    "progression": {
+      "score": 58,
+      "weight": 0.15,
+      "evidence": "The branch (whose voice) advances toward the trunk (whose face), but the deeper trunk — why the village sinks — is preserved to the last line, unanswered.",
+      "judgment": "The trunk's answer is preserved to the peak, which is correct, but the branch answer ('a face identical to his own') arrives rather suddenly without a middle that scales the gap to the size of the question."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": 63
+  },
+  "classification": "discovery_target",
+  "confidence": 70,
+  "strengths": [
+    "Give-then-break is in the correct order: the nightly sinking is settled as a ritual before the voice breaks it.",
+    "The trunk is preserved to the last line — why the village sinks is never answered, so the interest does not die early.",
+    "The want to know is attached to the keeper's own name and face, not left as an abstract mystery.",
+    "Each night escalates the gap in proportion (faint voice → nearer → a face), a spacing that scales to the question."
+  ],
+  "weaknesses": [
+    "The chain is short — there is no long middle to carry the pull, so the engine has little distance to run.",
+    "The branch answer ('a face identical to his own') lands with little preparation, so the joint is prepared but the escalation is abrupt.",
+    "The second trunk (why the village sinks) is only a reserve — it is never made something the reader actively wants to close within the text."
+  ],
+  "unique_perspective": "Where plot-architecture would trace when the disclosure is timed, I read the two unknowns as one reserve trunk and one active trunk — and I hold that the story survives because the reserve trunk is preserved, not because the active trunk is answered.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "plot-architecture",
+      "predicted_stance": "plot-architecture will likely praise the timed escalation (voice → face) as disclosure machinery, while I would argue the machinery ignites the engine but does not yet scale the gap."
+    },
+    {
+      "evaluator_type": "reader-experience",
+      "predicted_stance": "reader-experience may report low immersion because the prose is thin and the world is not yet inhabited; I would counter that interest (the pull) and immersion (the comfort) are distinct, and the pull is present even in thin prose."
+    }
+  ],
+  "narrative": "This story builds the engine in the right order, and that is rare enough to note. The first scene does the hard, unglamorous work: it makes the nightly sinking ordinary — the man lights the box, counts the roofs, and the village treats sinking the way a village treats sleeping. That is the give. Only after the reader has settled into that ritual does the story break it, with a voice that calls the keeper's name from under the water. The unknown is planted in a possession the reader already holds: the keeper's watch, and then the keeper's own name and face.\n\nWhere the chain is weakest is not the order but the distance. The escalation is compressed — faint voice, nearer voice, a face — and the middle that would let the want deepen is thin. The branch answer, a face identical to his own, lands almost as soon as the question is raised, so the joint is prepared but the gap is not scaled to the size of the question. What saves the story is the reserve trunk: why the village sinks at night is raised and never answered. That single preserved question is what keeps the interest line from dying at the last line.\n\nAs a mechanic I would score the give-then-break and the preservation as the two sound parts, and flag the short, abrupt middle as the part to rebuild. The engine ignites and holds to the end; it just does not yet run far enough to be seamless.",
+  "red_flags_triggered": [],
+  "green_flags_detected": [
+    "Give, then break (与えてから欠けさせる)",
+    "The answer opens the next question (閉じるとき、次の問いが開いている)",
+    "Trunk preserved to the end (幹が最後まで温存)",
+    "Gap scales to question size (間隔 ∝ 問いの大きさ)"
+  ],
+  "content_type": "text"
+}

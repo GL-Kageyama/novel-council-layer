@@ -1,0 +1,79 @@
+{
+  "evaluator_id": "prose-style",
+  "evaluator_name": "Prose Style Evaluator",
+  "content_summary": "A lantern-keeper in a village that sinks beneath the sea each night hears his own name rising from a drowned house and meets his own face behind a submerged window.",
+  "domain": "short-story",
+  "primary_score": 82,
+  "primary_score_rationale": "The prose functions as music: it throttles the reader's speed with short declarative beats, lands a single recontextualizing word, and makes the water felt on the skin.",
+  "dimension_scores": {
+    "rhythm": {
+      "score": 87,
+      "weight": 0.3,
+      "evidence": "Sentences are compressed to single beats — 'Nido-ban, koe wa chikakatta' / 'The voice was nearer.' Long clauses ('Ie no, mado no atari kara datta' / 'It came from near the window of the drowned house') release only after their withholding, then snap back to the short line. The repeated count of nights — first, second, third — imposes a liturgical pulse. Final line sweeps once and stops.",
+      "judgment": "Deliberate control of reading speed. The initial three clauses land like a single held breath; each of the three nights tightens the interval, so the descent toward the window feels like a heartbeat accelerating into the water."
+    },
+    "sensory_texture": {
+      "score": 75,
+      "weight": 0.25,
+      "evidence": "'Mizu wa kuroku, nani mo kaesanai' / 'The water was black and gave nothing back.' The lantern's light crossing 'shizunda yane no ue' / 'over the sunken roof' is made visible and slow. The knee-deep cold is felt in the body.",
+      "judgment": "Mass and temperature are present — the blackness of the water, the weight of it rising without sound. Color and touch carry the scene; smell and taste are absent, which suits a story that watches rather than eats."
+    },
+    "verbal_precision": {
+      "score": 84,
+      "weight": 0.25,
+      "evidence": "'Shizumu' / 'sink' is made synonymous with sleep — 'Shizumu koto wa, kono mura de wa neru koto to onaji datta' / 'To sink was, in this village, the same as sleeping' — so that one verb recontextualizes the entire premise. 'Ie no, mado no atari' / 'near the window of the house' places the voice to the inch. 'Onaji kao' / 'the same face' is repeated without ornament.",
+      "judgment": "Almost no word is disposable. The identification of sinking with sleep is a single recontextualizing act; every later line inherits its weight. Minimal and load-bearing."
+    },
+    "voice": {
+      "score": 83,
+      "weight": 0.2,
+      "evidence": "The narration is flat, witness-like, unhurried, and almost unblinking — it reports a horror without raising its voice. The parenthetical aside about the reaching hand is the one moment the telling leans in, and it is placed exactly there.",
+      "judgment": "An irreplaceable voice: a calm lantern-keeper's witness that no other narrator could sustain without becoming sentimental. Its restraint is its signature."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": 82,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null
+  },
+  "classification": "discovery_target",
+  "confidence": 86,
+  "strengths": [
+    "The opening three lines throttle the reader to a near-stop, then let the long image of the rising water expand before snapping shut — rhythm is used as an instrument.",
+    "'Sinking is the same as sleeping' is a single verb that recontextualizes the entire premise, giving every later descent the weight of a daily death.",
+    "The black unanswering water and the slow lantern crossing sunken roofs make the sea tactile without a single decorative adjective.",
+    "The voice is a calm, nearly unblinking witness whose restraint is the entire horror — the one parenthetical lean-in ('the hand came') is placed with precision."
+  ],
+  "weaknesses": [
+    "Smell and taste are entirely absent; the sensory palette is visual and thermal only, which keeps the sea slightly abstract where it might be full.",
+    "The parenthetical aside about the reaching hand arrives in a slightly different register than the flat witness-voice, a small fracture in the otherwise seamless control.",
+    "One or two linking phrases ('It came from near the window of the house') are filler that a stricter hand would have cut."
+  ],
+  "unique_perspective": "The story does not merely describe a sinking village; it makes sinking synonymous with sleep, so that the entire narrative rhythm — the three counted nights descending like a body lowering into a bath — performs the act it describes. The prose's tempo is the drowning, not just its report.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "emotional-power",
+      "predicted_stance": "May rate the affective depth lower, since the flat witness-voice withholds affect and leans on reader inference rather than overt feeling."
+    },
+    {
+      "evaluator_type": "reader-experience",
+      "predicted_stance": "May rate the whole experience higher for atmosphere and immersion, weighting the compressed rhythm and quiet dread as a complete read."
+    }
+  ],
+  "narrative": "Read this aloud and the first three beats land like stones: the sun sets, the sea rises, and nothing makes a sound. Then a single long sentence lets the water cross the road, climb the stone wall, and drink the foundations — and only then does it snap back to the short declarative line. That is not accident. The prose throttles the reader, and the three counted nights tighten the interval until the descent to the window feels like a body being lowered one stair at a time into black water.\n\nOne verb does the heavy lifting: to sink is to sleep. Once that equivalence is struck, every wet roof becomes a bed, every drowned house a sleeping body, and the final face behind the window is the dream the man did not know he was having. The word choice is spare to the edge of severity — the water is black and gives nothing back, the voice comes from near the window to the inch, the face is the same face, repeated without ornament. Almost nothing here is disposable.\n\nThe voice is the real instrument: a calm, nearly unblinking witness that reports a horror without raising its voice. The one moment it leans in — the parentheses around the reaching hand — is placed exactly where the reader is already holding breath. Weaknesses are small: smell and taste are absent, and a filler phrase or two could be cut. But the style functions as music of words, deliberately controlling speed and sensation; a single recontextualizing verb earns it a place well above the commonplace.",
+  "green_flags_detected": [
+    "Weight of a single word",
+    "Manipulation of speed",
+    "Intrinsic voice"
+  ],
+  "red_flags_triggered": [],
+  "content_type": "text",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z"
+}

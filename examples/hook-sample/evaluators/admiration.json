@@ -1,0 +1,85 @@
+{
+  "evaluator_id": "admiration",
+  "evaluator_name": "Admiration Evaluator",
+  "content_summary": "A spare, atmospheric short story about a village that sinks underwater each night and a lamp-keeper who finds his own face calling to him beneath the waves.",
+  "domain": "short-story",
+  "content_type": "text",
+  "primary_score": 59,
+  "primary_score_rationale": "A genuine but modest wow: the doppelganger exceeds the ghost the reader predicted, and it is earned thematically via the 'fears the sea yet descends' line. Familiarity of the trope mutes the exceed, and the inevitability is thematic rather than structural, holding the score in the lower-mid range of well-earned reversals.",
+  "dimension_scores": {
+    "expectation_guidance": {
+      "score": 70,
+      "weight": 0.2,
+      "evidence": "A voice calls the lamp-keeper's name from the sunken house across three escalating nights.",
+      "judgment": "The story plants a clear prediction — a ghost or a lost loved one — and tightens it with patient, ritualized escalation so there is something real for the reveal to surpass."
+    },
+    "expectation_exceeding": {
+      "score": 58,
+      "weight": 0.3,
+      "evidence": "The face in the window turns out to be the man's own face, exceeding the ghost the reader filled in.",
+      "judgment": "A genuine surpassing, but the doppelganger is a familiar horror trope, so the exceed reads as elegant rather than startling for genre-aware readers."
+    },
+    "inevitability": {
+      "score": 52,
+      "weight": 0.3,
+      "evidence": "The 'fears the sea yet descends' line reframes the doppelganger as the man's own divided self.",
+      "judgment": "Earned thematically more than structurally; re-reading finds no dense lattice of clues that lead specifically to one's own face, so the 'of course' is felt but not built."
+    },
+    "admiration_peak": {
+      "score": 62,
+      "weight": 0.2,
+      "evidence": "The stark reveal 'Inside the window, there was a face. It was the same face as the man,' followed by the parenthetical hand reaching across the window.",
+      "judgment": "Delivered with perfect restraint; it lands as a quiet collapse of the self/other boundary rather than a sharp jaw-drop, which suits the story but caps the involuntary exclamation."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": 59
+  },
+  "classification": "discovery_target",
+  "confidence": 75,
+  "green_flags_detected": [
+    "Recognition pleasure",
+    "Earned inevitability"
+  ],
+  "strengths": [
+    "Plants the expectation cleanly through three nights of escalating name-calling, so the reader has a concrete prediction (a ghost, a drowned loved one) for the reveal to exceed.",
+    "The doppelganger genuinely surpasses that prediction and recontextualizes the 'fears the sea yet descends' line into a portrait of a divided self, giving the twist a thematic inevitability.",
+    "The peak is delivered with withholding-to-the-point-of-severity: 'Inside the window, there was a face. It was the same face as the man.' The brevity is what makes the chill land.",
+    "The parenthetical hand reaching from the underwater side to this side of the window is a second, quieter surpassing that silently collapses the boundary between self and other.",
+    "The refusal to explain why the village sinks preserves the mystery as lingering unease rather than deflating into a hollow explanation."
+  ],
+  "weaknesses": [
+    "The doppelganger is a well-worn horror device, so the exceed is muted for genre-aware readers who may see the man's own face coming before the lantern reaches the window.",
+    "Inevitability rests on a single evocative line and is thematic rather than structural; re-reading does not uncover a network of clues that make one's own face the only possible answer.",
+    "The name-calling setup is functional but minimal — the story does not misdirect richly or plant a specific candidate for the caller before the reveal.",
+    "The central planted question (why the village sinks only at night) is never surpassed or earned; it is simply left open, so the largest expectation stays unaddressed."
+  ],
+  "unique_perspective": "The story's true wow is not the doppelganger — a recognizable trope — but the second, quieter surpassing: the parenthetical sentence in which the other man's hand reaches from the underwater side to this side of the window. That gesture does not scream; it collapses the boundary between the man and his sunken self, and the involuntary recognition is that the sea has been holding a mirror to him all along.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "plot-architecture",
+      "predicted_stance": "May praise the understated foreshadowing and the open ending as elegant structural restraint, while I note the foreshadowing is thin and the central mystery is left unearned."
+    },
+    {
+      "evaluator_type": "emotional-power",
+      "predicted_stance": "May find the piece too cold and restrained to move the heart, while I read that same restraint as the precise mechanism that makes the chill land."
+    }
+  ],
+  "improvement_suggestions": [
+    "Plant a reflection motif earlier — the man avoiding his own face in the water, a mirror fogged over — so the doppelganger becomes structurally inevitable on re-read.",
+    "Give the reader a specific candidate for the caller (a named drowned person) so the self-reveal exceeds a concrete prediction rather than a vague ghost.",
+    "Either let the village's sinking obey a rule the reader can infer (an 'of course' for the larger mystery) or make the deliberate non-explanation the point more overtly."
+  ],
+  "narrative": "The story knows exactly what prediction to plant. A voice rises from the sunken house and calls the lamp-keeper's name, and the reader fills the blank with a ghost, a drowned wife, a child the sea took. Three patient nights tighten that expectation until the third night descends from the high ground and the lantern is already swinging toward a face; what it finds is the man's own face, the face of the one who fears the sea but keeps walking down to it. That is a genuine surpassing — the caller knew him because the caller was him — and it is earned in the only way this story can earn it: thematically, through the single line that reframes the whole night walk as a man meeting his own divided self.\n\nBut the inevitability is thin beneath it. Re-reading the early pages does not uncover a lattice of clues leading specifically to the doppelganger; the proof of the twist is a mood, not a structure, so the moment reads as elegant inevitability rather than structural inevitability. And the device itself is worn — genre-aware readers may see their own face in the window before the lamp does, which blunts the very thing the story is selling. The closing refusal to explain why the village sinks is atmospheric and keeps the chill alive, but it also means the story's largest planted question is never surpassed or earned; it is simply left ajar.\n\nThe real feat of admiration is the second, smaller surpassing that most evaluators will pass over: the parenthetical sentence in which the other man's hand reaches from the underwater side to this side of the window. That gesture does not cry out; it quietly dismantles the seam between the man and his sunken self, and that collapse is the story's true 'got me' — the recognition that the sea has never shown him anyone but himself. A well-made, disciplined piece with a genuine but modest wow, more a lingering chill than a jaw-drop.",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z"
+}

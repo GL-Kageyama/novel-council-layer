@@ -1,0 +1,82 @@
+{
+  "evaluator_id": "emotional-power",
+  "evaluator_name": "Emotional Power Evaluator",
+  "content_summary": "A solitary lantern keeper watches his village sink underwater each night and is called by name from a drowned house, where he meets his own face.",
+  "domain": "short-story",
+  "primary_score": 70,
+  "primary_score_rationale": "Genuine, restrained emotion that accrues through ritual and echo rather than being administered through device; memorable images linger, though the muted register keeps the piece slightly toward the cool end and the doppelganger briefly leans generic.",
+  "dimension_scores": {
+    "genuine_emotion": {
+      "score": 71,
+      "weight": 0.3,
+      "evidence": "Emotion gathers around two repeated structures — the nightly counting of the sinking roofs and the name called from beneath the water — rather than around any stated feeling.",
+      "judgment": "The sorrow is never announced; it accrues through ritual and echo, giving it a restraint that reads as truthful rather than staged."
+    },
+    "empathy": {
+      "score": 68,
+      "weight": 0.2,
+      "evidence": "The keeper's vigil is structurally empathetic: villagers already rest on high ground while he alone stays awake, counting houses as one counts the sleeping, and the text refuses to distinguish sinking from sleeping.",
+      "judgment": "The reader is drawn into the loneliness of a solitary caretaker, an unspoken devotion that asks us to imagine his night as vigilance over others."
+    },
+    "memory_persistence": {
+      "score": 73,
+      "weight": 0.2,
+      "evidence": "The motif of light crossing sunken roofs, the face behind the window, and the hand reaching through recur and recontextualize the opening image of counted roofs.",
+      "judgment": "These images return after reading: the light that finds nothing and returns no answer becomes the residue of an unanswered vigil the reader carries."
+    },
+    "post_reading_shift": {
+      "score": 67,
+      "weight": 0.3,
+      "evidence": "The final refusal — the man does not put out the lamp though the water still rises — and the open clause that no one knew why until dawn leave the confrontation unresolved.",
+      "judgment": "What shifts is small and quiet: the sense of having watched someone choose not to look away. The absence of answer is the shift, which some may find resonant and others merely withheld."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": 70,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null
+  },
+  "classification": "discovery_target",
+  "confidence": 76,
+  "strengths": [
+    "The nightly counting of sinking roofs turns destruction into a tender vigil, so loneliness arises from structure rather than stated feeling.",
+    "The doppelganger embodies the story's own named contradiction — fearing the sea yet descending to it — making the uncanny emotional rather than merely frightening.",
+    "The man's refusal to extinguish the lamp, and the parenthetical rendering of the reaching hand, keep emotion restrained and let the reader complete the feeling."
+  ],
+  "weaknesses": [
+    "The uncanny-double device sits close to familiar horror grammar and momentarily leans generic before the restraint recovers it.",
+    "The muted register can read as cool distance; readers seeking warmth may find vigilance more chilling than moving.",
+    "The closing 'no one knew why' risks feeling withheld rather than resonant, deferring the emotional answer the vigil seems to promise."
+  ],
+  "unique_perspective": "Where another reader sees a ghost story, I see a portrait of solitary care. The lantern keeper counting rooftops is the emotional center — a night nurse of a drowning village — and the face in the window is not horror but the self calling the watcher by name, grief asking to be recognized.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "prose-style",
+      "predicted_stance": "May locate the work's value in the austere formal beauty of the prose, scoring style as the primary carrier, whereas I hold that style here serves an emotional structure and should not outweigh it."
+    },
+    {
+      "evaluator_type": "anti-generic-story-filter",
+      "predicted_stance": "May flag the doppelganger as a worn genre trope and judge the piece derivative, whereas I see the trope recontextualized by the tenderness of the vigil."
+    }
+  ],
+  "narrative": "This story moves without once asking to move. Its emotion is carried by a ritual — a man alone counting the roofs that sink, as one might count the breathing of sleepers — and by an echo, a name called upward through black water. Nothing is explained, and that is its strength: the reader is left inside the vigil, holding the lamp beside the man, watching the light cross a sunken roof and return nothing. The restraint is not coldness but precision; the story knows that grief and dread announce themselves more loudly when not announced.\n\nThe moment that gives the piece its weight is the contradiction the text names outright: the man who fears the sea is also the man who descends to it. The face in the window is never a monster; it is the same face, the same divided self, and its single gesture — a hand reaching slowly toward the glass — is rendered in parentheses, as if the story itself is embarrassed to say too much. That is the aesthetic of restraint in practice: the uncanny is held almost motionless so the reader's feeling must supply the movement.\n\nWhat lingers is not fear but tenderness, and not answer but the refusal to look away. The man does not put out the lamp, and the village's reason remains unknown until dawn — and after dawn, forgotten. There is something quietly devastating in that: a whole village sinking nightly and explaining itself to no one, watched over by one unpaid witness. I am moved, and I cannot quite say why, which is how I know it is genuine and not administered.",
+  "green_flags_detected": [
+    "Restrained emotion",
+    "Negative space",
+    "Complex emotion"
+  ],
+  "improvement_suggestions": [
+    "Ground the doppelganger in one specific personal detail of the keeper's life so the double reads as his particular guilt or longing rather than generic horror.",
+    "Allow a single warm, concrete human gesture earlier in the vigil to raise the register from cool distance toward felt tenderness.",
+    "Reconsider the final 'no one knew why' — either earn it as a shared village silence or replace it with a small internal shift in the man, so the absence of an answer feels deliberate rather than merely withheld."
+  ],
+  "content_type": "text",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z"
+}

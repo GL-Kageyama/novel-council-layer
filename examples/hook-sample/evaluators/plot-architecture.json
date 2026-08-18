@@ -1,0 +1,82 @@
+{
+  "evaluator_id": "plot-architecture",
+  "evaluator_name": "Plot Architecture Evaluator",
+  "content_summary": "A lamplighter in a village that sinks beneath the sea each night hears his own name rise from a drowned house and, over three nights, descends to find his own face at the window.",
+  "domain": "short-story",
+  "primary_score": 63,
+  "primary_score_rationale": "Disclosure is surgical — a three-night ramp with a recontextualizing reveal and a withheld resolution — but the causal premise and the double's existence are asserted rather than earned, keeping the whole in competent but thin territory.",
+  "dimension_scores": {
+    "causality": {
+      "score": 55,
+      "weight": 0.3,
+      "evidence": "The lamplighter's descent is motivated — the voice is heard, so the descent follows — and the three-night escalation is internally consistent. But the governing premise, why the village sinks only at night, is held outside the causal chain, and the double's existence is asserted at the climax rather than earned.",
+      "judgment": "A thin but unbroken chain: character action is motivated, while the world's causality is deliberately withheld, leaving the loop open by design."
+    },
+    "disclosure_timing": {
+      "score": 74,
+      "weight": 0.3,
+      "evidence": "The progression is measured: a barely audible name on the first night, the name twice from a window on the second, a face and a reaching hand on the third, then a sentence that relocates the explanation into a dawn that is never shown.",
+      "judgment": "The strongest element. Each disclosure widens the gap between what is known and what the water holds, and the final withholding purposefully extends the reader's curiosity past the ending."
+    },
+    "foreshadowing": {
+      "score": 56,
+      "weight": 0.25,
+      "evidence": "The early statement that sinking is the same as sleeping plants an association between the submerged world and the unconscious, which the identical face later embodies. Beyond this, few details are buried for rereading.",
+      "judgment": "One symbolic seed is planted and receives a payoff in the double, but the story is too brief to develop a fuller system of planted and paid-off details."
+    },
+    "tension_curve": {
+      "score": 70,
+      "weight": 0.15,
+      "evidence": "A clean three-beat escalation — distant voice, nearer voice, face and hand — that peaks at the climactic gesture and then declines to release, ending instead on the words that the water was still rising and the mystery unread.",
+      "judgment": "The rise is shaped deliberately and the withholding of release is a choice, redirecting the accumulated tension into a lingering question rather than a denouement."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": 63,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null
+  },
+  "classification": "low_signal",
+  "confidence": 74,
+  "strengths": [
+    "A disciplined three-beat disclosure ramp: the summons is released first as a barely audible name, then from a window, then as a face, each beat widening the gap between knowledge and what the water holds.",
+    "The identical face recontextualizes the opening voice — the summons was the self — a payoff that retroactively charges the first night.",
+    "The final line displaces the explanation into a dawn the reader is never shown, engineering a curiosity that survives the ending by design.",
+    "Clean escalating tension: each night the source is closer, culminating in a reaching hand and a deliberately unresolved close."
+  ],
+  "weaknesses": [
+    "The central premise — why the village sinks only at night — sits outside causality, withheld by authorial fiat rather than structural necessity.",
+    "The double's existence is asserted for the sake of the climax, not earned by any planted rule or mechanism.",
+    "Foreshadowing is thin: beyond the 'sinking equals sleeping' motif, little is buried for rereading to recover.",
+    "The causal loop is left open; the wound-up tension is redirected into a question rather than resolved in any sense."
+  ],
+  "unique_perspective": "The real reveal in this story is not the face but the withheld dawn. The story's last act of disclosure is a refusal to disclose — the answer is announced as existing 'until dawn' and then silently withheld — which means the reader is left holding a structure of absence rather than a fact. Only an architecture reading insists that the final gesture is the plot's true event.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "reader-experience",
+      "predicted_stance": "Likely to score higher, treating the unresolved ending and lingering dread as a feature of the atmosphere rather than an open causal loop; the final image may outweigh the thin causality."
+    },
+    {
+      "evaluator_type": "narrative-technique",
+      "predicted_stance": "May praise the controlled detachment and the final shift to a broader, almost omniscient register as a deliberate manipulation of distance, where I read the withheld dawn as a non-closure."
+    }
+  ],
+  "green_flags_detected": [
+    "Recontextualization structure",
+    "Asymmetry of information"
+  ],
+  "improvement_suggestions": [
+    "Plant one additional rule or detail in the opening that the double's appearance later pays off, so the doppelgänger feels earned rather than asserted.",
+    "Provide a release gesture for the wound-up tension — even an anti-release, such as the light going out — so the final withholding lands as a chosen refusal rather than a simple stop."
+  ],
+  "content_type": "text",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z",
+  "narrative": "The plot is a single ramp: three nights, each drawing the lamplighter closer to the submerged window. What is revealed, and when, is the whole of the architecture. The first night releases only a name at the threshold of audibility; the second doubles it and moves it to a window; the third delivers the face and a reaching hand. The sequencing is precise — the escalation is not hurried, and each beat widens the gap between what the man knows and what the water holds. The reveal of the identical face is the payoff that recontextualizes the voice: what called him was himself. In this respect the story has a genuine recontextualization structure, and the final line — 'until dawn no one knew' — is a deliberate displacement of the answer into a dawn the reader is never shown. That is a disclosure choice, not an accident; the reader's curiosity is engineered to outlive the final sentence.\n\nBut the causal chain is thin. The man's actions are motivated — he hears his name, so he descends — yet the premise that moves everything, why the village sinks only at night, is held entirely outside causalism, and the double's existence is never earned by anything except the story's need for a climax. The loop is left open by design. Foreshadowing is present but faint: 'sinking is the same as sleeping' plants the dream-self reading that the double later embodies, but little else is buried for rereading to recover. The tension curve is the most disciplined element — a clean three-beat escalation that peaks at the hand and then refuses release, redirecting the wound-up tension into a persistent question rather than a resolution.\n\nThe design is competent and surgical in its disclosure, but it operates within a very small frame. What it does, it does cleanly; it simply does not attempt much else. On a scale where causality is the load-bearing wall, the building here is a single well-lit corridor leading to a door that is never opened."
+}

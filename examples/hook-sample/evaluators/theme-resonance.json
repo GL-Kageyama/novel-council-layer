@@ -1,0 +1,89 @@
+{
+  "evaluator_id": "theme-resonance",
+  "evaluator_name": "Theme Resonance Evaluator",
+  "content_summary": "A lamplighter in a village that sinks beneath the sea each night, where sinking is the same as sleeping, hears his name called from a drowned house and meets his own face behind the window.",
+  "domain": "short-story",
+  "primary_score": 79,
+  "primary_score_rationale": "The theme emerges from structure rather than sermon, touching identity, death, and solitude with unusual restraint; it is slightly held back by its brevity and one explanatory sentence.",
+  "dimension_scores": {
+    "theme_depth": {
+      "score": 80,
+      "weight": 0.3,
+      "evidence": "The story poses the question of what the self meets when it descends into the drowned, sleeping part of its own world, and refuses to answer that question directly.",
+      "judgment": "A genuine, fundamental question about identity and death, rendered through the rite of watching roofs vanish rather than through commentary."
+    },
+    "existential_resonance": {
+      "score": 78,
+      "weight": 0.25,
+      "evidence": "Death, solitude, and the confrontation with one's own image are carried by the keeper's nightly vigil and the wordless double, not argued.",
+      "judgment": "It touches life's fundamental questions from within its structure, though the small scale leaves the implications still forming rather than fully sounded."
+    },
+    "coherence": {
+      "score": 82,
+      "weight": 0.2,
+      "evidence": "The sinking, the sleeping equivalence, the called name, and the refusal to extinguish the lamp all converge on a single descent toward the self.",
+      "judgment": "The parts are consistent with the whole; the theme is not retrofitted but grows from the arrangement of event, gesture, and withheld cause."
+    },
+    "restraint": {
+      "score": 88,
+      "weight": 0.15,
+      "evidence": "The double answers the question of identity only by speaking the keeper's name, the lamp is deliberately left burning, and the closing line leaves the cause unknown until dawn.",
+      "judgment": "Meaning is held under the waterline and offered as silence, giving the reader room to descend rather than closing interpretation."
+    },
+    "reread_depth": {
+      "score": 76,
+      "weight": 0.1,
+      "evidence": "First read as horror, the story rereads as the self's nightly crossing toward its own death and back; the title and the double accrue a second, allegorical register.",
+      "judgment": "Knowledge withheld on first reading opens a different meaning on rereading, though one explanatory sentence slightly reduces the layeredness."
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "prose_style": null,
+    "theme_resonance": 79,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null
+  },
+  "classification": "discovery_target",
+  "confidence": 80,
+  "strengths": [
+    "The equivalence of sinking and sleeping is established through observed custom and the keeper's counting of vanishing roofs, so the theme arises from ritual action rather than explanation.",
+    "The double is never decoded; when asked who he is, he only speaks the keeper's name, leaving the meaning of the encounter open to the reader.",
+    "The refusal to extinguish the lamp as the water rises and the hand reaches through the glass keeps the confrontation unresolved instead of granting a cheap climax.",
+    "The closing refusal of a cause preserves the mystery as silence, allowing the question of why the village sinks to remain the reader's own."
+  ],
+  "weaknesses": [
+    "The sentence equating sinking with sleeping states the central metaphor directly and slightly weakens the otherwise silent emergence of theme.",
+    "The confrontation is delivered in a single gesture and then the story ends, so the existential question is posed more than developed.",
+    "The unresolved 'why' of the sinking can feel like a withheld puzzle rather than fully earned ambiguity, depending on the reader."
+  ],
+  "unique_perspective": "Only this evaluator sees the true event as a nightly descent toward one's own submerged self: the keeper's counting of roofs is a ritual of witnessing his own crossing, and the double is not a horror but the returned gaze of the part of him that already sleeps beneath the water.",
+  "expected_disagreement_points": [
+    {
+      "evaluator_type": "plot-architecture",
+      "predicted_stance": "Likely to assess the narrative as too minimal and unresolved, with little event progression or payoff, since no cause and no confrontation are resolved by dawn."
+    },
+    {
+      "evaluator_type": "emotional-power",
+      "predicted_stance": "May find the horror understated and the emotional arc restrained to near-stillness, so the fear remains intellectual rather than visceral."
+    }
+  ],
+  "green_flags_detected": [
+    "theme emerging from structure",
+    "silence",
+    "layered rereading",
+    "honest uncertainty"
+  ],
+  "improvement_suggestions": [
+    "Remove or bury the single explanatory sentence equating sinking with sleeping so the metaphor comes entirely from the action and deepens the restraint.",
+    "Extend one quiet beat after the hand reaches through the glass, letting the gesture accrue structural weight before the ending."
+  ],
+  "content_type": "text",
+  "evaluation_timestamp": "2026-08-18T00:00:00Z",
+  "narrative": "The story's depth lies beneath the surface of its simple event. A solitary keeper lights the shore and counts the roofs as the sea, night after night, takes the village under. The story never tells us why the village sinks only at night; it tells us only that sinking and sleeping are the same act to these people. From that equivalence the theme rises without explanation: the night-sea is the sleep of the world, and each sunken roof is a life already halfway across the threshold. What the keeper hears at the bottom, then, is not a ghost but the sound of his own submerged self finishing the crossing before him.\n\nThe confrontation with the double is kept almost wordless. When asked who he is, the face in the window does not answer except to speak the keeper's name. The hand that reaches through the glass and the lamp that is deliberately not extinguished leave the meeting unresolved, and the final line refuses to explain the cause at all. This is the restraint that lets the theme live: meaning is not spoken but held just under the waterline, where the reader must go down to meet it.\n\nThe story deepens on a second reading. First read as eerie horror, it rereads as an account of the self's nightly descent toward its own death and back to dawn. The one unobtrusive sentence equating sinking with sleeping leans slightly toward stating the metaphor, a small cost in an otherwise silent structure; but the refusal to explain the village's reason keeps the question open, and the returned gaze remains the reader's to interpret. It is a small, honest work that touches the fundamental questions of identity, death, and solitude without insisting on an answer."
+}
