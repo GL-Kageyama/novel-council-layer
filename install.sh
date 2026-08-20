@@ -2,7 +2,7 @@
 #
 # Novel Council Layer installer
 #
-# Installs the 11 evaluator agents and the council orchestrator skill to
+# Installs the 13 evaluator agents and the council orchestrator skill to
 # Claude Code discovery locations so they are available by name.
 #
 # Usage:

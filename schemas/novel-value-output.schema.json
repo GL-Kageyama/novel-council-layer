@@ -116,6 +116,11 @@
           "minimum": 0,
           "maximum": 100
         },
+        "character_role": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
         "prose_style": {
           "type": ["integer", "null"],
           "minimum": 0,

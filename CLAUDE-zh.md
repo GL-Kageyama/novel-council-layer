@@ -31,7 +31,7 @@
 
 ## 目录约定
 
-- `agents/{name}.md` — 评价者代理的正本（12位）。作为基于人格的专家，以独立子代理启动
+- `agents/{name}.md` — 评价者代理的正本（13位）。作为基于人格的专家，以独立子代理启动
 - `skills/story-council/SKILL.md` — 合议编排者的正本（唯一技能）
 - `.claude/agents/` — 用于项目内发现的symlink（评价者代理）
 - `.claude/skills/` — 用于项目内发现的symlink（合议编排者）
@@ -62,7 +62,7 @@ Args: {"content": "...", "content_type": "text", "domain": "pure-literature"}
 
 ### 情节评价模式（只有梗概也能评价）
 
-指定 `content_type: "plot"`，即可对执笔前的构想或简单梗概进行评价。由于不存在散文、叙事与阅读体验，`prose-style`、`narrative-technique`、`reader-experience` 这3位不被召集，由其余9位（narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, theme-resonance, world-building, admiration, hook）进行评价。
+指定 `content_type: "plot"`，即可对执笔前的构想或简单梗概进行评价。由于不存在散文、叙事与阅读体验，`prose-style`、`narrative-technique`、`reader-experience` 这3位不被召集，由其余10位（narrative-originality, anti-generic-story-filter, emotional-power, plot-architecture, character-depth, character-role, theme-resonance, world-building, admiration, hook）进行评价。
 
 ```
 Skill: story-council
@@ -105,7 +105,7 @@ python utils/anonymize.py input.txt --author "著者名" --title "作品名" > a
 |--------|------|
 | `utils/anonymize.py` | **输入匿名化**——去除作者名、作品名，建立盲检评价的前提（第一重盲检） |
 | `utils/validate_output.py` | 评价者输出的schema验证。通过`--json`标志输出机器可读的结果（合议技能自动重试所使用） |
-| `utils/render_report.py` | Story Report的视觉展示（12维条形图・分类徽章・维度间的对立）。用`-o report.md`保存为Markdown文档，用`--individuals`显示全部个别报告 |
+| `utils/render_report.py` | Story Report的视觉展示（13维条形图・分类徽章・维度间的对立）。用`-o report.md`保存为Markdown文档，用`--individuals`显示全部个别报告 |
 | `utils/compare_reports.py` | 改写前后的差异比较（用于评价→改写循环） |
 
 ## 评价输出被设计为"输入"

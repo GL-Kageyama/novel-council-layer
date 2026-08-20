@@ -19,6 +19,7 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | Emotional Power | 感情の力・読後の変位 | pure-literature, genre-fiction, short-story |
 | Plot Architecture | 因果・情報開示・伏線 | genre-fiction, light-novel |
 | Character Depth | 人物の深さ・内的葛藤 | light-novel, historical-fiction |
+| Character Role | 人物が動くか——賭け・挑戦・一致・自律性・リスクテイク（深さと直交する「動き」の軸） | light-novel, historical-fiction |
 | Prose Style | 文体・言葉の音楽 | pure-literature, short-story |
 | World Building | 世界観の創造性・整合性 | genre-fiction, light-novel, historical-fiction |
 | Narrative Technique | 語りの距離・時間操作 | pure-literature, short-story |
@@ -53,6 +54,7 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | Emotional Power | 読者の心を動かし、記憶に定着するか？ |
 | Plot Architecture | 因果と情報開示は巧みに設計されているか？ |
 | Character Depth | 人物は生きた人間として立ち上がるか？ |
+| Character Role | 人物は物語の中で動くか——本物の賭けを持ち、何かに立ち向かい、自分らしく動き、リスクテイクするか——それとも単にプロットに動かされるだけか？ |
 | Prose Style | 文体は言葉の音楽として機能するか？ |
 | Theme Resonance | 主題は深く、一貫し、存在の問いに触れるか？ |
 | World Building | 舞台は創造的で、内的整合性を持つか？ |
@@ -80,12 +82,17 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 | **hook** × **admiration** | 同じ超出の二相：フックは開いた半身（納得の前の「なぜ？」）、感嘆は閉じた完成（驚き＋必然＝「おおっ」） |
 | **hook** × **anti-generic-story-filter** | 反凡庸は「予測通り＝凡庸」（品質欠陥）を判定する。フックは「予測通り＝未知なし＝退屈」（エンジン点検）を判定する |
 | **hook** × **emotional_power** | 感情は閉じた反応（同一化 → カタルシス）を見る。フックは開いた半身（同一化 → 「この人助かる？」）を見る |
+| **character_role** × **character_depth** | 深さは「人物は生きているか」（内面葛藤・変化弧・動機の真実味）を問う。ロールは「人物は動くか」（賭け・挑戦・リスクテイク）を問う。両者は直交し、深くても静止した人物・浅くても自律した人物はどちらもあり得る |
+| **character_role** × **plot_architecture** | プロットは因果と開示の機構を見る。ロールは人物がその因果に接続されているか（賭けが出来事に接続）を見る——機構そのものではなく、動きの源 |
+| **character_role** × **hook** | フックは読者を引く問い（未知 × 知りたさ）を見る。ロールは人物を動きの源として見る（物語を前へ進める賭け） |
+| **character_role** × **admiration** | 感嘆は機構が生む不随意的な「おおっ」を見る。ロールは人物のリスクテイクの選択がその超出を生むかを見る |
 
 ## 評価者間の関係
 
 ### 補完関係
 
 - **Plot Architecture ↔ Character Depth**: 優れた物語はプロットと人物の両方が噛み合う。プロットだけ・人物だけの物語はどちらも脆い。
+- **Character Depth ↔ Character Role**: 深さは人を与え、ロールは動きを与える。深く（生き）かつ能動的（動く）な人物が、融合軸の理想。
 - **Prose Style ↔ Emotional Power**: 抑制の美学——語らない文体——は感情を深める。文体と感情は独立に見るが、抑制は両者に跨る。
 - **Theme Resonance ↔ Reader Experience**: 読後に残る意味（テーマ）は、読む体験（没入）があって初めて成立する。
 
@@ -106,8 +113,8 @@ Novel Council Layer の評価者群は、単一の価値観ではなく**複数�
 ```
 Story Vector:
 [narrative_originality, quality, emotional_power, plot_architecture,
- character_depth, prose_style, theme_resonance, world_building,
- narrative_technique, reader_experience, admiration, hook]
+ character_depth, character_role, prose_style, theme_resonance,
+ world_building, narrative_technique, reader_experience, admiration, hook]
 ```
 
 ## 合議での評価者選択

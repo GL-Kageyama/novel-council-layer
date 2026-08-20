@@ -113,7 +113,7 @@
 │  ※各評価者は構造的基準で判断（第二の盲検）│
 └────────────────────────────────────────────┘
         ↓
-  Story Vector（11次元スコア）
+  Story Vector（13次元スコア）
         ↓
   Disagreement Map（不一致の保存）
         ↓
@@ -124,7 +124,7 @@
 
 ### 役割分担（実装）
 
-**評価者はエージェント、合議はスキル。** 評価者11体はペルソナベースの専門エージェント（`agents/{name}.md`）として独立したコンテキストで評価する。スキルは同じコンテキストを共有するため独立評価には不向きであり、サブエージェントとして起動することでコンテキストが隔離される。合議オーケストレーター（story-council）のみが唯一のスキルである。
+**評価者はエージェント、合議はスキル。** 評価者13体はペルソナベースの専門エージェント（`agents/{name}.md`）として独立したコンテキストで評価する。スキルは同じコンテキストを共有するため独立評価には不向きであり、サブエージェントとして起動することでコンテキストが隔離される。合議オーケストレーター（story-council）のみが唯一のスキルである。
 
 ---
 
@@ -140,7 +140,7 @@ novel-council-layer/
 ├── .claude-plugin/                    # プラグイン配布定義
 │   ├── marketplace.json
 │   └── plugin.json
-├── agents/                            # 評価者エージェントの正本（11体）
+├── agents/                            # 評価者エージェントの正本（13体）
 │   ├── narrative-originality.md
 │   ├── anti-generic-story-filter.md
 │   ├── emotional-power.md
@@ -202,7 +202,7 @@ novel-council-layer/
 |--------|---------|----------|------|
 | **1** | 評価者を**1体** | 単一次元の評価JSON | 特定の視点だけ確認したい |
 | **2** | **合議（auto）** | 統合Story Report（3〜5次元） | ドメインに応じて効率的に総合評価 |
-| **3** | **合議（full）** | 全11次元が埋まった完全なStory Report | 最初から全員を一気に評価したい |
+| **3** | **合議（full）** | 全13次元が埋まった完全なStory Report | 最初から全員を一気に評価したい |
 
 #### レベル1：評価者を1体呼ぶ
 
@@ -243,7 +243,7 @@ Args: {"content": "...", "domain": "genre-fiction", "mode": "full"}
 | 項目 | 選択肢 | 説明 |
 |------|--------|------|
 | **入力形式** `content_type` | `text`（デフォルト）/ `plot` | `plot` は**あらすじ・構想でも評価可能**（8体で評価。prose-style・narrative-technique・reader-experience は未招集） |
-| **招集範囲** `mode` | `auto`（デフォルト）/ `full` | `auto` はドメインに応じ**3〜5体**、`full` は適用可能な**全員**（text: 11体 / plot: 8体） |
+| **招集範囲** `mode` | `auto`（デフォルト）/ `full` | `auto` はドメインに応じ**3〜5体**、`full` は適用可能な**全員**（text: 13体 / plot: 10体） |
 | **反復** `iteration` | `confirm`（デフォルト）/ `persistent` | `confirm` は各ターンで修正方向を確認、`persistent` は方向を固定して磨き込み |
 | **ドメイン** `domain` | `pure-literature` / `genre-fiction` / `light-novel` / `short-story` / `historical-fiction` | 物語のサブドメイン。省略可（合議が判定） |
 
@@ -267,7 +267,7 @@ python utils/validate_output.py --json output.json
 
 ## 評価者一覧
 
-評価者11体は**サブエージェント**（`agents/{name}.md`）である。各評価者は自分の次元だけをスコアし、隣接する次元とは明確な境界を持つ。
+評価者13体は**サブエージェント**（`agents/{name}.md`）である。各評価者は自分の次元だけをスコアし、隣接する次元とは明確な境界を持つ。
 
 | 評価者（エージェント名） | コア質問 | 次元 |
 |--------|----------|------|
@@ -366,7 +366,7 @@ python utils/validate_output.py --json output.json
 ### 手順（二重の盲検の適用）
 
 1. 各作品の**冒頭＋要約**を、作者名・作品名を**除去した匿名テキスト**として入力する（第一の盲検）
-2. システムが11体の評価者で、**構造的基準**（第二の盲検）で評価し、分類を導出する
+2. システムが13体の評価者で、**構造的基準**（第二の盲検）で評価し、分類を導出する
 3. 評価が終わった**後**にのみ、文学史ラベル（ground truth）と照合して一致率を測定する
 
 ```
@@ -394,7 +394,7 @@ python utils/validate_output.py --json output.json
 
 ## ロードマップ
 
-- **Phase 1**: Novel Evaluation Core — 評価者エージェント11体（構造的次元・重みで実装）+ 二重の盲検（anonymize + 構造的キャリブレーション）+ 合議スキル（story-council）+ Story Vector + Story Report
+- **Phase 1**: Novel Evaluation Core — 評価者エージェント13体（構造的次元・重みで実装）+ 二重の盲検（anonymize + 構造的キャリブレーション）+ 合議スキル（story-council）+ Story Vector + Story Report
 - **Phase 2**: 盲検ベンチマーク（50冊を検証、一致率70%を目標）→ キャリブレーション調整。個人作家向け有料診断（フリーミアム）の開始
 - **Phase 3**: Debate Engine（評価者間の多ターン議論）＋ 投稿プラットフォームPoC（一致率65%・工数削減40%を目標）
 - **Phase 4**: Meta Value Layer（Bias Detection・Evaluation Critic——アンカリング・バイアスと固有名詞混入の監視含む）＋ 有料化（SaaS）

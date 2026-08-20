@@ -19,6 +19,7 @@ Assesses how much reading value a narrative holds **at the present moment**.
 | Emotional Power | Power of emotion; displacement after reading | pure-literature, genre-fiction, short-story |
 | Plot Architecture | Causality, information disclosure, foreshadowing | genre-fiction, light-novel |
 | Character Depth | Depth of characters; inner conflict | light-novel, historical-fiction |
+| Character Role | Whether the character acts — stake, challenge, consistency, autonomy, risk-taking (the orthogonal "movement" axis to depth) | light-novel, historical-fiction |
 | Prose Style | Prose style; the music of words | pure-literature, short-story |
 | World Building | Creativity and consistency of the worldview | genre-fiction, light-novel, historical-fiction |
 | Narrative Technique | Narrative distance; manipulation of time | pure-literature, short-story |
@@ -53,6 +54,7 @@ Shakes the very premises of evaluation.
 | Emotional Power | Does it move the reader's heart and stay fixed in memory? |
 | Plot Architecture | Are causality and information disclosure skillfully designed? |
 | Character Depth | Does the character stand up as a living person? |
+| Character Role | Does the character act in the story — carry a real stake, stand against something, move as themselves, and take risk — rather than merely being moved by the plot? |
 | Prose Style | Does the prose function as the music of words? |
 | Theme Resonance | Is the theme deep, consistent, and does it touch on questions of existence? |
 | World Building | Is the setting creative and internally consistent? |
@@ -80,12 +82,17 @@ Shakes the very premises of evaluation.
 | **hook** × **admiration** | The same surpassing in two phases: hook is the open half (the "why?" before 納得), admiration is the closed completion (surprise + inevitability = "wow") |
 | **hook** × **anti-generic-story-filter** | Anti-generic judges "predictable = 凡庸" (a quality defect); hook judges "predictable = no unknown = 退屈" (an engine check) |
 | **hook** × **emotional_power** | Emotion looks at the closed reaction (identification → catharsis); hook looks at the open half (identification → "will they be safe?") |
+| **character_role** × **character_depth** | Depth asks "does the character live" (inner conflict, change arc, motive truth); role asks "does the character move" (stake, challenge, risk-taking). They are orthogonal — deep yet static, and active yet shallow, are both possible |
+| **character_role** × **plot_architecture** | Plot looks at the machinery of causality and disclosure; role looks at whether the character is plugged into that causality (the stake wired to the events) — a source of motion, not the machinery itself |
+| **character_role** × **hook** | Hook looks at the question that pulls the reader (未知 × 知りたさ); role looks at the character as a source of motion (the stake that drives the story forward) |
+| **character_role** × **admiration** | Admiration looks at the involuntary "wow" the machinery produces; role looks at whether the character's risk-taking choice is what causes the surpassing event |
 
 ## Relationships Between Evaluators
 
 ### Complementary Relationships
 
 - **Plot Architecture ↔ Character Depth**: In excellent stories, plot and characters interlock. Stories with only a plot or only characters are fragile in either case.
+- **Character Depth ↔ Character Role**: Depth gives the person, role gives the motion. A character who is both deep (lives) and active (moves) is the ideal the fusion axis points at.
 - **Prose Style ↔ Emotional Power**: The aesthetics of restraint — a prose style that does not say everything — deepens emotion. Prose style and emotion are viewed independently, but restraint spans both.
 - **Theme Resonance ↔ Reader Experience**: Meaning that remains after reading (theme) comes into being only through the reading experience (immersion).
 
@@ -106,8 +113,8 @@ Each evaluator contributes to a specific dimension of the Story Vector (other di
 ```
 Story Vector:
 [narrative_originality, quality, emotional_power, plot_architecture,
- character_depth, prose_style, theme_resonance, world_building,
- narrative_technique, reader_experience, admiration, hook]
+ character_depth, character_role, prose_style, theme_resonance,
+ world_building, narrative_technique, reader_experience, admiration, hook]
 ```
 
 ## Evaluator Selection in the Council

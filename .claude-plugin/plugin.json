@@ -1,7 +1,7 @@
 {
   "name": "novel-council-layer",
   "version": "1.0.0",
-  "description": "Novel Council Layer — a multi-agent value evaluation layer for novels judging the quality of reading time. 11 evaluator agents + a story-council skill produce structured Story Reports preserving disagreement. Double-blind evaluation (anonymized input + structural calibration) shields against name anchoring to discover buried masterpieces.",
+  "description": "Novel Council Layer — a multi-agent value evaluation layer for novels judging the quality of reading time. 13 evaluator agents + a story-council skill produce structured Story Reports preserving disagreement. Double-blind evaluation (anonymized input + structural calibration) shields against name anchoring to discover buried masterpieces.",
   "author": {
     "name": "GL-Kageyama"
   },

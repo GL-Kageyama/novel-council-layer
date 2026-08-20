@@ -19,6 +19,7 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | Emotional Power | 情感的力量・读后的位移 | pure-literature, genre-fiction, short-story |
 | Plot Architecture | 因果・信息揭示・伏笔 | genre-fiction, light-novel |
 | Character Depth | 人物的深度・内心冲突 | light-novel, historical-fiction |
+| Character Role | 人物是否行动——赌注・挑战・一致性・自主性・甘冒风险（与深度正交的「行动」轴） | light-novel, historical-fiction |
 | Prose Style | 文体・文字的音乐 | pure-literature, short-story |
 | World Building | 世界观的创造性与一致性 | genre-fiction, light-novel, historical-fiction |
 | Narrative Technique | 叙事的距离・时间操作 | pure-literature, short-story |
@@ -53,6 +54,7 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | Emotional Power | 能否打动读者的心并铭刻于记忆？ |
 | Plot Architecture | 因果与信息揭示是否设计得巧妙？ |
 | Character Depth | 人物是否作为活生生的人站立起来？ |
+| Character Role | 人物是否在故事中行动——怀有真实的赌注、对抗着某物、像自己一样行动、甘冒风险——而非仅仅被情节所搬运？ |
 | Prose Style | 文体是否作为文字的音乐发挥作用？ |
 | Theme Resonance | 主题是否深刻、一贯，并触及存在的追问？ |
 | World Building | 舞台是否富有创造性，且具有内在一致性？ |
@@ -80,12 +82,17 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 | **hook** × **admiration** | 同一超脱的两个相位：钩子是敞开的一半（信服之前的「为什么？」），惊叹是闭合的完成（惊奇＋必然＝「哇」） |
 | **hook** × **anti-generic-story-filter** | 反平庸判定「可预料＝平庸」（品质缺陷）。钩子判定「可预料＝无未知＝无聊」（引擎检查） |
 | **hook** × **emotional_power** | 情感看闭合的反应（同一化 → 宣泄）。钩子看敞开的一半（同一化 → 「他们会得救吗？」） |
+| **character_role** × **character_depth** | 深度问「人物是否活着」（内在冲突・变化弧・动机真切）。角色问「人物是否行动」（赌注・挑战・甘冒风险）。两者正交——深却静止、浅却自主，皆有可能 |
+| **character_role** × **plot_architecture** | 情节看因果与揭示的机制。角色看人物是否接入该因果（赌注接入事件）——是行动的源头，而非机制本身 |
+| **character_role** × **hook** | 钩子看牵引读者的疑问（未知 × 想知道）。角色把人物视为行动的源头（推动故事向前的赌注） |
+| **character_role** × **admiration** | 惊叹看机制产生的不自主的「哇」。角色看人物的冒险选择是否引发那超越 |
 
 ## 评价者之间的关系
 
 ### 互补关系
 
 - **Plot Architecture ↔ Character Depth**: 优秀的故事中，情节与人物两者相互咬合。只有情节或只有人物的故事，两者都是脆弱的。
+- **Character Depth ↔ Character Role**: 深度给予人，角色给予行动。既深（活着）又主动（行动）的人物，是融合轴所指向的理想。
 - **Prose Style ↔ Emotional Power**: 克制的美学——不吐露一切的文体——深化情感。文体与情感分开看待，但克制跨越两者。
 - **Theme Resonance ↔ Reader Experience**: 读后留下的意义（主题）唯有在阅读体验（沉浸）存在时才得以成立。
 
@@ -106,8 +113,8 @@ Novel Council Layer 的评价者群并非由单一价值观构成，而是由**�
 ```
 Story Vector:
 [narrative_originality, quality, emotional_power, plot_architecture,
- character_depth, prose_style, theme_resonance, world_building,
- narrative_technique, reader_experience, admiration, hook]
+ character_depth, character_role, prose_style, theme_resonance,
+ world_building, narrative_technique, reader_experience, admiration, hook]
 ```
 
 ## 合议中的评价者选择

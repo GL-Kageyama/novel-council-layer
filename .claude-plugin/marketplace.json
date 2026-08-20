@@ -4,13 +4,13 @@
     "name": "GL-Kageyama"
   },
   "metadata": {
-    "description": "Multi-agent novel value evaluation layer — 33 evaluator agent variants (11 evaluators × 3 languages: en, ja, zh) + story-council skill that produce structured Story Reports preserving disagreement, using double-blind evaluation to discover buried masterpieces."
+    "description": "Multi-agent novel value evaluation layer — 39 evaluator agent variants (13 evaluators × 3 languages: en, ja, zh) + story-council skill that produce structured Story Reports preserving disagreement, using double-blind evaluation to discover buried masterpieces."
   },
   "plugins": [
     {
       "name": "novel-council-layer",
       "source": "./",
-      "description": "Novel Council Layer (小説評議会) — a multi-agent value evaluation system for novels that judges the quality of reading time. 11 evaluator agents + a story-council skill produce structured Story Reports preserving disagreement. Double-blind evaluation (anonymized input + structural calibration) shields against name anchoring to discover buried masterpieces.",
+      "description": "Novel Council Layer (小説評議会) — a multi-agent value evaluation system for novels that judges the quality of reading time. 13 evaluator agents + a story-council skill produce structured Story Reports preserving disagreement. Double-blind evaluation (anonymized input + structural calibration) shields against name anchoring to discover buried masterpieces.",
       "version": "1.0.0",
       "author": {
         "name": "GL-Kageyama"

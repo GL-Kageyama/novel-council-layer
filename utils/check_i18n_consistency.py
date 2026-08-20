@@ -35,8 +35,9 @@ from pathlib import Path
 
 BASES = [
     "narrative-originality", "anti-generic-story-filter", "emotional-power",
-    "plot-architecture", "character-depth", "prose-style", "theme-resonance",
-    "world-building", "narrative-technique", "reader-experience",
+    "plot-architecture", "character-depth", "character-role", "prose-style",
+    "theme-resonance", "world-building", "narrative-technique",
+    "reader-experience", "admiration", "hook",
 ]
 
 LANGS = ["en", "ja", "zh"]
@@ -85,8 +86,9 @@ WEIGHT_PATTERNS = {
 
 VECTOR_KEYS = [
     "narrative_originality", "quality", "emotional_power", "plot_architecture",
-    "character_depth", "prose_style", "theme_resonance", "world_building",
-    "narrative_technique", "reader_experience", "admiration", "hook",
+    "character_depth", "character_role", "prose_style", "theme_resonance",
+    "world_building", "narrative_technique", "reader_experience", "admiration",
+    "hook",
 ]
 
 # Kana letters (hiragana + katakana letters + prolonged mark ー), EXCLUDING
@@ -129,8 +131,15 @@ def split_frontmatter(text):
 
 
 def i18n_tag_ok(body, base, lang):
-    tag = f"i18n-version: 1.0.0 | canonical: {base}.md | translated: 2026-08-11 | lang: {lang}"
-    return f"<!-- {tag} -->" in body
+    # Accept any translation date: dates legitimately differ per file as
+    # evaluators are added over time. The tag structure, canonical base, and
+    # language are what the contract pins down.
+    m = re.search(
+        rf"i18n-version: 1\.0\.0 \| canonical: {re.escape(base)}\.md \| "
+        rf"translated: \d{{4}}-\d{{2}}-\d{{2}} \| lang: {lang}",
+        body,
+    )
+    return m is not None
 
 
 def main():

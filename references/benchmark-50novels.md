@@ -7,7 +7,7 @@ This project's biggest bet is whether this system can actually see through to th
 ## Blind Procedure (Applying Double Blindness)
 
 1. Each work's **opening + summary** is input as **anonymized text with the author and work title removed** (the first blindness). Preprocess it with `utils/anonymize.py`.
-2. The system evaluates with 11 evaluators using **structural criteria** (the second blindness) and derives a classification.
+2. The system evaluates with 13 evaluators using **structural criteria** (the second blindness) and derives a classification.
 3. Only **after** the evaluation has concluded, match against the literary-history label (ground truth) and measure the agreement rate.
 
 ```

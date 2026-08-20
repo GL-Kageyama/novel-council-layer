@@ -25,6 +25,7 @@ DIMENSION_KEYS = [
     "emotional_power",
     "plot_architecture",
     "character_depth",
+    "character_role",
     "prose_style",
     "theme_resonance",
     "world_building",
