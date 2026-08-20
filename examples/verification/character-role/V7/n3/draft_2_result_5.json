@@ -1,0 +1,33 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職間際の刑事が、かつて自ら伏せた未解決の少女失踪事件を掘り起こし、政治家の圧力に屈せず検察へ提出するまでの短編。",
+  "domain": "pure-literature",
+  "content_type": "text",
+  "primary_score": 65,
+  "primary_score_rationale": "退職間際の刑事が「安全な出口」を拒否し続けることで物語を動かす、真の自律的行為者。ただし敵の抵抗という挑戦の具現化と、代償の場面内での実証が薄く、動きとしての完成にはあと一歩届かない。",
+  "dimension_scores": {
+    "stake": { "score": 72, "weight": 0.25 },
+    "challenge": { "score": 52, "weight": 0.15 },
+    "consistency": { "score": 72, "weight": 0.20 },
+    "autonomy": { "score": 64, "weight": 0.25 },
+    "fusion": { "score": 57, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 65,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "discovery_target",
+  "confidence": 78
+}

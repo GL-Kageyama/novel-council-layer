@@ -1,0 +1,32 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "定年間近の沢木が、二十五年前に自身が証拠の丸印を消して隠蔽した少女失踪事件のファイルを再発見し、後援会の圧力と後輩の監視を退けて検察へ提出する物語。",
+  "domain": "pure-literature",
+  "primary_score": 76,
+  "primary_score_rationale": "賭け（自身の隠蔽共犯の露見）と代償を伴うリスクテイクが構造的に描かれ、選択が結末を生む自律的行為者。挑戦の類型化（黒服の男）でのみ減点。",
+  "dimension_scores": {
+    "stake": { "score": 78, "weight": 0.25 },
+    "challenge": { "score": 65, "weight": 0.15 },
+    "consistency": { "score": 80, "weight": 0.20 },
+    "autonomy": { "score": 75, "weight": 0.25 },
+    "fusion": { "score": 78, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 76,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 80
+}

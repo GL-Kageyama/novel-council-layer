@@ -1,0 +1,33 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "二十年前の自分の観察記録に消し跡を見つけた人物が、記録の真相と自らの関与を追い、最後に「これは私が消した字です」と名乗り出る短編。",
+  "domain": "pure-literature",
+  "content_type": "text",
+  "primary_score": 67,
+  "primary_score_rationale": "賭け・挑戦・一致が構造的に描かれ、最終場面で人物が物語を自らの手に引き受ける。ただし自律性は発見と妨害への応答が主体で、挑戦の「向こう側」が機構と自己に分散している。",
+  "dimension_scores": {
+    "stake": { "score": 68, "weight": 0.25 },
+    "challenge": { "score": 55, "weight": 0.15 },
+    "consistency": { "score": 82, "weight": 0.20 },
+    "autonomy": { "score": 58, "weight": 0.25 },
+    "fusion": { "score": 72, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 67,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "discovery_target",
+  "confidence": 80
+}

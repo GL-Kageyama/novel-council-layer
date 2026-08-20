@@ -1,0 +1,32 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職五日前の刑事・沢木が、二十年前の失踪事件の供述矛盾に気づき、退職と家族と身の安全を差し出す覚悟で、市長候補となった朽木へ静かに立ち向かう物語。",
+  "domain": "pure-literature",
+  "primary_score": 62,
+  "primary_score_rationale": "本物の賭けと名指しの挑戦を持ち『かまいません』というリスクテイクの選択をする自律的行為者だが、選択が新たな出来事を生む連鎖まで描かれる前に物語が途絶えており、能動性が因果生成に完全には接続されていない。",
+  "dimension_scores": {
+    "stake": { "score": 82, "weight": 0.25 },
+    "challenge": { "score": 68, "weight": 0.15 },
+    "consistency": { "score": 78, "weight": 0.20 },
+    "autonomy": { "score": 60, "weight": 0.25 },
+    "fusion": { "score": 70, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 62,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "discovery_target",
+  "confidence": 64
+}

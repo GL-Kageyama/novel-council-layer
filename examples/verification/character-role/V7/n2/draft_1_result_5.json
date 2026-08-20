@@ -1,0 +1,33 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "定年間際の看護師が、20年前に自ら消して書き直した観察記録の痕跡を見つけ、病院からの威圧と取引に抗いながら真実の確認へ踏み出す物語。",
+  "domain": "pure-literature",
+  "content_type": "text",
+  "primary_score": 57,
+  "primary_score_rationale": "確かに動く人物である。静かな定年という守る面が実際に脅かされ、師長・部長という向かう先が具体的で、身体的応答が全篇の行動原理となる。ただし出来事の発火は限られ、結末が犠牲の帰結を宙づりにするため、自律的行為者の完成には至らない。",
+  "dimension_scores": {
+    "stake": { "score": 62, "weight": 0.25 },
+    "challenge": { "score": 55, "weight": 0.15 },
+    "consistency": { "score": 62, "weight": 0.20 },
+    "autonomy": { "score": 54, "weight": 0.25 },
+    "fusion": { "score": 50, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 57,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 72
+}

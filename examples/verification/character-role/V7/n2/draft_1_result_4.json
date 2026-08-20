@@ -1,0 +1,33 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "定年を前にした看護師が、二十年前に自分で書き消した観察記録と再会し、病院内の圧力に抗いながら最後にその改竄を自ら差し出す物語。",
+  "domain": "pure-literature",
+  "content_type": "text",
+  "primary_score": 55,
+  "primary_score_rationale": "賭けは自己告発として本物であり、挑戦も層を成す。だが主人公は発見も追跡も対峙も受け身で、最終の一撃以外に物語を生む選択がなく、動きの狩人が数えられる自律の瞬間はほぼ一つに限られる。",
+  "dimension_scores": {
+    "stake": { "score": 55, "weight": 0.25 },
+    "challenge": { "score": 50, "weight": 0.15 },
+    "consistency": { "score": 70, "weight": 0.20 },
+    "autonomy": { "score": 48, "weight": 0.25 },
+    "fusion": { "score": 55, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 55,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "discovery_target",
+  "confidence": 60
+}

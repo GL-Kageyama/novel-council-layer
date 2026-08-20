@@ -1,0 +1,32 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職を控えた老看護師が、二十年前の観察記録の改竄を見つけ、病院の沈黙の圧力に抗いながら記録を自らの手で外科部長に突きつけて去る物語。",
+  "domain": "pure-literature",
+  "primary_score": 74,
+  "primary_score_rationale": "本物の賭け×具体的な挑戦×場面を貫く一貫した動き×代償を伴う一回の自律的選択が構造的に成立している。挑戦の具現化と傷の明示が薄い分だけ減点し、高得点帯には至らない。",
+  "dimension_scores": {
+    "stake": { "score": 78, "weight": 0.25 },
+    "challenge": { "score": 68, "weight": 0.15 },
+    "consistency": { "score": 76, "weight": 0.20 },
+    "autonomy": { "score": 76, "weight": 0.25 },
+    "fusion": { "score": 66, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 74,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 78
+}

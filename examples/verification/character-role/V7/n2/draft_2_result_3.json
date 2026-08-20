@@ -1,0 +1,32 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職を控えた看護師が、処分すべき二十年前の観察記録に自らの字による改ざんを見つけ、上司の制止を押して権力者のもとへ記録を置きに踏み出す物語。",
+  "domain": "pure-literature",
+  "primary_score": 68,
+  "primary_score_rationale": "退職の安泰を賭け、権力と向かい合い、最後の選択が物語を生み自律的に踏み出す行為者だが、挑戦の抵抗が受動的で賭けの重みが示唆に留まるため、最上域には届かない。",
+  "dimension_scores": {
+    "stake": { "score": 64, "weight": 0.25 },
+    "challenge": { "score": 52, "weight": 0.15 },
+    "consistency": { "score": 80, "weight": 0.20 },
+    "autonomy": { "score": 70, "weight": 0.25 },
+    "fusion": { "score": 75, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 68,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 72
+}

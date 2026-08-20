@@ -1,0 +1,33 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職5日前の刑事が、自身の署名が残る失踪事件の供述矛盾を見つけ、時効の切れた事件を追い、権力者の妨害を退けて退職の平穏を犠牲にする。",
+  "domain": "pure-literature",
+  "content_type": "text",
+  "primary_score": 82,
+  "primary_score_rationale": "退職の平穏を代償に差し出すリスクテイク、自発的な追及、一貫した抑制が揃い、役割が私的な傷から湧く自律的行為者として成立している。敵役の遠景化と被害者の空白が挑戦と賭けの一方を抽象に留めるため、天井をやや下げた。",
+  "dimension_scores": {
+    "stake": { "score": 80, "weight": 0.25 },
+    "challenge": { "score": 76, "weight": 0.15 },
+    "consistency": { "score": 82, "weight": 0.20 },
+    "autonomy": { "score": 85, "weight": 0.25 },
+    "fusion": { "score": 82, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 82,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 82
+}

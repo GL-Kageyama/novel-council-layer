@@ -1,0 +1,33 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職を目前にした沢木が、二十年前に自ら消した失踪事件の「五時」の丸印に気づき、平穏な定年を犠牲にして検察へ提出するまでの物語。",
+  "domain": "pure-literature",
+  "content_type": "text",
+  "primary_score": 82,
+  "primary_score_rationale": "退職という失い得るものを賭け、朽木後援会という向かう先を持ち、消しかけの丸印という一点を場面を越えて貫くリスクテイクが物語を動かす。自律的行為者として稀に高い部類に入る。",
+  "dimension_scores": {
+    "stake": { "score": 78, "weight": 0.25 },
+    "challenge": { "score": 72, "weight": 0.15 },
+    "consistency": { "score": 88, "weight": 0.20 },
+    "autonomy": { "score": 83, "weight": 0.25 },
+    "fusion": { "score": 86, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 82,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 86
+}

@@ -1,0 +1,32 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職間近の看護師が、二十年前の観察記録に残る改竄の痕跡を追い、板挟みの末、平穏な退職を捨てて外科部長に記録を突きつける物語。",
+  "domain": "pure-literature",
+  "primary_score": 66,
+  "primary_score_rationale": "退職の平穏という本物の賭けを自ら差し出し、記録の改竄＝隠蔽へ向かって動く行為者である。一貫した応答と犠牲を伴う選択が強い一方、挑戦の向こう側が最終盤まで実体化せず、発端がほぼ偶然なため満点には届かない。",
+  "dimension_scores": {
+    "stake": { "score": 62, "weight": 0.25 },
+    "challenge": { "score": 55, "weight": 0.15 },
+    "consistency": { "score": 78, "weight": 0.20 },
+    "autonomy": { "score": 66, "weight": 0.25 },
+    "fusion": { "score": 67, "weight": 0.15 }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 66,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 72
+}
