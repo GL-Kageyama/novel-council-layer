@@ -1,0 +1,57 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職直前の男が、自分が半ば消した失踪事件の時刻の丸印を手掛かりに未解決事件を掘り起こし、権力者の圧力に屈せず検察へ提出する物語。",
+  "domain": "pure-literature",
+  "primary_score": 72,
+  "primary_score_rationale": "賭け・挑戦・一致・リスクテイクが構造的に揃い、人物が物語を引き受ける。ただし挑戦の具現化が薄く、賭けが内面の良心に偏るため最上位には届かない。",
+  "dimension_scores": {
+    "stake": {
+      "score": 68,
+      "weight": 0.25,
+      "evidence": "退職間際の男が自分の半ば消した丸印を再発見し、それを消さずに提出へ向かう。取り除けば物語の道徳的核が失われる。",
+      "judgment": "賭けは内面の良心（かつて見逃した罪）に留まるが、台帳を操作した権力という現実の因果に接続している。"
+    },
+    "challenge": {
+      "score": 58,
+      "weight": 0.15,
+      "evidence": "操作された台帳と、現職政治家の後援会から圧力が来る。",
+      "judgment": "向かうべき敵は明示されるが、実際の対決は一度の訪問に留まり、障壁の具現化が薄い。"
+    },
+    "consistency": {
+      "score": 78,
+      "weight": 0.2,
+      "evidence": "短い受け答えと、回数を重ねても動じない態度が一貫し、最終盤まで「消さない」原理が保たれる。",
+      "judgment": "即興でなく能動の原理を持つ。場面ごとの応答が人物の都合でなくその人の流儀として読める。"
+    },
+    "autonomy": {
+      "score": 74,
+      "weight": 0.25,
+      "evidence": "自ら住民課へ赴き、引き出しへ戻さない選択を取り、周囲の制止に反して最終日に検察へ提出する。",
+      "judgment": "選択が次の事態を生み、退職後の平穏という代償を承知で踏み出す。出来事が来る前に自ら動く。"
+    },
+    "fusion": {
+      "score": 80,
+      "weight": 0.15,
+      "evidence": "調査者という機能が、かつて見逃した罪悪感という傷から自然に生まれ、実際に行動へ移る。",
+      "judgment": "動く記号でなく動く人である。機能が傷・欲求の発現として貼り付けられたラベルではない。"
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 72,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 78
+}

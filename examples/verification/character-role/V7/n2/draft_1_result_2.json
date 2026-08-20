@@ -1,0 +1,57 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "定年を控えた看護師が、20年前の自身の消し跡のある観察記録を発見し、管理職の連なる圧力を押して、消した字を自ら突き出す。",
+  "domain": "pure-literature",
+  "primary_score": 66,
+  "primary_score_rationale": "動く。本人の字である消し跡という固有の賭けと、管理職という具体的な向こう側を持ち、場面を越えて一貫した反復動作が通底する。ただしリスクテイクが最終場面に集中し、中盤は反応的である。",
+  "dimension_scores": {
+    "stake": {
+      "score": 68,
+      "weight": 0.25,
+      "evidence": "消し跡が本人の字であることで、外部の古い記録がその人固有の賭けに変換される。静かに勤め上げる安住と、自身の消した嘘を抱え続けた二十年が掛かっている。人物を抜けば消し跡は誰でもよい紙の傷に戻る。",
+      "judgment": "賭けは本物で、取り除いたら失われるものが構造的に示される。ただし、押し進めた時に実際に何を失うかの具体が柔らかく、犠牲の名指しが安住の範囲に留まる。"
+    },
+    "challenge": {
+      "score": 65,
+      "weight": 0.15,
+      "evidence": "管理職が主任・師長・部長と三段にわたって圧力をかけ、閲覧には判が必要な制度が壁となる。二十年前の夜の医師（いまの部長）が向かうべき先として屹立する。",
+      "judgment": "向こう側は具体的で、賭けがその壁に現実に脅かされる構造がある。挑戦の実在は確保されている。"
+    },
+    "consistency": {
+      "score": 75,
+      "weight": 0.20,
+      "evidence": "綴りを閉じては開き、薄くなった紙に指を置く反復動作が全場面に通底する。言葉で抗わず、記録という物へ立ち返る応答が問い詰めの場面でも一貫している。",
+      "judgment": "場面を越えて「その人らしい」動きが保たれ、プロットの都合で揺れない。即興ではなく能動の原理が読める。"
+    },
+    "autonomy": {
+      "score": 58,
+      "weight": 0.25,
+      "evidence": "当直表と処置記録へ自ら向かい、最終場面では提示された安住を退けて消した字を突き出す。自発の調査と、代償を承知した暴露の選択がある。",
+      "judgment": "生むより反応する中盤が長く、管理職が次々に来訪して圧力をかける構造が支配的。リスクテイクの犠牲は本物だが、物語を動かす選択が最終場面の一点に集中している。"
+    },
+    "fusion": {
+      "score": 64,
+      "weight": 0.15,
+      "evidence": "主人公であることが、本人の消した字という傷の自然な発現であり、なお最終場面で実際に行動する。貼り付けられた機能のラベルではない。",
+      "judgment": "機能は自然で行動も伴うが、内面の彫琢が薄く、動く記号へ近づく寸前で踏みとどまっている。動く人と動く記号の境界線上にある。"
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 66,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 78
+}

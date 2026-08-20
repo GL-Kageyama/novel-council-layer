@@ -1,0 +1,57 @@
+{
+  "evaluator_id": "character-role",
+  "evaluator_name": "Character Role Evaluator",
+  "content_summary": "退職まで五日と迫った刑事が、自ら署名した古い失踪事件の供述不整合を見つけ、市長候補へと繋がる追跡を、退職と引き換えに選び取る物語。",
+  "domain": "pure-literature",
+  "primary_score": 68,
+  "primary_score_rationale": "動きの四軸（賭け・挑戦・一致・自律）は構造的に強く、犠牲を伴う選択でリスクテイクに合格した自律的行為者。しかし融合の一点で崩れ、動きのもとになる傷・欲求が見えないため「動く記号」の域を出ない。",
+  "dimension_scores": {
+    "stake": {
+      "score": 80,
+      "weight": 0.25,
+      "evidence": "「退職まであと五日」という切迫の中で、失い得るものが退職の静穏・家族・事件そのものと多重に設定され、威圧電話が家族を名指しして賭けを現実化する。",
+      "judgment": "賭けは実在し、この人物を抜けば悲劇そのものが消える。「五日」という具体の切迫が、誰でもよかったではない固有の痛みを支えている。"
+    },
+    "challenge": {
+      "score": 68,
+      "weight": 0.15,
+      "evidence": "市長候補である朽木という具体の敵役、市役所の記録閲覧拒否という制度的障壁、名乗らない威圧電話が「向こう側」を具現化する。",
+      "judgment": "挑戦対象は具体的で賭けが私的な気分に留まらないが、朽木が「清廉な悪」という類型的輪郭で、向かう先としての人の厚みにはやや欠ける。"
+    },
+    "consistency": {
+      "score": 55,
+      "weight": 0.20,
+      "evidence": "ファイルを伏せない、脅迫で手が震えない、「時効の話をしてるんじゃない」という短い否定が全場面で揺れない。",
+      "judgment": "一貫はしているが一音のみ。場面を越えて沢木らしさは保つものの、能動の原理に幅がなく、平坦な一貫が人物の豊かさではなく類型の輪郭に見える。"
+    },
+    "autonomy": {
+      "score": 80,
+      "weight": 0.25,
+      "evidence": "ファイルを箱へ入れなかった選択が、市役所の拒絶→威圧電話→最終対峙を連鎖的に生む。「かまいません」で退職と家族を差し出す犠牲が伴っている。",
+      "judgment": "出来事に反応するのではなく選択が出来事を生む、真の自律的行為者。リスクテイクの試験に合格している。"
+    },
+    "fusion": {
+      "score": 45,
+      "weight": 0.15,
+      "evidence": "主人公は機能（主人公）を果たし実際に行動するが、なぜこの事件に掴まって離さないのか、その傷・欲求が一行も書かれていない。",
+      "judgment": "動く記号であって動く人ではない。機能が傷・欲求の自然な発現でなく、類型（清廉な男が正義を手放さない）のままで発動するため、融合が崩れる。"
+    }
+  },
+  "value_vector_contribution": {
+    "narrative_originality": null,
+    "quality": null,
+    "emotional_power": null,
+    "plot_architecture": null,
+    "character_depth": null,
+    "character_role": 68,
+    "prose_style": null,
+    "theme_resonance": null,
+    "world_building": null,
+    "narrative_technique": null,
+    "reader_experience": null,
+    "admiration": null,
+    "hook": null
+  },
+  "classification": "current_success",
+  "confidence": 70
+}
