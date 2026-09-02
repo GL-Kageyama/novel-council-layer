@@ -121,7 +121,7 @@
     "dims_title": "【分维度改善】",
     "dims_cols": "维度 | before | after | Δ",
     "one_sided": "(仅单侧)",
-    "average_change": "平均变化（已评估的{count}个维度）: {total:+d} / {count} = {avg:+.1f}",
+    "average_change": "平均变化（已评估的{count}个维度）: {total:+.1f} / {count} = {avg:+.1f}",
     "main_changes_title": "【主要变化】",
     "no_significant_changes": "无显著维度变化",
     "note_raw_values": "  ※ 全部维度的原始值请参照 JSON。不要仅凭平均值判断，也要看方差和分歧。",

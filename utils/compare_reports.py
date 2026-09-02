@@ -114,9 +114,9 @@ def main():
             if delta != 0:
                 changed.append((jp, b, a, delta))
             arrow = ARROWS["up"] if delta > 0 else (ARROWS["down"] if delta < 0 else ARROWS["same"])
-            b_s = f"{b:3d}" if b is not None else "  —"
-            a_s = f"{a:3d}" if a is not None else "  —"
-            d_s = f"{delta:+3d}" if b is not None and a is not None else "   "
+            b_s = f"{b:3.0f}" if b is not None else "  —"
+            a_s = f"{a:3.0f}" if a is not None else "  —"
+            d_s = f"{delta:+3.0f}" if b is not None and a is not None else "   "
             print(f"  {jp + ' (' + key + ')':28s} {b_s:>5s} {a_s:>5s} {arrow}{d_s}")
         else:
             print(f"  {jp + ' (' + key + ')':28s}   {'—' if b is None else b} -> {'—' if a is None else a}  ({t(L, 'compare', 'one_sided')})")
@@ -132,7 +132,7 @@ def main():
         changed_sorted = sorted(changed, key=lambda c: -abs(c[3]))
         for jp, b, a, d in changed_sorted[:6]:
             arrow = ARROWS["up"] if d > 0 else ARROWS["down"]
-            print(f"  {arrow} {jp}: {b} → {a} ({d:+d})")
+            print(f"  {arrow} {jp}: {b:.0f} → {a:.0f} ({d:+.0f})")
 
     print()
     print(t(L, "compare", "note_raw_values"))

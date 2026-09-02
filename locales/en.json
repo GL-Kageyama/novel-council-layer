@@ -121,7 +121,7 @@
     "dims_title": "Per-dimension improvement",
     "dims_cols": "dimension | before | after | Δ",
     "one_sided": "(one side only)",
-    "average_change": "Average change over {count} scored dimension(s): {total:+d} / {count} = {avg:+.1f}",
+    "average_change": "Average change over {count} scored dimension(s): {total:+.1f} / {count} = {avg:+.1f}",
     "main_changes_title": "Main changes",
     "no_significant_changes": "No significant dimension changes",
     "note_raw_values": "※ See the JSON for raw values across all dimensions. Do not judge by the mean alone — also read variance and disagreement.",

@@ -121,7 +121,7 @@
     "dims_title": "【次元別の改善】",
     "dims_cols": "次元 | before | after | Δ",
     "one_sided": "(片側のみ)",
-    "average_change": "平均変化（評価された{count}次元）: {total:+d} / {count} = {avg:+.1f}",
+    "average_change": "平均変化（評価された{count}次元）: {total:+.1f} / {count} = {avg:+.1f}",
     "main_changes_title": "【主な変化】",
     "no_significant_changes": "有意な次元変化なし",
     "note_raw_values": "  ※ 全次元の生値は JSON を参照。平均だけで判断せず、分散と不一致も見ること。",
