@@ -1,1 +1,1 @@
-/Users/user/AI評価者たちによる「知恵の評議会」/novel-council-layer/agents/hook.md
+/Users/user/AI創作工房/novel-council-layer/agents/hook.md
